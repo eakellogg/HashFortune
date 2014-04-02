@@ -14,7 +14,7 @@ var path = require('path');
 
 
 var io = require('socket.io').listen(server); 
-io.set('log level' , 0); //THIS IS HOW YOU TURN OFF DEBUG
+//io.set('log level' , 0); //THIS IS HOW YOU TURN OFF DEBUG
 server.listen(10001);
 
 var socketHandler = require('./javascript/socketHandler.js');
@@ -73,7 +73,10 @@ var DS = require('./ServerCommands.js');
 DS.setTrendingPage();
 DS.setLeaderBoard();
 socketHandler.giveSockets(io.sockets);
+var formula = require('./javascript/formula.js');
 DS.giveHandler( socketHandler);
+
+formula.set( DS);
 io.sockets.on( 'connection' , socketHandler.listen );
 
 

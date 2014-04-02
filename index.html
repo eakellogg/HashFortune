@@ -14,8 +14,8 @@
 </h1> 
 
 <div id="login_section">
-  <input id="name" type="text"></input> <br>
-  <input id="pass" type="password"></input> <br>
+  <input id="name" type="text">username</input> <br>
+  <input id="pass" type="password">password</input> <br>
   <input id="login" type="button" value="Log In" disabled="false"></input>
 </div>
 
@@ -53,16 +53,18 @@ $(document).ready(function() {
    $('#warning').css('display', 'none');
    $('#login').attr('disabled', false);
    socket = io.connect('http://' + document.location.host);
-   
+    
    socket.on( 'welcome' , connectProcedure );
+ 
    socket.on( 'login_ok', loginProcedure );
+  
    socket.on( 'login_fail' , function(message) { alert(message) } );
-   socket.on( 'warning' , warningProcedure );
+  socket.on( 'warning' , warningProcedure );
    
    /*
 	Handle all possible message from server while on server page
    */
-   
+  
    //Below handle all possible user caused events.
     $('#login').click(function() {
       var name = $('#name').val();
@@ -71,6 +73,7 @@ $(document).ready(function() {
         name = name.trim();
 		pass = pass.trim();
         if (name.length > 0 ) {
+		alert("LOGIN");
           socket.emit('login', { user_name: name , pass_word: pass });
         }
       }

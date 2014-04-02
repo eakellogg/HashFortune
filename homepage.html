@@ -49,7 +49,7 @@
 	  display:block; 
 	}
 
-	#stockleaders {
+	#leaderBoard {
 	  display:block; 
 	}
 
@@ -76,7 +76,7 @@
 	#hashtag_search {
 	  display:none; 
 	}
-
+/*
 	#username_search {
 	  display:none; 
 	}
@@ -88,7 +88,7 @@
     #user_search_results {
         display:none;
     }
-
+*/
 	#investments_all {
 	  display:none; 
 	}
@@ -141,19 +141,19 @@
 	<!-- icons on the righthand side of the toolbar -->
 	<div style="float:right;">
 		<img src="icons/trading.jpeg" height = "50" width = "50" class="pointable"
-		onclick="rename_page('Investments'); hide_all(); show_investments()" >
+		onclick="rename_page('Investments');  hide_all();   show_investments();" >
 				
 		<img src="icons/portfolio.png" height = "50" width = "50" class="pointable"
-		onclick="rename_page('Portfolio'); hide_all(); show_portfolio()" >
+		onclick="rename_page('Portfolio'); hide_all(); show_portfolio();" >
 			 
 		<img src="icons/friends.png" height = "50" width = "50" class="pointable"	
-		onclick="rename_page('Friends'); hide_all(); show_friends_page()" >
+		onclick="rename_page('Friends'); hide_all(); show_friends_page();" >
 			
 		<img src="icons/challenge.png" height = "50" width = "50" class="pointable"
-		onclick="rename_page('Challenges'); hide_all(); 	show_challenge_home()" >
+		onclick="rename_page('Challenges'); hide_all(); 	show_challenge_home();" >
 			
 		<img src="icons/settings.png" height = "50" width = "50" class="pointable"
-		onclick="rename_page('Settings'); hide_all(); show_settings()" >
+		onclick="rename_page('Settings'); hide_all(); show_settings();" >
 	</div>
   
 </h1>
@@ -172,10 +172,10 @@
     
 <!-- division containing the player's profile picture -->
 <div id="player_pic">
-	<img style="margin:0px auto;display:block"
+	<!--<img style="margin:0px auto;display:block;"
 	src="icons/defaultprofilepic.png" height = "250" width = "250">
 	<BR>
-	<BR>
+	<BR>-->
 </div>
 
 <!-- division containing the player's info -->
@@ -275,7 +275,9 @@
 <BR>
 </div>
 
+
 <!-- division containing the searchbar for a username -->
+<!--
 <div id="username_search">
 	<form>
 		<h2>
@@ -287,8 +289,9 @@
 		</h2>
 	</form>
 </div>
-
+-->
 <!-- division containing the searchbar for an email -->
+<!--
 <div id="email_search">
 	<form>
 		<h2>
@@ -300,11 +303,11 @@
 		</h2>
 	</form>
 </div>
-
-<!-- division containing the results from searching for a user by username or email -->
+-->
+<!-- division containing the results from searching for a user by username or email 
 <div id="user_search_results">
 </div>
-
+-->
 <!-- division containing a list of all investments of a user -->
 <div id="investments_all">
 </div>

@@ -1,11 +1,18 @@
 //formula update
 
-var servercommands = require('../ServerCommands.js');
+var servercommands; // = require('../ServerCommands.js');
 
 module.exports = {
-	apply : apply
+	apply : apply,
+	set : set
 };
 
+
+function set( sc )
+{
+	servercommands = sc;
+	console.log( servercommands);
+}
 function apply( socketHandler , connection, message )
 {
 	var username = message.user_name;
@@ -107,6 +114,7 @@ function apply( socketHandler , connection, message )
 			
 			newmessage = {};
 			newmessage.user_name = username;
+			console.log(servercommands);
 			servercommands.serveMyTrending(newmessage);
 		});				
 	});	

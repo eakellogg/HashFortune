@@ -11,6 +11,9 @@ var db_config = { host : 'hashfortune.com' , user : 'jzerr718_zerr2' , password 
 var connection;
 var formula = require('./javascript/formula.js');
 
+
+
+
 function handleDisconnect() {
   connection = mysql.createConnection(db_config); // Recreate the connection, since
                                                   // the old one cannot be reused.
@@ -48,12 +51,20 @@ module.exports = {
 	servePlayerInfo : servePlayerInfo,
 	serveLeaderBoard : serveLeaderBoard,
 	setLeaderBoard : setLeaderBoard,
-	setTrendingPage : setTrendingPage
+	setTrendingPage : setTrendingPage,
+	serveSearchUser : serveSearchUser,
+	serveSearchEmail : serveSearchEmail
 };
 
 setInterval( setLeaderBoard , 60 * 60 * 60 );
 setInterval( setTrendingPage , 60 *60 * 60 );
 
+function serveSearchUser(message)
+{
+}
+function serveSearchEmail(message)
+{
+}
 function setLeaderBoard()
 {
 		connection.query( "SELECT username , TotalValue FROM users ORDER BY TotalValue DESC LIMIT 10" , 

@@ -8,9 +8,9 @@
 		
 		//<!-- clear all search bars -->
 		function clear_searches() {
-			document.getElementById("esearch").value= "";
+			//document.getElementById("esearch").value= "";
 			document.getElementById("hsearch").value= "";
-			document.getElementById("usearch").value= "";
+			//document.getElementById("usearch").value= "";
 			document.getElementById("amount_buy").value= "";
 			document.getElementById("amount_sell").value= "";
 		}
@@ -26,15 +26,15 @@
 			document.getElementById("player_pic").style.display = "none";
 			document.getElementById("player_info").style.display = "none";
 			document.getElementById("hashtag_search").style.display = "none";
-			document.getElementById("username_search").style.display = "none";
-			document.getElementById("email_search").style.display = "none";
+			//document.getElementById("username_search").style.display = "none";
+			//document.getElementById("email_search").style.display = "none";
 			document.getElementById("investments_all").style.display = "none";
 			document.getElementById("hashtag_investments").style.display = "none";
 			document.getElementById("buy_sell_tags").style.display = "none";
 			document.getElementById("hashtag_graph").style.display = "none";
 			document.getElementById("hashtag_stats").style.display = "none";
 			document.getElementById("new_challenge").style.display = "none";
-            documetn.getElementById("user_search_results").style.display = "none";
+            //document.getElementById("user_search_results").style.display = "none";
 		}
 		
 		//<!-- show divisions relevant to homepage -->

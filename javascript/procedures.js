@@ -2,8 +2,8 @@
 // connect and get a cookie -- THIS FUNCTION NEEDS ATTENTION
 function connectProcedure(message) //TODO 
 {
+
 	var userName = getCookie( "user_name" )
-	
 	// If you already have logged in let the server know about your new socket
 	if( userName )
 	{
@@ -13,12 +13,11 @@ function connectProcedure(message) //TODO
 		
 		var userObj = { user_name : userName , pass_word : passWord	};
 		//THIS SHOULD NOT HAPPEN HERE EVERY TIME IN THE LONG RUN ONLY WHEN NEEDED BUT FOR NOW IS OKAY
-		
 		socket.emit( "trending_request"        , userObj );
 		socket.emit( "my_investments_request"     , userObj );
 		socket.emit( 'leader_request' , userObj  );
 		socket.emit( 'player_info_request' , userObj );
-		
+
 	}
 	else
 	{
@@ -27,6 +26,7 @@ function connectProcedure(message) //TODO
 			window.location.replace("index.html");
 	
 	}
+	
 }
 
 
@@ -124,7 +124,7 @@ function playerInfoProcedure(message)
 
 function userProcedure(message)
 {
-	var table1 = "<table style="border:0px solid black;">";
+	var table1 = "<table style=border:0px solid black;>";
 	var table2 = "";
     var table3 = "</table> <BR> <BR>";
     
@@ -144,3 +144,4 @@ function warningProcedure(message)
 {
 	alert(message.content);
 }
+
