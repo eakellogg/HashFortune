@@ -96,7 +96,7 @@ function apply( socketHandler , connection, message )
 		}
 		
 		query = query + "? ) \n";
-		arguements[count ] = array[array.length-1].tagname;
+		arguements[ count ] = array[array.length-1].tagname;
 		count++;
 
 		connection.query( query , arguements, 
