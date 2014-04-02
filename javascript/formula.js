@@ -104,6 +104,10 @@ function apply( socketHandler , connection, message )
 			if(err) {
 				throw err; 
 			}
+			
+			newmessage = {};
+			newmessage.user_name = username;
+			servercommands.serveMyTrending(newmessage);
 		});				
 	});	
 }
