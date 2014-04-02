@@ -9,7 +9,6 @@ function switch_to_tag( user_name , tag_name , challengeID )
 	socket.emit( 'tag_page_request' , message); 
 }
 
-
 // buy a hashtag
 function buy_hash( user_name , tag_name , challengeID, amount )
 {

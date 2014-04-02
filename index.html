@@ -73,7 +73,6 @@ $(document).ready(function() {
         name = name.trim();
 		pass = pass.trim();
         if (name.length > 0 ) {
-		alert("LOGIN");
           socket.emit('login', { user_name: name , pass_word: pass });
         }
       }

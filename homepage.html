@@ -411,8 +411,11 @@
 		var firstTime = true;
 		$(document).ready(function() {
 		
+			
 			user_name = getCookie( "user_name" );
 			socket = io.connect('http://' + document.location.host);
+			
+					
 			socket.on( 'welcome' , connectProcedure );
 			socket.on( 'tag_page', tagProcedure );
 			socket.on( 'trending_table', trendingProcedure );

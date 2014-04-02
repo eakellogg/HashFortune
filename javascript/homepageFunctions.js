@@ -39,10 +39,15 @@
 		
 		//<!-- show divisions relevant to homepage -->
 		function show_homepage() {
+			
 			document.getElementById("trending").style.display = "block";
 			document.getElementById("investments_summary").style.display = "block";
 			document.getElementById("leaderboard").style.display = "block";
 			document.getElementById("friends").style.display = "block";
+			
+			socket.emit( "trending_request"        , userObj );
+			socket.emit( 'leader_request' , userObj  );
+			
 		}
 	  
 		//<!-- show divisions relevant to investments page -->
@@ -57,6 +62,8 @@
 			document.getElementById("player_pic").style.display = "block";
 			document.getElementById("player_info").style.display = "block";
 			document.getElementById("investments_all").style.display = "block";
+			
+			socket.emit( 'player_info_request' , userObj );
 		}
 	  
 		//<!-- show divisions relevant to challenges page -->

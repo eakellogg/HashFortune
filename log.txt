@@ -1,1 +1,20 @@
 info: socket.io started
+
+The rows recieved from the query [object Object] The array created [object Object]Updating player + ZachB 
+The rows recieved from the query [object Object]
+ 
+The array created [object Object]
+Updating player + gogogoen 
+The rows recieved from the query OldAmount 715newAmount 1104 peopleNow 400 peoplePst 1 tweetsPast 11 tagname OpeningDay
+OldAmount 1378newAmount 2032 peopleNow 680 peoplePst27 tweetsPast 51 tagname selfie
+Updating player + ZachB 
+The rows recieved from the query OldAmount 268newAmount -19 peopleNow 1 peoplePst1 tweetsPast 1 tagname BBN
+Updating player ZachB 
+The rows recieved from the query 
+tagname: BBN
+Updating player ZachB 
+The rows recieved from the query 
+tagname: BBN
+OldAmount -19 newAmount -19
+peopleNow 1 peoplePstundefined
+tweetsNow 1 tweetsPast 1

@@ -73,7 +73,6 @@ function setLeaderBoard()
 			if( err)
 				throw err;
 			leaderBoard = rows;
-				console.log( leaderBoard );
 		});
 }
 
@@ -87,7 +86,6 @@ function setTrendingPage()
 		}
 		
 		trendingTable = hashtags;
-		console.log( trendingTable );
 	});
 	
 }
@@ -240,7 +238,8 @@ function serveTagPage(message)
 // handle a user's buy operation
 function serveBuyHash(message)
 {
-
+	if( message.amount >= 0 )
+	{
 	// search for the uninvested points of the user
 	connection.query( "SELECT `AvailablePoints` FROM users WHERE username = ?", [message.user_name], 
 	function (err, user_info) { 
@@ -302,6 +301,14 @@ function serveBuyHash(message)
 								}
 								
 							});
+							//Add one to investment count
+							connection.query( "UPDATE users SET investCount = (investCount + 1 ) WHERE username = ? " ,[ message.user_name ] ,
+							function ( err , rows )
+							{
+								if ( err )
+									throw err;
+								
+							});
 						});
 					}
 				});
@@ -320,13 +327,19 @@ function serveBuyHash(message)
 			}	
 		}	
 	});
-	
+	}
+	else
+	{
+		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can't buy negative poitns " } );
+	}
 }
 
 
 // handle a user's sell operation
 function serveSellHash(message)
 {
+	if( message.amount >= 0)
+	{
 	// search for the investment for the user in question
 	connection.query( "SELECT `amount` FROM investments WHERE username = ? AND tagname = ?", [message.user_name, message.tag_name], 
 	function (err, investment_info) { 
@@ -363,6 +376,12 @@ function serveSellHash(message)
 							throw err;
 						}
 					});	
+					connection.query( "UPDATE users SET investCount = (investCount -1 ) WHERE username = ?" , [message.user_name],
+					function( err , rows )
+					{
+						if( err )
+							throw err;
+					});
 				}
 					
 				// search for the uninvested points of the user
@@ -408,6 +427,11 @@ function serveSellHash(message)
 			socketHandler.messageUser(message.user_name, 'warning', warning);
 		}
 	});
+	}
+	else
+	{
+		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can not sell negative points" } );
+	}
 }
 
 
@@ -434,15 +458,19 @@ function serveTrending(message)
 function serveMyTrending(message)
 {
 var username = message.user_name;
-connection.query( "SELECT  tagname , amount FROM investments WHERE username = ?" , [username] , 
-	function (err , investments )
-	{
+connection.query( "SELECT investCount FROM users WHERE username = ? ", [username] , function (err ,rows )
+{
+	if(err)
+		throw err;
+	var limit = rows[0].investCount;
+	connection.query( "SELECT  tagname , amount FROM investments WHERE username = ? LIMIT ?" , [username, limit] , 
+	function (err , investments ){
 		if( err )
-			console.log( err );
-		socketHandler.messageUser( username,  'my_investments_table' , investments ); 
+			throw err;
+		socketHandler.messageUser( username,  'my_investments_table' , investments );
 
-	}
-);
+	});
+});
 }
 
 
@@ -469,7 +497,6 @@ connection.query( "SELECT username , AvailablePoints , TotalValue FROM users WHE
 	}
 );
 }
-//"SELECT name , count FROM hashTags ORDER BY dateTime DESC , count DESC LIMIT 10"
 
 function serveLeaderBoard(message){
 

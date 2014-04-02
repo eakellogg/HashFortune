@@ -11,13 +11,14 @@ function connectProcedure(message) //TODO
 		socket.emit( "re_establish" , { user_name : userName , pass_word : passWord	} );
  		//socket.emit( "login"        , { user_name : userName , pass_word : passWord	} );
 		
-		var userObj = { user_name : userName , pass_word : passWord	};
-		//THIS SHOULD NOT HAPPEN HERE EVERY TIME IN THE LONG RUN ONLY WHEN NEEDED BUT FOR NOW IS OKAY
-		socket.emit( "trending_request"        , userObj );
-		socket.emit( "my_investments_request"     , userObj );
-		socket.emit( 'leader_request' , userObj  );
-		socket.emit( 'player_info_request' , userObj );
-
+	var userObj = { user_name : userName , pass_word : passWord	};
+	
+		if ( firstTime )
+		{
+			socket.emit( "trending_request"        , { user_name : user_name });
+			socket.emit( 'leader_request' ,          { user_name : user_name });
+			firstTime = false;
+		}
 	}
 	else
 	{
@@ -27,6 +28,7 @@ function connectProcedure(message) //TODO
 	
 	}
 	
+
 }
 
 

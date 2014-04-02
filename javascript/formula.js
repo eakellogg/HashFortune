@@ -1,17 +1,15 @@
 //formula update
 
-var servercommands; // = require('../ServerCommands.js');
-
+var servercommands;
+var fs = require('fs');
 module.exports = {
 	apply : apply,
 	set : set
 };
 
-
-function set( sc )
+function set( ds )
 {
-	servercommands = sc;
-	console.log( servercommands);
+	servercommands = ds;
 }
 function apply( socketHandler , connection, message )
 {
@@ -22,7 +20,7 @@ function apply( socketHandler , connection, message )
 	convertedCurrentTime.setSeconds(0);
 					
 	connection.query( "SELECT init.tagname, init.amount AS oldAmount, " + 
-						"(SELECT COUNT(*) FROM hashTags WHERE name = " +
+						"(SELECT COUNT(*) FROM investments WHERE tagname = " +
 						"init.tagname) AS peopleNow, " +
 						"init.investorCount AS peoplePst, " + 
 						"newTag.count AS tweetsNow, " +
@@ -30,92 +28,122 @@ function apply( socketHandler , connection, message )
 						"FROM investments init " +
 						"LEFT join hashTags oldTag on (oldTag.dateTime = " +
 						"init.timeInvested AND oldTag.name = init.tagname) " +
-						"LEFT join hashTags newTag on newTag.name = init.tagname " +
-						"WHERE init.username = ? AND newTag.dateTime = ?" , [ username , convertedCurrentTime ] , 
+						"LEFT join hashTags newTag on (newTag.name = init.tagname AND newTag.dateTime = ?)" +
+						"WHERE init.username = ?" , [ convertedCurrentTime , username ] , 
 	function (err , rows) {
 		if( err ) {
 				throw err;
-		}
-				
+		}		
 		var array = new Array();
+		var newTotalValue = 0;
 		
-		for( var i =0; i < rows.length; i++)
+		
+		if( rows.length > 0 )
 		{
-			var obj = rows[i];
-			
-			if( obj.oldAmount == 'NULL' ) {
-				obj.oldAmount = 0;
+			for( var i =0; i < rows.length; i++)
+			{
+				var obj = rows[i];
+				
+				if( obj.oldAmount == 'NULL' ) {
+					obj.oldAmount = 0;
+				}
+				if( obj.peopleNow == 'NULL' ) {
+					obj.peopleNow = 0;
+				}
+				if( obj.peoplePst == 'NULL' ) {
+					obj.peoplePst = 0;
+				}
+				if( obj.tweetsNow == 'NULL' ) {
+					obj.tweetsNow = 0;
+				}
+				if( obj.tweetsPast == 'NULL' ) {
+					obj.tweetsPast = 0;
+				}
+				
+				array[i]  =  {};
+				array[i].newamount = obj.oldAmount + ( obj.peopleNow - obj.peoplePst ) + ( obj.tweetsNow - obj.tweetsPast );
+				if( array[i].newamount < 0 )
+					array[i].newamount = 0;
+				array[i].tagname   = obj.tagname;
+				array[i].peopleNow = obj.peopleNow;
+				
+				newTotalValue += array[i].newamount;
+				//console.log(obj);
 			}
-			if( obj.peopleNow == 'NULL' ) {
-				obj.peopleNow = 0;
+			var output = {};
+			output = "Updating player " + username + " at time + " + convertedCurrentTime + " \nThe rows recieved from the query \n";
+			for( var i =0; i < rows.length; i++)
+			{
+				output += "tagname: " + rows[i].tagname  + "\n" +
+				"OldAmount " + rows[i].oldAmount + " newAmount " + array[i].newamount + 
+				"\npeopleNow " + rows[i].peopleNow + " peoplePst " + rows[i].peoplePast + 
+				"\ntweetsNow " + rows[i].tweetsNow + " tweetsPast " + rows[i].tweetsPast + "\n";
 			}
-			if( obj.peoplePst == 'NULL' ) {
-				obj.peoplePst = 0;
-			}
-			if( obj.tweetsNow == 'NULL' ) {
-				obj.tweetsNow = 0;
-			}
-			if( obj.tweetsPast == 'NULL' ) {
-				obj.tweetsPast = 0;
-			}
-			
-			array[i]  =  {};
-			array[i].newamount = obj.oldAmount + ( obj.peopleNow - obj.peoplePst ) + ( obj.tweetsNow - obj.tweetsPast );
-			array[i].tagname   = obj.tagname;
-		}
-		
-		var query = "UPDATE investments SET amount = CASE tagname\n";
-		var arguements = new Array(); var count = 0;
-		
-		for( var i =0; i < array.length; i++)
-		{	
-			query = query + "WHEN ? THEN ? \n";
-			arguements[ count ] = array[i].tagname;
-			count++;
-			arguements[ count ] = array[i].newamount;
-			count++;
-		}
-		
-		query = query + "END,\n";
-		query = query + "investorcount = CASE tagname \n";
-		
-		for( var i =0; i < array.length; i++)
-		{
-			query = query + "WHEN ? THEN (SELECT COUNT(*) FROM hashTags WHERE name = ? )\n"
-			arguements[ count ] = array[i].tagname;
-			count++;
-			arguements[ count ] = array[i].tagname;
-			count++;
-		}
-		
-		query = query + "END,\n"
-		query = query + "timeInvested = ? WHERE username = ? AND tagname IN ( ";
-		arguements[ count ] = convertedCurrentTime;
-		count++;
-		arguements[ count ] = username;
-		count++;
-		
-		for( var i =0; i < array.length- 1; i++)
-		{
-			query = query + "? , ";
-			arguements[ count ] = array[i].tagname;
-			count++;
-		}
-		
-		query = query + "? ) \n";
-		arguements[ count ] = array[array.length-1].tagname;
-		count++;
 
-		connection.query( query , arguements, 
-		function(err , rows ) { 			
-			if(err) {
-				throw err; 
+			fs.appendFile( 'updatePlayerlog.txt' , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
+			
+			var query = "UPDATE investments SET amount = CASE tagname\n";
+			var arguements = new Array(); var count = 0;
+			
+			for( var i =0; i < array.length; i++)
+			{	
+				query = query + "WHEN ? THEN ? \n";
+				arguements[ count ] = array[i].tagname;
+				count++;
+				arguements[ count ] = array[i].newamount;
+				count++;
 			}
 			
+			query = query + "END,\n";
+			query = query + "investorcount = CASE tagname \n";
+			
+			for( var i =0; i < array.length; i++)
+			{
+				query = query + "WHEN ? THEN ?\n"
+				arguements[ count ] = array[i].tagname;
+				count++;
+				arguements[ count ] = array[i].peopleNow;
+				count++;
+			}
+			
+			query = query + "END,\n"
+			query = query + "timeInvested = ? WHERE username = ? AND tagname IN ( ";
+			arguements[ count ] = convertedCurrentTime;
+			count++;
+			arguements[ count ] = username;
+			count++;
+			
+			for( var i =0; i < array.length- 1; i++)
+			{
+				query = query + "? , ";
+				arguements[ count ] = array[i].tagname;
+				count++;
+			}
+			
+			query = query + "? ) \n";
+			arguements[ count ] = array[array.length-1].tagname;
+			count++;
+
+			connection.query( query , arguements, 
+			function(err , rows ) { 			
+				if(err) {
+					throw err; 
+				}
+			});
+		}	
+		
+		connection.query( "UPDATE users SET TotalValue = (? + availablePoints) WHERE username = ?" , [ newTotalValue , username ] , 
+		function (err , rows) {
+			if( err) {
+				throw err;
+			}
 			newmessage = {};
 			newmessage.user_name = username;
-			console.log(servercommands);
 			servercommands.serveMyTrending(newmessage);
-		});				
+		});
 	});	
 }
