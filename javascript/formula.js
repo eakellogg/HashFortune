@@ -1,6 +1,6 @@
 //formula update
 
-var servercommands = require('../../ServerCommands.js');
+var servercommands = require('../ServerCommands.js');
 
 module.exports = {
 	apply : apply

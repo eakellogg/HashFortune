@@ -1,4 +1,7 @@
 
+
+var trendingTable;
+var leaderBoard;
 // create connection to sql database
 var mysql = require('mysql');
 
@@ -6,7 +9,7 @@ var db_config = { host : 'hashfortune.com' , user : 'jzerr718_zerr2' , password 
 
 
 var connection;
-var formula = require('./hashFortune/javascript/formula.js');
+var formula = require('./javascript/formula.js');
 
 function handleDisconnect() {
   connection = mysql.createConnection(db_config); // Recreate the connection, since
@@ -43,8 +46,43 @@ module.exports = {
 	giveHandler   : giveHandler,
 	serveMyTrending : serveMyTrending,
 	servePlayerInfo : servePlayerInfo,
-	serveLeaderBoard : serveLeaderBoard
+	serveLeaderBoard : serveLeaderBoard,
+	setLeaderBoard : setLeaderBoard,
+	setTrendingPage : setTrendingPage
 };
+
+setInterval( setLeaderBoard , 60 * 60 * 60 );
+setInterval( setTrendingPage , 60 *60 * 60 );
+
+function setLeaderBoard()
+{
+		connection.query( "SELECT username , TotalValue FROM users ORDER BY TotalValue DESC LIMIT 10" , 
+		function (err , rows )
+		{
+			if( err)
+				throw err;
+			leaderBoard = rows;
+				console.log( leaderBoard );
+		});
+}
+
+function setTrendingPage()
+{
+	connection.query( "SELECT name , count FROM hashTags ORDER BY dateTime DESC , count DESC LIMIT 10" , 
+	function( err , hashtags )
+	{
+		if(err) {
+			throw err;
+		}
+		
+		trendingTable = hashtags;
+		console.log( trendingTable );
+	});
+	
+}
+
+
+
 
 function giveHandler( handler )
 {
@@ -368,6 +406,7 @@ function serveTrending(message)
 	var username = message.user_name;
 	
 	// select the name and count of the top ten trending hashtags
+	/*
 	connection.query( "SELECT name , count FROM hashTags ORDER BY dateTime DESC , count DESC LIMIT 10" , 
 	function( err , hashtags )
 	{
@@ -377,6 +416,8 @@ function serveTrending(message)
 			
 		socketHandler.messageUser( username , 'trending_table' , hashtags );
 	});
+	*/
+	socketHandler.messageUser( username , 'trending_table' , trendingTable );
 }
 
 function serveMyTrending(message)
@@ -422,32 +463,13 @@ connection.query( "SELECT username , AvailablePoints , TotalValue FROM users WHE
 function serveLeaderBoard(message){
 
 	var username = message.user_name;
-	connection.query( "SELECT username , TotalValue FROM users ORDER BY TotalValue DESC LIMIT 10" , 
+	/*connection.query( "SELECT username , TotalValue FROM users ORDER BY TotalValue DESC LIMIT 10" , 
 		function (err , rows )
 		{
 			if( err)
 				throw err;
 			socketHandler.messageUser( username , 'leader_board' , rows);
 		});
-}
-
-// search for users with a specified username
-function serveSearchUser(message)
-{
- 	var username = message.user_name;
- 	var searchUsername = message.search_user;
- 	//search for the user name and return a table (?) with the resulting usernames
- 	
- 	socketHandler.messageUser( username , 'user_search' , ___ );
-}
-
-
-//search for users with a specified email
-function serveSearchEmail(message)
-{
- 	var username = message.user_name;
- 	var email = message.search_email;
- 	//search for users with that email and return a table (?) with the resulting usernames
- 	
- 	socketHandler.messageUser( username , 'user_search' , ___ );
+		*/
+		socketHandler.messageUser( username , 'leader_board' , leaderBoard );
 }

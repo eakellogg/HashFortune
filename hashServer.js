@@ -33,7 +33,6 @@ var uri = url.parse(request.url).pathname
     '.php':  "text/php"
    
   };
-  console.log(filename);
 	
   path.exists(filename, function(exists) {
  
@@ -70,7 +69,9 @@ var uri = url.parse(request.url).pathname
 }
 
 
-var DS = require('./../ServerCommands.js');
+var DS = require('./ServerCommands.js');
+DS.setTrendingPage();
+DS.setLeaderBoard();
 socketHandler.giveSockets(io.sockets);
 DS.giveHandler( socketHandler);
 io.sockets.on( 'connection' , socketHandler.listen );

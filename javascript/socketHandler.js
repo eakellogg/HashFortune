@@ -7,7 +7,7 @@ the function that describes how they should behave
 
 var clientSocketTable = new Array();
 var allSockets;
-var serverCommands  = require('./../../ServerCommands.js');
+var serverCommands  = require('./../ServerCommands.js');
 
 
 //This is node js module stuff, its pretty cool, it allows for stuff in this file to be used in other node js scripts
