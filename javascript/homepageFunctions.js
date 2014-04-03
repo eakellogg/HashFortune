@@ -45,9 +45,10 @@
 			document.getElementById("leaderboard").style.display = "block";
 			document.getElementById("friends").style.display = "block";
 			
+			var userObj = { user_name : user_name };
 			socket.emit( "trending_request"        , userObj );
 			socket.emit( 'leader_request' , userObj  );
-			
+			socket.emit( 'my_investments_request' , userObj);
 		}
 	  
 		//<!-- show divisions relevant to investments page -->
@@ -55,6 +56,8 @@
 			document.getElementById("player_info").style.display = "block";
 			document.getElementById("trending").style.display = "block";
 			document.getElementById("hashtag_search").style.display = "block"; 
+			
+			socket.emit( 'player_info_request' , { user_name : user_name });
 		}
 	  
 		//<!-- show divisions relevant to portfolio page -->
@@ -63,7 +66,7 @@
 			document.getElementById("player_info").style.display = "block";
 			document.getElementById("investments_all").style.display = "block";
 			
-			socket.emit( 'player_info_request' , userObj );
+			socket.emit( 'player_info_request' , { user_name : user_name } );
 		}
 	  
 		//<!-- show divisions relevant to challenges page -->

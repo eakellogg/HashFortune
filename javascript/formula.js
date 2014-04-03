@@ -15,10 +15,42 @@ function apply( socketHandler , connection, message )
 {
 	var username = message.user_name;
 	var convertedCurrentTime = new Date();
+	
 	convertedCurrentTime.setHours(convertedCurrentTime.getHours() - 2);
 	convertedCurrentTime.setMinutes(0);
 	convertedCurrentTime.setSeconds(0);
-					
+	console.log("FJDLKFJ");
+	connection.query( "SELECT LastLogout FROM users WHERE username = ? " , [ username ] ,
+		function (err , rows )
+		{
+			if( err )
+				throw err;
+		//console.log("JFKDJF");
+		var min15 =1000*60*15;
+		
+		//console.log(rows);
+		var timediff;
+		timediff = 2;
+		if( rows.length != 0 )
+		{
+		// Convert both dates to milliseconds
+		//var date1_ms = rows[0].LastLogout.getTime();
+		//var date2_ms = convertedCurrentTime.getTime();
+		// Calculate the difference in milliseconds
+		//var difference_ms = date2_ms - date1_ms;
+		// Convert back to days and return
+		//timediff =  difference_ms/min15;
+		//	console.log( timediff );
+		}		
+			if (true )
+			{
+			console.log("HELLO");
+
+
+
+
+
+	
 	connection.query( "SELECT init.tagname, init.amount AS oldAmount, " + 
 						"(SELECT COUNT(*) FROM investments WHERE tagname = " +
 						"init.tagname) AS peopleNow, " +
@@ -146,4 +178,13 @@ function apply( socketHandler , connection, message )
 			servercommands.serveMyTrending(newmessage);
 		});
 	});	
+}
+else
+{
+	console.log("HRE");
+	newmessage = {};
+	newmessage.user_name = username;
+	servercommands.serveMyTrending(newmessage);
+	console.log("DJKDFD");
+}});
 }

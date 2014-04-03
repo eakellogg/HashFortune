@@ -9,7 +9,6 @@ function connectProcedure(message) //TODO
 	{
 		var passWord = getCookie( "pass_word");
 		socket.emit( "re_establish" , { user_name : userName , pass_word : passWord	} );
- 		//socket.emit( "login"        , { user_name : userName , pass_word : passWord	} );
 		
 	var userObj = { user_name : userName , pass_word : passWord	};
 	

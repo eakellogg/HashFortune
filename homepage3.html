@@ -49,7 +49,7 @@
 	  display:block; 
 	}
 
-	#leaderBoard {
+	#stockleaders {
 	  display:block; 
 	}
 
@@ -84,10 +84,6 @@
 	#email_search {
 	  display:none; 
 	}
-
-    #user_search_results {
-        display:none;
-    }
 
 	#investments_all {
 	  display:none; 
@@ -141,7 +137,7 @@
 	<!-- icons on the righthand side of the toolbar -->
 	<div style="float:right;">
 		<img src="icons/trading.jpeg" height = "50" width = "50" class="pointable"
-		onclick="rename_page('Investments');  hide_all();   show_investments();" >
+		onclick="rename_page('Investments'); hide_all(); show_investments();" >
 				
 		<img src="icons/portfolio.png" height = "50" width = "50" class="pointable"
 		onclick="rename_page('Portfolio'); hide_all(); show_portfolio();" >
@@ -158,21 +154,10 @@
   
 </h1>
 
-<!--division containing the challenge toolbar, which shows which challenge you're playing in  -->
-<div id="challenge_toolbar" >
-<b> Challenge Toolbar </b> <br>
-<p> This will have more cool stuff after we set up challenges! </p>
-<p> For right now, enjoy the power of buying and selling, and try to make it to the top of the leaderboard! </p>
-
-</div>
-
-<!-- division containing the main body of the page, everything not in a toolbar -->
-<div id="main_body" >
-    
 <!-- division containing the player's profile picture -->
 <div id="player_pic">
-	<img style="margin:0px auto;display:block;background-color:#8DB08D;"
-	src="icons/friends.png" height = "250" width = "250">
+	<img style="margin:0px auto;display:block"
+	src="icons/defaultprofilepic.png" height = "250" width = "250">
 	<BR>
 	<BR>
 </div>
@@ -274,37 +259,28 @@
 <BR>
 </div>
 
-
 <!-- division containing the searchbar for a username -->
-
 <div id="username_search">
 	<form>
 		<h2>
 		Search by username:
 		<input type="text" id="usearch"; size="35">
 		<input type="button" value="Search" width="50" 	
-            onclick="search_by_email(user_name, document.getElementById('usearch').value);
-            clear_searches();">
+		onclick="rename_page(document.getElementById('usearch').value); clear_searches()">
 		</h2>
 	</form>
 </div>
 
 <!-- division containing the searchbar for an email -->
-
 <div id="email_search">
 	<form>
 		<h2>
 		Search by email:
 		<input type="email" id="esearch"; size="35">
 		<input type="button" value="Search" width="50" 
-            onclick="search_by_email(user_name, document.getElementById('esearch').value);
-            clear_searches();">
+		onclick="rename_page(document.getElementById('esearch').value); clear_searches()">
 		</h2>
 	</form>
-</div>
-
-<!-- division containing the results from searching for a user by username or email -->
-<div id="user_search_results">
 </div>
 
 <!-- division containing a list of all investments of a user -->
@@ -316,9 +292,7 @@
 	<p> Email Notifications </p>
 	<p> Change Profile Picture </p>
 	<p> Rerun Tutorial </p>
-    <br>
-    <p> If you encounter any issues, you can email us at hashfortune@gmail.com </p>
-	<input type="button" value="Logout" onclick=" setCookie( 'user_name' , '' , 1); setCookie('pass_word' , '' , 1 ); socket.emit( 'logout' , { user_name : user_name } ); location.href = '/index.html'; "/>
+	<input type="button" value="Logout" onclick=" setCookie( 'user_name' , '' , 1); setCookie('pass_word' , '' , 1 ); location.href = '/index.html'; "/>
 
 </div>
 
@@ -386,9 +360,9 @@
 </div>
 
 <!-- division containing the searchbar for a hashtag -->
-<div id="hashtag_search" >
+<div id="hashtag_search">
 	<form>
-		<h1 class="hashtag_search">
+		<h1>
 		#Hashtag Search:
 		<input type="text" id="hsearch"; size="35">
 		<input type="button" value="Search" width="50" onclick="rename_page('Hashtag Investment');
@@ -402,7 +376,6 @@
 <BR>
 </div>
 
-</div> <!--closes div separating main body from toolbar -->
 
 </body>
 
@@ -412,11 +385,8 @@
 		var firstTime = true;
 		$(document).ready(function() {
 		
-			
 			user_name = getCookie( "user_name" );
 			socket = io.connect('http://' + document.location.host);
-			
-					
 			socket.on( 'welcome' , connectProcedure );
 			socket.on( 'tag_page', tagProcedure );
 			socket.on( 'trending_table', trendingProcedure );
@@ -424,7 +394,6 @@
 			socket.on( 'my_investments_table' , myInvestmentsProcedure );
 			socket.on( 'leader_board' , leaderProcedure );
 			socket.on( 'player_info_table' , playerInfoProcedure );
-            socket.on( 'user_search' , userProcedure );
 		});
 	 
 	</script>

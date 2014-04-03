@@ -20,10 +20,15 @@ module.exports = {
 	messageUser : messageUser,
 	giveSockets : set,
 	addClient   : addClient,
+	removeClient : removeClient,
 	messageAnonymous : messageAnonymous
 };
 
 
+function removeClient(username)
+{
+
+}
 // set the sockets
 function set( sockets )
 {
@@ -59,6 +64,8 @@ function listen( client )
 	client.on('leader_request' , serverCommands.serveLeaderBoard );
     client.on('search_username' , serverCommands.serveSearchUser );
 	client.on('search_user_email' , serverCommands.serveSearchEmail );
+	client.on('logout' , serverCommands.serveLogout );
+	client.on('chart_request' , serverCommands.serveChart );
 }
 
 
@@ -68,6 +75,11 @@ function messageUser( user , type , message )
 	// if the user is not undefined
 	if( clientSocketTable[user] != undefined ) {
 		clientSocketTable[ user ].emit( type , message );
+		console.log("MESSGE SENT");
+	}
+	else
+	{
+		console.log("FDFHDLFJKD");
 	}
 }
 
@@ -83,6 +95,7 @@ function messageAnonymous( socket , type , message)
 function addClient( client , socket )
 {
 	clientSocketTable[ client ] = socket;
+	console.log("THIS HAPPEND");
 }
 
 

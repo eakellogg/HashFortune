@@ -1,0 +1,1040 @@
+Updating player ZachB at time + Wed Apr 02 2014 13:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount -19 newAmount -19
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+Updating player gogogoen at time + Wed Apr 02 2014 13:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 113 newAmount 112
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 1
+tagname: BITCH
+OldAmount 100 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 1104 newAmount 705
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+tagname: selfie
+OldAmount 2032 newAmount 1357
+peopleNow 5 peoplePst undefined
+tweetsNow 27 tweetsPast 27
+Updating player eliz at time + Wed Apr 02 2014 13:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 1000 newAmount 428
+peopleNow 2 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: wcw
+OldAmount 113 newAmount -336
+peopleNow 2 peoplePst undefined
+tweetsNow 63 tweetsPast 63
+Updating player ZachB at time + Wed Apr 02 2014 13:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount -19 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+Updating player gogogoen at time + Wed Apr 02 2014 13:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 112 newAmount 112
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: BITCH
+OldAmount 99 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 705 newAmount 705
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+tagname: selfie
+OldAmount 1357 newAmount 1357
+peopleNow 5 peoplePst undefined
+tweetsNow 27 tweetsPast 27
+Updating player ZachB at time + Wed Apr 02 2014 13:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+Updating player ZachB at time + Wed Apr 02 2014 13:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+Updating player ZachB at time + Wed Apr 02 2014 14:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 15
+peopleNow 1 peoplePst undefined
+tweetsNow 16 tweetsPast 1
+Updating player gogogoen at time + Wed Apr 02 2014 14:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 112 newAmount 113
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast null
+tagname: BITCH
+OldAmount 99 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 705 newAmount 705
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+tagname: selfie
+OldAmount 1357 newAmount 1373
+peopleNow 5 peoplePst undefined
+tweetsNow 43 tweetsPast 27
+Updating player ZachB at time + Wed Apr 02 2014 14:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 15 newAmount 15
+peopleNow 1 peoplePst undefined
+tweetsNow 16 tweetsPast 16
+Updating player ZachB at time + Wed Apr 02 2014 14:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 15 newAmount 15
+peopleNow 1 peoplePst undefined
+tweetsNow 16 tweetsPast 16
+tagname: KCA
+OldAmount -90 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 10 tweetsPast 10
+Updating player jzerr718 at time + Wed Apr 02 2014 14:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: selfie
+OldAmount 1233 newAmount 1259
+peopleNow 5 peoplePst undefined
+tweetsNow 43 tweetsPast 22
+Updating player jzerr718 at time + Wed Apr 02 2014 14:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: selfie
+OldAmount 1259 newAmount 1259
+peopleNow 5 peoplePst undefined
+tweetsNow 43 tweetsPast 43
+Updating player monkey at time + Wed Apr 02 2014 14:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: HumpDay
+OldAmount 207 newAmount 211
+peopleNow 1 peoplePst undefined
+tweetsNow 5 tweetsPast 2
+tagname: humpday
+OldAmount 115 newAmount 115
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast 2
+tagname: RT
+OldAmount 670 newAmount 680
+peopleNow 1 peoplePst undefined
+tweetsNow 37 tweetsPast 28
+tagname: selfie
+OldAmount 674 newAmount 700
+peopleNow 5 peoplePst undefined
+tweetsNow 43 tweetsPast 22
+tagname: WCW
+OldAmount 363 newAmount 373
+peopleNow 1 peoplePst undefined
+tweetsNow 34 tweetsPast 25
+tagname: wcw
+OldAmount 464 newAmount 533
+peopleNow 2 peoplePst undefined
+tweetsNow 109 tweetsPast 42
+tagname: yeet
+OldAmount 66 newAmount 56
+peopleNow 1 peoplePst undefined
+tweetsNow 50 tweetsPast 61
+Updating player gogogoen at time + Wed Apr 02 2014 14:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 113 newAmount 113
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+tagname: BITCH
+OldAmount 99 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 705 newAmount 705
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+tagname: selfie
+OldAmount 1373 newAmount 1373
+peopleNow 5 peoplePst undefined
+tweetsNow 43 tweetsPast 43
+Updating player gogogoen at time + Wed Apr 02 2014 14:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 113 newAmount 113
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+tagname: BITCH
+OldAmount 99 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 705 newAmount 705
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+tagname: selfie
+OldAmount 1373 newAmount 1373
+peopleNow 5 peoplePst undefined
+tweetsNow 43 tweetsPast 43
+Updating player gogogoen at time + Wed Apr 02 2014 14:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 113 newAmount 113
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+tagname: BITCH
+OldAmount 99 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 705 newAmount 705
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+tagname: selfie
+OldAmount 1373 newAmount 1373
+peopleNow 5 peoplePst undefined
+tweetsNow 43 tweetsPast 43
+Updating player gogogoen at time + Wed Apr 02 2014 14:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 113 newAmount 113
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+tagname: BITCH
+OldAmount 99 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 705 newAmount 705
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+tagname: selfie
+OldAmount 1373 newAmount 1373
+peopleNow 5 peoplePst undefined
+tweetsNow 43 tweetsPast 43
+Updating player gogogoen at time + Wed Apr 02 2014 15:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 113 newAmount 112
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 1
+tagname: BITCH
+OldAmount 99 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 705 newAmount 704
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 1
+tagname: selfie
+OldAmount 1373 newAmount 1346
+peopleNow 5 peoplePst undefined
+tweetsNow 16 tweetsPast 43
+Updating player gogogoen at time + Wed Apr 02 2014 15:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 112 newAmount 112
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: BITCH
+OldAmount 99 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 704 newAmount 704
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: selfie
+OldAmount 1346 newAmount 1346
+peopleNow 5 peoplePst undefined
+tweetsNow 16 tweetsPast 16
+Updating player gogogoen at time + Wed Apr 02 2014 15:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 112 newAmount 112
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: BITCH
+OldAmount 99 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 704 newAmount 704
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: selfie
+OldAmount 1346 newAmount 1346
+peopleNow 5 peoplePst undefined
+tweetsNow 16 tweetsPast 16
+Updating player gogogoen at time + Wed Apr 02 2014 15:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 112 newAmount 112
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: BITCH
+OldAmount 99 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 704 newAmount 704
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: selfie
+OldAmount 1346 newAmount 1346
+peopleNow 5 peoplePst undefined
+tweetsNow 16 tweetsPast 16
+Updating player gogogoen at time + Wed Apr 02 2014 15:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 112 newAmount 112
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: BITCH
+OldAmount 99 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 704 newAmount 704
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: selfie
+OldAmount 1346 newAmount 1346
+peopleNow 5 peoplePst undefined
+tweetsNow 16 tweetsPast 16
+Updating player gogogoen at time + Wed Apr 02 2014 15:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 112 newAmount 112
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: BITCH
+OldAmount 99 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 704 newAmount 704
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: selfie
+OldAmount 1346 newAmount 1346
+peopleNow 5 peoplePst undefined
+tweetsNow 16 tweetsPast 16
+Updating player jzerr718 at time + Wed Apr 02 2014 16:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: selfie
+OldAmount 1259 newAmount 1240
+peopleNow 5 peoplePst undefined
+tweetsNow 24 tweetsPast 43
+Updating player momaggie at time + Wed Apr 02 2014 16:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: humpday
+OldAmount 500 newAmount 502
+peopleNow 2 peoplePst undefined
+tweetsNow 2 tweetsPast null
+Updating player ZachB at time + Wed Apr 02 2014 16:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 15 newAmount 1
+peopleNow 1 peoplePst undefined
+tweetsNow 2 tweetsPast 16
+tagname: KCA
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 9 tweetsPast 10
+Updating player nic at time + Wed Apr 02 2014 16:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 420blazeit
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: dream
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: love
+OldAmount 1000 newAmount 1007
+peopleNow 1 peoplePst undefined
+tweetsNow 9 tweetsPast 2
+tagname: swag
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+tagname: yolo
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player ZachB at time + Wed Apr 02 2014 16:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 1 newAmount 1
+peopleNow 1 peoplePst undefined
+tweetsNow 2 tweetsPast 2
+tagname: KCA
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 9 tweetsPast 9
+Updating player Saari at time + Wed Apr 02 2014 16:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: AutismAwareness
+OldAmount 1000 newAmount 992
+peopleNow 1 peoplePst undefined
+tweetsNow 15 tweetsPast 23
+tagname: HappyBirthdayPattie
+OldAmount 1000 newAmount 989
+peopleNow 1 peoplePst undefined
+tweetsNow 26 tweetsPast 37
+tagname: LIUB
+OldAmount 500 newAmount 486
+peopleNow 1 peoplePst undefined
+tweetsNow 10 tweetsPast 24
+tagname: selfie
+OldAmount 1000 newAmount 1002
+peopleNow 5 peoplePst undefined
+tweetsNow 24 tweetsPast 25
+Updating player Saari at time + Wed Apr 02 2014 16:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: AutismAwareness
+OldAmount 992 newAmount 992
+peopleNow 1 peoplePst undefined
+tweetsNow 15 tweetsPast 15
+tagname: HappyBirthdayPattie
+OldAmount 989 newAmount 989
+peopleNow 1 peoplePst undefined
+tweetsNow 26 tweetsPast 26
+tagname: LIUB
+OldAmount 486 newAmount 486
+peopleNow 1 peoplePst undefined
+tweetsNow 10 tweetsPast 10
+tagname: selfie
+OldAmount 1002 newAmount 1002
+peopleNow 5 peoplePst undefined
+tweetsNow 24 tweetsPast 24
+Updating player Saari at time + Wed Apr 02 2014 16:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: AutismAwareness
+OldAmount 992 newAmount 992
+peopleNow 1 peoplePst undefined
+tweetsNow 15 tweetsPast 15
+tagname: HappyBirthdayPattie
+OldAmount 989 newAmount 989
+peopleNow 1 peoplePst undefined
+tweetsNow 26 tweetsPast 26
+tagname: LIUB
+OldAmount 486 newAmount 486
+peopleNow 1 peoplePst undefined
+tweetsNow 10 tweetsPast 10
+tagname: selfie
+OldAmount 1002 newAmount 1002
+peopleNow 5 peoplePst undefined
+tweetsNow 24 tweetsPast 24
+Updating player ZachB at time + Wed Apr 02 2014 16:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 1 newAmount 1
+peopleNow 1 peoplePst undefined
+tweetsNow 2 tweetsPast 2
+tagname: wcw
+OldAmount 100 newAmount 101
+peopleNow 3 peoplePst undefined
+tweetsNow 115 tweetsPast 115
+Updating player ZachB at time + Wed Apr 02 2014 17:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 1 newAmount 1
+peopleNow 1 peoplePst undefined
+tweetsNow 2 tweetsPast 2
+tagname: wcw
+OldAmount 101 newAmount 106
+peopleNow 3 peoplePst undefined
+tweetsNow 120 tweetsPast 115
+Updating player ZachB at time + Wed Apr 02 2014 17:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 1 newAmount 1
+peopleNow 1 peoplePst undefined
+tweetsNow 2 tweetsPast 2
+tagname: wcw
+OldAmount 106 newAmount 106
+peopleNow 3 peoplePst undefined
+tweetsNow 120 tweetsPast 120
+Updating player ZachB at time + Wed Apr 02 2014 19:31:24 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 1 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 2
+Updating player ZachB at time + Wed Apr 02 2014 19:31:40 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player ZachB at time + Wed Apr 02 2014 19:32:10 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player ZachB at time + Wed Apr 02 2014 19:32:55 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player ZachB at time + Wed Apr 02 2014 19:40:56 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player ZachB at time + Wed Apr 02 2014 19:45:20 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player ZachB at time + Wed Apr 02 2014 19:46:53 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player ZachB at time + Wed Apr 02 2014 19:47:05 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player gogogoen at time + Wed Apr 02 2014 19:47:15 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 112 newAmount 112
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: BITCH
+OldAmount 99 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 704 newAmount 704
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: selfie
+OldAmount 1346 newAmount 1330
+peopleNow 5 peoplePst undefined
+tweetsNow null tweetsPast 16
+Updating player gogogoen at time + Wed Apr 02 2014 19:47:21 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 112 newAmount 112
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: BITCH
+OldAmount 99 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 704 newAmount 704
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: selfie
+OldAmount 1330 newAmount 1330
+peopleNow 5 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player gogogoen at time + Wed Apr 02 2014 19:48:16 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 130for130
+OldAmount 112 newAmount 112
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: BITCH
+OldAmount 99 newAmount 99
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: OpeningDay
+OldAmount 704 newAmount 704
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: selfie
+OldAmount 1330 newAmount 1330
+peopleNow 5 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player eliz at time + Wed Apr 02 2014 19:49:02 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 428 newAmount 425
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast 3
+tagname: wcw
+OldAmount -334 newAmount 0
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast 63
+Updating player eliz at time + Wed Apr 02 2014 19:49:24 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 425 newAmount 425
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: wcw
+OldAmount 0 newAmount 0
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player eliz at time + Wed Apr 02 2014 19:50:02 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 425 newAmount 425
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: wcw
+OldAmount 0 newAmount 0
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player eliz at time + Wed Apr 02 2014 19:50:12 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 425 newAmount 425
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: wcw
+OldAmount 0 newAmount 0
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player eliz at time + Wed Apr 02 2014 19:52:49 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 425 newAmount 425
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: wcw
+OldAmount 0 newAmount 0
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player eliz at time + Wed Apr 02 2014 19:53:02 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 425 newAmount 425
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: wcw
+OldAmount 0 newAmount 0
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player ZachB at time + Wed Apr 02 2014 19:53:37 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player ZachB at time + Wed Apr 02 2014 19:54:23 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player ZachB at time + Wed Apr 02 2014 19:55:06 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player ZachB at time + Wed Apr 02 2014 19:56:51 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player ZachB at time + Wed Apr 02 2014 19:58:18 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player ZachB at time + Wed Apr 02 2014 20:13:10 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player monkey at time + Wed Apr 02 2014 21:48:07 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: HumpDay
+OldAmount 1 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 5
+tagname: humpday
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: RT
+OldAmount 1 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 37
+tagname: selfie
+OldAmount 1 newAmount 0
+peopleNow 5 peoplePst undefined
+tweetsNow null tweetsPast 43
+tagname: WCW
+OldAmount 1 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 34
+tagname: wcw
+OldAmount 1 newAmount 0
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast 109
+tagname: yeet
+OldAmount 1 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 50
+Updating player monkey at time + Wed Apr 02 2014 21:51:02 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: HumpDay
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: humpday
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: RT
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: selfie
+OldAmount 0 newAmount 0
+peopleNow 5 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: WCW
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: wcw
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: yeet
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player monkey at time + Wed Apr 02 2014 22:00:21 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: wcw
+OldAmount 1 newAmount 0
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast 151
+Updating player monkey at time + Wed Apr 02 2014 22:02:05 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: wcw
+OldAmount 0 newAmount 0
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player monkey at time + Wed Apr 02 2014 22:22:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 10 newAmount 10
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 10 newAmount 9
+peopleNow 3 peoplePst undefined
+tweetsNow null tweetsPast 2
+tagname: wcw
+OldAmount 0 newAmount 0
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player monkey at time + Wed Apr 02 2014 22:22:43 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 10 newAmount 10
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 9 newAmount 9
+peopleNow 3 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: wcw
+OldAmount 10 newAmount 0
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast 110
+Updating player monkey at time + Wed Apr 02 2014 22:24:15 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 10 newAmount 10
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 9 newAmount 9
+peopleNow 3 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: wcw
+OldAmount 20 newAmount 20
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player monkey at time + Wed Apr 02 2014 22:24:49 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 10 newAmount 10
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 9 newAmount 9
+peopleNow 3 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: wcw
+OldAmount 20 newAmount 20
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player monkey at time + Wed Apr 02 2014 22:26:58 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 10 newAmount 10
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 9 newAmount 9
+peopleNow 3 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: wcw
+OldAmount 20 newAmount 20
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: yeet
+OldAmount 10 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 98
+Updating player monkey at time + Wed Apr 02 2014 22:33:25 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 10 newAmount 10
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 9 newAmount 9
+peopleNow 3 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: wcw
+OldAmount 20 newAmount 20
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: yeet
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player monkey at time + Wed Apr 02 2014 22:35:37 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 10 newAmount 10
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 9 newAmount 9
+peopleNow 3 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: USMNT
+OldAmount 50 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 160
+tagname: wcw
+OldAmount 20 newAmount 20
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player monkey at time + Wed Apr 02 2014 22:43:49 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 10 newAmount 10
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 9 newAmount 9
+peopleNow 3 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: USMNT
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: wcw
+OldAmount 20 newAmount 20
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player monkey at time + Wed Apr 02 2014 22:45:30 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 10 newAmount 10
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 9 newAmount 9
+peopleNow 3 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: USMNT
+OldAmount 100 newAmount 100
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: wcw
+OldAmount 20 newAmount 20
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player monkey at time + Wed Apr 02 2014 22:46:32 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 10 newAmount 10
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: tbt
+OldAmount 9 newAmount 9
+peopleNow 3 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: USMNT
+OldAmount 100 newAmount 100
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: VoteTris
+OldAmount 5 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 47
+tagname: wcw
+OldAmount 20 newAmount 20
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player ZachB at time + Wed Apr 02 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 0 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 2 tweetsPast null
+Updating player monkey at time + Wed Apr 02 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 10 newAmount 12
+peopleNow 2 peoplePst undefined
+tweetsNow 2 tweetsPast null
+tagname: tbt
+OldAmount 9 newAmount 13
+peopleNow 3 peoplePst undefined
+tweetsNow 4 tweetsPast null
+tagname: USMNT
+OldAmount 100 newAmount 43
+peopleNow 1 peoplePst undefined
+tweetsNow 103 tweetsPast 160
+tagname: VoteTris
+OldAmount 100 newAmount 78
+peopleNow 1 peoplePst undefined
+tweetsNow 25 tweetsPast 47
+tagname: wcw
+OldAmount 20 newAmount 10
+peopleNow 2 peoplePst undefined
+tweetsNow 100 tweetsPast 110
+Updating player monkey at time + Wed Apr 02 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: CALUMHOODFOLLOWPARTY
+OldAmount 1 newAmount 1
+peopleNow 1 peoplePst undefined
+tweetsNow 43 tweetsPast 43
+tagname: TBT
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow 2 tweetsPast 2
+tagname: tbt
+OldAmount 1 newAmount 1
+peopleNow 3 peoplePst undefined
+tweetsNow 4 tweetsPast 4
+tagname: USMNT
+OldAmount 1 newAmount 1
+peopleNow 1 peoplePst undefined
+tweetsNow 103 tweetsPast 103
+Updating player monkey at time + Wed Apr 02 2014 22:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: CALUMHOODFOLLOWPARTY
+OldAmount 1 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 19 tweetsPast 43
+tagname: TBT
+OldAmount 1 newAmount 3
+peopleNow 2 peoplePst undefined
+tweetsNow 4 tweetsPast 2
+tagname: tbt
+OldAmount 1 newAmount 0
+peopleNow 3 peoplePst undefined
+tweetsNow 2 tweetsPast 4
+tagname: USMNT
+OldAmount 1 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 39 tweetsPast 103
+Updating player monkey at time + Wed Apr 02 2014 22:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: CALUMHOODFOLLOWPARTY
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 19 tweetsPast 19
+tagname: TBT
+OldAmount 3 newAmount 3
+peopleNow 2 peoplePst undefined
+tweetsNow 4 tweetsPast 4
+tagname: tbt
+OldAmount 0 newAmount 0
+peopleNow 3 peoplePst undefined
+tweetsNow 2 tweetsPast 2
+tagname: USMNT
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 39 tweetsPast 39
+Updating player monkey at time + Wed Apr 02 2014 22:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: CALUMHOODFOLLOWPARTY
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 19 tweetsPast 19
+tagname: TBT
+OldAmount 3 newAmount 3
+peopleNow 2 peoplePst undefined
+tweetsNow 4 tweetsPast 4
+tagname: tbt
+OldAmount 0 newAmount 0
+peopleNow 3 peoplePst undefined
+tweetsNow 2 tweetsPast 2
+tagname: USMNT
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 39 tweetsPast 39
+tagname: yeet
+OldAmount 1 newAmount 1
+peopleNow 1 peoplePst undefined
+tweetsNow 117 tweetsPast 117

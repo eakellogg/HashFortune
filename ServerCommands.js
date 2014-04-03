@@ -13,7 +13,6 @@ var formula = require('./javascript/formula.js');
 
 
 
-
 function handleDisconnect() {
   connection = mysql.createConnection(db_config); // Recreate the connection, since
                                                   // the old one cannot be reused.
@@ -24,7 +23,7 @@ function handleDisconnect() {
       setTimeout(handleDisconnect, 2000); // We introduce a delay before attempting to reconnect,
     }                                     // to avoid a hot loop, and to allow our node script to
   });                                     // process asynchronous requests in the meantime.
-                                          // If you're also serving http, display a 503 error.
+                                          //
   connection.on('error', function(err) {
     console.log('db error', err);
     if(err.code === 'PROTOCOL_CONNECTION_LOST') { // Connection to the MySQL server is usually
@@ -53,12 +52,45 @@ module.exports = {
 	setLeaderBoard : setLeaderBoard,
 	setTrendingPage : setTrendingPage,
 	serveSearchUser : serveSearchUser,
-	serveSearchEmail : serveSearchEmail
+	serveSearchEmail : serveSearchEmail,
+	serveLogout    : serveLogout,
+	serveChart : serveChart
 };
 
-setInterval( setLeaderBoard , 60 * 60 * 60 );
-setInterval( setTrendingPage , 60 *60 * 60 );
+setInterval( setLeaderBoard ,  60 * 60 * 1000);
+setInterval( setTrendingPage , 60 * 60 * 1000 );
 
+
+function serveChart( message)
+{
+	var socket = this;
+	connection.query( "SELECT dateTime AS time , count FROM hashTags WHERE name = 'sex' " , function (err , rows )
+	{
+		if( err )
+			throw err;
+		
+		socket.emit( 'chart_data' , rows );
+	});
+	
+	
+}
+function serveLogout( message )
+{
+
+	var username = message.user_name;
+	socketHandler.removeClient( username );
+	
+	var convertedCurrentTime = new Date();
+	
+	connection.query( "UPDATE users SET lastLogout = ? WHERE username = ? " , [ convertedCurrentTime , username] ,
+		function ( err , rows )
+		{
+			if( err )
+				throw err;
+		}
+	);
+	
+}
 function serveSearchUser(message)
 {
 }
@@ -161,6 +193,9 @@ function VerifyLogin(message)
 	var password = message.pass_word;
 	var clientSocket = this;
 
+	//TODO THIS WILL BE A PROBLEM IF SOMEONE TRIES TO LOG IN AS YOU
+	
+	socketHandler.addClient( username , clientSocket);
 	// search for the username and password of the user in question
 	connection.query( "SELECT * FROM `users` WHERE username = ? AND password = ?", [username, password],
 	function(err, user_info) {
@@ -171,13 +206,14 @@ function VerifyLogin(message)
 		// no user found from the search
 		if(user_info.length == 0) {
 			
-			socketHandler.messageAnonymous( clientSocket , 'login_fail' , "User does not exist" );			
+			socketHandler.messageAnonymous( clientSocket , 'login_fail' , "User does not exist" );	
+			socketHandler.removeClient( username );
 		}
 		
 		// if the user does exist
 		else {
 			if(user_info[0].username == username && user_info[0].password == password) {
-				socketHandler.addClient( username , clientSocket );
+				
 				var returnmessage = {};
 				returnmessage.cred = "cred";
 				returnmessage.loc = "homepage.html";
@@ -467,6 +503,8 @@ connection.query( "SELECT investCount FROM users WHERE username = ? ", [username
 	function (err , investments ){
 		if( err )
 			throw err;
+			console.log("HERE");
+			console.log(username);
 		socketHandler.messageUser( username,  'my_investments_table' , investments );
 
 	});
