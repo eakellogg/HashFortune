@@ -132,12 +132,12 @@
 	<!-- icon on the lefthand side of the toolbar -->
 	<div style="float:left">
 		<img src="icons/icon.png" height = "62" width = "62" class="pointable"
-		onclick="rename_page('Home Page'); hide_all(); show_homepage();">
+		onclick="rename_page('HashFortune'); hide_all(); show_homepage();">
 	</div>
 	  
 	<!-- title of the page being viewed -->
 	<div id="page_title" style="display:inline;">
-		Home Page
+		hashFortune
 	</div>
 
 	<!-- icons on the righthand side of the toolbar -->
@@ -165,6 +165,7 @@
 <b> Challenge Toolbar </b> <br>
 <p> This will have more cool stuff after we set up challenges! </p>
 <p> For right now, enjoy the power of buying and selling, and try to make it to the top of the leaderboard! </p>
+<p> Also, please fill out a quick questionnaire to help us improve the game.  The link is in the settings page. </p>
 
 </div>
 
@@ -319,6 +320,8 @@
 	<p> Change Profile Picture </p>
 	<p> Rerun Tutorial </p>
     <br>
+    <a href="https://docs.google.com/forms/d/11X2S7wk5odFIWruJPixHJM3T6lcv9LR2fkCTE4ofsF4/viewform" target="_blank">Please take our user study!</a>
+    <br>
     <p> If you encounter any issues, you can email us at hashfortune@gmail.com </p>
 	<input type="button" value="Logout" onclick=" setCookie( 'user_name' , '' , 1); setCookie('pass_word' , '' , 1 ); socket.emit( 'logout' , { user_name : user_name } ); location.href = '/index.html'; "/>
 
@@ -327,7 +330,7 @@
 <!-- division containing the player's investment info for a particular hashtag -->
 <div id="hashtag_investments">
    <table width=75%; class="center";>
-    	<caption id="hashtag_name">Hashtag Name</caption>
+    	<caption id="hashtag_name">Hashtag</caption>
     	   <tr>
       		<td width=50%>Current Investment</td>
       		<td id="my_invested_points">300</td>
@@ -405,19 +408,17 @@
 <BR>
 </div>
 
+
+<div id="chartdiv" style="width: 640px; height: 400px;"></div>
+
+
 </div> <!--closes div separating main body from toolbar -->
 
 
-
-<body>
-    <div id="chartdiv" style="width: 640px; height: 400px;"></div>
 </body>
 
 
-</body>
-
-
-	<script>
+<script>
 
 		var firstTime = true;
 		$(document).ready(function() {
