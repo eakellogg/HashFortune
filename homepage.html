@@ -14,6 +14,8 @@
 	<script src= "http://code.jquery.com/jquery-2.1.0.min.js"> </script>
 	<script src= "/javascript/procedures.js"></script>
 	<script src= "/socket.io/socket.io.js"></script>
+	<script src="amcharts/amcharts.js" type="text/javascript"></script>
+<script src="amcharts/serial.js" type="text/javascript"></script>
 
 
 <head>
@@ -395,7 +397,8 @@
 		 current_tag = document.getElementById('hsearch').value;
 		 document.getElementById('hashtag_name').innerHTML='#' + current_tag;
 		 switch_to_tag(user_name, document.getElementById('hsearch').value, 0); 
- 		 clear_searches(); hide_all(); show_hashtag_page();">
+ 		 clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''	
+		 socket.emit('chart_request' , { tagname : current_tag} ); show_hashtag_page();">
 		</h1>
 	</form>
 <BR>
@@ -403,6 +406,13 @@
 </div>
 
 </div> <!--closes div separating main body from toolbar -->
+
+
+
+<body>
+    <div id="chartdiv" style="width: 640px; height: 400px;"></div>
+</body>
+
 
 </body>
 
@@ -425,7 +435,39 @@
 			socket.on( 'leader_board' , leaderProcedure );
 			socket.on( 'player_info_table' , playerInfoProcedure );
             socket.on( 'user_search' , userProcedure );
+			socket.on( 'chart_data' , function (message) 
+		{
+
+chartData = message;
+var chart = new AmCharts.AmSerialChart();
+chart.dataProvider = chartData;
+chart.categoryField = "time";
+
+
+var chartScrollbar = new AmCharts.ChartScrollbar();
+chart.addChartScrollbar(chartScrollbar);
+
+var graph = new AmCharts.AmGraph();
+graph.valueField = "count";
+graph.type = "line";
+chart.addGraph(graph);
+
+var categoryAxis = chart.categoryAxis;
+categoryAxis.autoGridCount  = true;
+categoryAxis.gridPosition = "start";
+categoryAxis.labelRotation = 90;
+
+graph.type = "line";
+graph.fillAlphas = 0; // or delete this line, as 0 is default
+//graph.bullet = "round";
+//graph.lineColor = "#8d1cc6"
+
+chart.write('chartdiv');
+	
+});
 		});
+		
+		
 	 
 	</script>
 

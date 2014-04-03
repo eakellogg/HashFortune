@@ -64,7 +64,7 @@ setInterval( setTrendingPage , 60 * 60 * 1000 );
 function serveChart( message)
 {
 	var socket = this;
-	connection.query( "SELECT dateTime AS time , count FROM hashTags WHERE name = 'sex' " , function (err , rows )
+	connection.query( "SELECT dateTime AS time , count FROM hashTags WHERE name = ? " , [ message.tagname] , function (err , rows )
 	{
 		if( err )
 			throw err;
@@ -220,6 +220,7 @@ function VerifyLogin(message)
 				returnmessage.user = username;
 				returnmessage.pass = password;	
 				socketHandler.messageUser( username, 'login_ok' , returnmessage );
+					formula.apply( socketHandler , connection , message);
 			}
 			else
 			{
@@ -228,7 +229,6 @@ function VerifyLogin(message)
 		}
 	});
 	
-	formula.apply( socketHandler , connection , message);
 }
 
 

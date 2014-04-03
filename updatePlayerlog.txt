@@ -1038,3 +1038,59 @@ tagname: yeet
 OldAmount 1 newAmount 1
 peopleNow 1 peoplePst undefined
 tweetsNow 117 tweetsPast 117
+Updating player ZachB at time + Wed Apr 02 2014 22:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 3
+peopleNow 1 peoplePst undefined
+tweetsNow 2 tweetsPast 1
+Updating player monkey at time + Wed Apr 02 2014 22:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: CALUMHOODFOLLOWPARTY
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 19 tweetsPast 19
+tagname: TBT
+OldAmount 3 newAmount 3
+peopleNow 2 peoplePst undefined
+tweetsNow 4 tweetsPast 4
+tagname: tbt
+OldAmount 0 newAmount 0
+peopleNow 3 peoplePst undefined
+tweetsNow 2 tweetsPast 2
+tagname: USMNT
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 39 tweetsPast 39
+tagname: yeet
+OldAmount 1 newAmount 1
+peopleNow 1 peoplePst undefined
+tweetsNow 117 tweetsPast 117
+Updating player ZachB at time + Thu Apr 03 2014 06:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 3 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 2
+Updating player monkey at time + Thu Apr 03 2014 07:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: CALUMHOODFOLLOWPARTY
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 19
+tagname: TBT
+OldAmount 3 newAmount 11
+peopleNow 2 peoplePst undefined
+tweetsNow 12 tweetsPast 4
+tagname: tbt
+OldAmount 0 newAmount 29
+peopleNow 3 peoplePst undefined
+tweetsNow 31 tweetsPast 2
+tagname: USMNT
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 2 tweetsPast 39
+tagname: yeet
+OldAmount 1 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 15 tweetsPast 117

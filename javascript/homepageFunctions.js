@@ -35,6 +35,7 @@
 			document.getElementById("hashtag_stats").style.display = "none";
 			document.getElementById("new_challenge").style.display = "none";
             document.getElementById("user_search_results").style.display = "none";
+			document.getElementById("chartdiv").style.display = "none";
 		}
 		
 		//<!-- show divisions relevant to homepage -->
@@ -94,4 +95,6 @@
 			document.getElementById("hashtag_graph").style.display = "block";
 			document.getElementById("buy_sell_tags").style.display = "block";
 			document.getElementById("hashtag_search").style.display = "block";
+			document.getElementById("chartdiv").style.display = "block";
+			
 		} 
