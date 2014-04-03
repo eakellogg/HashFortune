@@ -100,22 +100,24 @@ function apply( socketHandler , connection, message )
 				array[i].peopleNow = obj.peopleNow;
 				
 				newTotalValue += array[i].newamount;
-				//console.log(obj);
 			}
 			var output = {};
-			output = "Updating player " + username + " at time + " + convertedCurrentTime + " \nThe rows recieved from the query \n";
+			output = "Updating player " + username + " at time " + new Date() + " \nThe rows recieved from the query \n";
 			for( var i =0; i < rows.length; i++)
 			{
 				output += "tagname: " + rows[i].tagname  + "\n" +
 				"OldAmount " + rows[i].oldAmount + " newAmount " + array[i].newamount + 
 				"\npeopleNow " + rows[i].peopleNow + " peoplePst " + rows[i].peoplePast + 
-				"\ntweetsNow " + rows[i].tweetsNow + " tweetsPast " + rows[i].tweetsPast + "\n";
+				"\ntweetsNow " + rows[i].tweetsNow + " tweetsPast " + rows[i].tweetsPast + " \n\n";
 			}
 
-			fs.appendFile( 'updatePlayerlog.txt' , output , function ( err ) 
+			var filename = "./userLogs/" + username +  ".txt";
+		    fs.appendFile( filename , output , function ( err ) 
 			{
 				if( err )
-					throw err;
+					{
+						throw err;
+					}
 			});
 			
 			var query = "UPDATE investments SET amount = CASE tagname\n";

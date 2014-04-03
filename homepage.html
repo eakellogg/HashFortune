@@ -401,7 +401,7 @@
 		 document.getElementById('hashtag_name').innerHTML='#' + current_tag;
 		 switch_to_tag(user_name, document.getElementById('hsearch').value, 0); 
  		 clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''	
-		 socket.emit('chart_request' , { tagname : current_tag} ); show_hashtag_page();">
+		 socket.emit('chart_request' , { tagname : current_tag , user_name : user_name } ); show_hashtag_page();">
 		</h1>
 	</form>
 <BR>

@@ -1364,3 +1364,31 @@ tagname: tbt
 OldAmount 1941 newAmount 1941
 peopleNow 3 peoplePst undefined
 tweetsNow 94 tweetsPast 94
+Updating player ZachB at time + Thu Apr 03 2014 11:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+Updating player nic at time + Thu Apr 03 2014 11:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 420blazeit
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: dream
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: love
+OldAmount 1007 newAmount 1007
+peopleNow 1 peoplePst undefined
+tweetsNow 9 tweetsPast 9
+tagname: swag
+OldAmount 1000 newAmount 990
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 1
+tagname: yolo
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null

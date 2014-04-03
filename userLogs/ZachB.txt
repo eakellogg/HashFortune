@@ -1,0 +1,65 @@
+Updating player ZachB at time + Thu Apr 03 2014 11:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+Updating player ZachB at time Thu Apr 03 2014 13:30:35 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1
+Logged in  At time Thu Apr 03 2014 13:44:05 GMT-0500 (Central Daylight Time)
+
+Updating player ZachB at time Thu Apr 03 2014 13:44:06 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1 
+
+Got tag page undefined At time Thu Apr 03 2014 13:46:51 GMT-0500 (Central Daylight Time)
+
+Asked for chart selfie At time Thu Apr 03 2014 13:46:51 GMT-0500 (Central Daylight Time)
+
+Bought selfie For 29At time Thu Apr 03 2014 13:47:00 GMT-0500 (Central Daylight Time)
+
+Got tag page undefined At time Thu Apr 03 2014 13:47:00 GMT-0500 (Central Daylight Time)
+
+Got tag page undefined At time Thu Apr 03 2014 13:47:16 GMT-0500 (Central Daylight Time)
+
+Asked for chart selfie At time Thu Apr 03 2014 13:47:16 GMT-0500 (Central Daylight Time)
+
+Logged out  At time Thu Apr 03 2014 13:48:51 GMT-0500 (Central Daylight Time)
+
+Logged in  At time Thu Apr 03 2014 13:48:59 GMT-0500 (Central Daylight Time)
+
+Updating player ZachB at time Thu Apr 03 2014 13:49:06 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1 
+
+tagname: selfie
+OldAmount 29 newAmount 38
+peopleNow 5 peoplePst undefined
+tweetsNow 35 tweetsPast 35 
+
+Logged out  At time Thu Apr 03 2014 13:49:18 GMT-0500 (Central Daylight Time)
+
+Logged in  At time Thu Apr 03 2014 13:49:25 GMT-0500 (Central Daylight Time)
+
+Updating player ZachB at time Thu Apr 03 2014 13:49:32 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1 
+
+tagname: selfie
+OldAmount 38 newAmount 38
+peopleNow 5 peoplePst undefined
+tweetsNow 35 tweetsPast 35 
+

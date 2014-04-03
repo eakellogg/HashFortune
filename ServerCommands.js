@@ -1,5 +1,5 @@
 
-
+var fs = require('fs');
 var trendingTable;
 var leaderBoard;
 // create connection to sql database
@@ -73,6 +73,17 @@ function serveChart( message)
 	});
 	
 	
+		var username = message.user_name;
+		var filename = "./userLogs/" + username +  ".txt";
+			
+			var time = new Date();
+			var output = "Asked for chart " + message.tagname + " At time " + time + "\n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
+	
 }
 function serveLogout( message )
 {
@@ -89,13 +100,40 @@ function serveLogout( message )
 				throw err;
 		}
 	);
+			var filename = "./userLogs/" + username +  ".txt";
+			var time = new Date();
+			var output = "Logged out  At time " + time + "\n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
+	
 	
 }
 function serveSearchUser(message)
 {
+			var username = message.user_name;
+			var filename = "./userLogs/" + username +  ".txt";
+			var time = new Date();
+			var output = "Searched for user " + message.user +  " At time " + time + "\n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
 }
 function serveSearchEmail(message)
 {
+			var username = message.user_name;
+			var filename = "./userLogs/" + username +  ".txt";
+			var time = new Date();
+			var output = "Searched email " + message.email +  " At time " + time + "\n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
 }
 function setLeaderBoard()
 {
@@ -140,6 +178,16 @@ function createUser( newUser , connection )
 			throw err;
 		}
 	});
+	
+			var username = newUser
+			var filename = "./userLogs/" + username +  ".txt";
+			var time = new Date();
+			var output = "Created acount At time " + time + "\n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
 }
 
 
@@ -229,6 +277,16 @@ function VerifyLogin(message)
 		}
 	});
 	
+			var username = message.user_name;
+			var filename = "./userLogs/" + username +  ".txt";
+			var time = new Date();
+			var output = "Logged in  At time " + time + "\n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
+	
 }
 
 
@@ -268,6 +326,17 @@ function serveTagPage(message)
 			});	
 		}
 	});
+	
+		
+			var username = message.user_name;
+			var filename = "./userLogs/" + username +  ".txt";
+			var time = new Date();
+			var output = "Got tag page " + message.tag_name + " At time " + time + "\n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
 }
 
 
@@ -368,6 +437,17 @@ function serveBuyHash(message)
 	{
 		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can't buy negative poitns " } );
 	}
+	
+	
+			var username = message.user_name;
+			var filename = "./userLogs/" + username +  ".txt";
+			var time = new Date();
+			var output = "Bought " + message.tag_name + " For " + message.amount + "At time " + time + "\n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
 }
 
 
@@ -468,6 +548,16 @@ function serveSellHash(message)
 	{
 		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can not sell negative points" } );
 	}
+	
+			var username = message.user_name;
+			var filename = "./userLogs/" + username +  ".txt";
+			var time = new Date();
+			var output = "Sold " + message.tag_name + " For " + message.amount + "At time " + time + "\n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
 }
 
 
