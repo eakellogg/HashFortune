@@ -93,7 +93,7 @@ function apply( socketHandler , connection, message )
 				}
 				
 				array[i]  =  {};
-				array[i].newamount = obj.oldAmount + ( obj.peopleNow - obj.peoplePst ) + ( obj.tweetsNow - obj.tweetsPast );
+				array[i].newamount = obj.oldAmount + Math.floor(Math.pow( obj.peopleNow - obj.peoplePst, 2 )) + (obj.oldAmount/100)*( obj.tweetsNow - obj.tweetsPast );
 				if( array[i].newamount < 0 )
 					array[i].newamount = 0;
 				array[i].tagname   = obj.tagname;
