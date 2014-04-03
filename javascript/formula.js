@@ -41,7 +41,7 @@ function apply( socketHandler , connection, message )
 		// Convert back to days and return
 		//timediff =  difference_ms/min15;
 		//	console.log( timediff );
-		}		
+		}
 			if (true )
 			{
 			console.log("HELLO");
