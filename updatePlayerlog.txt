@@ -1094,3 +1094,273 @@ tagname: yeet
 OldAmount 1 newAmount 0
 peopleNow 1 peoplePst undefined
 tweetsNow 15 tweetsPast 117
+Updating player monkey at time + Thu Apr 03 2014 07:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 11 newAmount 11
+peopleNow 2 peoplePst undefined
+tweetsNow 12 tweetsPast 12
+tagname: tbt
+OldAmount 29 newAmount 29
+peopleNow 3 peoplePst undefined
+tweetsNow 31 tweetsPast 31
+tagname: yeet
+OldAmount 1 newAmount 1
+peopleNow 1 peoplePst undefined
+tweetsNow 15 tweetsPast 15
+Updating player monkey at time + Thu Apr 03 2014 07:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 11 newAmount 11
+peopleNow 2 peoplePst undefined
+tweetsNow 12 tweetsPast 12
+tagname: TheBuzz
+OldAmount 500 newAmount 500
+peopleNow 1 peoplePst undefined
+tweetsNow 11 tweetsPast 11
+tagname: tbt
+OldAmount 29 newAmount 29
+peopleNow 3 peoplePst undefined
+tweetsNow 31 tweetsPast 31
+tagname: yeet
+OldAmount 1 newAmount 1
+peopleNow 1 peoplePst undefined
+tweetsNow 15 tweetsPast 15
+Updating player monkey at time + Thu Apr 03 2014 07:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 11 newAmount 11
+peopleNow 2 peoplePst undefined
+tweetsNow 12 tweetsPast 12
+tagname: TheBuzz
+OldAmount 500 newAmount 500
+peopleNow 1 peoplePst undefined
+tweetsNow 11 tweetsPast 11
+tagname: tbt
+OldAmount 29 newAmount 29
+peopleNow 3 peoplePst undefined
+tweetsNow 31 tweetsPast 31
+tagname: yeet
+OldAmount 1 newAmount 1
+peopleNow 1 peoplePst undefined
+tweetsNow 15 tweetsPast 15
+Updating player jzerr718 at time + Thu Apr 03 2014 07:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: selfie
+OldAmount 1240 newAmount 1228
+peopleNow 4 peoplePst undefined
+tweetsNow 13 tweetsPast 24
+Updating player monkey at time + Thu Apr 03 2014 08:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: RT
+OldAmount 255 newAmount 255
+peopleNow 1 peoplePst undefined
+tweetsNow 17 tweetsPast 17
+tagname: TBT
+OldAmount 97 newAmount 97
+peopleNow 2 peoplePst undefined
+tweetsNow 9 tweetsPast 9
+tagname: TheBuzz
+OldAmount 560 newAmount 560
+peopleNow 1 peoplePst undefined
+tweetsNow 23 tweetsPast 23
+tagname: tbt
+OldAmount 52 newAmount 52
+peopleNow 3 peoplePst undefined
+tweetsNow 34 tweetsPast 34
+tagname: yeet
+OldAmount 1 newAmount 1
+peopleNow 1 peoplePst undefined
+tweetsNow 20 tweetsPast 20
+Updating player monkey at time + Thu Apr 03 2014 08:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 5soseurotripitalia
+OldAmount 6000 newAmount 6000
+peopleNow 1 peoplePst undefined
+tweetsNow 102 tweetsPast 102
+tagname: RT
+OldAmount 255 newAmount 255
+peopleNow 1 peoplePst undefined
+tweetsNow 17 tweetsPast 17
+tagname: TBT
+OldAmount 97 newAmount 97
+peopleNow 2 peoplePst undefined
+tweetsNow 9 tweetsPast 9
+tagname: TheBuzz
+OldAmount 560 newAmount 560
+peopleNow 1 peoplePst undefined
+tweetsNow 23 tweetsPast 23
+tagname: tbt
+OldAmount 52 newAmount 52
+peopleNow 3 peoplePst undefined
+tweetsNow 34 tweetsPast 34
+tagname: yeet
+OldAmount 1 newAmount 1
+peopleNow 1 peoplePst undefined
+tweetsNow 20 tweetsPast 20
+Updating player monkey at time + Thu Apr 03 2014 08:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: RT
+OldAmount 255 newAmount 255
+peopleNow 1 peoplePst undefined
+tweetsNow 17 tweetsPast 17
+tagname: TBT
+OldAmount 97 newAmount 97
+peopleNow 2 peoplePst undefined
+tweetsNow 9 tweetsPast 9
+tagname: TheBuzz
+OldAmount 560 newAmount 560
+peopleNow 1 peoplePst undefined
+tweetsNow 23 tweetsPast 23
+tagname: tbt
+OldAmount 52 newAmount 52
+peopleNow 3 peoplePst undefined
+tweetsNow 34 tweetsPast 34
+tagname: yeet
+OldAmount 1 newAmount 1
+peopleNow 1 peoplePst undefined
+tweetsNow 20 tweetsPast 20
+Updating player eliz at time + Thu Apr 03 2014 08:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: TBT
+OldAmount 1000 newAmount 1010
+peopleNow 2 peoplePst undefined
+tweetsNow 9 tweetsPast null
+tagname: tbt
+OldAmount 425 newAmount 457
+peopleNow 3 peoplePst undefined
+tweetsNow 34 tweetsPast 3
+tagname: wcw
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 120
+Updating player monkey at time + Thu Apr 03 2014 09:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: RT
+OldAmount 255 newAmount 264
+peopleNow 1 peoplePst undefined
+tweetsNow 26 tweetsPast 17
+tagname: TBT
+OldAmount 97 newAmount 109
+peopleNow 1 peoplePst undefined
+tweetsNow 22 tweetsPast 9
+tagname: TheBuzz
+OldAmount 560 newAmount 550
+peopleNow 1 peoplePst undefined
+tweetsNow 13 tweetsPast 23
+tagname: tbt
+OldAmount 52 newAmount 71
+peopleNow 3 peoplePst undefined
+tweetsNow 53 tweetsPast 34
+tagname: yeet
+OldAmount 1 newAmount 11
+peopleNow 1 peoplePst undefined
+tweetsNow 30 tweetsPast 20
+Updating player monkey at time + Thu Apr 03 2014 10:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: RT
+OldAmount 264 newAmount 261.36
+peopleNow 1 peoplePst undefined
+tweetsNow 25 tweetsPast 26
+tagname: TBT
+OldAmount 109 newAmount 119.9
+peopleNow 1 peoplePst undefined
+tweetsNow 32 tweetsPast 22
+tagname: TheBuzz
+OldAmount 550 newAmount 594
+peopleNow 1 peoplePst undefined
+tweetsNow 21 tweetsPast 13
+tagname: tbt
+OldAmount 71 newAmount 100.11
+peopleNow 3 peoplePst undefined
+tweetsNow 94 tweetsPast 53
+tagname: yeet
+OldAmount 11 newAmount 10.67
+peopleNow 1 peoplePst undefined
+tweetsNow 27 tweetsPast 30
+Updating player monkey at time + Thu Apr 03 2014 10:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: RT
+OldAmount 261 newAmount 261
+peopleNow 1 peoplePst undefined
+tweetsNow 25 tweetsPast 25
+tagname: TBT
+OldAmount 120 newAmount 120
+peopleNow 1 peoplePst undefined
+tweetsNow 32 tweetsPast 32
+tagname: TheBuzz
+OldAmount 594 newAmount 594
+peopleNow 1 peoplePst undefined
+tweetsNow 21 tweetsPast 21
+tagname: tbt
+OldAmount 100 newAmount 100
+peopleNow 3 peoplePst undefined
+tweetsNow 94 tweetsPast 94
+tagname: yeet
+OldAmount 11 newAmount 11
+peopleNow 1 peoplePst undefined
+tweetsNow 27 tweetsPast 27
+Updating player jzerr718 at time + Thu Apr 03 2014 10:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: selfie
+OldAmount 1228 newAmount 1215.72
+peopleNow 4 peoplePst undefined
+tweetsNow 12 tweetsPast 13
+Updating player keithkade at time + Thu Apr 03 2014 10:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: GoT
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: gameofthrones
+OldAmount 999 newAmount 999
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: SCOTUS
+OldAmount 1003 newAmount 982.94
+peopleNow 1 peoplePst undefined
+tweetsNow 2 tweetsPast 4
+tagname: selfie
+OldAmount 1001 newAmount 870.87
+peopleNow 4 peoplePst undefined
+tweetsNow 12 tweetsPast 25
+tagname: tbt
+OldAmount 1000 newAmount 1941
+peopleNow 3 peoplePst undefined
+tweetsNow 94 tweetsPast null
+Updating player eliz at time + Thu Apr 03 2014 10:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: tbt
+OldAmount 544 newAmount 767.04
+peopleNow 3 peoplePst undefined
+tweetsNow 94 tweetsPast 53
+tagname: throwbackthursday
+OldAmount 2000 newAmount 2060
+peopleNow 1 peoplePst undefined
+tweetsNow 23 tweetsPast 20
+tagname: wcw
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 4 tweetsPast null
+Updating player keithkade at time + Thu Apr 03 2014 10:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: GoT
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: gameofthrones
+OldAmount 999 newAmount 999
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: SCOTUS
+OldAmount 983 newAmount 983
+peopleNow 1 peoplePst undefined
+tweetsNow 2 tweetsPast 2
+tagname: selfie
+OldAmount 871 newAmount 871
+peopleNow 4 peoplePst undefined
+tweetsNow 12 tweetsPast 12
+tagname: tbt
+OldAmount 1941 newAmount 1941
+peopleNow 3 peoplePst undefined
+tweetsNow 94 tweetsPast 94
