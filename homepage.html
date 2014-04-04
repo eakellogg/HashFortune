@@ -58,6 +58,10 @@
 	#friends {
 	  display:block; 
 	}
+	
+	#friend_requests {
+	  display:none;
+	}
 
 	#challenge_home {
 	  display:none;
@@ -132,12 +136,12 @@
 	<!-- icon on the lefthand side of the toolbar -->
 	<div style="float:left">
 		<img src="icons/icon.png" height = "62" width = "62" class="pointable"
-		onclick="rename_page('HashFortune'); hide_all(); show_homepage();">
+		onclick="rename_page('Home Page'); hide_all(); show_homepage();">
 	</div>
 	  
 	<!-- title of the page being viewed -->
 	<div id="page_title" style="display:inline;">
-		hashFortune
+		Home Page
 	</div>
 
 	<!-- icons on the righthand side of the toolbar -->
@@ -146,7 +150,7 @@
 		onclick="rename_page('Investments');  hide_all();   show_investments();" >
 				
 		<img src="icons/portfolio.png" height = "50" width = "50" class="pointable"
-		onclick="rename_page('Portfolio'); hide_all(); show_portfolio();" >
+		onclick="rename_page('Portfolio'); hide_all(); show_portfolio(user_name);" >
 			 
 		<img src="icons/friends.png" height = "50" width = "50" class="pointable"	
 		onclick="rename_page('Friends'); hide_all(); show_friends_page();" >
@@ -165,7 +169,6 @@
 <b> Challenge Toolbar </b> <br>
 <p> This will have more cool stuff after we set up challenges! </p>
 <p> For right now, enjoy the power of buying and selling, and try to make it to the top of the leaderboard! </p>
-<p> Also, please fill out a quick questionnaire to help us improve the game.  The link is in the settings page. </p>
 
 </div>
 
@@ -205,31 +208,16 @@
 
 </div>
 
+<!-- division containing the player's friend requests -->
+<div id="friend_requests">
+
+<BR><BR>
+</div>
+
 <!-- division containing the player's friends -->
 <div id="friends">
-  <div class='scroll'>
-    <table width=75%; class="center";>
-    <caption>Your Friends</caption>
-    <tr>
-      <td width=50%>Monkey</td>
-      <td>94837</td>
-    </tr>
-    <tr>
-      <td>Aaron Elliott</td>
-      <td>87453</td>
-    </tr>
-    <tr>
-      <td>You</td>
-      <td>56672</td>
-    </tr>
-    <tr>
-      <td>Amelia Badelia</td>
-      <td>43272</td>
-    </tr>
-    </table>
-  </div>
-<BR>
-<BR>
+
+<BR><BR>
 </div>
 
 <!-- division containing the challenge home page -->
@@ -320,8 +308,6 @@
 	<p> Change Profile Picture </p>
 	<p> Rerun Tutorial </p>
     <br>
-    <a href="https://docs.google.com/forms/d/11X2S7wk5odFIWruJPixHJM3T6lcv9LR2fkCTE4ofsF4/viewform" target="_blank">Please take our user study!</a>
-    <br>
     <p> If you encounter any issues, you can email us at hashfortune@gmail.com </p>
 	<input type="button" value="Logout" onclick=" setCookie( 'user_name' , '' , 1); setCookie('pass_word' , '' , 1 ); socket.emit( 'logout' , { user_name : user_name } ); location.href = '/index.html'; "/>
 
@@ -330,14 +316,14 @@
 <!-- division containing the player's investment info for a particular hashtag -->
 <div id="hashtag_investments">
    <table width=75%; class="center";>
-    	<caption id="hashtag_name">Hashtag</caption>
+    	<caption id="hashtag_name">Hashtag Name</caption>
     	   <tr>
       		<td width=50%>Current Investment</td>
-      		<td id="my_invested_points">300</td>
+      		<td id="my_invested_points">0</td>
     	   </tr>
     	   <tr>
       		<td width=50%>Uninvested Pts</td>
-      		<td id="my_uninvested_points">576</td>
+      		<td id="my_uninvested_points">0</td>
     	   </tr>
     </table>
     <BR>
@@ -350,11 +336,11 @@
     	<caption>Popularity</caption>
     	   <tr>
       		<td width=50%>Current Investors</td>
-      		<td id="total_investors">3210</td>
+      		<td id="total_investors">0</td>
     	   </tr>
     	   <tr>
       		<td width=50%>Pts Invested</td>
-      		<td id="total_invested_points">4000</td>
+      		<td id="total_invested_points">0</td>
     	   </tr>
     </table>
     <BR>
@@ -401,24 +387,26 @@
 		 document.getElementById('hashtag_name').innerHTML='#' + current_tag;
 		 switch_to_tag(user_name, document.getElementById('hsearch').value, 0); 
  		 clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''	
-		 socket.emit('chart_request' , { tagname : current_tag , user_name : user_name } ); show_hashtag_page();">
+		 socket.emit('chart_request' , { tagname : current_tag} ); show_hashtag_page();">
 		</h1>
 	</form>
 <BR>
 <BR>
 </div>
 
-
-<div id="chartdiv" style="width: 640px; height: 400px;"></div>
-
-
 </div> <!--closes div separating main body from toolbar -->
+
+
+
+<body>
+    <div id="chartdiv" style="width: 640px; height: 400px;"></div>
+</body>
 
 
 </body>
 
 
-<script>
+	<script>
 
 		var firstTime = true;
 		$(document).ready(function() {
@@ -435,6 +423,8 @@
 			socket.on( 'my_investments_table' , myInvestmentsProcedure );
 			socket.on( 'leader_board' , leaderProcedure );
 			socket.on( 'player_info_table' , playerInfoProcedure );
+			socket.on( 'friends_table' , friendsProcedure );
+			socket.on( 'friend_request_table' , friendRequestsProcedure );
             socket.on( 'user_search' , userProcedure );
 			socket.on( 'chart_data' , function (message) 
 		{

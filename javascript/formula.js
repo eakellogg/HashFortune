@@ -19,7 +19,6 @@ function apply( socketHandler , connection, message )
 	convertedCurrentTime.setHours(convertedCurrentTime.getHours() - 2);
 	convertedCurrentTime.setMinutes(0);
 	convertedCurrentTime.setSeconds(0);
-	console.log("FJDLKFJ");
 	connection.query( "SELECT LastLogout FROM users WHERE username = ? " , [ username ] ,
 		function (err , rows )
 		{
@@ -41,16 +40,10 @@ function apply( socketHandler , connection, message )
 		// Convert back to days and return
 		//timediff =  difference_ms/min15;
 		//	console.log( timediff );
-		}
+		}		
 			if (true )
 			{
-			console.log("HELLO");
 
-
-
-
-
-	
 	connection.query( "SELECT init.tagname, init.amount AS oldAmount, " + 
 						"(SELECT COUNT(*) FROM investments WHERE tagname = " +
 						"init.tagname) AS peopleNow, " +
@@ -94,30 +87,29 @@ function apply( socketHandler , connection, message )
 				
 				array[i]  =  {};
 				array[i].newamount = obj.oldAmount + Math.floor(Math.pow( obj.peopleNow - obj.peoplePst, 2 )) + (obj.oldAmount/100)*( obj.tweetsNow - obj.tweetsPast );
+				console.log("!!!!!!!!!!!!!!!!!!!!!" + array[i].newamount);
 				if( array[i].newamount < 0 )
 					array[i].newamount = 0;
 				array[i].tagname   = obj.tagname;
 				array[i].peopleNow = obj.peopleNow;
 				
 				newTotalValue += array[i].newamount;
+				//console.log(obj);
 			}
 			var output = {};
-			output = "Updating player " + username + " at time " + new Date() + " \nThe rows recieved from the query \n";
+			output = "Updating player " + username + " at time + " + convertedCurrentTime + " \nThe rows recieved from the query \n";
 			for( var i =0; i < rows.length; i++)
 			{
 				output += "tagname: " + rows[i].tagname  + "\n" +
 				"OldAmount " + rows[i].oldAmount + " newAmount " + array[i].newamount + 
 				"\npeopleNow " + rows[i].peopleNow + " peoplePst " + rows[i].peoplePast + 
-				"\ntweetsNow " + rows[i].tweetsNow + " tweetsPast " + rows[i].tweetsPast + " \n\n";
+				"\ntweetsNow " + rows[i].tweetsNow + " tweetsPast " + rows[i].tweetsPast + "\n";
 			}
 
-			var filename = "./userLogs/" + username +  ".txt";
-		    fs.appendFile( filename , output , function ( err ) 
+			fs.appendFile( 'updatePlayerlog.txt' , output , function ( err ) 
 			{
 				if( err )
-					{
-						throw err;
-					}
+					throw err;
 			});
 			
 			var query = "UPDATE investments SET amount = CASE tagname\n";
@@ -177,16 +169,16 @@ function apply( socketHandler , connection, message )
 			}
 			newmessage = {};
 			newmessage.user_name = username;
+			newmessage.portfolio_name = username;
 			servercommands.serveMyTrending(newmessage);
 		});
 	});	
 }
 else
 {
-	console.log("HRE");
 	newmessage = {};
 	newmessage.user_name = username;
+	newmessage.portfolio_name = username;
 	servercommands.serveMyTrending(newmessage);
-	console.log("DJKDFD");
 }});
 }

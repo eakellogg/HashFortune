@@ -49,3 +49,17 @@ function search_by_email( user_name , search_email )
  	message.search_email = search_email;
  	socket.emit( 'search_user_email' , message);
 }
+
+function acceptFriend( user_name, friend_name ) {
+	var message = {};
+ 	message.user_name = user_name;
+ 	message.friend_name = friend_name;
+ 	socket.emit( 'accept_friend' , message);
+}
+
+function declineFriend( user_name, friend_name ) {
+	var message = {};
+ 	message.user_name = user_name;
+ 	message.friend_name = friend_name;
+ 	socket.emit( 'decline_friend' , message);
+}

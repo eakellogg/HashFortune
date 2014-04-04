@@ -61,6 +61,10 @@ function listen( client )
 	client.on('trending_request' , serverCommands.serveTrending );
 	client.on('my_investments_request' , serverCommands.serveMyTrending );
 	client.on('player_info_request' , serverCommands.servePlayerInfo);
+	client.on('friend_table_request' , serverCommands.serveFriends);
+	client.on('friend_request_request' , serverCommands.serveFriendRequests);
+	client.on('accept_friend' , serverCommands.serveAcceptFriend);
+	client.on('decline_friend' , serverCommands.serveDeclineFriend);
 	client.on('leader_request' , serverCommands.serveLeaderBoard );
     client.on('search_username' , serverCommands.serveSearchUser );
 	client.on('search_user_email' , serverCommands.serveSearchEmail );

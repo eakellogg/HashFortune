@@ -21,6 +21,7 @@
 			document.getElementById("investments_summary").style.display = "none";
 			document.getElementById("leaderboard").style.display = "none";
 			document.getElementById("friends").style.display = "none";
+			document.getElementById("friend_requests").style.display = "none";
 			document.getElementById("challenge_home").style.display = "none";
 			document.getElementById("settings").style.display = "none";			  
 			document.getElementById("player_pic").style.display = "none";
@@ -47,9 +48,13 @@
 			document.getElementById("friends").style.display = "block";
 			
 			var userObj = { user_name : user_name };
+			var investObj = {};
+			investObj.user_name = user_name;
+			investObj.portfolio_name = user_name;
+			
 			socket.emit( "trending_request"        , userObj );
 			socket.emit( 'leader_request' , userObj  );
-			socket.emit( 'my_investments_request' , userObj);
+			socket.emit( 'my_investments_request' , investObj);
 		}
 	  
 		//<!-- show divisions relevant to investments page -->
@@ -62,12 +67,17 @@
 		}
 	  
 		//<!-- show divisions relevant to portfolio page -->
-		function show_portfolio() {
+		function show_portfolio(portfolio_name) {
 			document.getElementById("player_pic").style.display = "block";
 			document.getElementById("player_info").style.display = "block";
 			document.getElementById("investments_all").style.display = "block";
 			
-			socket.emit( 'player_info_request' , { user_name : user_name } );
+			var message = {};
+			message.user_name = user_name;
+			message.portfolio_name = portfolio_name;
+			
+			socket.emit( 'player_info_request' , message );
+			socket.emit( 'my_investments_request' , message );
 		}
 	  
 		//<!-- show divisions relevant to challenges page -->
@@ -78,9 +88,13 @@
 	  
 		//<!-- show divisions relevant to friends page -->
 		function show_friends_page() {
+			document.getElementById("friend_requests").style.display = "block";
 			document.getElementById("friends").style.display = "block";
 			document.getElementById("username_search").style.display = "block";
 			document.getElementById("email_search").style.display = "block";
+			
+			socket.emit( 'friend_table_request' , { user_name : user_name } );
+			socket.emit( 'friend_request_request' , { user_name: user_name } );
 		}
 	  
 		//<!-- show divisions relevant to settings page -->

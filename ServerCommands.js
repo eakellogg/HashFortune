@@ -1,5 +1,5 @@
 
-var fs = require('fs');
+
 var trendingTable;
 var leaderBoard;
 // create connection to sql database
@@ -45,7 +45,11 @@ module.exports = {
 	serveBuyHash : serveBuyHash,
     serveSellHash : serveSellHash,
 	serveTrending : serveTrending,
-	giveHandler   : giveHandler,
+	serveFriends : serveFriends,
+	serveFriendRequests : serveFriendRequests,
+	serveAcceptFriend : serveAcceptFriend,
+	serveDeclineFriend : serveDeclineFriend,
+	giveHandler : giveHandler,
 	serveMyTrending : serveMyTrending,
 	servePlayerInfo : servePlayerInfo,
 	serveLeaderBoard : serveLeaderBoard,
@@ -53,7 +57,7 @@ module.exports = {
 	setTrendingPage : setTrendingPage,
 	serveSearchUser : serveSearchUser,
 	serveSearchEmail : serveSearchEmail,
-	serveLogout    : serveLogout,
+	serveLogout  : serveLogout,
 	serveChart : serveChart
 };
 
@@ -73,17 +77,6 @@ function serveChart( message)
 	});
 	
 	
-		var username = message.user_name;
-		var filename = "./userLogs/" + username +  ".txt";
-			
-			var time = new Date();
-			var output = "Asked for chart " + message.tagname + " At time " + time + "\n\n";
-			fs.appendFile( filename , output , function ( err ) 
-			{
-				if( err )
-					throw err;
-			});
-	
 }
 function serveLogout( message )
 {
@@ -100,40 +93,13 @@ function serveLogout( message )
 				throw err;
 		}
 	);
-			var filename = "./userLogs/" + username +  ".txt";
-			var time = new Date();
-			var output = "Logged out  At time " + time + "\n\n";
-			fs.appendFile( filename , output , function ( err ) 
-			{
-				if( err )
-					throw err;
-			});
-	
 	
 }
 function serveSearchUser(message)
 {
-			var username = message.user_name;
-			var filename = "./userLogs/" + username +  ".txt";
-			var time = new Date();
-			var output = "Searched for user " + message.user +  " At time " + time + "\n\n";
-			fs.appendFile( filename , output , function ( err ) 
-			{
-				if( err )
-					throw err;
-			});
 }
 function serveSearchEmail(message)
 {
-			var username = message.user_name;
-			var filename = "./userLogs/" + username +  ".txt";
-			var time = new Date();
-			var output = "Searched email " + message.email +  " At time " + time + "\n\n";
-			fs.appendFile( filename , output , function ( err ) 
-			{
-				if( err )
-					throw err;
-			});
 }
 function setLeaderBoard()
 {
@@ -160,9 +126,6 @@ function setTrendingPage()
 	
 }
 
-
-
-
 function giveHandler( handler )
 {
 	socketHandler = handler;
@@ -178,21 +141,11 @@ function createUser( newUser , connection )
 			throw err;
 		}
 	});
-	
-			var username = newUser
-			var filename = "./userLogs/" + username +  ".txt";
-			var time = new Date();
-			var output = "Created acount At time " + time + "\n\n";
-			fs.appendFile( filename , output , function ( err ) 
-			{
-				if( err )
-					throw err;
-			});
 }
 
 
 // verify the creation of a new account
-//TODO should more be done to check a new account besides just checkng that its unused?
+//TODO should more be done to check a new account besides just checking that its unused?
 function VerifyCreate(message)
 {
 	var user = message.user_name;
@@ -245,7 +198,7 @@ function VerifyLogin(message)
 	
 	socketHandler.addClient( username , clientSocket);
 	// search for the username and password of the user in question
-	connection.query( "SELECT * FROM `users` WHERE username = ? AND password = ?", [username, password],
+	connection.query( "SELECT username, password FROM `users` WHERE username = ? AND password = ?", [username, password],
 	function(err, user_info) {
 		if(err) {
 			throw err;
@@ -276,16 +229,6 @@ function VerifyLogin(message)
 			}
 		}
 	});
-	
-			var username = message.user_name;
-			var filename = "./userLogs/" + username +  ".txt";
-			var time = new Date();
-			var output = "Logged in  At time " + time + "\n\n";
-			fs.appendFile( filename , output , function ( err ) 
-			{
-				if( err )
-					throw err;
-			});
 	
 }
 
@@ -326,17 +269,6 @@ function serveTagPage(message)
 			});	
 		}
 	});
-	
-		
-			var username = message.user_name;
-			var filename = "./userLogs/" + username +  ".txt";
-			var time = new Date();
-			var output = "Got tag page " + message.tag_name + " At time " + time + "\n\n";
-			fs.appendFile( filename , output , function ( err ) 
-			{
-				if( err )
-					throw err;
-			});
 }
 
 
@@ -389,35 +321,34 @@ function serveBuyHash(message)
 					
 					// make new investment
 					else {
-					
-						// get the current number of investors
-						connection.query( "SELECT * FROM investments WHERE tagname = ? LIMIT 1", [message.tag_name], 
-						function (err, entry) { 
-							if(err) {
+						connection.query( "SELECT COUNT(*) AS count FROM investments WHERE tagname = ?", [message.tag_name],
+						function( err , counter ){
+							if( err ) {
 								throw err;
 							}
-
+						
 							// insert new investment into the database
 							connection.query( "INSERT INTO investments ( username, tagname, amount, timeInvested, challengeID, investorCount) VALUES ( ?, ?, ?, ?, 0, ? )" , 
-							[message.user_name, message.tag_name, message.amount, investTime, entry.length + 1 ], //Todo hard coded challege value of 0
+							[message.user_name, message.tag_name, message.amount, investTime, counter[0].count + 1 ], //Todo hard coded challege value of 0
 							function( err , blank){
 								if( err ) {
 									throw err;
 								}
-								
+							
 							});
-							//Add one to investment count
-							connection.query( "UPDATE users SET investCount = (investCount + 1 ) WHERE username = ? " ,[ message.user_name ] ,
-							function ( err , rows )
-							{
-								if ( err )
-									throw err;
-								
-							});
+							
+						});
+						//Add one to investment count
+						connection.query( "UPDATE users SET investCount = (investCount + 1) WHERE username = ? " ,[ message.user_name ] ,
+						function ( err , rows )
+						{
+							if ( err ){
+								throw err;
+							}
 						});
 					}
 				});
-			
+
 				// update the user with the post investment point total
 				connection.query( "UPDATE `users` SET AvailablePoints = ? WHERE username = ?", [newpoints, message.user_name],
 				function(err, blank) {
@@ -437,17 +368,6 @@ function serveBuyHash(message)
 	{
 		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can't buy negative poitns " } );
 	}
-	
-	
-			var username = message.user_name;
-			var filename = "./userLogs/" + username +  ".txt";
-			var time = new Date();
-			var output = "Bought " + message.tag_name + " For " + message.amount + "At time " + time + "\n\n";
-			fs.appendFile( filename , output , function ( err ) 
-			{
-				if( err )
-					throw err;
-			});
 }
 
 
@@ -492,41 +412,28 @@ function serveSellHash(message)
 							throw err;
 						}
 					});	
-					connection.query( "UPDATE users SET investCount = (investCount -1 ) WHERE username = ?" , [message.user_name],
+					connection.query( "UPDATE `users` SET investCount = (investCount -1 ) WHERE username = ?" , [message.user_name],
 					function( err , rows )
 					{
 						if( err )
 							throw err;
 					});
 				}
-					
-				// search for the uninvested points of the user
-				connection.query( "SELECT `AvailablePoints` FROM users WHERE username = ?", [message.user_name], 
-				function (err, user_info) { 
+			
+				// update the user with the post investment point total
+				connection.query( "UPDATE `users` SET AvailablePoints = (? + AvailablePoints) WHERE username = ?", [message.amount, message.user_name, message.user_name],
+				function(err, blank) {
 					if(err) {
 						throw err;
 					}
-			
-					// if the user exists
-					if(user_info.length > 0) {
-						var oldpoints = user_info[0].AvailablePoints;
-						var newpoints = parseInt(oldpoints) + parseInt(message.amount);
-			
-						// update the user with the post investment point total
-						connection.query( "UPDATE `users` SET AvailablePoints = ? WHERE username = ?", [newpoints, message.user_name],
-						function(err, blank) {
-							if(err) {
-								throw err;
-							}
 								
-							var update = {};
-							update.user_name = message.user_name;
-							update.tag_name = message.tag_name;
-							serveTagPage(update);
-						});	
-					}
-				});					
+					var update = {};
+					update.user_name = message.user_name;
+					update.tag_name = message.tag_name;
+					serveTagPage(update);
+				});	
 			}
+
 
 			// if the user does not have the points to sell
 			else {
@@ -548,16 +455,6 @@ function serveSellHash(message)
 	{
 		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can not sell negative points" } );
 	}
-	
-			var username = message.user_name;
-			var filename = "./userLogs/" + username +  ".txt";
-			var time = new Date();
-			var output = "Sold " + message.tag_name + " For " + message.amount + "At time " + time + "\n\n";
-			fs.appendFile( filename , output , function ( err ) 
-			{
-				if( err )
-					throw err;
-			});
 }
 
 
@@ -565,39 +462,17 @@ function serveSellHash(message)
 function serveTrending(message) 
 {
 	var username = message.user_name;
-	
-	// select the name and count of the top ten trending hashtags
-	/*
-	connection.query( "SELECT name , count FROM hashTags ORDER BY dateTime DESC , count DESC LIMIT 10" , 
-	function( err , hashtags )
-	{
-		if(err) {
-			throw err;
-		}
-			
-		socketHandler.messageUser( username , 'trending_table' , hashtags );
-	});
-	*/
 	socketHandler.messageUser( username , 'trending_table' , trendingTable );
 }
 
 function serveMyTrending(message)
 {
-var username = message.user_name;
-connection.query( "SELECT investCount FROM users WHERE username = ? ", [username] , function (err ,rows )
-{
-	if(err)
+var portfolio_name = message.portfolio_name;
+connection.query( "SELECT  tagname , amount FROM investments WHERE investments.username = ? " , [portfolio_name] , 
+function (err , investments ){
+	if( err )
 		throw err;
-	var limit = rows[0].investCount;
-	connection.query( "SELECT  tagname , amount FROM investments WHERE username = ? LIMIT ?" , [username, limit] , 
-	function (err , investments ){
-		if( err )
-			throw err;
-			console.log("HERE");
-			console.log(username);
-		socketHandler.messageUser( username,  'my_investments_table' , investments );
-
-	});
+	socketHandler.messageUser( message.user_name,  'my_investments_table' , investments );
 });
 }
 
@@ -614,28 +489,71 @@ function getCurrentTime() {
 
 function servePlayerInfo(message) {
 
-var username = message.user_name;
+var portfolio_name = message.portfolio_name;
 connection.query( "SELECT username , AvailablePoints , TotalValue FROM users WHERE username = ?" ,
-	[ username ] , 
+	[ portfolio_name ] , 
 	function( err , rows ){
 	if( err )
 		throw err;
 	
-	socketHandler.messageUser( username , 'player_info_table' , rows[0] );
+	socketHandler.messageUser( message.user_name , 'player_info_table' , rows[0] );
 	}
 );
+}
+
+function serveFriends(message) {
+	var username = message.user_name;
+	connection.query( "SELECT sender AS Friend, TotalValue FROM friends inner join users on users.username = friends.sender WHERE accepted = 1 AND receiver = ? UNION ALL SELECT receiver AS Friend, TotalValue FROM friends inner join users on users.username = friends.receiver WHERE accepted = 1 AND sender = ?", [username, username] ,
+	function (err , friends )
+	{
+		if(err) {
+			throw err;
+		}
+		console.log(friends);
+		socketHandler.messageUser( username, 'friends_table' , friends );
+	});
+}
+
+function serveFriendRequests(message) {
+	var username = message.user_name;
+	connection.query( "SELECT sender, receiver FROM friends WHERE accepted = 0 AND receiver = ?", [username] , 
+	function (err , requests )
+	{
+		if(err) {
+			throw err;
+		}
+		socketHandler.messageUser( username, 'friend_request_table' , requests );
+	});
+}
+
+function serveAcceptFriend(message) {
+	var username = message.user_name;
+	connection.query( "UPDATE `friends` SET accepted = 1 WHERE sender = ? AND receiver = ?", [message.friend_name, message.user_name],
+	function(err, blank) {
+		if(err) {
+			throw err;
+		}
+		
+		socketHandler.messageUser( username, 'friends_table' , friends );
+		socketHandler.messageUser( username, 'friend_request_table' , requests );
+	});
+}
+
+function serveDeclineFriend(message) {
+	var username = message.user_name;
+	connection.query( "DELETE FROM `friends` WHERE sender = ? AND receiver = ?", [message.friend_name, message.user_name],
+	function(err, blank) {
+		if(err) {
+			throw err;
+		}
+		
+		socketHandler.messageUser( username, 'friends_table' , friends );
+		socketHandler.messageUser( username, 'friend_request_table' , requests );
+	});
 }
 
 function serveLeaderBoard(message){
 
 	var username = message.user_name;
-	/*connection.query( "SELECT username , TotalValue FROM users ORDER BY TotalValue DESC LIMIT 10" , 
-		function (err , rows )
-		{
-			if( err)
-				throw err;
-			socketHandler.messageUser( username , 'leader_board' , rows);
-		});
-		*/
-		socketHandler.messageUser( username , 'leader_board' , leaderBoard );
+	socketHandler.messageUser( username , 'leader_board' , leaderBoard );
 }
