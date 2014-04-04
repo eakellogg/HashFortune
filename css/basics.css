@@ -1,6 +1,7 @@
 body
 {
-   background-color:#C9FBC9;
+   background-color:#CCF5CC; //C9FBC9;
+   margin: 0px;
 }
 
 /* when you move your mouse over anything with class="pointable", your cursor will turn into a pointer */
@@ -14,23 +15,38 @@ img.pointable:hover
 }
 h1
 {
-    color:black;
-    font-size: 40pt; 
-    padding:5px;
-    background-color:#336600;
+    color:rgb(235, 235, 235);
+    font-size: 30pt; 
+    font-weight: 100;
+    /*color:black;
+    font-size: 40pt; */
+    padding:8px;
+    //background-color:#336600;
+    background-color: #111111;
+    z-index: 1000;
+    margin: 0px;
+}
+#main_header
+{
+    box-shadow: 0px 0px 16px 3px rgb(73, 73, 73);
 }
 table {
-    border-collapse:separate;
-    border-radius: 5px;
-    border:5px; #304816;
-    background-color:#FCFCFC;
-    border-style:groove;
-    border-color:#336600; 
-    width:75%;
-} 
+    //border-collapse:separate;
+    //border-radius: 5px;
+    //border:5px; #304816;
+    //background-color:#FCFCFC;
+    //border-style:groove;
+    //border-color:#336600;
+    //width:75%;
+    background-color:#EFFEEF;
+    width:550px;
+    cell-spacing: 0px;
+    border: none;
+    cell-border: none;
+}
 caption {
     font-family:Times; 
-    color:black; 
+    color:black;
     font-size:30pt;
     font-weight:bold;
     text-shadow:.5px .5px #336600;
@@ -65,16 +81,24 @@ tr {
 }
 #challenge_toolbar {
     background-color:#A1C9A1;
-    width:200px;
+    width:175px;
     float:left;
-    //max-height:200px;
+    /* max-height:200px;
     padding-bottom:60%;
     padding-right:0;
     margin-right:0;
+    */
+    //color: rgb(60, 60, 60);
+    bottom: 0px;
+    top: 62px;
+    position: absolute;
+    height: 100%;
+    padding: 16px;
+    z-index: -1;
 }
 #main_body {
     margin-left:200px;
-    padding:1em;
+    padding:2em;
 }
 
 
