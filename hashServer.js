@@ -79,7 +79,8 @@ DS.giveHandler( socketHandler);
 formula.set( DS);
 io.sockets.on( 'connection' , socketHandler.listen );
 
-
+setInterval( DS.setLeaderBoard ,   60 * 1000);
+setInterval( DS.setTrendingPage ,  60 * 1000);
 
 
 

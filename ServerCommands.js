@@ -57,8 +57,6 @@ module.exports = {
 	serveChart : serveChart
 };
 
-setInterval( setLeaderBoard ,  60 * 60 * 1000);
-setInterval( setTrendingPage , 60 * 60 * 1000 );
 
 
 function serveChart( message)
@@ -93,6 +91,7 @@ function serveLogout( message )
 	
 	var convertedCurrentTime = new Date();
 	
+	console.log("THIS HAPPEND?");
 	connection.query( "UPDATE users SET lastLogout = ? WHERE username = ? " , [ convertedCurrentTime , username] ,
 		function ( err , rows )
 		{
@@ -137,6 +136,7 @@ function serveSearchEmail(message)
 }
 function setLeaderBoard()
 {
+		console.log("reseting leader board");
 		connection.query( "SELECT username , TotalValue FROM users ORDER BY TotalValue DESC LIMIT 10" , 
 		function (err , rows )
 		{
@@ -399,7 +399,7 @@ function serveBuyHash(message)
 
 							// insert new investment into the database
 							connection.query( "INSERT INTO investments ( username, tagname, amount, timeInvested, challengeID, investorCount) VALUES ( ?, ?, ?, ?, 0, ? )" , 
-							[message.user_name, message.tag_name, message.amount, investTime, entry.length + 1 ], //Todo hard coded challege value of 0
+							[message.user_name, message.tag_name, message.amount, investTime, (entry.length + 1) ], //Todo hard coded challege value of 0
 							function( err , blank){
 								if( err ) {
 									throw err;
@@ -593,8 +593,6 @@ connection.query( "SELECT investCount FROM users WHERE username = ? ", [username
 	function (err , investments ){
 		if( err )
 			throw err;
-			console.log("HERE");
-			console.log(username);
 		socketHandler.messageUser( username,  'my_investments_table' , investments );
 
 	});

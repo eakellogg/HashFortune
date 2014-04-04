@@ -1,0 +1,19 @@
+Logged in  At time Thu Apr 03 2014 20:09:57 GMT-0500 (Central Daylight Time)
+
+Updating player eliz at time Thu Apr 03 2014 20:10:09 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: tbt
+OldAmount 741 newAmount 749.41
+peopleNow 2 peoplePst undefined
+tweetsNow 92 tweetsPast 91 
+
+tagname: throwbackthursday
+OldAmount 2143 newAmount 2057.28
+peopleNow 1 peoplePst undefined
+tweetsNow 23 tweetsPast 27 
+
+tagname: wcw
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 5 tweetsPast 3 
+

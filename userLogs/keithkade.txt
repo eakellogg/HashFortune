@@ -1,0 +1,29 @@
+Logged in  At time Thu Apr 03 2014 14:33:28 GMT-0500 (Central Daylight Time)
+
+Updating player keithkade at time Thu Apr 03 2014 14:33:51 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: GoT
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null 
+
+tagname: gameofthrones
+OldAmount 999 newAmount 999
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null 
+
+tagname: SCOTUS
+OldAmount 983 newAmount 963.34
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 2 
+
+tagname: selfie
+OldAmount 871 newAmount 967.81
+peopleNow 5 peoplePst undefined
+tweetsNow 23 tweetsPast 12 
+
+tagname: tbt
+OldAmount 1941 newAmount 2503.89
+peopleNow 3 peoplePst undefined
+tweetsNow 123 tweetsPast 94 
+

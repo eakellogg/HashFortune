@@ -24,3 +24,27 @@ tweetsNow 34 tweetsPast 34
 
 Logged out  At time Thu Apr 03 2014 14:11:45 GMT-0500 (Central Daylight Time)
 
+Logged in  At time Thu Apr 03 2014 17:44:45 GMT-0500 (Central Daylight Time)
+
+Updating player monkey at time Thu Apr 03 2014 17:45:03 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: RT
+OldAmount 228 newAmount 230.28
+peopleNow 1 peoplePst undefined
+tweetsNow 41 tweetsPast 40 
+
+tagname: TheBuzz
+OldAmount 600 newAmount 630
+peopleNow 1 peoplePst undefined
+tweetsNow 27 tweetsPast 22 
+
+tagname: tbt
+OldAmount 100 newAmount 68
+peopleNow 3 peoplePst undefined
+tweetsNow 91 tweetsPast 123 
+
+tagname: yeet
+OldAmount 12 newAmount 10.8
+peopleNow 1 peoplePst undefined
+tweetsNow 24 tweetsPast 34 
+

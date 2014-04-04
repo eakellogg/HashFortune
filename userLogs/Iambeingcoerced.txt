@@ -1,0 +1,106 @@
+Got tag page #PoorMichelle At time Thu Apr 03 2014 21:53:42 GMT-0500 (Central Daylight Time)
+
+Asked for chart #PoorMichelle At time Thu Apr 03 2014 21:53:42 GMT-0500 (Central Daylight Time)
+
+Got tag page PoorMichelle At time Thu Apr 03 2014 21:54:05 GMT-0500 (Central Daylight Time)
+
+Asked for chart PoorMichelle At time Thu Apr 03 2014 21:54:05 GMT-0500 (Central Daylight Time)
+
+Got tag page TBT At time Thu Apr 03 2014 21:54:25 GMT-0500 (Central Daylight Time)
+
+Asked for chart TBT At time Thu Apr 03 2014 21:54:25 GMT-0500 (Central Daylight Time)
+
+Got tag page TGIF At time Thu Apr 03 2014 21:55:32 GMT-0500 (Central Daylight Time)
+
+Asked for chart TGIF At time Thu Apr 03 2014 21:55:32 GMT-0500 (Central Daylight Time)
+
+Bought TGIF For 1500At time Thu Apr 03 2014 21:56:50 GMT-0500 (Central Daylight Time)
+
+Got tag page TGIF At time Thu Apr 03 2014 21:56:50 GMT-0500 (Central Daylight Time)
+
+Got tag page KCA At time Thu Apr 03 2014 21:57:18 GMT-0500 (Central Daylight Time)
+
+Asked for chart KCA At time Thu Apr 03 2014 21:57:18 GMT-0500 (Central Daylight Time)
+
+Got tag page WinterSoldier At time Thu Apr 03 2014 21:57:51 GMT-0500 (Central Daylight Time)
+
+Asked for chart WinterSoldier At time Thu Apr 03 2014 21:57:51 GMT-0500 (Central Daylight Time)
+
+Got tag page wintersoldier At time Thu Apr 03 2014 21:58:01 GMT-0500 (Central Daylight Time)
+
+Asked for chart wintersoldier At time Thu Apr 03 2014 21:58:01 GMT-0500 (Central Daylight Time)
+
+Got tag page Marvel At time Thu Apr 03 2014 21:58:09 GMT-0500 (Central Daylight Time)
+
+Asked for chart Marvel At time Thu Apr 03 2014 21:58:09 GMT-0500 (Central Daylight Time)
+
+Got tag page AgentsofShield At time Thu Apr 03 2014 21:58:20 GMT-0500 (Central Daylight Time)
+
+Asked for chart AgentsofShield At time Thu Apr 03 2014 21:58:20 GMT-0500 (Central Daylight Time)
+
+Asked for chart WinterSoldier At time Thu Apr 03 2014 21:58:27 GMT-0500 (Central Daylight Time)
+
+Got tag page WinterSoldier At time Thu Apr 03 2014 21:58:27 GMT-0500 (Central Daylight Time)
+
+Asked for chart CaptainAmerica At time Thu Apr 03 2014 21:58:34 GMT-0500 (Central Daylight Time)
+
+Got tag page CaptainAmerica At time Thu Apr 03 2014 21:58:34 GMT-0500 (Central Daylight Time)
+
+Bought CaptainAmerica For 500At time Thu Apr 03 2014 21:58:50 GMT-0500 (Central Daylight Time)
+
+Got tag page CaptainAmerica At time Thu Apr 03 2014 21:58:50 GMT-0500 (Central Daylight Time)
+
+Got tag page WinterSoldier At time Thu Apr 03 2014 21:58:58 GMT-0500 (Central Daylight Time)
+
+Asked for chart WinterSoldier At time Thu Apr 03 2014 21:58:58 GMT-0500 (Central Daylight Time)
+
+Bought WinterSoldier For 500At time Thu Apr 03 2014 21:59:25 GMT-0500 (Central Daylight Time)
+
+Got tag page WinterSoldier At time Thu Apr 03 2014 21:59:25 GMT-0500 (Central Daylight Time)
+
+Logged out  At time Thu Apr 03 2014 22:07:00 GMT-0500 (Central Daylight Time)
+
+Logged in  At time Thu Apr 03 2014 22:11:56 GMT-0500 (Central Daylight Time)
+
+Logged in  At time Thu Apr 03 2014 22:12:48 GMT-0500 (Central Daylight Time)
+
+Updating player Iambeingcoerced at time Thu Apr 03 2014 22:13:01 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: CaptainAmerica
+OldAmount 500 newAmount 510
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 1 
+
+tagname: TGIF
+OldAmount 1500 newAmount 1500
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 1 
+
+tagname: WinterSoldier
+OldAmount 500 newAmount 495
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 1 
+
+Logged out  At time Thu Apr 03 2014 22:14:09 GMT-0500 (Central Daylight Time)
+
+Logged in  At time Fri Apr 04 2014 00:37:23 GMT-0500 (Central Daylight Time)
+
+Updating player Iambeingcoerced at time Fri Apr 04 2014 00:37:36 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: CaptainAmerica
+OldAmount 510 newAmount 515.1
+peopleNow 1 peoplePst undefined
+tweetsNow 4 tweetsPast 3 
+
+tagname: TGIF
+OldAmount 1500 newAmount 1485
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 1 
+
+tagname: WinterSoldier
+OldAmount 495 newAmount 495
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null 
+
+Logged out  At time Fri Apr 04 2014 00:38:14 GMT-0500 (Central Daylight Time)
+

@@ -63,3 +63,128 @@ OldAmount 38 newAmount 38
 peopleNow 5 peoplePst undefined
 tweetsNow 35 tweetsPast 35 
 
+Logged in  At time Thu Apr 03 2014 22:14:19 GMT-0500 (Central Daylight Time)
+
+Updating player ZachB at time Thu Apr 03 2014 22:14:26 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 1.98
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast 1 
+
+tagname: selfie
+OldAmount 38 newAmount 29.64
+peopleNow 5 peoplePst undefined
+tweetsNow 13 tweetsPast 35 
+
+Logged out  At time Thu Apr 03 2014 22:14:58 GMT-0500 (Central Daylight Time)
+
+Logged in  At time Thu Apr 03 2014 22:22:05 GMT-0500 (Central Daylight Time)
+
+Updating player ZachB at time Thu Apr 03 2014 22:22:13 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null 
+
+tagname: selfie
+OldAmount 30 newAmount 30
+peopleNow 5 peoplePst undefined
+tweetsNow 13 tweetsPast 13 
+
+Got tag page selfie At time Thu Apr 03 2014 22:22:28 GMT-0500 (Central Daylight Time)
+
+Asked for chart selfie At time Thu Apr 03 2014 22:22:28 GMT-0500 (Central Daylight Time)
+
+Sold selfie For 30At time Thu Apr 03 2014 22:22:39 GMT-0500 (Central Daylight Time)
+
+Got tag page selfie At time Thu Apr 03 2014 22:22:39 GMT-0500 (Central Daylight Time)
+
+Got tag page BITCH At time Thu Apr 03 2014 22:22:47 GMT-0500 (Central Daylight Time)
+
+Asked for chart BITCH At time Thu Apr 03 2014 22:22:47 GMT-0500 (Central Daylight Time)
+
+Bought BITCH For 1At time Thu Apr 03 2014 22:22:59 GMT-0500 (Central Daylight Time)
+
+Got tag page BITCH At time Thu Apr 03 2014 22:23:00 GMT-0500 (Central Daylight Time)
+
+Got tag page BBN At time Thu Apr 03 2014 22:25:52 GMT-0500 (Central Daylight Time)
+
+Asked for chart BBN At time Thu Apr 03 2014 22:25:52 GMT-0500 (Central Daylight Time)
+
+Logged out  At time Thu Apr 03 2014 22:26:22 GMT-0500 (Central Daylight Time)
+
+Logged out  At time Fri Apr 04 2014 01:02:08 GMT-0500 (Central Daylight Time)
+
+Logged in  At time Fri Apr 04 2014 01:02:14 GMT-0500 (Central Daylight Time)
+
+Updating player ZachB at time Fri Apr 04 2014 01:02:21 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null 
+
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null 
+
+Got tag page AlphaCenter At time Fri Apr 04 2014 01:03:13 GMT-0500 (Central Daylight Time)
+
+Asked for chart AlphaCenter At time Fri Apr 04 2014 01:03:13 GMT-0500 (Central Daylight Time)
+
+Got tag page tgif At time Fri Apr 04 2014 01:03:30 GMT-0500 (Central Daylight Time)
+
+Asked for chart tgif At time Fri Apr 04 2014 01:03:30 GMT-0500 (Central Daylight Time)
+
+Got tag page TGIF At time Fri Apr 04 2014 01:03:36 GMT-0500 (Central Daylight Time)
+
+Asked for chart TGIF At time Fri Apr 04 2014 01:03:36 GMT-0500 (Central Daylight Time)
+
+Got tag page TGIF At time Fri Apr 04 2014 01:03:49 GMT-0500 (Central Daylight Time)
+
+Asked for chart TGIF At time Fri Apr 04 2014 01:03:49 GMT-0500 (Central Daylight Time)
+
+Bought TGIF For 911At time Fri Apr 04 2014 01:03:54 GMT-0500 (Central Daylight Time)
+
+Got tag page TGIF At time Fri Apr 04 2014 01:03:54 GMT-0500 (Central Daylight Time)
+
+Logged out  At time Fri Apr 04 2014 01:03:59 GMT-0500 (Central Daylight Time)
+
+Logged in  At time Fri Apr 04 2014 09:43:35 GMT-0500 (Central Daylight Time)
+
+Updating player ZachB at time Fri Apr 04 2014 09:43:49 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null 
+
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null 
+
+tagname: TGIF
+OldAmount 911 newAmount 992.99
+peopleNow 2 peoplePst undefined
+tweetsNow 9 tweetsPast null 
+
+Got tag page TGIF At time Fri Apr 04 2014 09:44:11 GMT-0500 (Central Daylight Time)
+
+Asked for chart TGIF At time Fri Apr 04 2014 09:44:11 GMT-0500 (Central Daylight Time)
+
+Sold TGIF For 993At time Fri Apr 04 2014 09:45:07 GMT-0500 (Central Daylight Time)
+
+Got tag page TGIF At time Fri Apr 04 2014 09:45:07 GMT-0500 (Central Daylight Time)
+
+Got tag page FreebieFriday At time Fri Apr 04 2014 09:45:31 GMT-0500 (Central Daylight Time)
+
+Asked for chart FreebieFriday At time Fri Apr 04 2014 09:45:31 GMT-0500 (Central Daylight Time)
+
+Got tag page RT At time Fri Apr 04 2014 09:46:00 GMT-0500 (Central Daylight Time)
+
+Asked for chart RT At time Fri Apr 04 2014 09:46:00 GMT-0500 (Central Daylight Time)
+

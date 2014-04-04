@@ -75,11 +75,9 @@ function messageUser( user , type , message )
 	// if the user is not undefined
 	if( clientSocketTable[user] != undefined ) {
 		clientSocketTable[ user ].emit( type , message );
-		console.log("MESSGE SENT");
 	}
 	else
 	{
-		console.log("FDFHDLFJKD");
 	}
 }
 
@@ -95,7 +93,6 @@ function messageAnonymous( socket , type , message)
 function addClient( client , socket )
 {
 	clientSocketTable[ client ] = socket;
-	console.log("THIS HAPPEND");
 }
 
 

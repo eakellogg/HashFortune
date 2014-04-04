@@ -19,16 +19,14 @@ function apply( socketHandler , connection, message )
 	convertedCurrentTime.setHours(convertedCurrentTime.getHours() - 2);
 	convertedCurrentTime.setMinutes(0);
 	convertedCurrentTime.setSeconds(0);
-	console.log("FJDLKFJ");
 	connection.query( "SELECT LastLogout FROM users WHERE username = ? " , [ username ] ,
 		function (err , rows )
 		{
 			if( err )
 				throw err;
-		//console.log("JFKDJF");
+
 		var min15 =1000*60*15;
 		
-		//console.log(rows);
 		var timediff;
 		timediff = 2;
 		if( rows.length != 0 )
@@ -44,7 +42,6 @@ function apply( socketHandler , connection, message )
 		}
 			if (true )
 			{
-			console.log("HELLO");
 
 
 
@@ -183,10 +180,8 @@ function apply( socketHandler , connection, message )
 }
 else
 {
-	console.log("HRE");
 	newmessage = {};
 	newmessage.user_name = username;
 	servercommands.serveMyTrending(newmessage);
-	console.log("DJKDFD");
 }});
 }
