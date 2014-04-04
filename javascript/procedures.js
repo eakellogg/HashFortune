@@ -72,7 +72,7 @@ function trendingProcedure(message)
 
 function myInvestmentsProcedure(message)
 {
-	var table1 = "<table width=75%; class='center';> <caption>Your Investments</caption>";
+	var table1 = "<table width=75%; class='center';> <caption>Investments</caption>";
 	var table3 = "</table> <BR> <BR>";	
 	var table2 = "";
 	
@@ -97,7 +97,7 @@ function leaderProcedure(message)
 	// file the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
-		table2 = table2 + "<tr><td width=50%>" + message[x].username + "</td><td>" + message[x].TotalValue + "</td></tr>";
+		table2 = table2 + "<tr><td width=50%><a onclick=\"rename_page('Portfolio'); hide_all(); show_portfolio('" + message[x].username + "');\"> " + message[x].username + " </ a></td><td>" + message[x].TotalValue + "</td></tr>";
 	}
 
 	var finaltable = table1 + table2 + table3;
@@ -106,7 +106,7 @@ function leaderProcedure(message)
 
 function playerInfoProcedure(message)
 {
-	var table1 = "<table width=75%; class='center';> <caption>Player Info</caption>";
+	var table1 = "<table width=75%; class='center';> <caption>" + message.username + "</caption>";
 	var table3 = "</table> <BR> <BR>";	
 	var table2 = "";
 	
@@ -139,6 +139,40 @@ function userProcedure(message)
     document.getElementById("user_search_results").innerHTML = finaltable;
 }
 
+
+function friendsProcedure(message)
+{
+	var table1 = "<table width=75%; class='center';> <caption>Friends</caption>";
+	var table3 = "</table> <BR> <BR>";	
+	var table2 = "";
+
+	// file the table with the hashtag info received
+	for(var x = 0; x < message.length; x++ )
+	{
+		table2 = table2 + "<tr><td width=50%>" + message[x].Friend + "</td><td>" + message[x].TotalValue + "</td></tr>";
+	}
+
+	var finaltable = table1 + table2 + table3;
+	document.getElementById("friends").innerHTML=finaltable;
+}
+
+function friendRequestsProcedure(message)
+{
+	var table1 = "<table width=75%; class='center';> <caption>Friend Requests</caption>";
+	var table3 = "</table> <BR> <BR>";	
+	var table2 = "";
+
+	// file the table with the hashtag info received
+	for(var x = 0; x < message.length; x++ )
+	{
+		table2 = table2 + "<tr><td width=50%>" + message[x].sender + "</td><td width=25%><button type='button' onclick=\"acceptFriend( '"; 
+		table2 = table2 + message[x].receiver + "' , '" + message[x].sender + "' );\"> Accept </ button></ td><td width=25%>";
+		table2 = table2 + "<button type='button' onclick=\"declineFriend( '" + message[x].receiver + "' , '" + message[x].sender + "' );\"> Decline </ button></ td></tr>";
+	}
+
+	var finaltable = table1 + table2 + table3;
+	document.getElementById("friend_requests").innerHTML=finaltable;
+}
 
 // present the user with a warning
 function warningProcedure(message)
