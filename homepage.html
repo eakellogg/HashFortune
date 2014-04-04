@@ -130,13 +130,17 @@
 <body>
 
 
-<h1>
+<h1 id="main_header">
     <script src = "/javascript/homepageFunctions.js"></script>
   
 	<!-- icon on the lefthand side of the toolbar -->
 	<div style="float:left">
 		<img src="icons/icon.png" height = "62" width = "62" class="pointable"
-		onclick="rename_page('Home Page'); hide_all(); show_homepage();">
+            onclick="rename_page('Home Page'); hide_all(); show_homepage();" style="
+            padding-right: 1px;
+            width: 40px;
+            height: auto;
+            ">>
 	</div>
 	  
 	<!-- title of the page being viewed -->
@@ -169,7 +173,7 @@
 <b> Challenge Toolbar </b> <br>
 <p> This will have more cool stuff after we set up challenges! </p>
 <p> For right now, enjoy the power of buying and selling, and try to make it to the top of the leaderboard! </p>
-
+<p> Also, please fill out a quick questionnaire to help us improve the game.  The link is in the settings page. There is also a link to a brief tutorial.</p>
 </div>
 
 <!-- division containing the main body of the page, everything not in a toolbar -->
@@ -306,7 +310,13 @@
 <div id="settings">
 	<p> Email Notifications </p>
 	<p> Change Profile Picture </p>
-	<p> Rerun Tutorial </p>
+	<p>
+    <a href="https://docs.google.com/document/d/1TczHh537i3HhJxRfrLsV-6fgIK9zduZqFltcCf921ow/edit?usp=sharing" target="_blank">Here is the link to a brief tutorial.</a>
+    </p>
+    
+    <a href="https://docs.google.com/forms/d/11X2S7wk5odFIWruJPixHJM3T6lcv9LR2fkCTE4ofsF4/viewform" target="_blank">Please take our user study!</a>
+    <br>
+    
     <br>
     <p> If you encounter any issues, you can email us at hashfortune@gmail.com </p>
 	<input type="button" value="Logout" onclick=" setCookie( 'user_name' , '' , 1); setCookie('pass_word' , '' , 1 ); socket.emit( 'logout' , { user_name : user_name } ); location.href = '/index.html'; "/>
@@ -396,7 +406,12 @@
 <BR>
 </div>
 
+<div id="chartdiv" style="width: 640px; height: 400px;"></div>
+
 </div> <!--closes div separating main body from toolbar -->
+
+
+
 
 
 
