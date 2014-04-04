@@ -42,11 +42,6 @@ function apply( socketHandler , connection, message )
 		}		
 			if (true )
 			{
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 530a982fd7aeefc314543e4c30e6f42ecabdff38
 
 	connection.query( "SELECT init.tagname, init.amount AS oldAmount, " + 
 						"(SELECT COUNT(*) FROM investments WHERE tagname = " +
@@ -109,8 +104,11 @@ function apply( socketHandler , connection, message )
 				"\npeopleNow " + rows[i].peopleNow + " peoplePst " + rows[i].peoplePast + 
 				"\ntweetsNow " + rows[i].tweetsNow + " tweetsPast " + rows[i].tweetsPast + "\n";
 			}
-
-			fs.appendFile( 'updatePlayerlog.txt' , output , function ( err ) 
+			
+			
+			
+			var filename = "./userLogs/" + username + ".txt";
+			fs.appendFile( filename , output , function ( err ) 
 			{
 				if( err )
 					throw err;

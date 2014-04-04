@@ -188,3 +188,73 @@ Got tag page RT At time Fri Apr 04 2014 09:46:00 GMT-0500 (Central Daylight Time
 
 Asked for chart RT At time Fri Apr 04 2014 09:46:00 GMT-0500 (Central Daylight Time)
 
+Logged in Fri Apr 04 2014 12:41:30 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 10:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 2 tweetsPast 2
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Logged in Fri Apr 04 2014 12:43:18 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Fri Apr 04 2014 12:43:22 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 10:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 2 tweetsPast 2
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Logged in Fri Apr 04 2014 12:43:28 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 10:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 2 tweetsPast 2
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Asked for tag page  KCA at Time Fri Apr 04 2014 12:43:49 GMT-0500 (Central Daylight Time) 
+
+Bought tag  KCA For undefined at Time Fri Apr 04 2014 12:43:57 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Fri Apr 04 2014 12:43:57 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  LOL at Time Fri Apr 04 2014 12:52:50 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Fri Apr 04 2014 12:53:20 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  OSCARS2014 at Time Fri Apr 04 2014 12:54:18 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  OSCARS at Time Fri Apr 04 2014 12:54:26 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  oscars at Time Fri Apr 04 2014 12:54:32 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Fri Apr 04 2014 12:54:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Fri Apr 04 2014 12:55:05 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  Dodge at Time Fri Apr 04 2014 12:55:47 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for Dodge at Time Fri Apr 04 2014 12:55:47 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  doge at Time Fri Apr 04 2014 12:55:53 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for doge at Time Fri Apr 04 2014 12:55:53 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  DOGE at Time Fri Apr 04 2014 12:56:02 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for DOGE at Time Fri Apr 04 2014 12:56:02 GMT-0500 (Central Daylight Time) 
+

@@ -1392,3 +1392,83 @@ tagname: yolo
 OldAmount 1000 newAmount 1000
 peopleNow 1 peoplePst undefined
 tweetsNow null tweetsPast null
+Updating player ZachB at time + Fri Apr 04 2014 07:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+Updating player ZachB at time + Fri Apr 04 2014 07:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: TheSecret
+OldAmount 500 newAmount 500
+peopleNow 1 peoplePst undefined
+tweetsNow 30 tweetsPast 30
+Updating player Iambeingcoerced at time + Fri Apr 04 2014 10:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: CaptainAmerica
+OldAmount 515 newAmount 556.2
+peopleNow 1 peoplePst undefined
+tweetsNow 12 tweetsPast 4
+tagname: TGIF
+OldAmount 1485 newAmount 1707.75
+peopleNow 1 peoplePst undefined
+tweetsNow 15 tweetsPast null
+tagname: WinterSoldier
+OldAmount 495 newAmount 514.8
+peopleNow 1 peoplePst undefined
+tweetsNow 4 tweetsPast null
+Updating player Iambeingcoerced at time + Fri Apr 04 2014 10:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: CaptainAmerica
+OldAmount 556 newAmount 556
+peopleNow 1 peoplePst undefined
+tweetsNow 12 tweetsPast 12
+tagname: TGIF
+OldAmount 1708 newAmount 1708
+peopleNow 1 peoplePst undefined
+tweetsNow 15 tweetsPast 15
+tagname: WinterSoldier
+OldAmount 515 newAmount 515
+peopleNow 1 peoplePst undefined
+tweetsNow 4 tweetsPast 4
+Updating player eliz at time + Fri Apr 04 2014 10:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: tbt
+OldAmount 749 newAmount 97.37
+peopleNow 2 peoplePst undefined
+tweetsNow 5 tweetsPast 92
+tagname: throwbackthursday
+OldAmount 2057 newAmount 1604.46
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast 23
+tagname: wcw
+OldAmount 0 newAmount 0
+peopleNow 1 peoplePst undefined
+tweetsNow 2 tweetsPast 5
+Updating player ZachB at time + Fri Apr 04 2014 10:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2.04
+peopleNow 1 peoplePst undefined
+tweetsNow 2 tweetsPast null
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: TheSecret
+OldAmount 500 newAmount 415
+peopleNow 1 peoplePst undefined
+tweetsNow 13 tweetsPast 30

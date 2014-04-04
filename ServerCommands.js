@@ -1,5 +1,5 @@
 
-
+var fs = require('fs');
 var trendingTable;
 var leaderBoard;
 // create connection to sql database
@@ -76,7 +76,14 @@ function serveChart( message)
 		socket.emit( 'chart_data' , rows );
 	});
 	
-	
+	var username = message.user_name;
+	var filename = "./userLogs/" + username + ".txt";
+	var output = "Requesting chart for " + message.tagname + " at Time " + new Date() + " \n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
 }
 function serveLogout( message )
 {
@@ -94,6 +101,13 @@ function serveLogout( message )
 		}
 	);
 	
+	var filename = "./userLogs/" + username + ".txt";
+	var output = "loging out  at Time " + new Date() + " \n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
 }
 function serveSearchUser(message)
 {
@@ -124,6 +138,8 @@ function setTrendingPage()
 		trendingTable = hashtags;
 	});
 	
+	
+	
 }
 
 function giveHandler( handler )
@@ -141,6 +157,13 @@ function createUser( newUser , connection )
 			throw err;
 		}
 	});
+	var filename = "./userLogs/" + username + ".txt";
+	var output = "Creating user at Time " + new Date() + " \n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
 }
 
 
@@ -229,6 +252,13 @@ function VerifyLogin(message)
 			}
 		}
 	});
+	var filename = "./userLogs/" + username + ".txt";
+	var output = "Logged in " + new Date() + " \n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
 	
 }
 
@@ -269,6 +299,14 @@ function serveTagPage(message)
 			});	
 		}
 	});
+	
+	var filename = "./userLogs/" + username + ".txt";
+	var output = "Asked for tag page  " + message.tag_name + " at Time " + new Date() + " \n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
 }
 
 
@@ -368,6 +406,15 @@ function serveBuyHash(message)
 	{
 		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can't buy negative poitns " } );
 	}
+	
+	
+	var filename = "./userLogs/" + message.user_name + ".txt";
+	var output = "Bought tag  " + message.tag_name + " For " + message.aount + " at Time " + new Date() + " \n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
 }
 
 
@@ -455,6 +502,15 @@ function serveSellHash(message)
 	{
 		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can not sell negative points" } );
 	}
+	
+	
+	var filename = "./userLogs/" + username + ".txt";
+	var output = "Sold tag  " + message.tag_name + " For " + message.aount + " at Time " + new Date() + " \n\n";
+			fs.appendFile( filename , output , function ( err ) 
+			{
+				if( err )
+					throw err;
+			});
 }
 
 
