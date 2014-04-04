@@ -86,7 +86,6 @@ function apply( socketHandler , connection, message )
 				
 				array[i]  =  {};
 				array[i].newamount = obj.oldAmount + Math.floor(Math.pow( obj.peopleNow - obj.peoplePst, 2 )) + (obj.oldAmount/100)*( obj.tweetsNow - obj.tweetsPast );
-				console.log("!!!!!!!!!!!!!!!!!!!!!" + array[i].newamount);
 				if( array[i].newamount < 0 )
 					array[i].newamount = 0;
 				array[i].tagname   = obj.tagname;
@@ -160,6 +159,12 @@ function apply( socketHandler , connection, message )
 			function(err , rows ) { 			
 				if(err) {
 					throw err; 
+					
+					
+			newmessage = {};
+			newmessage.user_name = username;
+			newmessage.portfolio_name = username;
+			servercommands.serveMyTrending(newmessage);
 				}
 			});
 		}	
@@ -169,10 +174,6 @@ function apply( socketHandler , connection, message )
 			if( err) {
 				throw err;
 			}
-			newmessage = {};
-			newmessage.user_name = username;
-			newmessage.portfolio_name = username;
-			servercommands.serveMyTrending(newmessage);
 		});
 	});	
 }

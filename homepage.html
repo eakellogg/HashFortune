@@ -330,6 +330,8 @@
     <BR>
 </div>
 
+ <div id="chartdiv" class= "center"; style="width: 900px; height: 400px;"></div>
+
 <!-- division containing the information regarding a particular hashtag -->
 <div id="hashtag_stats">
    <table width=75%; class="center";>
@@ -398,9 +400,6 @@
 
 
 
-<body>
-    <div id="chartdiv" style="width: 640px; height: 400px;"></div>
-</body>
 
 
 </body>
@@ -427,7 +426,7 @@
 			socket.on( 'friend_request_table' , friendRequestsProcedure );
             socket.on( 'user_search' , userProcedure );
 			socket.on( 'chart_data' , function (message) 
-		{
+			{
 
 chartData = message;
 var chart = new AmCharts.AmSerialChart();

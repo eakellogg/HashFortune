@@ -27,3 +27,27 @@ OldAmount 1000 newAmount 1000
 peopleNow 1 peoplePst undefined
 tweetsNow null tweetsPast null 
 
+Logged in Fri Apr 04 2014 14:30:45 GMT-0500 (Central Daylight Time) 
+
+Updating player nic at time + Fri Apr 04 2014 12:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: 420blazeit
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: dream
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: love
+OldAmount 987 newAmount 967.26
+peopleNow 1 peoplePst undefined
+tweetsNow 5 tweetsPast 7
+tagname: swag
+OldAmount 990 newAmount 1019.7
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast null
+tagname: yolo
+OldAmount 1000 newAmount 1000
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null

@@ -61,8 +61,8 @@ module.exports = {
 	serveChart : serveChart
 };
 
-setInterval( setLeaderBoard ,  60 * 60 * 1000);
-setInterval( setTrendingPage , 60 * 60 * 1000 );
+setInterval( setLeaderBoard ,  60 * 1000);
+setInterval( setTrendingPage , 60 * 1000 );
 
 
 function serveChart( message)
@@ -157,7 +157,7 @@ function createUser( newUser , connection )
 			throw err;
 		}
 	});
-	var filename = "./userLogs/" + username + ".txt";
+	var filename = "./userLogs/" + newUser.user_name + ".txt";
 	var output = "Creating user at Time " + new Date() + " \n\n";
 			fs.appendFile( filename , output , function ( err ) 
 			{
@@ -178,7 +178,7 @@ function VerifyCreate(message)
 	
 	// search the username
 	var clientSocket = this;
-	connection.query( 'SELECT username FROM users WHERE username = ?', [user] , 
+	connection.query( 'SELECT username FROM users WHERE username = ? LIMIT 1', [user] , 
 	function( err , user_info )
 	{
 		if(err) {
@@ -221,7 +221,7 @@ function VerifyLogin(message)
 	
 	socketHandler.addClient( username , clientSocket);
 	// search for the username and password of the user in question
-	connection.query( "SELECT username, password FROM `users` WHERE username = ? AND password = ?", [username, password],
+	connection.query( "SELECT username, password FROM `users` WHERE username = ? AND password = ? LIMIT 1", [username, password],
 	function(err, user_info) {
 		if(err) {
 			throw err;
@@ -244,7 +244,7 @@ function VerifyLogin(message)
 				returnmessage.user = username;
 				returnmessage.pass = password;	
 				socketHandler.messageUser( username, 'login_ok' , returnmessage );
-					formula.apply( socketHandler , connection , message);
+				formula.apply( socketHandler , connection , message);
 			}
 			else
 			{
@@ -504,7 +504,7 @@ function serveSellHash(message)
 	}
 	
 	
-	var filename = "./userLogs/" + username + ".txt";
+	var filename = "./userLogs/" + message.user_name + ".txt";
 	var output = "Sold tag  " + message.tag_name + " For " + message.aount + " at Time " + new Date() + " \n\n";
 			fs.appendFile( filename , output , function ( err ) 
 			{

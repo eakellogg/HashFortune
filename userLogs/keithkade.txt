@@ -27,3 +27,39 @@ OldAmount 1941 newAmount 2503.89
 peopleNow 3 peoplePst undefined
 tweetsNow 123 tweetsPast 94 
 
+Logged in Fri Apr 04 2014 14:55:46 GMT-0500 (Central Daylight Time) 
+
+Updating player keithkade at time + Fri Apr 04 2014 12:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: GoT
+OldAmount 1000 newAmount 1010
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast null
+tagname: gameofthrones
+OldAmount 999 newAmount 999
+peopleNow 1 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: SCOTUS
+OldAmount 963 newAmount 972.63
+peopleNow 1 peoplePst undefined
+tweetsNow 1 tweetsPast null
+tagname: selfie
+OldAmount 968 newAmount 949.64
+peopleNow 4 peoplePst undefined
+tweetsNow 21 tweetsPast 23
+tagname: tbt
+OldAmount 2504 newAmount 0
+peopleNow 3 peoplePst undefined
+tweetsNow 2 tweetsPast 123
+Asked for tag page  tbt at Time Fri Apr 04 2014 14:56:27 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Fri Apr 04 2014 14:56:27 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Fri Apr 04 2014 15:01:45 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Fri Apr 04 2014 15:01:45 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page   at Time Fri Apr 04 2014 15:02:09 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for  at Time Fri Apr 04 2014 15:02:09 GMT-0500 (Central Daylight Time) 
+
