@@ -53,20 +53,18 @@ $(document).ready(function() {
    $('#warning').css('display', 'none');
    $('#login').attr('disabled', false);
    socket = io.connect('http://' + document.location.host);
-    
    socket.on( 'welcome' , connectProcedure );
- 
    socket.on( 'login_ok', loginProcedure );
-  
    socket.on( 'login_fail' , function(message) { alert(message) } );
-  socket.on( 'warning' , warningProcedure );
+    
+   socket.on( 'warning' , warningProcedure );
    
    /*
 	Handle all possible message from server while on server page
    */
-  
    //Below handle all possible user caused events.
     $('#login').click(function() {
+	
       var name = $('#name').val();
 	  var pass = $('#pass').val();
       if (name && pass) {

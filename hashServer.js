@@ -15,7 +15,7 @@ var path = require('path');
 
 var io = require('socket.io').listen(server); 
 //io.set('log level' , 0); //THIS IS HOW YOU TURN OFF DEBUG
-server.listen(10001);
+server.listen(10002);
 
 var socketHandler = require('./javascript/socketHandler.js');
 

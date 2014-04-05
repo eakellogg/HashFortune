@@ -330,7 +330,8 @@
     	<caption id="hashtag_name">Hashtag Name</caption>
     	   <tr>
       		<td width=50%>Current Investment</td>
-      		<td id="my_invested_points">0</td>
+      		<td id="current_stock_count">0</td>
+			<td id="current_value">0</td>
     	   </tr>
     	   <tr>
       		<td width=50%>Uninvested Pts</td>
@@ -348,12 +349,12 @@
    <table width=75%; class="center";>
     	<caption>Popularity</caption>
     	   <tr>
-      		<td width=50%>Current Investors</td>
-      		<td id="total_investors">0</td>
+      		<td width=50%>Shares in</td>
+      		<td id="total_shares">0</td>
     	   </tr>
     	   <tr>
-      		<td width=50%>Pts Invested</td>
-      		<td id="total_invested_points">0</td>
+      		<td width=50%>Value per share</td>
+      		<td id="value_per_share">0</td>
     	   </tr>
     </table>
     <BR>
@@ -441,36 +442,7 @@
 			socket.on( 'friends_table' , friendsProcedure );
 			socket.on( 'friend_request_table' , friendRequestsProcedure );
             socket.on( 'user_search' , userProcedure );
-			socket.on( 'chart_data' , function (message) 
-			{
-
-chartData = message;
-var chart = new AmCharts.AmSerialChart();
-chart.dataProvider = chartData;
-chart.categoryField = "time";
-
-
-var chartScrollbar = new AmCharts.ChartScrollbar();
-chart.addChartScrollbar(chartScrollbar);
-
-var graph = new AmCharts.AmGraph();
-graph.valueField = "count";
-graph.type = "line";
-chart.addGraph(graph);
-
-var categoryAxis = chart.categoryAxis;
-categoryAxis.autoGridCount  = true;
-categoryAxis.gridPosition = "start";
-categoryAxis.labelRotation = 90;
-
-graph.type = "line";
-graph.fillAlphas = 0; // or delete this line, as 0 is default
-//graph.bullet = "round";
-//graph.lineColor = "#8d1cc6"
-
-chart.write('chartdiv');
-	
-});
+			socket.on( 'chart_data' , chartProcedure );
 		});
 		
 		

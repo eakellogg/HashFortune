@@ -428,3 +428,323 @@ Asked for tag page  KCA at Time Fri Apr 04 2014 15:12:53 GMT-0500 (Central Dayli
 
 Requesting chart for KCA at Time Fri Apr 04 2014 15:12:53 GMT-0500 (Central Daylight Time) 
 
+Logged in Fri Apr 04 2014 23:43:57 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: KCA
+OldAmount 9 newAmount 9
+peopleNow 1 peoplePst undefined
+tweetsNow 8 tweetsPast 8
+loging out  at Time Fri Apr 04 2014 23:44:34 GMT-0500 (Central Daylight Time) 
+
+Logged in Fri Apr 04 2014 23:44:40 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: KCA
+OldAmount 9 newAmount 9
+peopleNow 1 peoplePst undefined
+tweetsNow 8 tweetsPast 8
+loging out  at Time Fri Apr 04 2014 23:45:31 GMT-0500 (Central Daylight Time) 
+
+Logged in Fri Apr 04 2014 23:46:46 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Fri Apr 04 2014 23:46:49 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: KCA
+OldAmount 9 newAmount 9
+peopleNow 1 peoplePst undefined
+tweetsNow 8 tweetsPast 8
+Logged in Fri Apr 04 2014 23:47:04 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: KCA
+OldAmount 9 newAmount 9
+peopleNow 1 peoplePst undefined
+tweetsNow 8 tweetsPast 8
+loging out  at Time Fri Apr 04 2014 23:47:20 GMT-0500 (Central Daylight Time) 
+
+Logged in Fri Apr 04 2014 23:47:26 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Fri Apr 04 2014 23:47:29 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: KCA
+OldAmount 9 newAmount 9
+peopleNow 1 peoplePst undefined
+tweetsNow 8 tweetsPast 8
+Logged in Fri Apr 04 2014 23:47:46 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Fri Apr 04 2014 23:47:49 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: KCA
+OldAmount 9 newAmount 9
+peopleNow 1 peoplePst undefined
+tweetsNow 8 tweetsPast 8
+Logged in Fri Apr 04 2014 23:48:07 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Fri Apr 04 2014 23:48:10 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: KCA
+OldAmount 9 newAmount 9
+peopleNow 1 peoplePst undefined
+tweetsNow 8 tweetsPast 8
+Logged in Fri Apr 04 2014 23:48:27 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Fri Apr 04 2014 23:48:30 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: KCA
+OldAmount 9 newAmount 9
+peopleNow 1 peoplePst undefined
+tweetsNow 8 tweetsPast 8
+Logged in Fri Apr 04 2014 23:48:45 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Fri Apr 04 2014 23:48:47 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: KCA
+OldAmount 9 newAmount 9
+peopleNow 1 peoplePst undefined
+tweetsNow 8 tweetsPast 8
+Logged in Fri Apr 04 2014 23:49:13 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Fri Apr 04 2014 23:49:16 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: KCA
+OldAmount 9 newAmount 9
+peopleNow 1 peoplePst undefined
+tweetsNow 8 tweetsPast 8
+Logged in Fri Apr 04 2014 23:50:25 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Fri Apr 04 2014 23:50:27 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: KCA
+OldAmount 9 newAmount 9
+peopleNow 1 peoplePst undefined
+tweetsNow 8 tweetsPast 8
+Logged in Fri Apr 04 2014 23:51:29 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Fri Apr 04 2014 23:51:35 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: KCA
+OldAmount 9 newAmount 9
+peopleNow 1 peoplePst undefined
+tweetsNow 8 tweetsPast 8
+Logged in Fri Apr 04 2014 23:52:05 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Fri Apr 04 2014 23:52:11 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Fri Apr 04 2014 23:52:11 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 21:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: KCA
+OldAmount 9 newAmount 9
+peopleNow 1 peoplePst undefined
+tweetsNow 8 tweetsPast 8
+loging out  at Time Fri Apr 04 2014 23:53:28 GMT-0500 (Central Daylight Time) 
+
+Logged in Sat Apr 05 2014 00:04:24 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 22:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: KCA
+OldAmount 9 newAmount 8.82
+peopleNow 1 peoplePst undefined
+tweetsNow 6 tweetsPast 8
+loging out  at Time Sat Apr 05 2014 00:36:03 GMT-0500 (Central Daylight Time) 
+
+Logged in Sat Apr 05 2014 00:36:10 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sat Apr 05 2014 00:37:30 GMT-0500 (Central Daylight Time) 
+
+Logged in Sat Apr 05 2014 00:37:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Sat Apr 05 2014 00:37:40 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Sat Apr 05 2014 00:37:40 GMT-0500 (Central Daylight Time) 
+
+Updating player ZachB at time + Fri Apr 04 2014 22:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: BBN
+OldAmount 2 newAmount 2
+peopleNow 1 peoplePst undefined
+tweetsNow 3 tweetsPast 3
+tagname: BITCH
+OldAmount 1 newAmount 1
+peopleNow 2 peoplePst undefined
+tweetsNow null tweetsPast null
+tagname: KCA
+OldAmount 9 newAmount 9
+peopleNow 1 peoplePst undefined
+tweetsNow 6 tweetsPast 6
+Asked for tag page  KCA at Time Sat Apr 05 2014 00:51:33 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Sat Apr 05 2014 00:51:33 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Sat Apr 05 2014 00:52:12 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Sat Apr 05 2014 00:52:12 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Sat Apr 05 2014 00:54:50 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Sat Apr 05 2014 00:54:50 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Sat Apr 05 2014 00:56:01 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Sat Apr 05 2014 00:56:01 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Sat Apr 05 2014 00:56:19 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Sat Apr 05 2014 00:56:19 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Sat Apr 05 2014 00:56:48 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Sat Apr 05 2014 00:56:48 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Sat Apr 05 2014 00:57:45 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Sat Apr 05 2014 00:57:45 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Sat Apr 05 2014 00:58:05 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Sat Apr 05 2014 00:58:05 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  BITCH at Time Sat Apr 05 2014 00:59:14 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for BITCH at Time Sat Apr 05 2014 00:59:14 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  BITCH at Time Sat Apr 05 2014 00:59:31 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for BITCH at Time Sat Apr 05 2014 00:59:31 GMT-0500 (Central Daylight Time) 
+

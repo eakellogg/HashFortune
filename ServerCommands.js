@@ -65,27 +65,33 @@ setInterval( setLeaderBoard ,  60 * 1000);
 setInterval( setTrendingPage , 60 * 1000 );
 
 
-function serveChart( message)
+function serveChart( message) //TODO ZERR This should be a query that returns an array of objects with entries time , value
 {
 	var socket = this;
+	/*
 	connection.query( "SELECT dateTime AS time , count FROM hashTags WHERE name = ? " , [ message.tagname] , function (err , rows )
 	{
 		if( err )
 			throw err;
 		
-		socket.emit( 'chart_data' , rows );
+		
 	});
+	*/
+	
+	//EXAMPLE array
+	var rows  = [ { time : "2014-4-4 21:00:00" , value : 100 } ];
+	socket.emit( 'chart_data' , rows ); //Should be inside query callback
+	
 	
 	var username = message.user_name;
 	var filename = "./userLogs/" + username + ".txt";
 	var output = "Requesting chart for " + message.tagname + " at Time " + new Date() + " \n\n";
-			fs.appendFile( filename , output , function ( err ) 
-			{
-				if( err )
-					throw err;
-			});
+	fs.appendFile( filename , output , function ( err ) {
+		if( err )
+			throw err;
+	});
 }
-function serveLogout( message )
+function serveLogout( message )// TODO 
 {
 
 	var username = message.user_name;
@@ -93,6 +99,7 @@ function serveLogout( message )
 	
 	var convertedCurrentTime = new Date();
 	
+	/*Not needed in new mechanic but might be interesting data to store? not sure
 	connection.query( "UPDATE users SET lastLogout = ? WHERE username = ? " , [ convertedCurrentTime , username] ,
 		function ( err , rows )
 		{
@@ -100,14 +107,14 @@ function serveLogout( message )
 				throw err;
 		}
 	);
-	
+	*/
 	var filename = "./userLogs/" + username + ".txt";
 	var output = "loging out  at Time " + new Date() + " \n\n";
-			fs.appendFile( filename , output , function ( err ) 
-			{
-				if( err )
-					throw err;
-			});
+    fs.appendFile( filename , output , function ( err ) //The log out time is kinda stored here
+	{
+		if( err )
+			throw err;
+	});
 }
 function serveSearchUser(message)
 {
@@ -115,7 +122,7 @@ function serveSearchUser(message)
 function serveSearchEmail(message)
 {
 }
-function setLeaderBoard()
+function setLeaderBoard() // No changes needed
 {
 		connection.query( "SELECT username , TotalValue FROM users ORDER BY TotalValue DESC LIMIT 10" , 
 		function (err , rows )
@@ -126,9 +133,12 @@ function setLeaderBoard()
 		});
 }
 
+
+//TODO ZERR I have made the required change but its commented out until database is changed
 function setTrendingPage()
 {
-	connection.query( "SELECT name , count FROM hashTags ORDER BY dateTime DESC , count DESC LIMIT 10" , 
+/*
+	connection.query( "SELECT name , value FROM hashTags ORDER BY dateTime DESC , value DESC LIMIT 10" , 
 	function( err , hashtags )
 	{
 		if(err) {
@@ -137,18 +147,18 @@ function setTrendingPage()
 		
 		trendingTable = hashtags;
 	});
-	
+*/	
 	
 	
 }
 
-function giveHandler( handler )
+function giveHandler( handler ) //No changes needed
 {
 	socketHandler = handler;
 }
 
 // create a new user account
-function createUser( newUser , connection )
+function createUser( newUser , connection ) //No changes needed
 {
 	// insert new user into the database
 	connection.query( "INSERT INTO users ( username , password , email , AvailablePoints) VALUES (  ?, ? , ? , 5000 )" , [ newUser.user_name , newUser.pass_word , newUser.email ] , 
@@ -211,6 +221,8 @@ function VerifyCreate(message)
 }
 
 // verify the login of a user
+
+//TODO nothing changed directly here, but the formula it calls in now different 
 function VerifyLogin(message) 
 {
 	var username = message.user_name;
@@ -244,7 +256,8 @@ function VerifyLogin(message)
 				returnmessage.user = username;
 				returnmessage.pass = password;	
 				socketHandler.messageUser( username, 'login_ok' , returnmessage );
-				formula.apply( socketHandler , connection , message);
+				
+				formula.apply( socketHandler , connection , message); //This will change
 			}
 			else
 			{
@@ -252,22 +265,27 @@ function VerifyLogin(message)
 			}
 		}
 	});
+	
 	var filename = "./userLogs/" + username + ".txt";
 	var output = "Logged in " + new Date() + " \n\n";
-			fs.appendFile( filename , output , function ( err ) 
-			{
-				if( err )
-					throw err;
-			});
+	fs.appendFile( filename , output , function ( err ) 
+	{
+		if( err )
+			throw err;
+	});
 	
 }
 
 
 // update the hashtag page for a specific user
+
+//TODO ZERR this should now get the stock value, how many shares have been bought in total , how many times its been tweeted
+// and how many shares in this the user has 
 function serveTagPage(message)
 {
 	var username = message.user_name;
 	
+	/*
 	// search for the uninvested points of the user
 	connection.query( "SELECT AvailablePoints FROM users WHERE username = ? ", [username] , 
 	function( err , user_info )
@@ -311,6 +329,13 @@ function serveTagPage(message)
 			});	
 		}
 	});
+	*/
+	
+	//EXAMPLE output 
+	var output = { available_points : 1000 , user_invested : 1 , total_invested : 100 , value : 50 };
+	socketHandler.messageUser( username , 'tag_page' , output ); //should be inside query
+	
+	
 	
 	var filename = "./userLogs/" + username + ".txt";
 	var output = "Asked for tag page  " + message.tag_name + " at Time " + new Date() + " \n\n";
@@ -323,8 +348,12 @@ function serveTagPage(message)
 
 
 // handle a user's buy operation
+
+//TODO ZERR NEEDS query
 function serveBuyHash(message)
 {
+
+	/*
 	if( message.amount >= 0 )
 	{
 	// search for the uninvested points of the user
@@ -419,7 +448,7 @@ function serveBuyHash(message)
 		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can't buy negative poitns " } );
 	}
 	
-	
+	*/
 	var filename = "./userLogs/" + message.user_name + ".txt";
 	var output = "Bought tag  " + message.tag_name + " For " + message.aount + " at Time " + new Date() + " \n\n";
 			fs.appendFile( filename , output , function ( err ) 
@@ -431,8 +460,10 @@ function serveBuyHash(message)
 
 
 // handle a user's sell operation
+//TODO ZERR needs query
 function serveSellHash(message)
-{
+
+/*
 	if( message.amount >= 0)
 	{
 	// search for the investment for the user in question
@@ -515,7 +546,7 @@ function serveSellHash(message)
 		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can not sell negative points" } );
 	}
 	
-	
+	*/
 	var filename = "./userLogs/" + message.user_name + ".txt";
 	var output = "Sold tag  " + message.tag_name + " For " + message.aount + " at Time " + new Date() + " \n\n";
 			fs.appendFile( filename , output , function ( err ) 
@@ -533,9 +564,12 @@ function serveTrending(message)
 	socketHandler.messageUser( username , 'trending_table' , trendingTable );
 }
 
-function serveMyTrending(message)
-{
+//TODO ZERR investments should be an array of objects with three entries
+//tagname , count , value 
+function serveMyTrending(message ) {
+
 var portfolio_name = message.portfolio_name;
+/*
 connection.query( "SELECT  tagname , amount FROM investments WHERE investments.username = ? " , [portfolio_name] , 
 function (err , investments ){
 	if( err )
@@ -543,6 +577,12 @@ function (err , investments ){
 	socketHandler.messageUser( message.user_name,  'my_investments_table' , investments );
 
 });
+*/
+
+//EXAMPLE array
+var investments = [ { tagname : "BITCH" , count : 100 , value : 5 } ];
+socketHandler.messageUser( message.user_name , 'my_investments_table' , investments );
+
 }
 
 
