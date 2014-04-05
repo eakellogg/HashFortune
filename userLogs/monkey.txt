@@ -48,3 +48,73 @@ OldAmount 12 newAmount 10.8
 peopleNow 1 peoplePst undefined
 tweetsNow 24 tweetsPast 34 
 
+Logged in Fri Apr 04 2014 15:18:24 GMT-0500 (Central Daylight Time) 
+
+Updating player monkey at time + Fri Apr 04 2014 13:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: RT
+OldAmount 224 newAmount 210.56
+peopleNow 1 peoplePst undefined
+tweetsNow 37 tweetsPast 43
+tagname: TheBuzz
+OldAmount 633 newAmount 746.94
+peopleNow 1 peoplePst undefined
+tweetsNow 49 tweetsPast 31
+tagname: yeet
+OldAmount 13 newAmount 8.84
+peopleNow 1 peoplePst undefined
+tweetsNow 16 tweetsPast 48
+Asked for tag page  RT at Time Fri Apr 04 2014 15:21:12 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Fri Apr 04 2014 15:21:12 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  what at Time Fri Apr 04 2014 15:22:25 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for what at Time Fri Apr 04 2014 15:22:25 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  meh at Time Fri Apr 04 2014 15:25:55 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for meh at Time Fri Apr 04 2014 15:25:55 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  test at Time Fri Apr 04 2014 15:36:50 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for test at Time Fri Apr 04 2014 15:36:50 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  fuckzerr at Time Fri Apr 04 2014 15:43:23 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for fuckzerr at Time Fri Apr 04 2014 15:43:23 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Fri Apr 04 2014 15:44:41 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for selfie at Time Fri Apr 04 2014 15:44:41 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Fri Apr 04 2014 15:45:20 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for selfie at Time Fri Apr 04 2014 15:45:20 GMT-0500 (Central Daylight Time) 
+
+Logged in Fri Apr 04 2014 15:48:38 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Fri Apr 04 2014 15:48:47 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for TBT at Time Fri Apr 04 2014 15:48:47 GMT-0500 (Central Daylight Time) 
+
+Updating player monkey at time + Fri Apr 04 2014 13:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: RT
+OldAmount 211 newAmount 211
+peopleNow 1 peoplePst undefined
+tweetsNow 37 tweetsPast 37
+tagname: TheBuzz
+OldAmount 747 newAmount 747
+peopleNow 1 peoplePst undefined
+tweetsNow 49 tweetsPast 49
+tagname: yeet
+OldAmount 9 newAmount 9
+peopleNow 1 peoplePst undefined
+tweetsNow 16 tweetsPast 16
+Asked for tag page  TBT at Time Fri Apr 04 2014 15:56:26 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for TBT at Time Fri Apr 04 2014 15:56:26 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Fri Apr 04 2014 15:56:33 GMT-0500 (Central Daylight Time) 
+

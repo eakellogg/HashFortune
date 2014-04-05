@@ -104,3 +104,31 @@ tweetsNow null tweetsPast null
 
 Logged out  At time Fri Apr 04 2014 00:38:14 GMT-0500 (Central Daylight Time)
 
+Logged in Fri Apr 04 2014 21:49:01 GMT-0500 (Central Daylight Time) 
+
+Updating player Iambeingcoerced at time + Fri Apr 04 2014 19:00:00 GMT-0500 (Central Daylight Time) 
+The rows recieved from the query 
+tagname: CaptainAmerica
+OldAmount 556 newAmount 517.08
+peopleNow 1 peoplePst undefined
+tweetsNow 5 tweetsPast 12
+tagname: WinterSoldier
+OldAmount 515 newAmount 520.15
+peopleNow 1 peoplePst undefined
+tweetsNow 5 tweetsPast 4
+Asked for tag page  CaptainAmerica at Time Fri Apr 04 2014 21:49:28 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for CaptainAmerica at Time Fri Apr 04 2014 21:49:28 GMT-0500 (Central Daylight Time) 
+
+Sold tag  CaptainAmerica For undefined at Time Fri Apr 04 2014 21:49:51 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  CaptainAmerica at Time Fri Apr 04 2014 21:49:51 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WinterSoldier at Time Fri Apr 04 2014 21:49:58 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WinterSoldier at Time Fri Apr 04 2014 21:49:58 GMT-0500 (Central Daylight Time) 
+
+Sold tag  WinterSoldier For undefined at Time Fri Apr 04 2014 21:50:19 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WinterSoldier at Time Fri Apr 04 2014 21:50:20 GMT-0500 (Central Daylight Time) 
+

@@ -295,6 +295,18 @@ function serveTagPage(message)
 					output.invested = investment_info[0].amount;
 				}
 				
+					connection.query( "SELECT investorCount FROM `investments` WHERE tagname = ?", [message.tag_name], 
+					function( err , numInvestors )
+					{
+						if(err) {
+							throw err;
+						}
+						
+						if(numInvestors.length != 0) {
+							output.players_invested = numInvestors[0].investorCount;
+						}
+					});
+				
 				socketHandler.messageUser( username , 'tag_page' , output );	
 			});	
 		}
