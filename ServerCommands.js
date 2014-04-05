@@ -65,23 +65,20 @@ setInterval( setLeaderBoard ,  60 * 1000);
 setInterval( setTrendingPage , 60 * 1000 );
 
 
-function serveChart( message) //TODO ZERR This should be a query that returns an array of objects with entries time , value
+//TODO ZERR This should be a query that returns an array of objects with entries time , value
+//I came back and wrote this one, its simple.
+function serveChart( message) 
 {
 	var socket = this;
-	/*
-	connection.query( "SELECT dateTime AS time , count FROM hashTags WHERE name = ? " , [ message.tagname] , function (err , rows )
+	
+	connection.query( "SELECT dateTime AS time , price AS value FROM hashTags WHERE name = ? " , [ message.tagname] , function (err , rows )
 	{
 		if( err )
 			throw err;
 		
-		
+			socket.emit( 'chart_data' , rows );
 	});
-	*/
-	
-	//EXAMPLE array
-	var rows  = [ { time : "2014-4-4 21:00:00" , value : 100 } ];
-	socket.emit( 'chart_data' , rows ); //Should be inside query callback
-	
+
 	
 	var username = message.user_name;
 	var filename = "./userLogs/" + username + ".txt";
@@ -134,11 +131,11 @@ function setLeaderBoard() // No changes needed
 }
 
 
-//TODO ZERR I have made the required change but its commented out until database is changed
+//TODO ZERR I have made the required change
 function setTrendingPage()
 {
-/*
-	connection.query( "SELECT name , value FROM hashTags ORDER BY dateTime DESC , value DESC LIMIT 10" , 
+
+	connection.query( "SELECT name , price FROM hashTags ORDER BY dateTime DESC , price DESC LIMIT 10" , 
 	function( err , hashtags )
 	{
 		if(err) {
@@ -147,7 +144,7 @@ function setTrendingPage()
 		
 		trendingTable = hashtags;
 	});
-*/	
+	
 	
 	
 }
@@ -279,11 +276,17 @@ function VerifyLogin(message)
 
 // update the hashtag page for a specific user
 
-//TODO ZERR this should now get the stock value, how many shares have been bought in total , how many times its been tweeted
-// and how many shares in this the user has 
+//TODO ZERR this should now get the stock value, how many shares have been bought in total
+// and how many shares in this the user has as well as their available points
 function serveTagPage(message)
 {
 	var username = message.user_name;
+	
+	
+	
+	
+//	connection.query( "SELECT price , shares, 
+	
 	
 	/*
 	// search for the uninvested points of the user
@@ -557,7 +560,7 @@ function serveSellHash(message)
 }
 
 
-// search for the top ten trending hashtags (name and count) to return to the requester
+//Give the requester  the current trending_table
 function serveTrending(message) 
 {
 	var username = message.user_name;
@@ -577,8 +580,8 @@ function (err , investments ){
 	socketHandler.messageUser( message.user_name,  'my_investments_table' , investments );
 
 });
-*/
 
+*/
 //EXAMPLE array
 var investments = [ { tagname : "BITCH" , count : 100 , value : 5 } ];
 socketHandler.messageUser( message.user_name , 'my_investments_table' , investments );

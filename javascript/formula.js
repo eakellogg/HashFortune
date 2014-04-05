@@ -11,8 +11,14 @@ function set( ds )
 {
 	servercommands = ds;
 }
+
+//TODO ZERR this now just needs to figure out their new total value 
+//which should just be the sum of all their investments.
+
 function apply( socketHandler , connection, message )
 {
+
+/*
 	var username = message.user_name;
 	var convertedCurrentTime = new Date();
 	
@@ -184,4 +190,5 @@ else
 	newmessage.portfolio_name = username;
 	servercommands.serveMyTrending(newmessage);
 }});
+*/
 }
