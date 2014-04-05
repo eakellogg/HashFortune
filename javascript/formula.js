@@ -12,12 +12,28 @@ function set( ds )
 	servercommands = ds;
 }
 
-//TODO ZERR this now just needs to figure out their new total value 
-//which should just be the sum of all their investments.
 
 function apply( socketHandler , connection, message )
 {
+	var username = message.user_name;
+	var totalValue = 0;
+	
+	connection.query( "SELECT Invests.shares, value FROM Invests inner join Market on Market.tagname = Invests.tagname WHERE Invests.username = ? " , [username] , 
+	function (err , investments ){
+		if( err )
+			throw err;
+		for(var i = 0; i < investments.length; i++)
+		{
+			totalValue += Math.ceil(investments[i].shares * investments[i].value);
+		}
 
+	});
+	
+	connection.query( "UPDATE users SET TotalValue = ? WHERE username = ? " , [totalValue, username] , 
+	function (err , blank ){
+		if( err )
+			throw err;
+	});
 /*
 	var username = message.user_name;
 	var convertedCurrentTime = new Date();
