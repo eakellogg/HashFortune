@@ -65,20 +65,17 @@ setInterval( setLeaderBoard ,  60 * 1000);
 setInterval( setTrendingPage , 60 * 1000 );
 
 
-//TODO ZERR This should be a query that returns an array of objects with entries time , value
-//I came back and wrote this one, its simple.
 function serveChart( message) 
 {
 	var socket = this;
-	
-	connection.query( "SELECT dateTime AS time , price AS value FROM hashTags WHERE name = ? " , [ message.tagname] , function (err , rows )
+
+	//now getting the historical values from the hashTags table
+	connection.query( "SELECT dateTime AS time , value FROM hashTags WHERE name = ? " , [ message.tagname] , function (err , rows )
 	{
 		if( err )
 			throw err;
-		
-			socket.emit( 'chart_data' , rows );
+		socket.emit( 'chart_data' , rows );
 	});
-
 	
 	var username = message.user_name;
 	var filename = "./userLogs/" + username + ".txt";
@@ -88,7 +85,7 @@ function serveChart( message)
 			throw err;
 	});
 }
-function serveLogout( message )// TODO 
+function serveLogout( message )
 {
 
 	var username = message.user_name;
@@ -119,7 +116,7 @@ function serveSearchUser(message)
 function serveSearchEmail(message)
 {
 }
-function setLeaderBoard() // No changes needed
+function setLeaderBoard()
 {
 		connection.query( "SELECT username , TotalValue FROM users ORDER BY TotalValue DESC LIMIT 10" , 
 		function (err , rows )
@@ -131,7 +128,6 @@ function setLeaderBoard() // No changes needed
 }
 
 
-//TODO ZERR I have made the required change
 function setTrendingPage()
 {
 
@@ -144,21 +140,18 @@ function setTrendingPage()
 		
 		trendingTable = hashtags;
 	});
-	
-	
-	
 }
 
-function giveHandler( handler ) //No changes needed
+function giveHandler( handler )
 {
 	socketHandler = handler;
 }
 
 // create a new user account
-function createUser( newUser , connection ) //No changes needed
+function createUser( newUser , connection )
 {
 	// insert new user into the database
-	connection.query( "INSERT INTO users ( username , password , email , AvailablePoints) VALUES (  ?, ? , ? , 5000 )" , [ newUser.user_name , newUser.pass_word , newUser.email ] , 
+	connection.query( "INSERT INTO users ( username , password , email , AvailablePoints) VALUES ( ? , ? , ? , 5000 )" , [ newUser.user_name , newUser.pass_word , newUser.email ] , 
 	function( err , blank){
 		if( err )  {
 			throw err;
@@ -275,20 +268,9 @@ function VerifyLogin(message)
 
 
 // update the hashtag page for a specific user
-
-//TODO ZERR this should now get the stock value, how many shares have been bought in total
-// and how many shares in this the user has as well as their available points
 function serveTagPage(message)
 {
 	var username = message.user_name;
-	
-	
-	
-	
-//	connection.query( "SELECT price , shares, 
-	
-	
-	/*
 	// search for the uninvested points of the user
 	connection.query( "SELECT AvailablePoints FROM users WHERE username = ? ", [username] , 
 	function( err , user_info )
@@ -301,10 +283,10 @@ function serveTagPage(message)
 		if( user_info.length > 0 )
 		{	
 			// create the output with the user's available points incorporated
-			var output = { available_points : user_info[0].AvailablePoints , invested : 0 , total_invested : 0 , players_invested : 0 } 
+			var output = { available_points : user_info[0].AvailablePoints , user_invested : 0 , total_invested : 0 , value : 0 } 
 
 			// search for the investment for the user in question
-			connection.query( "SELECT amount FROM `investments` WHERE username = ? AND tagname = ?", [username, message.tag_name], 
+			connection.query( "SELECT shares FROM `Invests` WHERE username = ? AND tagname = ?", [username, message.tag_name], 
 			function( err , investment_info )
 			{
 				if(err) {
@@ -313,18 +295,19 @@ function serveTagPage(message)
 					
 				// if the investment exists, update the output with the user's current investment	
 				if(investment_info.length != 0) {
-					output.invested = investment_info[0].amount;
+					output.user_invested = investment_info[0].shares;
 				}
 				
-					connection.query( "SELECT investorCount FROM `investments` WHERE tagname = ?", [message.tag_name], 
-					function( err , numInvestors )
+					connection.query( "SELECT shares, value FROM `Market` WHERE tagname = ?", [message.tag_name], 
+					function( err , market_info )
 					{
 						if(err) {
 							throw err;
 						}
 						
 						if(numInvestors.length != 0) {
-							output.players_invested = numInvestors[0].investorCount;
+							output.total_invested = market_info[0].shares;
+							output.value = market_info[0].value;
 						}
 					});
 				
@@ -332,13 +315,6 @@ function serveTagPage(message)
 			});	
 		}
 	});
-	*/
-	
-	//EXAMPLE output 
-	var output = { available_points : 1000 , user_invested : 1 , total_invested : 100 , value : 50 };
-	socketHandler.messageUser( username , 'tag_page' , output ); //should be inside query
-	
-	
 	
 	var filename = "./userLogs/" + username + ".txt";
 	var output = "Asked for tag page  " + message.tag_name + " at Time " + new Date() + " \n\n";
@@ -351,67 +327,64 @@ function serveTagPage(message)
 
 
 // handle a user's buy operation
-
-//TODO ZERR NEEDS query
 function serveBuyHash(message)
 {
-
-	/*
+	//********
+	//TODO do we really want to allow buying 0 shares?
+	//********
 	if( message.amount >= 0 )
 	{
 	// search for the uninvested points of the user
-	connection.query( "SELECT `AvailablePoints` FROM users WHERE username = ?", [message.user_name], 
-	function (err, user_info) { 
+	connection.query( "SELECT `AvailablePoints` FROM users WHERE username = ?", [message.user_name],
+	function(err,user_info) {
 		if(err) {
 			throw err;
 		}
-
-		// if the user and his/her available points exist
-		if(user_info.length > 0) {
-			var oldpoints = user_info[0].AvailablePoints;
-			var newpoints = oldpoints - message.amount;
-				
-			// if the new amount would cause amount to go negative - invalid buy
-			if(newpoints < 0) {
-				var warning = {};
-				warning.content = "You do not have the points to make that investment!";
-				socketHandler.messageUser(message.user_name, 'warning', warning);
-			}
-				
-			// valid buy operation
-			else{
-				// search for the investment for the user in question
-				connection.query( "SELECT `amount` FROM investments WHERE username = ? AND tagname = ?", [message.user_name, message.tag_name], 
-				function (err, investment_info) { 
-					if(err) {
-						throw err;
-					}
 		
-					var investTime = getCurrentTime();
+		if(user_info.length > 0) {
+			//get the value of the shares
+			connection.query( "SELECT `value` FROM market WHERE tagname = ?", [message.tag_name],
+			function (err, value_info) { 
+				if(err) {
+					throw err;
+				}
+				
+				var cost = Math.ceil(value_info[0].value * message.amount);
+				var newpoints = user_info[0].AvailablePoints - cost;
+				
+				// if the new amount would cause amount to go negative - invalid buy
+				if(newpoints < 0) {
+					var warning = {};
+					warning.content = "You do not have the points to make that investment!";
+					socketHandler.messageUser(message.user_name, 'warning', warning);
+				}
+				
+				// valid buy operation
+				else{
+					// search for the investment for the user in question
+					connection.query( "SELECT `shares` FROM Invests WHERE username = ? AND tagname = ?", [message.user_name, message.tag_name], 
+					function (err, investment_info) { 
+						if(err) {
+							throw err;
+						}
 					
-					// if the investment already existed
-					if(investment_info.length > 0) {
-						var oldamount = investment_info[0].amount;
-						var newamount = parseInt(oldamount) + parseInt(message.amount);		  
-						connection.query( "UPDATE `investments` SET amount = ?, timeInvested = ? WHERE username = ? AND tagname = ?", [newamount, investTime, message.user_name, message.tag_name],
-						function(err, blank) {
-							if(err) {
-								throw err;
-							}
-						});
-					}
+						// if the investment already existed
+						if(investment_info.length > 0) {
+							var oldamount = investment_info[0].shares;
+							var newamount = oldamount + message.amount;		  
+							connection.query( "UPDATE `Invests` SET shares = ? WHERE username = ? AND tagname = ?", [newamount, message.user_name, message.tag_name],
+							function(err, blank) {
+								if(err) {
+									throw err;
+								}
+							});
+						}
 					
-					// make new investment
-					else {
-						connection.query( "SELECT COUNT(*) AS count FROM investments WHERE tagname = ?", [message.tag_name],
-						function( err , counter ){
-							if( err ) {
-								throw err;
-							}
-						
+						// make new investment
+						else {
 							// insert new investment into the database
-							connection.query( "INSERT INTO investments ( username, tagname, amount, timeInvested, challengeID, investorCount) VALUES ( ?, ?, ?, ?, 0, ? )" , 
-							[message.user_name, message.tag_name, message.amount, investTime, counter[0].count + 1 ], //Todo hard coded challege value of 0
+							connection.query( "INSERT INTO Invests ( username, tagname, shares, challengeID) VALUES ( ?, ?, ?, 0 )" , 
+							[message.user_name, message.tag_name, message.amount], //Todo hard coded challege value of 0
 							function( err , blank){
 								if( err ) {
 									throw err;
@@ -419,30 +392,35 @@ function serveBuyHash(message)
 							
 							});
 							
-						});
-						//Add one to investment count
-						connection.query( "UPDATE users SET investCount = (investCount + 1) WHERE username = ? " ,[ message.user_name ] ,
-						function ( err , rows )
-						{
-							if ( err ){
-								throw err;
-							}
-						});
-					}
-				});
-
-				// update the user with the post investment point total
-				connection.query( "UPDATE `users` SET AvailablePoints = ? WHERE username = ?", [newpoints, message.user_name],
-				function(err, blank) {
-					if(err) {
-						throw err;
-					}
-					var update = {};
-					update.user_name = message.user_name;
-					update.tag_name = message.tag_name;
-					serveTagPage(update);
-				});
-			}	
+							//Add one to investment count
+							connection.query( "UPDATE users SET investCount = (investCount + 1) WHERE username = ? " ,[ message.user_name ] ,
+							function ( err , rows )
+							{
+								if ( err ){
+									throw err;
+								}
+							});
+						}
+						
+					});
+					
+					//********
+					//TODO update value based off of change in shares
+					//********
+					
+					// update the user with the post investment point total
+					connection.query( "UPDATE `users` SET AvailablePoints = ? WHERE username = ?", [newpoints, message.user_name],
+					function(err, blank) {
+						if(err) {
+							throw err;
+						}
+						var update = {};
+						update.user_name = message.user_name;
+						update.tag_name = message.tag_name;
+						serveTagPage(update);
+					});
+				}
+			});
 		}	
 	});
 	}
@@ -451,7 +429,7 @@ function serveBuyHash(message)
 		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can't buy negative poitns " } );
 	}
 	
-	*/
+	
 	var filename = "./userLogs/" + message.user_name + ".txt";
 	var output = "Bought tag  " + message.tag_name + " For " + message.aount + " at Time " + new Date() + " \n\n";
 			fs.appendFile( filename , output , function ( err ) 
@@ -463,14 +441,12 @@ function serveBuyHash(message)
 
 
 // handle a user's sell operation
-//TODO ZERR needs query
 function serveSellHash(message)
-
-/*
+{
 	if( message.amount >= 0)
 	{
 	// search for the investment for the user in question
-	connection.query( "SELECT `amount` FROM investments WHERE username = ? AND tagname = ?", [message.user_name, message.tag_name], 
+	connection.query( "SELECT `shares` FROM Invests WHERE username = ? AND tagname = ?", [message.user_name, message.tag_name], 
 	function (err, investment_info) { 
 		if(err) {
 			throw err;
@@ -478,18 +454,26 @@ function serveSellHash(message)
 
 		// if the investment exists
 		if(investment_info.length > 0) {
-			var oldamount = investment_info[0].amount;
+			var oldamount = investment_info[0].shares;
 			var newamount = oldamount - message.amount;
 
-			// if the user has the points to sell
+			// if the user has the shares to sell
 			if(newamount >= 0) {
-			
-				// if points would be left over
+				
+				connection.query( "UPDATE `Market` SET shares = (shares - ?) WHERE tagname = ?", [message.amount, message.tag_name], 
+				function (err, blank) { 
+					if(err) {
+						throw err;
+					}
+				});
+				
+				//*******
+				//TODO update value based off of changes in shares
+				//*******
+				
+				// if shares would be left over
 				if(newamount > 0) {
-				
-					var investTime = getCurrentTime();
-				
-					connection.query( "UPDATE `investments` SET amount = ?, timeInvested = ? WHERE username = ? AND tagname = ?", [newamount, investTime, message.user_name, message.tag_name],
+					connection.query( "UPDATE `Invests` SET shares = ? WHERE username = ? AND tagname = ?", [newamount, message.user_name, message.tag_name],
 					function(err, blank) {
 						if(err) {
 							throw err;
@@ -499,7 +483,7 @@ function serveSellHash(message)
 				
 				// if selling entire investment
 				if(newamount == 0) {
-					connection.query( "DELETE FROM `investments` WHERE username = ? AND tagname = ?", [message.user_name, message.tag_name],
+					connection.query( "DELETE FROM `Invests` WHERE username = ? AND tagname = ?", [message.user_name, message.tag_name],
 					function(err, blank) {
 						if(err) {
 							throw err;
@@ -512,23 +496,33 @@ function serveSellHash(message)
 							throw err;
 					});
 				}
-			
-				// update the user with the post investment point total
-				connection.query( "UPDATE `users` SET AvailablePoints = (? + AvailablePoints) WHERE username = ?", [message.amount, message.user_name, message.user_name],
-				function(err, blank) {
+				
+				
+				
+				connection.query( "SELECT `value` FROM Market WHERE tagname = ?", [message.tag_name],
+				function(err, updated_market) {
 					if(err) {
 						throw err;
 					}
+					var added_value = Math.ceil(updated_market[0].value * message.amount)
+					
+					// update the user with the post investment point total
+					connection.query( "UPDATE `users` SET AvailablePoints = (? + AvailablePoints) WHERE username = ?", [added_value, message.user_name],
+					function(err, blank) {
+						if(err) {
+							throw err;
+						}
 								
-					var update = {};
-					update.user_name = message.user_name;
-					update.tag_name = message.tag_name;
-					serveTagPage(update);
-				});	
+						var update = {};
+						update.user_name = message.user_name;
+						update.tag_name = message.tag_name;
+						serveTagPage(update);
+					});
+				});
 			}
 
 
-			// if the user does not have the points to sell
+			// if the user does not have the shares to sell
 			else {
 				var warning = {};
 				warning.content = "You do not have that many points to sell!";
@@ -549,7 +543,6 @@ function serveSellHash(message)
 		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can not sell negative points" } );
 	}
 	
-	*/
 	var filename = "./userLogs/" + message.user_name + ".txt";
 	var output = "Sold tag  " + message.tag_name + " For " + message.aount + " at Time " + new Date() + " \n\n";
 			fs.appendFile( filename , output , function ( err ) 
@@ -567,13 +560,12 @@ function serveTrending(message)
 	socketHandler.messageUser( username , 'trending_table' , trendingTable );
 }
 
-//TODO ZERR investments should be an array of objects with three entries
-//tagname , count , value 
+
 function serveMyTrending(message ) {
 
 var portfolio_name = message.portfolio_name;
-/*
-connection.query( "SELECT  tagname , amount FROM investments WHERE investments.username = ? " , [portfolio_name] , 
+
+connection.query( "SELECT  tagname , Invests.shares, value FROM Invests inner join Market on Market.tagname = Invests.tagname WHERE Invests.username = ? " , [portfolio_name] , 
 function (err , investments ){
 	if( err )
 		throw err;
@@ -581,10 +573,6 @@ function (err , investments ){
 
 });
 
-*/
-//EXAMPLE array
-var investments = [ { tagname : "BITCH" , count : 100 , value : 5 } ];
-socketHandler.messageUser( message.user_name , 'my_investments_table' , investments );
 
 }
 
