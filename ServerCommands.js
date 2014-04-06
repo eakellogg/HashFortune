@@ -70,7 +70,7 @@ function serveChart( message)
 	var socket = this;
 
 	//now getting the historical values from the hashTags table
-	connection.query( "SELECT dateTime AS time , value FROM hashTags WHERE name = ? " , [ message.tagname] , function (err , rows )
+	connection.query( "SELECT dateTime AS time , price FROM hashTags WHERE name = ? " , [ message.tagname] , function (err , rows )
 	{
 		if( err )
 			throw err;
@@ -268,6 +268,7 @@ function VerifyLogin(message)
 
 
 // update the hashtag page for a specific user
+//TODO Need user invested 
 function serveTagPage(message)
 {
 	var username = message.user_name;
@@ -298,20 +299,21 @@ function serveTagPage(message)
 					output.user_invested = investment_info[0].shares;
 				}
 				
-					connection.query( "SELECT shares, value FROM `Market` WHERE tagname = ?", [message.tag_name], 
+					connection.query( "SELECT shares, price FROM `Market` WHERE tagname = ?", [message.tag_name], 
 					function( err , market_info )
 					{
 						if(err) {
 							throw err;
 						}
 						
-						if(numInvestors.length != 0) {
+						if(market_info.length != 0) {
 							output.total_invested = market_info[0].shares;
-							output.value = market_info[0].value;
+							output.value = market_info[0].price;
+							
 						}
+						socketHandler.messageUser( username , 'tag_page' , output );	
 					});
 				
-				socketHandler.messageUser( username , 'tag_page' , output );	
 			});	
 		}
 	});
@@ -329,10 +331,7 @@ function serveTagPage(message)
 // handle a user's buy operation
 function serveBuyHash(message)
 {
-	//********
-	//TODO do we really want to allow buying 0 shares?
-	//********
-	if( message.amount >= 0 )
+	if( message.amount > 0 )
 	{
 	// search for the uninvested points of the user
 	connection.query( "SELECT `AvailablePoints` FROM users WHERE username = ?", [message.user_name],
@@ -343,13 +342,13 @@ function serveBuyHash(message)
 		
 		if(user_info.length > 0) {
 			//get the value of the shares
-			connection.query( "SELECT `value` FROM market WHERE tagname = ?", [message.tag_name],
+			connection.query( "SELECT `price` FROM Market WHERE tagname = ?", [message.tag_name],
 			function (err, value_info) { 
 				if(err) {
 					throw err;
 				}
 				
-				var cost = Math.ceil(value_info[0].value * message.amount);
+				var cost = Math.ceil(value_info[0].price * message.amount);
 				var newpoints = user_info[0].AvailablePoints - cost;
 				
 				// if the new amount would cause amount to go negative - invalid buy
@@ -392,6 +391,7 @@ function serveBuyHash(message)
 							
 							});
 							
+							
 							//Add one to investment count
 							connection.query( "UPDATE users SET investCount = (investCount + 1) WHERE username = ? " ,[ message.user_name ] ,
 							function ( err , rows )
@@ -426,7 +426,7 @@ function serveBuyHash(message)
 	}
 	else
 	{
-		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can't buy negative poitns " } );
+		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can't buy negative stocks " } );
 	}
 	
 	
@@ -499,7 +499,7 @@ function serveSellHash(message)
 				
 				
 				
-				connection.query( "SELECT `value` FROM Market WHERE tagname = ?", [message.tag_name],
+				connection.query( "SELECT `price` FROM Market WHERE tagname = ?", [message.tag_name],
 				function(err, updated_market) {
 					if(err) {
 						throw err;
@@ -525,7 +525,7 @@ function serveSellHash(message)
 			// if the user does not have the shares to sell
 			else {
 				var warning = {};
-				warning.content = "You do not have that many points to sell!";
+				warning.content = "You do not have that many stocks to sell!";
 				socketHandler.messageUser(message.user_name, 'warning', warning);
 			}
 		}
@@ -533,14 +533,14 @@ function serveSellHash(message)
 		// user doesn't own that invest - can't sell
 		else {
 			var warning = {};
-			warning.content = "You do not currently have an investment to sell!";
+			warning.content = "You do not currently have stocks to sell!";
 			socketHandler.messageUser(message.user_name, 'warning', warning);
 		}
 	});
 	}
 	else
 	{
-		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can not sell negative points" } );
+		socketHandler.messageUser( message.user_name , 'warning' , { content : "You can not sell negative stocks" } );
 	}
 	
 	var filename = "./userLogs/" + message.user_name + ".txt";
@@ -565,7 +565,7 @@ function serveMyTrending(message ) {
 
 var portfolio_name = message.portfolio_name;
 
-connection.query( "SELECT  tagname , Invests.shares, value FROM Invests inner join Market on Market.tagname = Invests.tagname WHERE Invests.username = ? " , [portfolio_name] , 
+connection.query( "SELECT  Invests.tagname , Invests.shares, price FROM Invests inner join Market on Market.tagname = Invests.tagname WHERE Invests.username = ? " , [portfolio_name] , 
 function (err , investments ){
 	if( err )
 		throw err;

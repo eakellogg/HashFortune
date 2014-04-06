@@ -13,27 +13,27 @@ function set( ds )
 }
 
 
+//TODO CAN"T THE SUMMING BE DONE WITH A SUM FUNCTION?
 function apply( socketHandler , connection, message )
 {
 	var username = message.user_name;
 	var totalValue = 0;
 	
-	connection.query( "SELECT Invests.shares, value FROM Invests inner join Market on Market.tagname = Invests.tagname WHERE Invests.username = ? " , [username] , 
+	connection.query( "SELECT SUM(Market.price * Invests.shares) AS sum FROM Invests inner join Market on Market.tagname = Invests.tagname WHERE Invests.username = ? " , [username] , 
 	function (err , investments ){
 		if( err )
 			throw err;
-		for(var i = 0; i < investments.length; i++)
-		{
-			totalValue += Math.ceil(investments[i].shares * investments[i].value);
-		}
-
-	});
-	
-	connection.query( "UPDATE users SET TotalValue = ? WHERE username = ? " , [totalValue, username] , 
+			console.log( investments );
+	if( investments.length != 0 ){	
+	connection.query( "UPDATE users SET TotalValue = ? WHERE username = ? " , [investments[0].sum, username] , 
 	function (err , blank ){
 		if( err )
 			throw err;
+		});
+		}
 	});
+	
+
 /*
 	var username = message.user_name;
 	var convertedCurrentTime = new Date();

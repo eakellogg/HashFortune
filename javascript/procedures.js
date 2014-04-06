@@ -64,7 +64,7 @@ function trendingProcedure(message)
 	// file the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
-		table2 = table2 + "<tr><td width=50%>#" + message[x].name + "</td><td>" + message[x].count + "</td></tr>";
+		table2 = table2 + "<tr><td width=50%>#" + message[x].name + "</td><td>" + message[x].price + "</td></tr>";
 	}
 
 	var finaltable = table1 + table2 + table3;
@@ -83,8 +83,8 @@ function myInvestmentsProcedure(message) //Changed to have three columns , tagna
 	// fill the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
-		table2 = table2 + "<tr><td width=50%>#" + message[x].tagname + "</td><td>" + message[x].count + "</td>><td>" + 
-		(message[x].value * message[x].count) + "</td></tr>";
+		table2 = table2 + "<tr><td width=50%>#" + message[x].tagname + "</td><td>" + message[x].shares + "</td>><td>" + 
+		(message[x].price * message[x].shares) + "</td></tr>";
 	}
 
 	var finaltable = table1 + table2 + table3;
@@ -199,7 +199,7 @@ var chartScrollbar = new AmCharts.ChartScrollbar();
 chart.addChartScrollbar(chartScrollbar);
 
 var graph = new AmCharts.AmGraph();
-graph.valueField = "value"; //This changed to a tags stock value at each time
+graph.valueField = "price"; //This changed to a tags stock value at each time
 graph.type = "line";
 chart.addGraph(graph);
 
