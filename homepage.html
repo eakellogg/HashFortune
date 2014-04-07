@@ -392,8 +392,8 @@
 	<form>
 		<h1 class="hashtag_search">
 		#Hashtag Search:
-		<input type="text" id="hsearch"; size="35" onkeypress="function(e) {
-            enter_click('hsearch_button', e);">
+		<input type="text" id="hsearch"; size="35" <!--onkeypress="function(e) {
+            enter_click('hsearch_button', e);">-->
         <input type="button" value="Search" width="50" onclick="rename_page('Hashtag Investment');current_tag = document.getElementById('hsearch').value; document.getElementById('hashtag_name').innerHTML='#' + current_tag; switch_to_tag(user_name, document.getElementById('hsearch').value, 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML='' socket.emit('chart_request' , { tagname : current_tag , user_name : user_name } ); show_hashtag_page();">
 		</h1>
 	</form>

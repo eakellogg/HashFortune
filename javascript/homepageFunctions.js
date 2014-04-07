@@ -112,7 +112,7 @@ function show_hashtag_page() {
     document.getElementById("chartdiv").style.display = "block";
 }
 
-//<!-- what to do when search for username -->
+/*<!--
 function username_search_clicked() {
     search_by_email(user_name, document.getElementById('usearch').value);
     clear_searches();
@@ -158,7 +158,7 @@ function hashtag_search_clicked() {
     socket.emit('chart_request' , { tagname : current_tag , user_name : user_name } );show_hashtag_page();
 }
 
-//<!-- allows the user to hit enter instead of clicking a button -->e
+//<!-- allows the user to hit enter instead of clicking a button -->
 function enter_click(button,e)
 {
     var event = e || window.event;
@@ -176,7 +176,7 @@ function enter_click(button,e)
     }
 }
 
-
+-->/*
 
 
 
