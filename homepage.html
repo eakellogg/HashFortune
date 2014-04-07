@@ -279,8 +279,7 @@
 		Search by username:
 		<input type="text" id="usearch"; size="35">
 		<input type="button" value="Search" width="50" 	
-            onclick="search_by_email(user_name, document.getElementById('usearch').value);
-            clear_searches();">
+            onclick="username_search_clicked();">
 		</h2>
 	</form>
 </div>
@@ -293,8 +292,7 @@
 		Search by email:
 		<input type="email" id="esearch"; size="35">
 		<input type="button" value="Search" width="50" 
-            onclick="search_by_email(user_name, document.getElementById('esearch').value);
-            clear_searches();">
+            onclick="email_search_clicked();">
 		</h2>
 	</form>
 </div>
@@ -320,7 +318,7 @@
     
     <br>
     <p> If you encounter any issues, you can email us at hashfortune@gmail.com </p>
-	<input type="button" value="Logout" onclick=" setCookie( 'user_name' , '' , 1); setCookie('pass_word' , '' , 1 ); socket.emit( 'logout' , { user_name : user_name } ); location.href = '/index.html'; "/>
+	<input type="button" value="Logout" onclick="logout_clicked();"/>
 
 </div>
 
@@ -369,23 +367,11 @@
 <div id="buy_sell_tags">
    <form name="buy" >
      Amount: <input type="text" id="amount_buy" /> <br>
-     <input type="button" value="Buy!" onclick="
-	var username = user_name;
-	var tag_name = current_tag;
-	var challengeID = 0;
-	var amount = $('#amount_buy').val();
-	buy_hash(username, tag_name, challengeID, amount);
-	clear_searches();"/>
+     <input type="button" value="Buy!" onclick="buy_clicked();"/>
    </form>
    <form name="sell" >
      Amount: <input type="text" id="amount_sell" /> <br>
-     <input type="button" value="Sell!" onclick="
-       var username = user_name;
-	var tag_name = current_tag;
-	var challengeID = 0;
-	var amount = $('#amount_sell').val();
-	sell_hash(username, tag_name, challengeID, amount);
-	clear_searches();"/>
+     <input type="button" value="Sell!" onclick="sell_clicked();"/>
    </form>
 </div>
 
@@ -394,13 +380,9 @@
 	<form>
 		<h1 class="hashtag_search">
 		#Hashtag Search:
-		<input type="text" id="hsearch"; size="35">
-		<input type="button" value="Search" width="50" onclick="rename_page('Hashtag Investment');
-		 current_tag = document.getElementById('hsearch').value;
-		 document.getElementById('hashtag_name').innerHTML='#' + current_tag;
-		 switch_to_tag(user_name, document.getElementById('hsearch').value, 0); 
- 		 clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''	
-		 socket.emit('chart_request' , { tagname : current_tag , user_name : user_name } ); show_hashtag_page();">
+		<input type="text" id="hsearch"; size="35" onkeypress="function(e) {
+            enter_click('hsearch_button', e);">
+		<input type="button" id="hsearch_button"value="Search" width="50" onclick="hashtag_search_clicked();">
 		</h1>
 	</form>
 <BR>
