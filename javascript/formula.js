@@ -25,7 +25,9 @@ function apply( socketHandler , connection, message )
 			throw err;
 			console.log( investments );
 	if( investments.length != 0 ){	
-	connection.query( "UPDATE users SET TotalValue = ? WHERE username = ? " , [investments[0].sum, username] , 
+	if( investments[0].sum == null )
+		investments[0].sum = 0;
+	connection.query( "UPDATE users SET TotalValue = ( ? + AvailablePoints ) WHERE username = ? " , [investments[0].sum, username] , 
 	function (err , blank ){
 		if( err )
 			throw err;

@@ -57,14 +57,16 @@ function tagProcedure(message)
 // update the trending hashtags table
 function trendingProcedure(message)
 {
-    var table1 = "<table width=75%; class='center';> <caption>Trending Hashtags</caption>";
+    var table1 = "<table width=75%; class='center';> <caption>Trending Hashtags</caption> <tr><th>Hashtag Name</th><th>Stock Price</th><tr>";
 	var table3 = "</table> <BR> <BR>";	
 	var table2 = "";
 	
 	// file the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
-		table2 = table2 + "<tr><td width=50%>#" + message[x].name + "</td><td>" + message[x].price + "</td></tr>";
+		table2 = table2 + "<tr><td width=50% onMouseOver=\"show_menu('" + message[x].name + "T')\" onMouseOut=\"hide_menu('" + message[x].name + "T')\" >";
+		table2 = table2 + "<a onclick=\" rename_page( 'Hashtag Investment' ); current_tag = " + message[x].tagname + "; document.getElementById('hashtag_name').innerHTML='#' + '" + message[x].name + "'; switch_to_tag('" + user_name + "', '" + message[x].name + "', 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : '" + message[x].name + "', user_name : '" + user_name + "' } ); show_hashtag_page(); \">";
+		table2 = table2 + "#" + message[x].name + "</a> <a style=\"display:none; color:black\" id=\"" + message[x].name + "T\" href=\"http://www.urbandictionary.com/define.php?term=" + message[x].name + "\" target=\"_blank\">Urban Dictionary Definition</a> </td><td>" + message[x].price + "</td></tr>";
 	}
 
 	var finaltable = table1 + table2 + table3;
@@ -77,14 +79,16 @@ function myInvestmentsProcedure(message) //Changed to have three columns , tagna
 	var table3 = "</table> <BR> <BR>";	
 	var table2 = "";
 	
-	//Required from message
-	//message[0].tagname message[0].count 'how many stocks user has'  message[0].value 'how much each stock is worth'
-	
-	// fill the table with the hashtag info received
+	// file the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
-		table2 = table2 + "<tr><td width=50%>#" + message[x].tagname + "</td><td>" + message[x].shares + "</td>><td>" + 
-		(message[x].price * message[x].shares) + "</td></tr>";
+		if( message.price == undefined )
+		{
+			message.price = 0;
+		}
+		table2 = table2 + "<tr><td width=50% onMouseOver=\"show_menu('" + message[x].tagname + "I')\" onMouseOut=\"hide_menu('" + message[x].tagname + "I')\" >";
+		table2 = table2 + "<a onclick=\" rename_page( 'Hashtag Investment' ); current_tag = " + message[x].tagname + "; document.getElementById('hashtag_name').innerHTML='#' + '" + message[x].tagname + "'; switch_to_tag('" + user_name + "', '" + message[x].tagname + "', 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : '" + message[x].tagname + "', user_name : '" + user_name + "' } ); show_hashtag_page(); \">";
+		table2 = table2 + "#" + message[x].tagname + "</a> <a style=\"display:none; color:black\"  id=\"" + message[x].tagname + "I\" href=\"http://www.urbandictionary.com/define.php?term=" + message[x].tagname + "\" target=\"_blank\">Urban Dictionary Definition</a> </td><td>" + message[x].shares + "</td><td>" + message[x].shares * message[x].price + "</td></tr>";
 	}
 
 	var finaltable = table1 + table2 + table3;
@@ -95,16 +99,14 @@ function myInvestmentsProcedure(message) //Changed to have three columns , tagna
 function leaderProcedure(message)
 {
 
-	var table1 = "<table width=75%; class='center';> <caption>Leader Board</caption>";
+		var table1 = "<table width=75%; class='center';> <caption>Leader Board</caption>";
 	var table3 = "</table> <BR> <BR>";	
 	var table2 = "";
 	
 	// file the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
-		table2 = table2 + "<tr><td width=50%><a onclick=\"rename_page('Portfolio'); hide_all(); " +
-		"show_portfolio('" + message[x].username + "');\"> " + message[x].username + " </ a></td><td>" + message[x].TotalValue + 
-		"</td></tr>";
+		table2 = table2 + "<tr><td width=50%><a onclick=\"rename_page('Portfolio'); hide_all(); show_portfolio('" + message[x].username + "');\"> " + message[x].username + " </ a></td><td>" + message[x].TotalValue + "</td></tr>";
 	}
 
 	var finaltable = table1 + table2 + table3;
@@ -148,6 +150,7 @@ function userProcedure(message)
 
 function friendsProcedure(message) //No change needed here
 {
+
 	var table1 = "<table width=75%; class='center';> <caption>Friends</caption>";
 	var table3 = "</table> <BR> <BR>";	
 	var table2 = "";
@@ -155,7 +158,8 @@ function friendsProcedure(message) //No change needed here
 	// file the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
-		table2 = table2 + "<tr><td width=50%>" + message[x].Friend + "</td><td>" + message[x].TotalValue + "</td></tr>";
+		//table2 = table2 + "<tr><td width=50%>" + message[x].Friend + "</td><td>" + message[x].TotalValue + "</td></tr>";
+		table2 = table2 + "<tr><td width=50%><a onclick=\"rename_page('Portfolio'); hide_all(); show_portfolio('" + message[x].Friend + "');\"> " + message[x].Friend + " </ a></td><td>" + message[x].TotalValue + "</td></tr>";
 	}
 
 	var finaltable = table1 + table2 + table3;

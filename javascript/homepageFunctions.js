@@ -63,21 +63,24 @@
 			document.getElementById("trending").style.display = "block";
 			document.getElementById("hashtag_search").style.display = "block"; 
 			
-			socket.emit( 'player_info_request' , { user_name : user_name });
+    			socket.emit( 'my_investments_request' , investObj);
+			socket.emit( 'player_info_request' , { portfolio_name : user_name , user_name : user_name });
 		}
 	  
 		//<!-- show divisions relevant to portfolio page -->
 		function show_portfolio(portfolio_name) {
+			
 			document.getElementById("player_pic").style.display = "block";
 			document.getElementById("player_info").style.display = "block";
 			document.getElementById("investments_all").style.display = "block";
 			
-			var message = {};
-			message.user_name = user_name;
-			message.portfolio_name = portfolio_name;
-			
-			socket.emit( 'player_info_request' , message );
-			socket.emit( 'my_investments_request' , message );
+				var userObj = { user_name : user_name };
+    			var investObj = {};
+    			investObj.user_name = user_name;
+    			investObj.portfolio_name = user_name;
+
+    			socket.emit( 'my_investments_request' , investObj);
+				socket.emit( 'player_info_request' , { portfolio_name : portfolio_name , user_name : user_name });
 		}
 	  
 		//<!-- show divisions relevant to challenges page -->
@@ -112,3 +115,14 @@
 			document.getElementById("chartdiv").style.display = "block";
 			
 		} 
+		
+				// <!-- show drop down menu of particular hashtag -->
+		function show_menu(hashtag_name) {
+			document.getElementById(hashtag_name).style.display ="block";
+		}
+
+		// <!-- hide drop down menu of particular hashtag -->
+		function hide_menu(hashtag_name) {
+			document.getElementById(hashtag_name).style.display ="none";
+		}
+		

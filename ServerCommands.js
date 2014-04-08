@@ -13,6 +13,7 @@ var formula = require('./javascript/formula.js');
 
 
 
+
 function handleDisconnect() {
   connection = mysql.createConnection(db_config); // Recreate the connection, since
                                                   // the old one cannot be reused.
@@ -309,6 +310,7 @@ function serveTagPage(message)
 						if(market_info.length != 0) {
 							output.total_invested = market_info[0].shares;
 							output.value = market_info[0].price;
+							console.log( output.value );
 							
 						}
 						socketHandler.messageUser( username , 'tag_page' , output );	
@@ -342,13 +344,22 @@ function serveBuyHash(message)
 		
 		if(user_info.length > 0) {
 			//get the value of the shares
-			connection.query( "SELECT `price` FROM Market WHERE tagname = ?", [message.tag_name],
+			connection.query( "SELECT `shares`, `count` FROM Market WHERE tagname = ?", [message.tag_name],
 			function (err, value_info) { 
 				if(err) {
 					throw err;
 				}
 				
-				var cost = Math.ceil(value_info[0].price * message.amount);
+				var marketBool = true;
+				if( value_info.length == 0 )
+				{
+					value_info[0] = { shares : 0, count : 0};
+					marketBool = false;
+				}
+				
+				var shares = parseInt(message.amount) + parseInt(value_info[0].shares);
+				var value = 10 + 10*(shares) + 10*(value_info[0].count);
+				var cost = Math.ceil(value* message.amount);
 				var newpoints = user_info[0].AvailablePoints - cost;
 				
 				// if the new amount would cause amount to go negative - invalid buy
@@ -360,6 +371,7 @@ function serveBuyHash(message)
 				
 				// valid buy operation
 				else{
+				
 					// search for the investment for the user in question
 					connection.query( "SELECT `shares` FROM Invests WHERE username = ? AND tagname = ?", [message.user_name, message.tag_name], 
 					function (err, investment_info) { 
@@ -370,7 +382,7 @@ function serveBuyHash(message)
 						// if the investment already existed
 						if(investment_info.length > 0) {
 							var oldamount = investment_info[0].shares;
-							var newamount = oldamount + message.amount;		  
+							var newamount = parseInt(oldamount) + parseInt(message.amount);		  
 							connection.query( "UPDATE `Invests` SET shares = ? WHERE username = ? AND tagname = ?", [newamount, message.user_name, message.tag_name],
 							function(err, blank) {
 								if(err) {
@@ -404,9 +416,27 @@ function serveBuyHash(message)
 						
 					});
 					
-					//********
-					//TODO update value based off of change in shares
-					//********
+					if(marketBool)
+					{
+						connection.query( "UPDATE Market SET price = ?, shares = ? WHERE tagname = ?" ,[ value, shares, message.tag_name ] ,
+							function ( err , Blank )
+							{
+								if ( err ){
+									throw err;
+								}
+							});
+					}
+					else
+					{
+						connection.query( "INSERT INTO Market ( tagname, price, shares, count) VALUES ( ?, ?, ?, 0 )" ,[  message.tag_name, value, shares ] ,
+							function ( err , Blank )
+							{
+								if ( err ){
+									throw err;
+								}
+							});
+					}
+
 					
 					// update the user with the post investment point total
 					connection.query( "UPDATE `users` SET AvailablePoints = ? WHERE username = ?", [newpoints, message.user_name],
@@ -460,17 +490,6 @@ function serveSellHash(message)
 			// if the user has the shares to sell
 			if(newamount >= 0) {
 				
-				connection.query( "UPDATE `Market` SET shares = (shares - ?) WHERE tagname = ?", [message.amount, message.tag_name], 
-				function (err, blank) { 
-					if(err) {
-						throw err;
-					}
-				});
-				
-				//*******
-				//TODO update value based off of changes in shares
-				//*******
-				
 				// if shares would be left over
 				if(newamount > 0) {
 					connection.query( "UPDATE `Invests` SET shares = ? WHERE username = ? AND tagname = ?", [newamount, message.user_name, message.tag_name],
@@ -499,12 +518,15 @@ function serveSellHash(message)
 				
 				
 				
-				connection.query( "SELECT `price` FROM Market WHERE tagname = ?", [message.tag_name],
-				function(err, updated_market) {
+				connection.query( "SELECT `price`, `shares`, `count` FROM Market WHERE tagname = ?", [message.tag_name],
+				function(err, market) {
 					if(err) {
 						throw err;
 					}
-					var added_value = Math.ceil(updated_market[0].value * message.amount)
+					var added_value = Math.ceil(market[0].price * message.amount);
+					var shares = parseInt(market[0].shares) - parseInt(message.amount);
+					var value = 10 + 10*(shares) + 10*(market[0].count);
+					console.log("Jacob!!!!!!!!!!!!!!!!!!" + value);
 					
 					// update the user with the post investment point total
 					connection.query( "UPDATE `users` SET AvailablePoints = (? + AvailablePoints) WHERE username = ?", [added_value, message.user_name],
@@ -518,6 +540,14 @@ function serveSellHash(message)
 						update.tag_name = message.tag_name;
 						serveTagPage(update);
 					});
+					
+					connection.query( "UPDATE `Market` SET price = ?, shares = ? WHERE tagname = ?", [value, shares, message.tag_name],
+					function(err, blank) {
+						if(err) {
+							throw err;
+						}
+					});
+					
 				});
 			}
 
@@ -564,11 +594,12 @@ function serveTrending(message)
 function serveMyTrending(message ) {
 
 var portfolio_name = message.portfolio_name;
-
-connection.query( "SELECT  Invests.tagname , Invests.shares, price FROM Invests inner join Market on Market.tagname = Invests.tagname WHERE Invests.username = ? " , [portfolio_name] , 
+console.log( portfolio_name );
+connection.query( "SELECT  Invests.tagname , Invests.shares, price FROM Invests left join Market on Market.tagname = Invests.tagname WHERE Invests.username = ? " , [portfolio_name] , 
 function (err , investments ){
 	if( err )
 		throw err;
+
 	socketHandler.messageUser( message.user_name,  'my_investments_table' , investments );
 
 });
@@ -596,6 +627,8 @@ connection.query( "SELECT username , AvailablePoints , TotalValue FROM users WHE
 	if( err )
 		throw err;
 	
+	
+
 	socketHandler.messageUser( message.user_name , 'player_info_table' , rows[0] );
 	}
 );
@@ -609,7 +642,7 @@ function serveFriends(message) {
 		if(err) {
 			throw err;
 		}
-		console.log(friends);
+	
 		socketHandler.messageUser( username, 'friends_table' , friends );
 	});
 }
