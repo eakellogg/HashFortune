@@ -14,8 +14,10 @@ function connectProcedure(message) //TODO
 	
 		if ( firstTime )
 		{
+			socket.emit( "my_investments_request"        , { user_name : user_name, portfolio_name : user_name });
 			socket.emit( "trending_request"        , { user_name : user_name });
 			socket.emit( 'leader_request' ,          { user_name : user_name });
+			socket.emit( 'friend_table_request' , { user_name : user_name, portfolio_name : user_name });
 			firstTime = false;
 		}
 	}
@@ -63,7 +65,9 @@ function trendingProcedure(message)
 	// file the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
-		table2 = table2 + "<tr><td width=50%>#" + message[x].name + "</td><td>" + message[x].count + "</td></tr>";
+		table2 = table2 + "<tr><td width=50% onMouseOver=\"show_menu('" + message[x].name + "T')\" onMouseOut=\"hide_menu('" + message[x].name + "T')\" >";
+		table2 = table2 + "<a onclick=\" rename_page( 'Hashtag Investment' ); document.getElementById('hashtag_name').innerHTML='#' + '" + message[x].name + "'; switch_to_tag('" + user_name + "', '" + message[x].name + "', 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : '" + message[x].name + "', user_name : '" + user_name + "' } ); show_hashtag_page(); \">";
+		table2 = table2 + "#" + message[x].name + "</a> <a style=\"display:none; color:black\" id=\"" + message[x].name + "T\" href=\"http://www.urbandictionary.com/define.php?term=" + message[x].name + "\" target=\"_blank\">Urban Dictionary Definition</a> </td><td>" + message[x].count + "</td></tr>";
 	}
 
 	var finaltable = table1 + table2 + table3;
@@ -79,12 +83,13 @@ function myInvestmentsProcedure(message)
 	// file the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
-		table2 = table2 + "<tr><td width=50%>#" + message[x].tagname + "</td><td>" + message[x].amount + "</td></tr>";
+		table2 = table2 + "<tr><td width=50% onMouseOver=\"show_menu('" + message[x].tagname + "I')\" onMouseOut=\"hide_menu('" + message[x].tagname + "I')\" >";
+		table2 = table2 + "<a onclick=\" rename_page( 'Hashtag Investment' ); document.getElementById('hashtag_name').innerHTML='#' + '" + message[x].tagname + "'; switch_to_tag('" + user_name + "', '" + message[x].tagname + "', 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : '" + message[x].tagname + "', user_name : '" + user_name + "' } ); show_hashtag_page(); \">";
+		table2 = table2 + "#" + message[x].tagname + "</a> <a style=\"display:none; color:black\"  id=\"" + message[x].tagname + "I\" href=\"http://www.urbandictionary.com/define.php?term=" + message[x].tagname + "\" target=\"_blank\">Urban Dictionary Definition</a> </td><td>" + message[x].amount + "</td></tr>";
 	}
 
 	var finaltable = table1 + table2 + table3;
 	document.getElementById("investments_summary").innerHTML=finaltable;
-	document.getElementById("investments_all").innerHTML=finaltable;
 }
 
 function leaderProcedure(message)
@@ -149,7 +154,8 @@ function friendsProcedure(message)
 	// file the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
-		table2 = table2 + "<tr><td width=50%>" + message[x].Friend + "</td><td>" + message[x].TotalValue + "</td></tr>";
+		//table2 = table2 + "<tr><td width=50%>" + message[x].Friend + "</td><td>" + message[x].TotalValue + "</td></tr>";
+		table2 = table2 + "<tr><td width=50%><a onclick=\"rename_page('Portfolio'); hide_all(); show_portfolio('" + message[x].Friend + "');\"> " + message[x].Friend + " </ a></td><td>" + message[x].TotalValue + "</td></tr>";
 	}
 
 	var finaltable = table1 + table2 + table3;
