@@ -17,6 +17,29 @@
 		
 		//<!-- hide all divisions (results in a blank page) -->
 		function hide_all() {
+<<<<<<< HEAD
+			document.getElementById("trending").style.display = "none";
+			document.getElementById("investments_summary").style.display = "none";
+			document.getElementById("leaderboard").style.display = "none";
+			document.getElementById("friends").style.display = "none";
+			document.getElementById("friend_requests").style.display = "none";
+			document.getElementById("challenge_home").style.display = "none";
+			document.getElementById("settings").style.display = "none";			  
+			document.getElementById("player_pic").style.display = "none";
+			document.getElementById("player_info").style.display = "none";
+			document.getElementById("hashtag_search").style.display = "none";
+			document.getElementById("username_search").style.display = "none";
+			document.getElementById("email_search").style.display = "none";
+			document.getElementById("hashtag_investments").style.display = "none";
+			document.getElementById("buy_sell_tags").style.display = "none";
+			document.getElementById("hashtag_graph").style.display = "none";
+			document.getElementById("hashtag_stats").style.display = "none";
+			document.getElementById("new_challenge").style.display = "none";
+            document.getElementById("user_search_results").style.display = "none";
+			document.getElementById("chartdiv").style.display = "none";
+		}
+		
+=======
     			document.getElementById("trending").style.display = "none";
     			document.getElementById("investments_summary").style.display = "none";
     			document.getElementById("leaderboard").style.display = "none";
@@ -39,6 +62,7 @@
     			document.getElementById("chartdiv").style.display = "none";
     		}
 
+>>>>>>> 1482d5027cfa2b3a3cc8a1a15308a751347bf199
 		//<!-- show divisions relevant to homepage -->
 		function show_homepage() {
 			
@@ -47,6 +71,20 @@
     			document.getElementById("leaderboard").style.display = "block";
     			document.getElementById("friends").style.display = "block";
 			
+<<<<<<< HEAD
+			var userObj = { user_name : user_name };
+			var investObj = {};
+			investObj.user_name = user_name;
+			investObj.portfolio_name = user_name;
+			
+			socket.emit( "trending_request"        , userObj );
+			socket.emit( 'leader_request' , userObj  );
+			socket.emit( 'my_investments_request' , investObj);
+			socket.emit( 'friend_table_request' , investObj);
+		}
+	  
+		//<!-- show divisions relevant to investments page -->
+=======
     var userObj = { user_name : user_name };
     			var investObj = {};
     			investObj.user_name = user_name;
@@ -59,6 +97,7 @@
 }
 
 //<!-- show divisions relevant to investments page -->
+>>>>>>> 1482d5027cfa2b3a3cc8a1a15308a751347bf199
 		function show_investments() {
     			document.getElementById("player_info").style.display = "block";
     			document.getElementById("trending").style.display = "block";
@@ -69,6 +108,20 @@
 	  
 //<!-- show divisions relevant to portfolio page -->
 		function show_portfolio(portfolio_name) {
+<<<<<<< HEAD
+			document.getElementById("player_pic").style.display = "block";
+			document.getElementById("player_info").style.display = "block";
+			document.getElementById("investments_summary").style.display = "block";
+			
+			var message = {};
+			message.user_name = user_name;
+			message.portfolio_name = portfolio_name;
+			
+			socket.emit( 'player_info_request' , message );
+			socket.emit( 'my_investments_request' , message );
+		}
+	  
+=======
     			document.getElementById("player_pic").style.display = "block";
     			document.getElementById("player_info").style.display = "block";
     			document.getElementById("investments_all").style.display = "block";
@@ -81,6 +134,7 @@
     			socket.emit( 'my_investments_request' , message );
     		}
 
+>>>>>>> 1482d5027cfa2b3a3cc8a1a15308a751347bf199
 		//<!-- show divisions relevant to challenges page -->
 		function show_challenge_home() {
     			document.getElementById("challenge_home").style.display = "block";
@@ -106,6 +160,26 @@
 
 		//<!-- show divisions relevant to specific hashtag page -->
 		function show_hashtag_page() {
+<<<<<<< HEAD
+			document.getElementById("hashtag_investments").style.display = "block";
+			document.getElementById("hashtag_stats").style.display = "block";
+			document.getElementById("hashtag_graph").style.display = "block";
+			document.getElementById("buy_sell_tags").style.display = "block";
+			document.getElementById("hashtag_search").style.display = "block";
+			document.getElementById("chartdiv").style.display = "block";			
+		} 
+		
+		// <!-- show drop down menu of particular hashtag -->
+		function show_menu(hashtag_name) {
+			document.getElementById(hashtag_name).style.display ="block";
+		}
+
+		// <!-- hide drop down menu of particular hashtag -->
+		function hide_menu(hashtag_name) {
+			document.getElementById(hashtag_name).style.display ="none";
+		}
+		
+=======
     			document.getElementById("hashtag_investments").style.display = "block";
     			document.getElementById("hashtag_stats").style.display = "block";
     			document.getElementById("hashtag_graph").style.display = "block";
@@ -114,3 +188,4 @@
             document.getElementById("chartdiv").style.display = "block";
     
     		}
+>>>>>>> 1482d5027cfa2b3a3cc8a1a15308a751347bf199
