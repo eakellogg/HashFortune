@@ -980,3 +980,219 @@ Logged in Tue Apr 08 2014 12:17:54 GMT-0500 (Central Daylight Time)
 
 loging out  at Time Tue Apr 08 2014 12:18:09 GMT-0500 (Central Daylight Time) 
 
+Logged in Wed Apr 09 2014 11:39:52 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 15:03:49 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 09 2014 15:04:16 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 09 2014 15:04:16 GMT-0500 (Central Daylight Time) 
+
+Bought tag  wcw For undefined at Time Wed Apr 09 2014 15:04:19 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 09 2014 15:04:19 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 09 2014 15:05:54 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 09 2014 15:05:54 GMT-0500 (Central Daylight Time) 
+
+Sold tag  wcw For undefined at Time Wed Apr 09 2014 15:05:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 09 2014 15:05:57 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Wed Apr 09 2014 15:06:18 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Wed Apr 09 2014 15:06:18 GMT-0500 (Central Daylight Time) 
+
+Bought tag  KCA For undefined at Time Wed Apr 09 2014 15:06:26 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Wed Apr 09 2014 15:06:27 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Wed Apr 09 2014 15:06:34 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Wed Apr 09 2014 15:06:34 GMT-0500 (Central Daylight Time) 
+
+Sold tag  KCA For undefined at Time Wed Apr 09 2014 15:06:38 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Wed Apr 09 2014 15:06:38 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  XOXO at Time Wed Apr 09 2014 15:06:41 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for XOXO at Time Wed Apr 09 2014 15:06:41 GMT-0500 (Central Daylight Time) 
+
+Bought tag  XOXO For undefined at Time Wed Apr 09 2014 15:06:53 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  XOXO at Time Wed Apr 09 2014 15:06:53 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  XOXO at Time Wed Apr 09 2014 15:07:07 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for XOXO at Time Wed Apr 09 2014 15:07:07 GMT-0500 (Central Daylight Time) 
+
+Sold tag  XOXO For undefined at Time Wed Apr 09 2014 15:07:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  XOXO at Time Wed Apr 09 2014 15:07:10 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for fdsfsadfasdf at Time Wed Apr 09 2014 15:07:11 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  fdsfsadfasdf at Time Wed Apr 09 2014 15:07:11 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  sadfsadf at Time Wed Apr 09 2014 15:07:29 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for sadfsadf at Time Wed Apr 09 2014 15:07:29 GMT-0500 (Central Daylight Time) 
+
+Bought tag  sadfsadf For undefined at Time Wed Apr 09 2014 15:07:31 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  sadfsadf at Time Wed Apr 09 2014 15:07:32 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  fasdfasdhgahahfahf at Time Wed Apr 09 2014 15:07:40 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for fasdfasdhgahahfahf at Time Wed Apr 09 2014 15:07:40 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ffffffffffffff at Time Wed Apr 09 2014 15:07:47 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for ffffffffffffff at Time Wed Apr 09 2014 15:07:47 GMT-0500 (Central Daylight Time) 
+
+Bought tag  ffffffffffffff For undefined at Time Wed Apr 09 2014 15:07:49 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ffffffffffffff at Time Wed Apr 09 2014 15:07:49 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ffffffffffffff at Time Wed Apr 09 2014 15:08:02 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for ffffffffffffff at Time Wed Apr 09 2014 15:08:02 GMT-0500 (Central Daylight Time) 
+
+Sold tag  ffffffffffffff For undefined at Time Wed Apr 09 2014 15:08:05 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ffffffffffffff at Time Wed Apr 09 2014 15:08:05 GMT-0500 (Central Daylight Time) 
+
+Sold tag  ffffffffffffff For undefined at Time Wed Apr 09 2014 15:08:08 GMT-0500 (Central Daylight Time) 
+
+Sold tag  ffffffffffffff For undefined at Time Wed Apr 09 2014 15:08:10 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  sadfsadf at Time Wed Apr 09 2014 15:08:26 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for sadfsadf at Time Wed Apr 09 2014 15:08:26 GMT-0500 (Central Daylight Time) 
+
+Sold tag  sadfsadf For undefined at Time Wed Apr 09 2014 15:08:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  sadfsadf at Time Wed Apr 09 2014 15:08:29 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISWONTEXSIST at Time Wed Apr 09 2014 15:08:50 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for THISWONTEXSIST at Time Wed Apr 09 2014 15:08:50 GMT-0500 (Central Daylight Time) 
+
+Bought tag  THISWONTEXSIST For undefined at Time Wed Apr 09 2014 15:08:54 GMT-0500 (Central Daylight Time) 
+
+Bought tag  THISWONTEXSIST For undefined at Time Wed Apr 09 2014 15:08:57 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISWONTEXSIST at Time Wed Apr 09 2014 15:08:57 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISWONTEXSIST at Time Wed Apr 09 2014 15:09:24 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for THISWONTEXSIST at Time Wed Apr 09 2014 15:09:24 GMT-0500 (Central Daylight Time) 
+
+Sold tag  THISWONTEXSIST For undefined at Time Wed Apr 09 2014 15:09:26 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISWONTEXSIST at Time Wed Apr 09 2014 15:09:27 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISWONTEXSIST at Time Wed Apr 09 2014 15:09:34 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for THISWONTEXSIST at Time Wed Apr 09 2014 15:09:34 GMT-0500 (Central Daylight Time) 
+
+Sold tag  THISWONTEXSIST For undefined at Time Wed Apr 09 2014 15:09:37 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISWONTEXSIST at Time Wed Apr 09 2014 15:09:40 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISWONTEXSIST at Time Wed Apr 09 2014 15:09:46 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for THISWONTEXSIST at Time Wed Apr 09 2014 15:09:46 GMT-0500 (Central Daylight Time) 
+
+Sold tag  THISWONTEXSIST For undefined at Time Wed Apr 09 2014 15:09:49 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISWONTEXSIST at Time Wed Apr 09 2014 15:09:49 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 15:10:00 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 15:10:06 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISWONTEXSIST at Time Wed Apr 09 2014 15:11:46 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for THISWONTEXSIST at Time Wed Apr 09 2014 15:11:46 GMT-0500 (Central Daylight Time) 
+
+Bought tag  THISWONTEXSIST For undefined at Time Wed Apr 09 2014 15:11:51 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISWONTEXSIST at Time Wed Apr 09 2014 15:11:51 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for THISWONTEXSIST at Time Wed Apr 09 2014 15:12:23 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISWONTEXSIST at Time Wed Apr 09 2014 15:12:23 GMT-0500 (Central Daylight Time) 
+
+Sold tag  THISWONTEXSIST For undefined at Time Wed Apr 09 2014 15:12:27 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISWONTEXSIST at Time Wed Apr 09 2014 15:12:27 GMT-0500 (Central Daylight Time) 
+
+Sold tag  THISWONTEXSIST For undefined at Time Wed Apr 09 2014 15:12:28 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 15:12:46 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 15:12:51 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 09 2014 15:13:33 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 09 2014 15:13:33 GMT-0500 (Central Daylight Time) 
+
+Bought tag  wcw For undefined at Time Wed Apr 09 2014 15:13:37 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 09 2014 15:13:37 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 09 2014 15:13:50 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 09 2014 15:13:50 GMT-0500 (Central Daylight Time) 
+
+Sold tag  wcw For undefined at Time Wed Apr 09 2014 15:13:52 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 09 2014 15:13:53 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 09 2014 15:14:01 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 09 2014 15:14:01 GMT-0500 (Central Daylight Time) 
+
+Bought tag  wcw For undefined at Time Wed Apr 09 2014 15:14:03 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 09 2014 15:14:04 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 15:15:53 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 15:16:00 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THE at Time Wed Apr 09 2014 15:16:41 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for THE at Time Wed Apr 09 2014 15:16:41 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISNO at Time Wed Apr 09 2014 15:17:07 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for THISNO at Time Wed Apr 09 2014 15:17:07 GMT-0500 (Central Daylight Time) 
+
+Bought tag  THISNO For undefined at Time Wed Apr 09 2014 15:17:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISNO at Time Wed Apr 09 2014 15:17:09 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 15:17:18 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 15:17:24 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 15:18:30 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 15:18:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISNO at Time Wed Apr 09 2014 15:19:31 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for THISNO at Time Wed Apr 09 2014 15:19:31 GMT-0500 (Central Daylight Time) 
+
+Sold tag  THISNO For undefined at Time Wed Apr 09 2014 15:19:34 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  THISNO at Time Wed Apr 09 2014 15:19:34 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 15:19:40 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 15:19:46 GMT-0500 (Central Daylight Time) 
+

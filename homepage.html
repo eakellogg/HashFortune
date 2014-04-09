@@ -112,7 +112,7 @@
 		display:none;
 	}
 
-	#hashtag_graph {
+	#chartdiv {
 		display:none;
 	}
 
@@ -305,113 +305,105 @@
 <div id="investments_all">
 </div>
 
+<!-- This section contains everything specific to a hashtag page -->
+<section id="hashtag_page">
+	<!-- division containing the player's investment info for a particular hashtag -->
+	<div id="hashtag_investments">
+		<table class="center";>
+			<caption id="hashtag_name">Hashtag Name</caption>
+			<tr>
+      		<td>Stocks I Own</td>
+      		<td id="current_stock_count">0</td>
+			</tr>
+			<tr>
+			<td>My Investment Value</td>
+			<td id="current_value">0</td>
+			</tr>
+			<tr>
+      		<td>Uninvested Pts</td>
+      		<td id="my_uninvested_points">0</td>
+			</tr>
+		</table>
+		<BR>
+		<BR>
+	</div>
+
+	<!-- division containing the graph of the history of a particular hashtag -->
+	<div id="chartdiv" style="width: 750px; height: 400px;"></div>
+
+	<!-- division containing the information regarding a particular hashtag -->
+	<div id="hashtag_stats">
+		<table class="center";>
+			<caption>Current Value</caption>
+			<tr>
+      		<td>Total # of Shares</td>
+      		<td id="total_shares">0</td>
+			</tr>
+			<tr>
+      		<td>Value per share</td>
+      		<td id="value_per_share">0</td>
+			</tr>
+		</table>
+		<BR>
+		<BR>
+	</div>
+
+	<!-- division containing the menu through which a user can buy or sell a particular hashtag -->
+	<div id="buy_sell_tags">
+		<form name="buy" >
+			Amount: <input type="text" id="amount_buy" /> <br>
+			<input type="button" value="Buy!" onclick="
+				var username = user_name;
+				var tag_name = current_tag;
+				var challengeID = 0;
+				var amount = $('#amount_buy').val();
+				buy_hash(username, tag_name, challengeID, amount);
+				clear_searches();"/>
+		</form>
+		<form name="sell" >
+			Amount: <input type="text" id="amount_sell" /> <br>
+			<input type="button" value="Sell!" onclick="
+				var username = user_name;
+				var tag_name = current_tag;
+				var challengeID = 0;
+				var amount = $('#amount_sell').val();
+				sell_hash(username, tag_name, challengeID, amount);
+				clear_searches();"/>
+		</form>
+	</div>
+
+	<!-- division containing the searchbar for a hashtag -->
+	<div id="hashtag_search" >
+		<form>
+			<h1 class="hashtag_search">
+				#Hashtag Search:
+				<input type="text" id="hsearch"; size="35" >
+				<input type="button" value="Search" width="50" onclick="rename_page('Hashtag Investment');current_tag = document.getElementById('hsearch').value; document.getElementById('hashtag_name').innerHTML='#' + current_tag; switch_to_tag(user_name, document.getElementById('hsearch').value, 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : current_tag , user_name : user_name } ); show_hashtag_page();">
+			</h1>
+		</form>
+		<BR>
+		<BR>
+	</div>
+	
+</section>
+
+
 <!-- division containing the settings menu -->
 <div id="settings">
 	<p> Email Notifications </p>
 	<p> Change Profile Picture </p>
 	<p>
-
     <a href="tutorial.html" target="_blank">A quick tutorial</a>
     </p>
-    
     <a href="https://docs.google.com/forms/d/11X2S7wk5odFIWruJPixHJM3T6lcv9LR2fkCTE4ofsF4/viewform" target="_blank">And please take our user study!</a>
     <br>
-    
     <br>
     <p> If you encounter any issues, you can email us at hashfortune@gmail.com </p>
 	<input type="button" value="Logout" onclick=" setCookie( 'user_name' , '' , 1); setCookie('pass_word' , '' , 1 ); socket.emit( 'logout' , { user_name : user_name } ); location.href = '/index.html'; "/>
-
 </div>
 
-<!-- division containing the player's investment info for a particular hashtag -->
-<div id="hashtag_investments">
-   <table width=75%; class="center";>
-    	<caption id="hashtag_name">Hashtag Name</caption>
-    	   <tr>
-      		<td width=50%>Current Investment</td>
-      		<td width=25%id="current_stock_count">0</td>
-			<td width=25%id="current_value">0</td>
-    	   </tr>
-    	   <tr>
-      		<td width=50%>Uninvested Pts</td>
-      		<td id="my_uninvested_points">0</td>
-    	   </tr>
-    </table>
-    <BR>
-    <BR>
-</div>
-
- <div id="chartdiv" class= "center"; style="width: 900px; height: 400px;"></div>
-
-<!-- division containing the information regarding a particular hashtag -->
-<div id="hashtag_stats">
-   <table width=75%; class="center";>
-    	<caption>Popularity</caption>
-    	   <tr>
-      		<td width=50%>Shares in</td>
-      		<td id="total_shares">0</td>
-    	   </tr>
-    	   <tr>
-      		<td width=50%>Value per share</td>
-      		<td id="value_per_share">0</td>
-    	   </tr>
-    </table>
-    <BR>
-    <BR>
-</div>
-
-<!-- division containing the graph of the history of a particular hashtag -->
-<div id="hashtag_graph">
-   
-</div>
-
-<!-- division containing the menu through which a user can buy or sell a particular hashtag -->
-<div id="buy_sell_tags">
-   <form name="buy" >
-     Amount: <input type="text" id="amount_buy" /> <br>
-     <input type="button" value="Buy!" onclick="
-     	var username = user_name;
-     	var tag_name = current_tag;
-     	var challengeID = 0;
-     	var amount = $('#amount_buy').val();
-     	buy_hash(username, tag_name, challengeID, amount);
-     	clear_searches();"/>
-   </form>
-   <form name="sell" >
-     Amount: <input type="text" id="amount_sell" /> <br>
-     <input type="button" value="Sell!" onclick="
-     var username = user_name;
-     var tag_name = current_tag;
-     var challengeID = 0;
-     var amount = $('#amount_sell').val();
-     sell_hash(username, tag_name, challengeID, amount);
-     clear_searches();"/>
-   </form>
-</div>
-
-<!-- division containing the searchbar for a hashtag -->
-<div id="hashtag_search" >
-	<form>
-		<h1 class="hashtag_search">
-		#Hashtag Search:
-		<input type="text" id="hsearch"; size="35" >
-        <input type="button" value="Search" width="50" onclick="rename_page('Hashtag Investment');current_tag = document.getElementById('hsearch').value; document.getElementById('hashtag_name').innerHTML='#' + current_tag; switch_to_tag(user_name, document.getElementById('hsearch').value, 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : current_tag , user_name : user_name } ); show_hashtag_page();">
-		</h1>
-	</form>
-<BR>
-<BR>
-</div>
-
-<div id="chartdiv" style="width: 640px; height: 400px;"></div>
 
 </div> <!--closes div separating main body from toolbar -->
-
-
-
-
-
-
-
 
 </body>
 

@@ -132,7 +132,7 @@ function setLeaderBoard()
 function setTrendingPage()
 {
 
-	connection.query( "SELECT name , price FROM hashTags ORDER BY dateTime DESC , price DESC LIMIT 10" , 
+	connection.query( "SELECT tagname AS name , price FROM Market ORDER BY price DESC LIMIT 10" , 
 	function( err , hashtags )
 	{
 		if(err) {
@@ -272,6 +272,7 @@ function VerifyLogin(message)
 //TODO Need user invested 
 function serveTagPage(message)
 {
+	var output = { available_points : 0 , user_invested : 0 , total_invested : 0 , value : 0 };
 	var username = message.user_name;
 	// search for the uninvested points of the user
 	connection.query( "SELECT AvailablePoints FROM users WHERE username = ? ", [username] , 
@@ -285,7 +286,7 @@ function serveTagPage(message)
 		if( user_info.length > 0 )
 		{	
 			// create the output with the user's available points incorporated
-			var output = { available_points : user_info[0].AvailablePoints , user_invested : 0 , total_invested : 0 , value : 0 } 
+			 output.available_points = user_info[0].AvailablePoints;
 
 			// search for the investment for the user in question
 			connection.query( "SELECT shares FROM `Invests` WHERE username = ? AND tagname = ?", [username, message.tag_name], 
