@@ -9,6 +9,10 @@ body
 {
    cursor:pointer;
 }
+a
+{
+	cursor:pointer;
+}
 img.pointable:hover
 {
    opacity:0.4;
@@ -48,13 +52,13 @@ caption {
     font-family:Times; 
     color:black;
     font-size:30pt;
-    font-weight:bold;
-    text-shadow:.5px .5px #336600;
+    font-weight:150%;
+    //text-shadow:.5px .5px #336600;
 }     
 th {font-family:Times; 
     color:#1A3300; 
-    font-size:30pt;
-    
+    font-size:14pt;
+    font-weight:50%;
     border-bottom:1px solid #000000;
     border-right:1px solid #000000;
     border-left:1px solid #000000;
@@ -99,6 +103,21 @@ tr {
 #main_body {
     margin-left:200px;
     padding:2em;
+}
+#symbol {
+	background-color:white;
+	color:black;
+	padding-right:0px;
+	margin-right:0px;
+	font-size:18px;
+	font-weight:bold;
+}
+#hsearch {
+	padding-left:0px;
+	margin-left:0px;
+	border-left:0px;
+	padding-top:3px;
+
 }
 
 

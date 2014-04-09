@@ -33,11 +33,16 @@ function hide_all() {
     document.getElementById("investments_all").style.display = "none";
     document.getElementById("hashtag_investments").style.display = "none";
     document.getElementById("buy_sell_tags").style.display = "none";
-    //document.getElementById("hashtag_graph").style.display = "none";
     document.getElementById("hashtag_stats").style.display = "none";
     document.getElementById("new_challenge").style.display = "none";
     document.getElementById("user_search_results").style.display = "none";
     document.getElementById("chartdiv").style.display = "none";
+	
+	document.getElementById("current_value").innerHTML = 0;
+	document.getElementById("my_uninvested_points").innerHTML= 0;
+	document.getElementById("current_stock_count").innerHTML = 0; 
+	document.getElementById("total_shares").innerHTML = 0;
+	document.getElementById("value_per_share").innerHTML = 0;
 }
 
 

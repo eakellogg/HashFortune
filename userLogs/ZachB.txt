@@ -1196,3 +1196,37 @@ loging out  at Time Wed Apr 09 2014 15:19:40 GMT-0500 (Central Daylight Time)
 
 Logged in Wed Apr 09 2014 15:19:46 GMT-0500 (Central Daylight Time) 
 
+Logged in Wed Apr 09 2014 16:14:00 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  AAAA at Time Wed Apr 09 2014 16:14:25 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for AAAA at Time Wed Apr 09 2014 16:14:25 GMT-0500 (Central Daylight Time) 
+
+Bought tag  AAAA For undefined at Time Wed Apr 09 2014 16:14:32 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  AAAA at Time Wed Apr 09 2014 16:14:33 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 16:14:46 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 16:14:51 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  AAAA at Time Wed Apr 09 2014 16:14:56 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for AAAA at Time Wed Apr 09 2014 16:14:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  AAAA at Time Wed Apr 09 2014 16:15:17 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for AAAA at Time Wed Apr 09 2014 16:15:17 GMT-0500 (Central Daylight Time) 
+
+Sold tag  AAAA For undefined at Time Wed Apr 09 2014 16:15:20 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  AAAA at Time Wed Apr 09 2014 16:15:21 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 16:15:23 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 16:15:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  FFF at Time Wed Apr 09 2014 16:17:24 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for FFF at Time Wed Apr 09 2014 16:17:24 GMT-0500 (Central Daylight Time) 
+

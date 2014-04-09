@@ -24,7 +24,7 @@
 	<link rel="stylesheet" type="text/css" href="css/basics.css">
 	<title>HashFortune</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+	<link rel="shortcut icon" href="favicon.ico" >
 	<!-- disable the enter key -->
 	<script type="text/javascript"> 
 		function stopRKey(evt) { 
@@ -309,6 +309,7 @@
 <section id="hashtag_page">
 	<!-- division containing the player's investment info for a particular hashtag -->
 	<div id="hashtag_investments">
+		
 		<table class="center";>
 			<caption id="hashtag_name">Hashtag Name</caption>
 			<tr>
@@ -325,7 +326,7 @@
 			</tr>
 		</table>
 		<BR>
-		<BR>
+		<BR>  
 	</div>
 
 	<!-- division containing the graph of the history of a particular hashtag -->
@@ -333,6 +334,7 @@
 
 	<!-- division containing the information regarding a particular hashtag -->
 	<div id="hashtag_stats">
+		
 		<table class="center";>
 			<caption>Current Value</caption>
 			<tr>
@@ -345,7 +347,7 @@
 			</tr>
 		</table>
 		<BR>
-		<BR>
+		<BR>	
 	</div>
 
 	<!-- division containing the menu through which a user can buy or sell a particular hashtag -->
@@ -371,21 +373,25 @@
 				clear_searches();"/>
 		</form>
 	</div>
+</section>
 
 	<!-- division containing the searchbar for a hashtag -->
 	<div id="hashtag_search" >
 		<form>
 			<h1 class="hashtag_search">
 				#Hashtag Search:
-				<input type="text" id="hsearch"; size="35" >
-				<input type="button" value="Search" width="50" onclick="rename_page('Hashtag Investment');current_tag = document.getElementById('hsearch').value; document.getElementById('hashtag_name').innerHTML='#' + current_tag; switch_to_tag(user_name, document.getElementById('hsearch').value, 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : current_tag , user_name : user_name } ); show_hashtag_page();">
+				
+				
+				<span id="symbol">#</span><input type="text" id="hsearch"; size="35" />
+				<input type="button" value="Search" width="50" onclick="rename_page('Hashtag Investment');current_tag = document.getElementById('hsearch').value; document.getElementById('hashtag_name').innerHTML='#' + current_tag; switch_to_tag(user_name, document.getElementById('hsearch').value, 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : current_tag , user_name : user_name } ); show_hashtag_page();"/>
+				
 			</h1>
 		</form>
 		<BR>
 		<BR>
 	</div>
 	
-</section>
+
 
 
 <!-- division containing the settings menu -->

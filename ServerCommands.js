@@ -272,7 +272,7 @@ function VerifyLogin(message)
 //TODO Need user invested 
 function serveTagPage(message)
 {
-	var output = { available_points : 0 , user_invested : 0 , total_invested : 0 , value : 0 };
+	//var output = { available_points : 0 , user_invested : 0 , total_invested : 0 , value : 0 };
 	var username = message.user_name;
 	// search for the uninvested points of the user
 	connection.query( "SELECT AvailablePoints FROM users WHERE username = ? ", [username] , 
@@ -286,7 +286,7 @@ function serveTagPage(message)
 		if( user_info.length > 0 )
 		{	
 			// create the output with the user's available points incorporated
-			 output.available_points = user_info[0].AvailablePoints;
+			 var available_points = user_info[0].AvailablePoints;		//output.avail
 
 			// search for the investment for the user in question
 			connection.query( "SELECT shares FROM `Invests` WHERE username = ? AND tagname = ?", [username, message.tag_name], 
@@ -295,27 +295,35 @@ function serveTagPage(message)
 				if(err) {
 					throw err;
 				}
-					
+				var user_invested = 0;	
 				// if the investment exists, update the output with the user's current investment	
 				if(investment_info.length != 0) {
-					output.user_invested = investment_info[0].shares;
+					user_invested = investment_info[0].shares;		//output.user..
 				}
 				
-					connection.query( "SELECT shares, price FROM `Market` WHERE tagname = ?", [message.tag_name], 
-					function( err , market_info )
-					{
-						if(err) {
-							throw err;
-						}
-						
-						if(market_info.length != 0) {
-							output.total_invested = market_info[0].shares;
-							output.value = market_info[0].price;
-							console.log( output.value );
+				connection.query( "SELECT shares, price FROM `Market` WHERE tagname = ?", [message.tag_name], 
+				function( err , market_info )
+				{
+					if(err) {
+						throw err;
+					}
+					var total_invested = 0;
+					var value = 0;
+					if(market_info.length != 0) {
+						total_invested = market_info[0].shares;		//output.total
+						value = market_info[0].price;				//output.value
+						console.log( value );
 							
-						}
-						socketHandler.messageUser( username , 'tag_page' , output );	
-					});
+					}
+					
+					var update = {};		//{ available_points : 0 , user_invested : 0 , total_invested : 0 , value : 0 };
+					update.available_points = available_points;
+					update.user_invested = user_invested;
+					update.total_invested = total_invested;
+					update.value = value;
+						console.log("HEYYYYYY"+update);
+					socketHandler.messageUser( username , 'tag_page' , update );	
+				});
 				
 			});	
 		}
