@@ -8,9 +8,9 @@
 		
 		//<!-- clear all search bars -->
 		function clear_searches() {
-    			//document.getElementById("esearch").value= "";
+    			document.getElementById("esearch").value= "";
     			document.getElementById("hsearch").value= "";
-    			//document.getElementById("usearch").value= "";
+    			document.getElementById("usearch").value= "";
     			document.getElementById("amount_buy").value= "";
     			document.getElementById("amount_sell").value= "";
     		}
@@ -36,7 +36,7 @@
     			document.getElementById("hashtag_graph").style.display = "none";
     			document.getElementById("hashtag_stats").style.display = "none";
     			document.getElementById("new_challenge").style.display = "none";
-                	document.getElementById("user_search_results").style.display = "none";
+                document.getElementById("user_search_results").style.display = "none";
     			document.getElementById("chartdiv").style.display = "none";
     		}
 
@@ -65,12 +65,14 @@
 //<!-- show divisions relevant to investments page -->
 
 		function show_investments() {
-    			document.getElementById("player_info").style.display = "block";
-    			document.getElementById("trending").style.display = "block";
-    			document.getElementById("hashtag_search").style.display = "block";
-    
-    			socket.emit( 'player_info_request' , { user_name : user_name });
-    		}
+
+			document.getElementById("player_info").style.display = "block";
+			document.getElementById("trending").style.display = "block";
+			document.getElementById("hashtag_search").style.display = "block"; 
+			
+    		socket.emit( 'my_investments_request' , investObj);
+			socket.emit( 'player_info_request' , { portfolio_name : user_name , user_name : user_name });
+		}
 	  
 //<!-- show divisions relevant to portfolio page -->
 		function show_portfolio(portfolio_name) {
@@ -79,12 +81,13 @@
 			document.getElementById("player_info").style.display = "block";
 			document.getElementById("investments_summary").style.display = "block";
 			
-			var message = {};
-			message.user_name = user_name;
-			message.portfolio_name = portfolio_name;
-			
-			socket.emit( 'player_info_request' , message );
-			socket.emit( 'my_investments_request' , message );
+				var userObj = { user_name : user_name };
+    			var investObj = {};
+    			investObj.user_name = user_name;
+    			investObj.portfolio_name = user_name;
+
+    			socket.emit( 'my_investments_request' , investObj);
+				socket.emit( 'player_info_request' , { portfolio_name : portfolio_name , user_name : user_name });
 		}
 
 
@@ -119,8 +122,11 @@
 			document.getElementById("hashtag_graph").style.display = "block";
 			document.getElementById("buy_sell_tags").style.display = "block";
 			document.getElementById("hashtag_search").style.display = "block";
+
 			document.getElementById("chartdiv").style.display = "block";			
 		} 
+		
+
 		
 		// <!-- show drop down menu of particular hashtag -->
 		function show_menu(hashtag_name) {
@@ -131,6 +137,3 @@
 		function hide_menu(hashtag_name) {
 			document.getElementById(hashtag_name).style.display ="none";
 		}
-		
-
-

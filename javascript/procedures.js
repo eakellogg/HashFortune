@@ -1,5 +1,4 @@
 
-// connect and get a cookie -- THIS FUNCTION NEEDS ATTENTION
 function connectProcedure(message) //TODO 
 {
 
@@ -48,17 +47,19 @@ function loginProcedure(message)
 // update the user info in the appropriate areas on a hashtag page
 function tagProcedure(message) 
 {
-	document.getElementById("my_invested_points").innerHTML = message.invested;
-	document.getElementById("my_uninvested_points").innerHTML=message.available_points;
-	document.getElementById("total_investors").innerHTML= message.players_invested;
-	document.getElementById("total_invested_points").innerHTML= message.total_invested;
+	var total = message.value * message.user_invested;
+	document.getElementById("current_value").innerHTML = total;
+	document.getElementById("my_uninvested_points").innerHTML= message.available_points;
+	document.getElementById("current_stock_count").innerHTML = message.user_invested;
+	document.getElementById("total_shares").innerHTML = message.total_invested;
+	document.getElementById("value_per_share").innerHTML = message.value;
 }
 
 
 // update the trending hashtags table
 function trendingProcedure(message)
 {
-    var table1 = "<table width=75%; class='center';> <caption>Trending Hashtags</caption>";
+    var table1 = "<table width=75%; class='center';> <caption>Trending Hashtags</caption> <tr><th>Hashtag Name</th><th>Stock Price</th><tr>";
 	var table3 = "</table> <BR> <BR>";	
 	var table2 = "";
 	
@@ -66,15 +67,16 @@ function trendingProcedure(message)
 	for(var x = 0; x < message.length; x++ )
 	{
 		table2 = table2 + "<tr><td width=50% onMouseOver=\"show_menu('" + message[x].name + "T')\" onMouseOut=\"hide_menu('" + message[x].name + "T')\" >";
-		table2 = table2 + "<a onclick=\" rename_page( 'Hashtag Investment' ); document.getElementById('hashtag_name').innerHTML='#' + '" + message[x].name + "'; switch_to_tag('" + user_name + "', '" + message[x].name + "', 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : '" + message[x].name + "', user_name : '" + user_name + "' } ); show_hashtag_page(); \">";
-		table2 = table2 + "#" + message[x].name + "</a> <a style=\"display:none; color:black\" id=\"" + message[x].name + "T\" href=\"http://www.urbandictionary.com/define.php?term=" + message[x].name + "\" target=\"_blank\">Urban Dictionary Definition</a> </td><td>" + message[x].count + "</td></tr>";
+		table2 = table2 + "<a onclick=\" rename_page( 'Hashtag Investment' ); current_tag = " + message[x].tagname + "; document.getElementById('hashtag_name').innerHTML='#' + '" + message[x].name + "'; switch_to_tag('" + user_name + "', '" + message[x].name + "', 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : '" + message[x].name + "', user_name : '" + user_name + "' } ); show_hashtag_page(); \">";
+		table2 = table2 + "#" + message[x].name + "</a> <a style=\"display:none; color:black\" id=\"" + message[x].name + "T\" href=\"http://www.urbandictionary.com/define.php?term=" + message[x].name + "\" target=\"_blank\">Urban Dictionary Definition</a> </td><td>" + message[x].price + "</td></tr>";
+
 	}
 
 	var finaltable = table1 + table2 + table3;
 	document.getElementById("trending").innerHTML=finaltable;
 }
 
-function myInvestmentsProcedure(message)
+function myInvestmentsProcedure(message) //Changed to have three columns , tagname , #stocks , total value
 {
 	var table1 = "<table width=75%; class='center';> <caption>Investments</caption>";
 	var table3 = "</table> <BR> <BR>";	
@@ -83,9 +85,13 @@ function myInvestmentsProcedure(message)
 	// file the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
+		if( message.price == undefined )
+		{
+			message.price = 0;
+		}
 		table2 = table2 + "<tr><td width=50% onMouseOver=\"show_menu('" + message[x].tagname + "I')\" onMouseOut=\"hide_menu('" + message[x].tagname + "I')\" >";
-		table2 = table2 + "<a onclick=\" rename_page( 'Hashtag Investment' ); document.getElementById('hashtag_name').innerHTML='#' + '" + message[x].tagname + "'; switch_to_tag('" + user_name + "', '" + message[x].tagname + "', 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : '" + message[x].tagname + "', user_name : '" + user_name + "' } ); show_hashtag_page(); \">";
-		table2 = table2 + "#" + message[x].tagname + "</a> <a style=\"display:none; color:black\"  id=\"" + message[x].tagname + "I\" href=\"http://www.urbandictionary.com/define.php?term=" + message[x].tagname + "\" target=\"_blank\">Urban Dictionary Definition</a> </td><td>" + message[x].amount + "</td></tr>";
+		table2 = table2 + "<a onclick=\" rename_page( 'Hashtag Investment' ); current_tag = " + message[x].tagname + "; document.getElementById('hashtag_name').innerHTML='#' + '" + message[x].tagname + "'; switch_to_tag('" + user_name + "', '" + message[x].tagname + "', 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : '" + message[x].tagname + "', user_name : '" + user_name + "' } ); show_hashtag_page(); \">";
+		table2 = table2 + "#" + message[x].tagname + "</a> <a style=\"display:none; color:black\"  id=\"" + message[x].tagname + "I\" href=\"http://www.urbandictionary.com/define.php?term=" + message[x].tagname + "\" target=\"_blank\">Urban Dictionary Definition</a> </td><td>" + message[x].shares + "</td><td>" + message[x].shares * message[x].price + "</td></tr>";
 	}
 
 	var finaltable = table1 + table2 + table3;
@@ -95,7 +101,7 @@ function myInvestmentsProcedure(message)
 function leaderProcedure(message)
 {
 
-	var table1 = "<table width=75%; class='center';> <caption>Leader Board</caption>";
+		var table1 = "<table width=75%; class='center';> <caption>Leader Board</caption>";
 	var table3 = "</table> <BR> <BR>";	
 	var table2 = "";
 	
@@ -108,8 +114,7 @@ function leaderProcedure(message)
 	var finaltable = table1 + table2 + table3;
 	document.getElementById("leaderboard").innerHTML=finaltable;
 }
-
-function playerInfoProcedure(message)
+function playerInfoProcedure(message) //TODO might need change here
 {
 	var table1 = "<table width=75%; class='center';> <caption>" + message.username + "</caption>";
 	var table3 = "</table> <BR> <BR>";	
@@ -119,8 +124,8 @@ function playerInfoProcedure(message)
 	var total      = message.TotalValue;
 	var invested = total - uninvested;
 		
-		table2 = table2 + "<tr><td width=50%>UninvestedPoints </td><td>" + uninvested + "</td></tr>";
-		table2 = table2 + "<tr><td width=50%>InvestedPoints </td><td>" + invested + "</td></tr>";
+		table2 = table2 + "<tr><td width=50%>Uninvested Points </td><td>" +     uninvested + "</td></tr>";
+		table2 = table2 + "<tr><td width=50%>Value of owned stocks </td><td>" + invested + "</td></tr>";
 		table2 = table2 + "<tr><td width=50%>Net Worth </td><td>" + total + "</td></tr>";
 	
 
@@ -128,7 +133,7 @@ function playerInfoProcedure(message)
 	document.getElementById("player_info").innerHTML=finaltable;
 }
 
-function userProcedure(message)
+function userProcedure(message) 
 {
 	var table1 = "<table style=border:0px solid black;>";
 	var table2 = "";
@@ -145,8 +150,9 @@ function userProcedure(message)
 }
 
 
-function friendsProcedure(message)
+function friendsProcedure(message) //No change needed here
 {
+
 	var table1 = "<table width=75%; class='center';> <caption>Friends</caption>";
 	var table3 = "</table> <BR> <BR>";	
 	var table2 = "";
@@ -162,7 +168,7 @@ function friendsProcedure(message)
 	document.getElementById("friends").innerHTML=finaltable;
 }
 
-function friendRequestsProcedure(message)
+function friendRequestsProcedure(message) //No change needed here
 {
 	var table1 = "<table width=75%; class='center';> <caption>Friend Requests</caption>";
 	var table3 = "</table> <BR> <BR>";	
@@ -181,8 +187,37 @@ function friendRequestsProcedure(message)
 }
 
 // present the user with a warning
+
 function warningProcedure(message)
 {
 	alert(message.content);
 }
 
+function chartProcedure(message){
+
+chartData = message;
+var chart = new AmCharts.AmSerialChart();
+chart.dataProvider = chartData;
+chart.categoryField = "time";
+
+
+var chartScrollbar = new AmCharts.ChartScrollbar();
+chart.addChartScrollbar(chartScrollbar);
+
+var graph = new AmCharts.AmGraph();
+graph.valueField = "price"; //This changed to a tags stock value at each time
+graph.type = "line";
+chart.addGraph(graph);
+
+var categoryAxis = chart.categoryAxis;
+categoryAxis.autoGridCount  = true;
+categoryAxis.gridPosition = "start";
+categoryAxis.labelRotation = 90;
+
+graph.type = "line";
+graph.fillAlphas = 0; // or delete this line, as 0 is default
+//graph.bullet = "round";
+//graph.lineColor = "#8d1cc6"
+
+chart.write('chartdiv');
+}

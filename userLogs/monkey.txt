@@ -118,3 +118,413 @@ Requesting chart for TBT at Time Fri Apr 04 2014 15:56:26 GMT-0500 (Central Dayl
 
 loging out  at Time Fri Apr 04 2014 15:56:33 GMT-0500 (Central Daylight Time) 
 
+Logged in Mon Apr 07 2014 22:23:11 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  boobproblemsnight at Time Mon Apr 07 2014 22:23:48 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for boobproblemsnight at Time Mon Apr 07 2014 22:23:48 GMT-0500 (Central Daylight Time) 
+
+Bought tag  undefined For undefined at Time Mon Apr 07 2014 22:24:14 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 08 2014 11:58:12 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 11:58:59 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Tue Apr 08 2014 11:58:59 GMT-0500 (Central Daylight Time) 
+
+Bought tag  wcw For undefined at Time Tue Apr 08 2014 11:59:27 GMT-0500 (Central Daylight Time) 
+
+Bought tag  wcw For undefined at Time Tue Apr 08 2014 11:59:37 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 11:59:37 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:00:09 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Tue Apr 08 2014 12:00:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:00:36 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Tue Apr 08 2014 12:00:36 GMT-0500 (Central Daylight Time) 
+
+Bought tag  wcw For undefined at Time Tue Apr 08 2014 12:00:40 GMT-0500 (Central Daylight Time) 
+
+Bought tag  wcw For undefined at Time Tue Apr 08 2014 12:00:45 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:00:45 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:01:04 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Tue Apr 08 2014 12:01:04 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:01:17 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Tue Apr 08 2014 12:01:17 GMT-0500 (Central Daylight Time) 
+
+Sold tag  wcw For undefined at Time Tue Apr 08 2014 12:01:20 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:01:26 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:02:05 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Tue Apr 08 2014 12:02:05 GMT-0500 (Central Daylight Time) 
+
+Bought tag  wcw For undefined at Time Tue Apr 08 2014 12:02:12 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:02:12 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:02:38 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Tue Apr 08 2014 12:02:38 GMT-0500 (Central Daylight Time) 
+
+Sold tag  wcw For undefined at Time Tue Apr 08 2014 12:02:42 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:02:42 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:02:55 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Tue Apr 08 2014 12:02:55 GMT-0500 (Central Daylight Time) 
+
+Bought tag  wcw For undefined at Time Tue Apr 08 2014 12:02:57 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:02:58 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:03:05 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Tue Apr 08 2014 12:03:05 GMT-0500 (Central Daylight Time) 
+
+Sold tag  wcw For undefined at Time Tue Apr 08 2014 12:03:08 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:03:08 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Tue Apr 08 2014 12:03:26 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 08 2014 12:03:31 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Tue Apr 08 2014 12:04:13 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 08 2014 12:04:39 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:12:20 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Tue Apr 08 2014 12:12:20 GMT-0500 (Central Daylight Time) 
+
+Bought tag  wcw For undefined at Time Tue Apr 08 2014 12:12:27 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:12:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:13:02 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Tue Apr 08 2014 12:13:02 GMT-0500 (Central Daylight Time) 
+
+Bought tag  wcw For undefined at Time Tue Apr 08 2014 12:13:05 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:13:05 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:14:29 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Tue Apr 08 2014 12:14:29 GMT-0500 (Central Daylight Time) 
+
+Sold tag  wcw For undefined at Time Tue Apr 08 2014 12:14:33 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:14:33 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:15:48 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Tue Apr 08 2014 12:15:48 GMT-0500 (Central Daylight Time) 
+
+Bought tag  wcw For undefined at Time Tue Apr 08 2014 12:15:50 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:15:51 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:16:01 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Tue Apr 08 2014 12:16:01 GMT-0500 (Central Daylight Time) 
+
+Sold tag  wcw For undefined at Time Tue Apr 08 2014 12:16:02 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Tue Apr 08 2014 12:16:04 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Tue Apr 08 2014 12:17:28 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 08 2014 12:17:32 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Tue Apr 08 2014 12:17:42 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 08 2014 12:17:46 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Tue Apr 08 2014 12:17:50 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 08 2014 12:18:15 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 08 2014 12:20:53 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Tue Apr 08 2014 12:20:53 GMT-0500 (Central Daylight Time) 
+
+Bought tag  RT For undefined at Time Tue Apr 08 2014 12:20:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 08 2014 12:20:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 08 2014 12:21:36 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Tue Apr 08 2014 12:21:36 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  art at Time Tue Apr 08 2014 12:32:59 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for art at Time Tue Apr 08 2014 12:32:59 GMT-0500 (Central Daylight Time) 
+
+Bought tag  RT For undefined at Time Tue Apr 08 2014 12:33:03 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 08 2014 12:33:03 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  art at Time Tue Apr 08 2014 12:33:20 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for art at Time Tue Apr 08 2014 12:33:20 GMT-0500 (Central Daylight Time) 
+
+Bought tag  undefined For undefined at Time Tue Apr 08 2014 12:33:24 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Tue Apr 08 2014 12:33:29 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  art at Time Tue Apr 08 2014 12:34:54 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for art at Time Tue Apr 08 2014 12:34:54 GMT-0500 (Central Daylight Time) 
+
+Bought tag  undefined For undefined at Time Tue Apr 08 2014 12:34:59 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Tue Apr 08 2014 12:34:59 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  buytest at Time Tue Apr 08 2014 12:39:53 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for buytest at Time Tue Apr 08 2014 12:39:53 GMT-0500 (Central Daylight Time) 
+
+Bought tag  buytest For undefined at Time Tue Apr 08 2014 12:39:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  buytest at Time Tue Apr 08 2014 12:39:57 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  buytest at Time Tue Apr 08 2014 12:40:11 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for buytest at Time Tue Apr 08 2014 12:40:11 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  art at Time Tue Apr 08 2014 12:40:28 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for art at Time Tue Apr 08 2014 12:40:28 GMT-0500 (Central Daylight Time) 
+
+Bought tag  art For undefined at Time Tue Apr 08 2014 12:40:31 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  art at Time Tue Apr 08 2014 12:40:32 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  art at Time Tue Apr 08 2014 12:40:54 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for art at Time Tue Apr 08 2014 12:40:54 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  art at Time Tue Apr 08 2014 12:41:07 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for art at Time Tue Apr 08 2014 12:41:07 GMT-0500 (Central Daylight Time) 
+
+Bought tag  art For undefined at Time Tue Apr 08 2014 12:41:10 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  art at Time Tue Apr 08 2014 12:41:10 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  mb_europe at Time Tue Apr 08 2014 12:41:52 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for mb_europe at Time Tue Apr 08 2014 12:41:52 GMT-0500 (Central Daylight Time) 
+
+Bought tag  art For undefined at Time Tue Apr 08 2014 12:41:54 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  mb_europe at Time Tue Apr 08 2014 12:42:11 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for mb_europe at Time Tue Apr 08 2014 12:42:11 GMT-0500 (Central Daylight Time) 
+
+Bought tag  art For undefined at Time Tue Apr 08 2014 12:42:18 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 12:46:03 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for nathanTard at Time Tue Apr 08 2014 12:46:03 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 12:47:00 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for nathanTard at Time Tue Apr 08 2014 12:47:00 GMT-0500 (Central Daylight Time) 
+
+Bought tag  nathanTard For undefined at Time Tue Apr 08 2014 12:47:04 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 12:47:04 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 12:50:02 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for nathanTard at Time Tue Apr 08 2014 12:50:02 GMT-0500 (Central Daylight Time) 
+
+Bought tag  nathanTard For undefined at Time Tue Apr 08 2014 12:50:08 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 12:50:08 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 12:50:59 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for nathanTard at Time Tue Apr 08 2014 12:50:59 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 12:51:11 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for nathanTard at Time Tue Apr 08 2014 12:51:11 GMT-0500 (Central Daylight Time) 
+
+Bought tag  nathanTard For undefined at Time Tue Apr 08 2014 12:51:13 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 12:51:13 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 12:52:04 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for nathanTard at Time Tue Apr 08 2014 12:52:04 GMT-0500 (Central Daylight Time) 
+
+Bought tag  nathanTard For undefined at Time Tue Apr 08 2014 12:52:07 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 12:52:07 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  mb_europe at Time Tue Apr 08 2014 12:53:27 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for mb_europe at Time Tue Apr 08 2014 12:53:27 GMT-0500 (Central Daylight Time) 
+
+Bought tag  nathanTard For undefined at Time Tue Apr 08 2014 12:53:37 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 12:53:37 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  HalaMadrid at Time Tue Apr 08 2014 12:54:12 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for HalaMadrid at Time Tue Apr 08 2014 12:54:12 GMT-0500 (Central Daylight Time) 
+
+Bought tag  undefined For undefined at Time Tue Apr 08 2014 12:54:14 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  mb_europe at Time Tue Apr 08 2014 12:54:49 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for mb_europe at Time Tue Apr 08 2014 12:54:49 GMT-0500 (Central Daylight Time) 
+
+Bought tag  mb_europe For undefined at Time Tue Apr 08 2014 12:54:52 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  mb_europe at Time Tue Apr 08 2014 12:54:52 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  2yearsWithEXO at Time Tue Apr 08 2014 12:55:06 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for 2yearsWithEXO at Time Tue Apr 08 2014 12:55:06 GMT-0500 (Central Daylight Time) 
+
+Bought tag  mb_europe For undefined at Time Tue Apr 08 2014 12:55:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  mb_europe at Time Tue Apr 08 2014 12:55:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  2yearsWithEXO at Time Tue Apr 08 2014 12:55:23 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for 2yearsWithEXO at Time Tue Apr 08 2014 12:55:23 GMT-0500 (Central Daylight Time) 
+
+Bought tag  undefined For undefined at Time Tue Apr 08 2014 12:55:25 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  art at Time Tue Apr 08 2014 13:05:35 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for art at Time Tue Apr 08 2014 13:05:35 GMT-0500 (Central Daylight Time) 
+
+Bought tag  art For undefined at Time Tue Apr 08 2014 13:05:38 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  art at Time Tue Apr 08 2014 13:05:38 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  art at Time Tue Apr 08 2014 13:05:51 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for art at Time Tue Apr 08 2014 13:05:51 GMT-0500 (Central Daylight Time) 
+
+Sold tag  undefined For undefined at Time Tue Apr 08 2014 13:05:53 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  FanArmy at Time Tue Apr 08 2014 13:06:07 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for FanArmy at Time Tue Apr 08 2014 13:06:07 GMT-0500 (Central Daylight Time) 
+
+Bought tag  undefined For undefined at Time Tue Apr 08 2014 13:06:10 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  FanArym at Time Tue Apr 08 2014 13:09:07 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for FanArym at Time Tue Apr 08 2014 13:09:07 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  FanArmy at Time Tue Apr 08 2014 13:09:13 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for FanArmy at Time Tue Apr 08 2014 13:09:13 GMT-0500 (Central Daylight Time) 
+
+Bought tag  FanArmy For undefined at Time Tue Apr 08 2014 13:09:15 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  FanArmy at Time Tue Apr 08 2014 13:09:16 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  buytest at Time Tue Apr 08 2014 13:11:57 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for buytest at Time Tue Apr 08 2014 13:11:57 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 13:12:24 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for nathanTard at Time Tue Apr 08 2014 13:12:24 GMT-0500 (Central Daylight Time) 
+
+Sold tag  nathanTard For undefined at Time Tue Apr 08 2014 13:12:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 13:12:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 13:14:41 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for nathanTard at Time Tue Apr 08 2014 13:14:41 GMT-0500 (Central Daylight Time) 
+
+Sold tag  nathanTard For undefined at Time Tue Apr 08 2014 13:14:46 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 13:14:47 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 13:16:19 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for nathanTard at Time Tue Apr 08 2014 13:16:19 GMT-0500 (Central Daylight Time) 
+
+Sold tag  nathanTard For undefined at Time Tue Apr 08 2014 13:16:23 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 13:16:23 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 13:17:00 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for nathanTard at Time Tue Apr 08 2014 13:17:00 GMT-0500 (Central Daylight Time) 
+
+Sold tag  nathanTard For undefined at Time Tue Apr 08 2014 13:17:04 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 13:17:04 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 13:20:22 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for nathanTard at Time Tue Apr 08 2014 13:20:22 GMT-0500 (Central Daylight Time) 
+
+Sold tag  nathanTard For undefined at Time Tue Apr 08 2014 13:20:30 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  nathanTard at Time Tue Apr 08 2014 13:20:30 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  asdfasdf at Time Tue Apr 08 2014 13:26:56 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for asdfasdf at Time Tue Apr 08 2014 13:26:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 08 2014 13:27:51 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Tue Apr 08 2014 13:27:51 GMT-0500 (Central Daylight Time) 
+
+Bought tag  RT For undefined at Time Tue Apr 08 2014 13:27:58 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 08 2014 13:27:58 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 08 2014 13:29:36 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Tue Apr 08 2014 13:29:36 GMT-0500 (Central Daylight Time) 
+
+Sold tag  RT For undefined at Time Tue Apr 08 2014 13:29:38 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 08 2014 13:29:39 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  asdfasdf at Time Tue Apr 08 2014 13:30:24 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for asdfasdf at Time Tue Apr 08 2014 13:30:24 GMT-0500 (Central Daylight Time) 
+
+Bought tag  asdfasdf For undefined at Time Tue Apr 08 2014 13:30:32 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  asdfasdf at Time Tue Apr 08 2014 13:30:33 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  asdfasdf at Time Tue Apr 08 2014 13:32:30 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for asdfasdf at Time Tue Apr 08 2014 13:32:30 GMT-0500 (Central Daylight Time) 
+
+Sold tag  asdfasdf For undefined at Time Tue Apr 08 2014 13:32:32 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  asdfasdf at Time Tue Apr 08 2014 13:32:33 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Tue Apr 08 2014 13:44:22 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 08 2014 13:53:09 GMT-0500 (Central Daylight Time) 
+
