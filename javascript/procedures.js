@@ -185,7 +185,10 @@ function friendRequestsProcedure(message)
 	var table1 = "<table width=75%; class='center';> <caption>Friend Requests</caption>";
 	var table3 = "</table> <BR> <BR>";	
 	var table2 = "";
-
+	if (message.length == 0)
+	{
+		table2 = table2 + "<tr><td style=\"text-align:center;\" >No Currently Pending Friend Requests</td></tr>";
+	}
 	// file the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
@@ -237,6 +240,7 @@ chart.addChartScrollbar(chartScrollbar);
 var graph = new AmCharts.AmGraph();
 graph.valueField = "price"; //This changed to a tags stock value at each time
 graph.type = "line";
+
 chart.addGraph(graph);
 
 var categoryAxis = chart.categoryAxis;
@@ -245,6 +249,7 @@ categoryAxis.gridPosition = "start";
 categoryAxis.labelRotation = 90;
 
 graph.type = "line";
+graph.lineColor = "#003300";
 graph.fillAlphas = 0; // or delete this line, as 0 is default
 //graph.bullet = "round";
 //graph.lineColor = "#8d1cc6"
