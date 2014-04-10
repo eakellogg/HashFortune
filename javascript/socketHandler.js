@@ -53,6 +53,12 @@ function listen( client )
 		function( message ) {
 		clientSocketTable[ message.user_name ] = this;
 		console.log("re-established " + message.user_name );
+		message.portfolio_name = message.user_name;
+		serverCommands.serveFormula( message, serverCommands.servePlayerInfo, serverCommands.serveMyTrending );
+		serverCommands.serveTrending( message );
+		serverCommands.serveLeaderBoard( message );
+		serverCommands.serveFriends( message );
+		serverCommands.serveFriendRequests( message );		
 	});
 	client.on('tag_page_request' , serverCommands.serveTagPage );
 	client.on('create_login' , serverCommands.VerifyCreate );
@@ -63,6 +69,7 @@ function listen( client )
 	client.on('player_info_request' , serverCommands.servePlayerInfo);
 	client.on('friend_table_request' , serverCommands.serveFriends);
 	client.on('friend_request_request' , serverCommands.serveFriendRequests);
+	client.on('friend_button_request' , serverCommands.serveFriendButton);
 	client.on('accept_friend' , serverCommands.serveAcceptFriend);
 	client.on('decline_friend' , serverCommands.serveDeclineFriend);
 	client.on('leader_request' , serverCommands.serveLeaderBoard );
@@ -70,6 +77,7 @@ function listen( client )
 	client.on('search_user_email' , serverCommands.serveSearchEmail );
 	client.on('logout' , serverCommands.serveLogout );
 	client.on('chart_request' , serverCommands.serveChart );
+	client.on('make_friend_request' , serverCommands.serveMakeFriend );
 }
 
 

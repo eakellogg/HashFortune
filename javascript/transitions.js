@@ -1,4 +1,24 @@
 
+// send a friend request
+function send_friend_request( user_name , friend )
+{
+	var message = {};
+	message.user_name = user_name;
+	message.friend    = friend;
+	message.drop = false;
+	socket.emit( 'make_friend_request' , message);
+}
+
+// remove a friend
+function remove_friend( user_name , friend )
+{
+	var message = {};
+	message.user_name = user_name;
+	message.friend    = friend;
+	message.drop = true;
+	socket.emit( 'make_friend_request' , message);
+}
+
 // switch to the tag page
 function switch_to_tag( user_name , tag_name , challengeID )
 {
@@ -33,11 +53,11 @@ function sell_hash( user_name , tag_name , challengeID, amount )
 }
 
 //search by username
-function search_by_username( user_name , search_user )
+function search_by_username( user_name , portfolio_name )
 {
  	var message = {};
  	message.user_name = user_name;
- 	message.search_user = search_user;
+ 	message.portfolio_name = portfolio_name;
  	socket.emit( 'search_username' , message);
 }
 

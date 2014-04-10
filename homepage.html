@@ -8,7 +8,7 @@
 		var current_tag;
 	</script>
 	
-		<script src= "http://code.jquery.com/jquery-2.1.0.min.js"> </script>
+	<script src= "http://code.jquery.com/jquery-2.1.0.min.js"> </script>
 	<script src = "/javascript/cookie.js"></script>
 	<script src = "/javascript/transitions.js"> </script>
 	<script src= "http://code.jquery.com/jquery-2.1.0.min.js"> </script>
@@ -61,6 +61,10 @@
 	}
 	
 	#friend_requests {
+		display:none;
+	}
+	
+	#friend_button {
 		display:none;
 	}
 
@@ -151,7 +155,7 @@
 	<!-- icons on the righthand side of the toolbar -->
 	<div style="float:right;">
 		<img src="icons/trading.jpeg" height = "50" width = "50" class="pointable"
-		onclick="rename_page('Investments');  hide_all();   show_investments();" >
+		onclick="rename_page('Investments');  hide_all();   show_investments(user_name);" >
 				
 		<img src="icons/portfolio.png" height = "50" width = "50" class="pointable"
 		onclick="rename_page('Portfolio'); hide_all(); show_portfolio(user_name);" >
@@ -207,9 +211,6 @@
 <!-- division containing the game leaderboard -->
 <div id="leaderboard">
 
- <!-- <div class='scroll'>
- </div>-->
-
 
 </div>
 
@@ -221,6 +222,12 @@
 
 <!-- division containing the player's friends -->
 <div id="friends">
+
+<BR><BR>
+</div>
+
+<!-- division containing the player's friends -->
+<div id="friend_button">
 
 <BR><BR>
 </div>
@@ -277,7 +284,7 @@
 	<form>
 		<h2>
 		Search by username:
-		<input type="text" id="usearch"; size="35">
+		<input type="text" id="usearch"; onkeypress="if(event.keyCode==13){search_by_username(user_name, document.getElementById('usearch').value);clear_searches();}" size="35">
 		<input type="button" value="Search" width="50" 	
             onclick="search_by_username(user_name, document.getElementById('usearch').value);clear_searches();">
 		</h2>
@@ -290,7 +297,7 @@
 	<form>
 		<h2>
 		Search by email:
-		<input type="email" id="esearch"; size="35">
+		<input type="email" id="esearch"; onkeypress="if(event.keyCode==13){search_by_email(user_name, document.getElementById('esearch').value);clear_searches();}" size="35">
 		<input type="button" value="Search" width="50" 
             onclick="search_by_email(user_name, document.getElementById('esearch').value);clear_searches();">
 		</h2>
@@ -330,7 +337,7 @@
 	</div>
 
 	<!-- division containing the graph of the history of a particular hashtag -->
-	<div id="chartdiv" style="width: 750px; height: 400px;"></div>
+	<div id="chartdiv" style="width: 750px; height: 400px; margin-left:auto; margin-right:auto;"></div>
 
 	<!-- division containing the information regarding a particular hashtag -->
 	<div id="hashtag_stats">
@@ -353,7 +360,12 @@
 	<!-- division containing the menu through which a user can buy or sell a particular hashtag -->
 	<div id="buy_sell_tags">
 		<form name="buy" >
-			Amount: <input type="text" id="amount_buy" /> <br>
+			Amount: <input type="text" id="amount_buy" onkeypress="if(event.keyCode==13){var username = user_name;
+				var tag_name = current_tag;
+				var challengeID = 0;
+				var amount = $('#amount_buy').val();
+				buy_hash(username, tag_name, challengeID, amount);
+				clear_searches();}"/> <br>
 			<input type="button" value="Buy!" onclick="
 				var username = user_name;
 				var tag_name = current_tag;
@@ -363,7 +375,12 @@
 				clear_searches();"/>
 		</form>
 		<form name="sell" >
-			Amount: <input type="text" id="amount_sell" /> <br>
+			Amount: <input type="text" id="amount_sell" onkeypress="if(event.keyCode==13){var username = user_name;
+				var tag_name = current_tag;
+				var challengeID = 0;
+				var amount = $('#amount_buy').val();
+				buy_hash(username, tag_name, challengeID, amount);
+				clear_searches();}"/> <br>
 			<input type="button" value="Sell!" onclick="
 				var username = user_name;
 				var tag_name = current_tag;
@@ -381,8 +398,7 @@
 			<h1 class="hashtag_search">
 				#Hashtag Search:
 				
-				
-				<span id="symbol">#</span><input type="text" id="hsearch"; size="35" />
+				<span id="symbol">#</span><input type="text" id="hsearch"; size="35" onkeypress="if(event.keyCode==13){rename_page('Hashtag Investment');current_tag = document.getElementById('hsearch').value; document.getElementById('hashtag_name').innerHTML='#' + current_tag; switch_to_tag(user_name, document.getElementById('hsearch').value, 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : current_tag , user_name : user_name } ); show_hashtag_page();}" />
 				<input type="button" value="Search" width="50" onclick="rename_page('Hashtag Investment');current_tag = document.getElementById('hsearch').value; document.getElementById('hashtag_name').innerHTML='#' + current_tag; switch_to_tag(user_name, document.getElementById('hsearch').value, 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : current_tag , user_name : user_name } ); show_hashtag_page();"/>
 				
 			</h1>
@@ -433,8 +449,10 @@
 			socket.on( 'player_info_table' , playerInfoProcedure );
 			socket.on( 'friends_table' , friendsProcedure );
 			socket.on( 'friend_request_table' , friendRequestsProcedure );
+			socket.on( 'friend_button' , friendButtonProcedure );
             socket.on( 'user_search' , userProcedure );
 			socket.on( 'chart_data' , chartProcedure );
+			socket.on( 'user_search' , userSearchProcedure );
 		});
 		
 		

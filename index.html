@@ -24,8 +24,30 @@
 </h1> 
 
 <div id="login_section">
-  <input id="name" type="text">username</input> <br>
-  <input id="pass" type="password">password</input> <br>
+  <input id="name" onkeypress="if(event.keyCode==13){var name = $('#name').val();
+	  var pass = $('#pass').val();
+      if (name && pass) {
+        name = name.trim();
+		pass = pass.trim();
+        if (name.length > 0 ) {
+          socket.emit('login', { user_name: name , pass_word: pass });
+        }
+      }
+      // Clear the input field.
+      $('#name').val('');
+	  $('#pass').val('');}" type="text">username</input> <br>
+  <input id="pass" onkeypress="if(event.keyCode==13){var name = $('#name').val();
+	  var pass = $('#pass').val();
+      if (name && pass) {
+        name = name.trim();
+		pass = pass.trim();
+        if (name.length > 0 ) {
+          socket.emit('login', { user_name: name , pass_word: pass });
+        }
+      }
+      // Clear the input field.
+      $('#name').val('');
+	  $('#pass').val('');}" type="password">password</input> <br>
   <input id="login" type="button" value="Log In" disabled="false"></input>
 </div>
 
@@ -43,10 +65,70 @@ Not a member? <br>
 <div style="display:none" id="new account">
 <form name="create account">
     <fieldset>
-    Email: <br> <input id ="email" type="text"/> <br>
-    Username: <br> <input id = "cuser" type="text" name="username" /> <br>
-    Create Password: <br> <input id ="cpass" type="password" name="password" /> <br>
-    Confirm Password: <br> <input id = "crepass" type="password" name="repassword" /> <br>
+    Email: <br> <input id ="email" type="text" onkeypress="if(event.keyCode==13){var name = $('#cuser').val();
+		var pass = $('#cpass').val();
+		var repass = $('#crepass').val();
+		var email =  $('#email').val(); //TODO NEED TO PROTECT AGAINST ATTACKS	
+		if( pass != repass )
+			alert('The password fields must match!');
+		else 
+		{
+			name = name.trim();
+			email = email.trim();
+			pass = pass.trim();
+			repass = repass.trim();
+			if( !socket )
+				alert('problem with socket');
+			socket.emit('create_login' , { user_name: name , pass_word: pass , user_email : email} );
+		}}"/> <br>
+    Username: <br> <input id = "cuser" type="text" name="username"  onkeypress="if(event.keyCode==13){var name = $('#cuser').val();
+		var pass = $('#cpass').val();
+		var repass = $('#crepass').val();
+		var email =  $('#email').val(); //TODO NEED TO PROTECT AGAINST ATTACKS	
+		if( pass != repass )
+			alert('The password fields must match!');
+		else 
+		{
+			name = name.trim();
+			email = email.trim();
+			pass = pass.trim();
+			repass = repass.trim();
+			if( !socket )
+				alert('problem with socket');
+			socket.emit('create_login' , { user_name: name , pass_word: pass , user_email : email} );
+		}}"/> <br>
+    Create Password: <br> <input id ="cpass" type="password" name="password" onkeypress="if(event.keyCode==13){var name = $('#cuser').val();
+		var pass = $('#cpass').val();
+		var repass = $('#crepass').val();
+		var email =  $('#email').val(); //TODO NEED TO PROTECT AGAINST ATTACKS	
+		if( pass != repass )
+			alert('The password fields must match!');
+		else 
+		{
+			name = name.trim();
+			email = email.trim();
+			pass = pass.trim();
+			repass = repass.trim();
+			if( !socket )
+				alert('problem with socket');
+			socket.emit('create_login' , { user_name: name , pass_word: pass , user_email : email} );
+		}}"/> <br>
+    Confirm Password: <br> <input id = "crepass" type="password" name="repassword" onkeypress="if(event.keyCode==13){var name = $('#cuser').val();
+		var pass = $('#cpass').val();
+		var repass = $('#crepass').val();
+		var email =  $('#email').val(); //TODO NEED TO PROTECT AGAINST ATTACKS	
+		if( pass != repass )
+			alert('The password fields must match!');
+		else 
+		{
+			name = name.trim();
+			email = email.trim();
+			pass = pass.trim();
+			repass = repass.trim();
+			if( !socket )
+				alert('problem with socket');
+			socket.emit('create_login' , { user_name: name , pass_word: pass , user_email : email} );
+		}}"/> <br>
        
     <input id = "createB" type="button" value="Create Account" /></input>
     </fieldset>

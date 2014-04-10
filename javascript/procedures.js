@@ -114,7 +114,7 @@ function myInvestmentsProcedure(message) //Changed to have three columns , tagna
 function leaderProcedure(message)
 {
 
-		var table1 = "<table width=75%; class='center';> <caption>Leader Board</caption><tr><th>Username</th><th>Net Worth</th></tr>";
+	var table1 = "<table width=75%; class='center';> <caption>Leader Board</caption><tr><th>Username</th><th>Net Worth</th></tr>";
 	var table3 = "</table> <BR> <BR>";	
 	var table2 = "";
 	
@@ -173,7 +173,6 @@ function friendsProcedure(message) //No change needed here
 	// file the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
-		//table2 = table2 + "<tr><td width=50%>" + message[x].Friend + "</td><td>" + message[x].TotalValue + "</td></tr>";
 		table2 = table2 + "<tr><td width=50%><a onclick=\"rename_page('Portfolio'); hide_all(); show_portfolio('" + message[x].Friend + "');\"> " + message[x].Friend + " </ a></td><td>" + message[x].TotalValue + "</td></tr>";
 	}
 
@@ -181,7 +180,7 @@ function friendsProcedure(message) //No change needed here
 	document.getElementById("friends").innerHTML=finaltable;
 }
 
-function friendRequestsProcedure(message) //No change needed here
+function friendRequestsProcedure(message)
 {
 	var table1 = "<table width=75%; class='center';> <caption>Friend Requests</caption>";
 	var table3 = "</table> <BR> <BR>";	
@@ -197,6 +196,24 @@ function friendRequestsProcedure(message) //No change needed here
 
 	var finaltable = table1 + table2 + table3;
 	document.getElementById("friend_requests").innerHTML=finaltable;
+}
+
+function friendButtonProcedure(message)
+{
+	var button = "";
+	if(message.result) {
+		button = button + "<button type=\"button\" onclick=\"send_friend_request('" + user_name + "','" + message.friend +"'); show_portfolio('" + message.friend  + "'); \"/> Add Friend </button>";
+	}
+	else {
+		button = button + "<button type=\"button\" onclick=\"remove_friend('" + user_name + "','" + message.friend +"'); show_portfolio('" + message.friend  + "'); \"/> Remove Friend </button>";
+	}
+	document.getElementById("friend_button").innerHTML=button;
+}
+
+function userSearchProcedure(message)
+{
+	hide_all();
+	show_portfolio(message.portfolio_name);
 }
 
 // present the user with a warning
