@@ -128,6 +128,60 @@
 		margin-left:auto;
 		margin-right:auto;
 	}
+
+	.modalDialog {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 99999;
+		opacity:0;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		pointer-events: none;
+	}
+		
+	.modalDialog:target {
+		opacity:1;
+		pointer-events: auto;
+	}
+
+	.modalDialog > div {
+		width: 400px;
+		position: relative;
+		margin: 10% auto;
+		padding: 5px 20px 13px 20px;
+		border-radius: 10px;
+		background: #fff;
+		background: -moz-linear-gradient(#fff, #999);
+		background: -webkit-linear-gradient(#fff, #999);
+		background: -o-linear-gradient(#fff, #999);
+	}
+	
+	.close {
+		background: #606061;
+		color: #FFFFFF;
+		line-height: 25px;
+		position: absolute;
+		right: -12px;
+		text-align: center;
+		top: -10px;
+		width: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
+
+	.close:hover { background: #000000 }
 	
 </style>
 
@@ -273,14 +327,60 @@ and at least read the paragraph summarizing the recent changes.</b>
 <BR>
 </div>
 
+<!-- division containing the challenge setup menu -->
+<div id="openModal" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<h2>New Quick Challenge</h2>
+		<select id="player_num">
+			<option value="" disabled="disabled" selected="selected">Max Players</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+		</select>
+		<BR>
+		<select id="time_limit">
+			<option value="" disabled="disabled" selected="selected">Time Limit</option>
+			<option value="1">1 Hour</option>
+			<option value="2">2 Hour</option>
+			<option value="3">3 Hour</option>
+		</select>
+		<BR>
+		<select id="wager">
+			<option value="" disabled="disabled" selected="selected">Wager</option>
+			<option value="1">250</option>
+			<option value="2">500</option>
+			<option value="3">750</option>
+			<option value="4">1000</option>
+		</select>
+		<BR>
+		<select id="start_time">
+			<option value="" disabled="disabled" selected="selected">Start Time</option>
+			<option value="1">12:00 am</option>
+			<option value="2">3:00 am</option>
+			<option value="3">6:00 am</option>
+			<option value="4">9:00 am</option>
+			<option value="5">12:00 pm</option>
+			<option value="6">3:00 pm</option>
+			<option value="7">6:00 pm</option>
+			<option value="8">9:00 pm</option>
+			
+		</select>
+		<BR>
+			
+		<input type="button" value="Search" width="50" onclick="clear_searches();">
+	</div>
+</div>
+
 <!-- division containing a new challenges page -->
 <div id="new_challenge">
-   <form name="Quick" >
-   	<input type="submit" value="New Quick Challenge" />
-   </form>
-   <form name="Friends" >
-   	<input type="submit" value="New Friend Challenge" />
-   </form>
+	<form name="Quick" action="#openModal">
+		<input type="submit" value="New Quick Challenge" />
+	</form>
+	<form name="Friends" >
+		<input type="button" value="New Friend Challenge" />
+	</form>
 <BR>
 <BR>
 </div>
@@ -414,9 +514,6 @@ and at least read the paragraph summarizing the recent changes.</b>
 		<BR>
 		<BR>
 	</div>
-	
-
-
 
 <!-- division containing the settings menu -->
 <div id="settings">
@@ -442,11 +539,9 @@ and at least read the paragraph summarizing the recent changes.</b>
 
 		var firstTime = true;
 		$(document).ready(function() {
-		
-			
+					
 			user_name = getCookie( "user_name" );
-			socket = io.connect('http://' + document.location.host);
-			
+			socket = io.connect('http://' + document.location.host);			
 					
 			socket.on( 'welcome' , connectProcedure );
 			socket.on( 'tag_page', tagProcedure );
