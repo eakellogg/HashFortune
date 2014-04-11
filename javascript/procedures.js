@@ -182,22 +182,27 @@ function friendsProcedure(message) //No change needed here
 
 function friendRequestsProcedure(message)
 {
-	var table1 = "<table width=75%; class='center';> <caption>Friend Requests</caption>";
-	var table3 = "</table> <BR> <BR>";	
-	var table2 = "";
-	if (message.length == 0)
+	
+	if (message.length != 0)
 	{
-		table2 = table2 + "<tr><td style=\"text-align:center;\" >No Currently Pending Friend Requests</td></tr>";
-	}
-	// file the table with the hashtag info received
-	for(var x = 0; x < message.length; x++ )
-	{
-		table2 = table2 + "<tr><td width=50%>" + message[x].sender + "</td><td width=25%><button type='button' onclick=\"acceptFriend( '"; 
-		table2 = table2 + message[x].receiver + "' , '" + message[x].sender + "' );\"> Accept </ button></ td><td width=25%>";
-		table2 = table2 + "<button type='button' onclick=\"declineFriend( '" + message[x].receiver + "' , '" + message[x].sender + "' );\"> Decline </ button></ td></tr>";
-	}
+		var table1 = "<table width=75%; class='center';> <caption>Friend Requests</caption>";
+		var table3 = "</table> <BR> <BR>";	
+		var table2 = "";
+		
+		// file the table with the hashtag info received
+		for(var x = 0; x < message.length; x++ )
+		{
+			table2 = table2 + "<tr><td width=50%>" + message[x].sender + "</td><td width=25%><button type='button' onclick=\"acceptFriend( '"; 
+			table2 = table2 + message[x].receiver + "' , '" + message[x].sender + "' );\"> Accept </ button></ td><td width=25%>";
+			table2 = table2 + "<button type='button' onclick=\"declineFriend( '" + message[x].receiver + "' , '" + message[x].sender + "' );\"> Decline </ button></ td></tr>";
+		}
 
-	var finaltable = table1 + table2 + table3;
+		var finaltable = table1 + table2 + table3;
+	}
+	else{
+		var finaltable="";
+	}
+	
 	document.getElementById("friend_requests").innerHTML=finaltable;
 }
 

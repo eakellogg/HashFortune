@@ -73,6 +73,7 @@ function show_homepage() {
 function show_investments(user_name) {
 
 	document.getElementById("player_info").style.display = "block";
+	document.getElementById("investments_summary").style.display = "block";
 	document.getElementById("trending").style.display = "block";
 	document.getElementById("hashtag_search").style.display = "block"; 
 	
@@ -90,6 +91,7 @@ function show_portfolio(portfolio_name) {
 	document.getElementById("player_pic").style.display = "block";
 	document.getElementById("player_info").style.display = "block";
 	document.getElementById("investments_summary").style.display = "block";
+	document.getElementById("friends").style.display = "block";
 	if(user_name != portfolio_name) {
 		document.getElementById("friend_button").style.display = "block";
 	}
@@ -100,6 +102,7 @@ function show_portfolio(portfolio_name) {
 
     socket.emit( 'my_investments_request' , investObj);
 	socket.emit( 'player_info_request' , investObj);
+	socket.emit( 'friend_table_request' , { user_name : user_name } );
 	socket.emit( 'friend_button_request', investObj);
 }
 

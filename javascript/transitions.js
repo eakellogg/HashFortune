@@ -6,7 +6,7 @@ function send_friend_request( user_name , friend )
 	message.user_name = user_name;
 	message.friend    = friend;
 	message.drop = false;
-	socket.emit( 'make_friend_request' , message);
+	socket.emit( 'make_friend_request' , message);f
 }
 
 // remove a friend
@@ -70,6 +70,7 @@ function search_by_email( user_name , search_email )
  	socket.emit( 'search_user_email' , message);
 }
 
+//accept a friend request
 function acceptFriend( user_name, friend_name ) {
 	var message = {};
  	message.user_name = user_name;
@@ -77,6 +78,7 @@ function acceptFriend( user_name, friend_name ) {
  	socket.emit( 'accept_friend' , message);
 }
 
+//decline a friend request
 function declineFriend( user_name, friend_name ) {
 	var message = {};
  	message.user_name = user_name;

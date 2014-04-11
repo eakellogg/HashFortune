@@ -1,0 +1,198 @@
+Logged in Wed Apr 09 2014 11:35:32 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 11:48:52 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 11:49:02 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 11:50:14 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 11:50:36 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 11:53:34 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 12:18:46 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 12:18:57 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 12:19:42 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 12:19:54 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  fear at Time Wed Apr 09 2014 12:22:04 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for fear at Time Wed Apr 09 2014 12:22:04 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 09 2014 12:24:57 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Wed Apr 09 2014 12:24:57 GMT-0500 (Central Daylight Time) 
+
+Bought tag  tbt For undefined at Time Wed Apr 09 2014 12:25:17 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 09 2014 12:25:17 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  MUFCBAYERN at Time Wed Apr 09 2014 12:28:11 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for MUFCBAYERN at Time Wed Apr 09 2014 12:28:11 GMT-0500 (Central Daylight Time) 
+
+Bought tag  undefined For undefined at Time Wed Apr 09 2014 12:28:17 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 12:35:11 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 12:35:20 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  MUFCBAYERN at Time Wed Apr 09 2014 12:35:22 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for MUFCBAYERN at Time Wed Apr 09 2014 12:35:22 GMT-0500 (Central Daylight Time) 
+
+Bought tag  undefined For undefined at Time Wed Apr 09 2014 12:35:26 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 09 2014 12:35:26 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  somanytears at Time Wed Apr 09 2014 12:35:43 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for somanytears at Time Wed Apr 09 2014 12:35:43 GMT-0500 (Central Daylight Time) 
+
+Bought tag  undefined For undefined at Time Wed Apr 09 2014 12:35:46 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 09 2014 12:35:46 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 12:36:50 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 12:37:06 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Wed Apr 09 2014 12:37:11 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Wed Apr 09 2014 12:37:11 GMT-0500 (Central Daylight Time) 
+
+Bought tag  RT For undefined at Time Wed Apr 09 2014 12:37:14 GMT-0500 (Central Daylight Time) 
+
+Bought tag  RT For undefined at Time Wed Apr 09 2014 12:37:20 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Wed Apr 09 2014 12:37:21 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 09 2014 12:42:09 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for undefined at Time Wed Apr 09 2014 12:42:09 GMT-0500 (Central Daylight Time) 
+
+Sold tag  undefined For undefined at Time Wed Apr 09 2014 12:42:21 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 09 2014 12:42:30 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for undefined at Time Wed Apr 09 2014 12:42:30 GMT-0500 (Central Daylight Time) 
+
+Sold tag  undefined For undefined at Time Wed Apr 09 2014 12:42:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ESPYS at Time Wed Apr 09 2014 13:14:46 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for ESPYS at Time Wed Apr 09 2014 13:14:46 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 13:14:55 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 13:15:04 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 13:16:24 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 13:16:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ESPYS at Time Wed Apr 09 2014 13:16:37 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for ESPYS at Time Wed Apr 09 2014 13:16:37 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 22:02:32 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 09 2014 22:04:04 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Wed Apr 09 2014 22:04:04 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Wed Apr 09 2014 22:04:33 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for TBT at Time Wed Apr 09 2014 22:04:33 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 22:28:57 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 22:29:07 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 22:30:34 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 22:30:44 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Wed Apr 09 2014 22:36:35 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for TBT at Time Wed Apr 09 2014 22:36:35 GMT-0500 (Central Daylight Time) 
+
+Bought tag  TBT For undefined at Time Wed Apr 09 2014 22:36:39 GMT-0500 (Central Daylight Time) 
+
+Bought tag  TBT For undefined at Time Wed Apr 09 2014 22:36:46 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Wed Apr 09 2014 22:36:46 GMT-0500 (Central Daylight Time) 
+
+Bought tag  TBT For undefined at Time Wed Apr 09 2014 22:36:49 GMT-0500 (Central Daylight Time) 
+
+Bought tag  TBT For undefined at Time Wed Apr 09 2014 22:36:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Wed Apr 09 2014 22:37:05 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for TBT at Time Wed Apr 09 2014 22:37:05 GMT-0500 (Central Daylight Time) 
+
+Bought tag  TBT For undefined at Time Wed Apr 09 2014 22:37:11 GMT-0500 (Central Daylight Time) 
+
+Sold tag  TBT For undefined at Time Wed Apr 09 2014 22:37:14 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Wed Apr 09 2014 22:37:58 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for TBT at Time Wed Apr 09 2014 22:37:58 GMT-0500 (Central Daylight Time) 
+
+Sold tag  TBT For undefined at Time Wed Apr 09 2014 22:38:05 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Wed Apr 09 2014 22:38:05 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 22:48:10 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 22:48:19 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 09 2014 22:48:24 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 09 2014 22:48:35 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 10 2014 12:11:21 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 10 2014 12:13:15 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Thu Apr 10 2014 12:13:15 GMT-0500 (Central Daylight Time) 
+
+Sold tag  tbt For undefined at Time Thu Apr 10 2014 12:14:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 10 2014 12:14:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  VoteKatniss at Time Thu Apr 10 2014 12:17:42 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for VoteKatniss at Time Thu Apr 10 2014 12:17:42 GMT-0500 (Central Daylight Time) 
+
+Bought tag  VoteKatniss For undefined at Time Thu Apr 10 2014 12:18:23 GMT-0500 (Central Daylight Time) 
+
+Bought tag  VoteKatniss For undefined at Time Thu Apr 10 2014 12:18:31 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  VoteKatniss at Time Thu Apr 10 2014 12:18:32 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Thu Apr 10 2014 12:18:49 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Thu Apr 10 2014 12:18:49 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  VoteKatniss at Time Thu Apr 10 2014 12:19:29 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for VoteKatniss at Time Thu Apr 10 2014 12:19:29 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 10 2014 12:20:18 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 10 2014 12:20:44 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 10 2014 12:21:32 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 10 2014 12:22:03 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 10 2014 12:24:17 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 10 2014 12:50:39 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 10 2014 22:59:33 GMT-0500 (Central Daylight Time) 
+

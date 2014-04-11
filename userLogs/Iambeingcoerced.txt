@@ -150,3 +150,41 @@ Logged in Thu Apr 10 2014 13:03:49 GMT-0500 (Central Daylight Time)
 
 loging out  at Time Thu Apr 10 2014 13:06:24 GMT-0500 (Central Daylight Time) 
 
+Logged in Thu Apr 10 2014 22:56:40 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 10 2014 22:57:02 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Thu Apr 10 2014 22:57:02 GMT-0500 (Central Daylight Time) 
+
+Sold tag  tbt For undefined at Time Thu Apr 10 2014 22:57:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 10 2014 22:57:28 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Thu Apr 10 2014 22:57:38 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 10 2014 22:58:48 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TGIF at Time Thu Apr 10 2014 22:59:09 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for TGIF at Time Thu Apr 10 2014 22:59:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tgif at Time Thu Apr 10 2014 22:59:24 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tgif at Time Thu Apr 10 2014 22:59:24 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TGIF at Time Thu Apr 10 2014 22:59:46 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for TGIF at Time Thu Apr 10 2014 22:59:46 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  mcm at Time Thu Apr 10 2014 23:00:11 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for mcm at Time Thu Apr 10 2014 23:00:11 GMT-0500 (Central Daylight Time) 
+
+Bought tag  mcm For undefined at Time Thu Apr 10 2014 23:00:42 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  mcm at Time Thu Apr 10 2014 23:00:42 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  VoteKatniss at Time Thu Apr 10 2014 23:03:06 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for VoteKatniss at Time Thu Apr 10 2014 23:03:06 GMT-0500 (Central Daylight Time) 
+
