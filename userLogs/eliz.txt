@@ -589,3 +589,69 @@ Asked for tag page  tbt at Time Thu Apr 10 2014 13:19:35 GMT-0500 (Central Dayli
 
 Requesting chart for tbt at Time Thu Apr 10 2014 13:19:35 GMT-0500 (Central Daylight Time) 
 
+Logged in Thu Apr 10 2014 17:11:38 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for TBT at Time Thu Apr 10 2014 17:14:02 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Thu Apr 10 2014 17:14:02 GMT-0500 (Central Daylight Time) 
+
+Sold tag  TBT For undefined at Time Thu Apr 10 2014 17:14:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Thu Apr 10 2014 17:14:10 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 10 2014 19:22:55 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 10 2014 19:24:31 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Thu Apr 10 2014 19:24:31 GMT-0500 (Central Daylight Time) 
+
+Sold tag  tbt For undefined at Time Thu Apr 10 2014 19:25:12 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 10 2014 19:25:12 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Thu Apr 10 2014 19:25:49 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Thu Apr 10 2014 19:25:49 GMT-0500 (Central Daylight Time) 
+
+Bought tag  RT For undefined at Time Thu Apr 10 2014 19:25:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Thu Apr 10 2014 19:25:56 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 10 2014 21:34:17 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  throwbackthursday at Time Thu Apr 10 2014 21:41:01 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for throwbackthursday at Time Thu Apr 10 2014 21:41:01 GMT-0500 (Central Daylight Time) 
+
+Sold tag  throwbackthursday For undefined at Time Thu Apr 10 2014 21:41:30 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  throwbackthursday at Time Thu Apr 10 2014 21:41:30 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThisCouldBeUsButYouPlayin at Time Thu Apr 10 2014 21:41:45 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for ThisCouldBeUsButYouPlayin at Time Thu Apr 10 2014 21:41:45 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Thu Apr 10 2014 21:42:42 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Thu Apr 10 2014 21:42:42 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Thu Apr 10 2014 21:42:59 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for selfie at Time Thu Apr 10 2014 21:42:59 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  throwbackthursday at Time Thu Apr 10 2014 21:45:10 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for throwbackthursday at Time Thu Apr 10 2014 21:45:10 GMT-0500 (Central Daylight Time) 
+
+Bought tag  throwbackthursday For undefined at Time Thu Apr 10 2014 21:45:21 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  throwbackthursday at Time Thu Apr 10 2014 21:45:21 GMT-0500 (Central Daylight Time) 
+
+Sold tag  throwbackthursday For undefined at Time Thu Apr 10 2014 21:45:30 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  throwbackthursday at Time Thu Apr 10 2014 21:45:30 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 10 2014 22:32:10 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Thu Apr 10 2014 22:32:10 GMT-0500 (Central Daylight Time) 
+
