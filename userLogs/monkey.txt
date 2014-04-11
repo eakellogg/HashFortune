@@ -950,5 +950,15 @@ Logged in Thu Apr 10 2014 13:01:44 GMT-0500 (Central Daylight Time)
 
 Logged in Thu Apr 10 2014 13:06:21 GMT-0500 (Central Daylight Time) 
 
+<<<<<<< HEAD
 Logged in Thu Apr 10 2014 21:00:29 GMT-0500 (Central Daylight Time) 
+=======
+Logged in Thu Apr 10 2014 21:09:31 GMT-0500 (CDT) 
+
+Asked for tag page  VoteTris at Time Thu Apr 10 2014 21:47:30 GMT-0500 (CDT) 
+
+Requesting chart for VoteTris at Time Thu Apr 10 2014 21:47:30 GMT-0500 (CDT) 
+
+Bought tag  VoteTris For undefined at Time Thu Apr 10 2014 21:47:33 GMT-0500 (CDT) 
+>>>>>>> 93f46b2ca30a3c11311467fa28af45f53cc40d1e
 

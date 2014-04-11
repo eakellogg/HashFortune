@@ -13,6 +13,10 @@ function clear_searches() {
     document.getElementById("usearch").value= "";
     document.getElementById("amount_buy").value= "";
     document.getElementById("amount_sell").value= "";
+	document.getElementById("player_num").value= "";
+	document.getElementById("time_limit").value= "";
+	document.getElementById("wager").value= "";
+	document.getElementById("start_time").value= "";
 }
 		
 //<!-- hide all divisions (results in a blank page) -->
