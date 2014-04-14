@@ -54,3 +54,13 @@ Asked for tag page  mcm at Time Thu Apr 10 2014 21:37:49 GMT-0500 (Central Dayli
 
 Requesting chart for mcm at Time Thu Apr 10 2014 21:37:49 GMT-0500 (Central Daylight Time) 
 
+Logged in Sat Apr 12 2014 14:42:43 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Sat Apr 12 2014 14:44:35 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Sat Apr 12 2014 14:44:35 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 13 2014 19:10:33 GMT-0500 (Central Daylight Time) 
+
+Creating user at Time Sun Apr 13 2014 19:11:02 GMT-0500 (Central Daylight Time) 
+

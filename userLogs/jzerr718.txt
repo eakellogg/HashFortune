@@ -196,3 +196,19 @@ Logged in Thu Apr 10 2014 12:50:39 GMT-0500 (Central Daylight Time)
 
 Logged in Thu Apr 10 2014 22:59:33 GMT-0500 (Central Daylight Time) 
 
+Logged in Sun Apr 13 2014 19:32:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  VoteKatniss at Time Sun Apr 13 2014 19:35:10 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for VoteKatniss at Time Sun Apr 13 2014 19:35:10 GMT-0500 (Central Daylight Time) 
+
+Bought tag  VoteKatniss For undefined at Time Sun Apr 13 2014 19:36:30 GMT-0500 (Central Daylight Time) 
+
+Bought tag  VoteKatniss For undefined at Time Sun Apr 13 2014 19:36:36 GMT-0500 (Central Daylight Time) 
+
+Sold tag  VoteKatniss For undefined at Time Sun Apr 13 2014 19:36:45 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  VoteKatniss at Time Sun Apr 13 2014 19:36:45 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sun Apr 13 2014 19:37:24 GMT-0500 (Central Daylight Time) 
+

@@ -1,0 +1,78 @@
+Creating user at Time Fri Apr 11 2014 15:11:02 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tgif at Time Fri Apr 11 2014 15:11:41 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tgif at Time Fri Apr 11 2014 15:11:41 GMT-0500 (Central Daylight Time) 
+
+Logged in Sat Apr 12 2014 12:12:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Sat Apr 12 2014 12:12:24 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Sat Apr 12 2014 12:12:24 GMT-0500 (Central Daylight Time) 
+
+Bought tag  RT For undefined at Time Sat Apr 12 2014 12:12:44 GMT-0500 (Central Daylight Time) 
+
+Bought tag  RT For undefined at Time Sat Apr 12 2014 12:12:48 GMT-0500 (Central Daylight Time) 
+
+Bought tag  RT For undefined at Time Sat Apr 12 2014 12:12:51 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Sat Apr 12 2014 12:12:52 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sat Apr 12 2014 12:13:08 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 13 2014 19:10:13 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 13 2014 19:10:29 GMT-0500 (Central Daylight Time) 
+
+Creating user at Time Sun Apr 13 2014 19:10:59 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Sun Apr 13 2014 19:11:18 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for selfie at Time Sun Apr 13 2014 19:11:18 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  MTVMovieAwards at Time Sun Apr 13 2014 19:12:10 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for MTVMovieAwards at Time Sun Apr 13 2014 19:12:10 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Sun Apr 13 2014 19:21:30 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Sun Apr 13 2014 19:21:30 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Sun Apr 13 2014 19:24:16 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Sun Apr 13 2014 19:24:16 GMT-0500 (Central Daylight Time) 
+
+Bought tag  tbt For undefined at Time Sun Apr 13 2014 19:24:34 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Sun Apr 13 2014 19:24:34 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 13 2014 20:43:37 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Sun Apr 13 2014 20:44:07 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Sun Apr 13 2014 20:44:07 GMT-0500 (Central Daylight Time) 
+
+Sold tag  RT For undefined at Time Sun Apr 13 2014 20:44:18 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Sun Apr 13 2014 20:44:18 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  MTVMovieAwards at Time Sun Apr 13 2014 20:44:36 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for MTVMovieAwards at Time Sun Apr 13 2014 20:44:36 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Sun Apr 13 2014 20:45:42 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Sun Apr 13 2014 20:45:42 GMT-0500 (Central Daylight Time) 
+
+Sold tag  tbt For undefined at Time Sun Apr 13 2014 20:45:52 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Sun Apr 13 2014 20:45:52 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  MTVMovieAwards at Time Sun Apr 13 2014 20:46:18 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for MTVMovieAwards at Time Sun Apr 13 2014 20:46:18 GMT-0500 (Central Daylight Time) 
+
+Bought tag  MTVMovieAwards For undefined at Time Sun Apr 13 2014 20:46:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  MTVMovieAwards at Time Sun Apr 13 2014 20:46:28 GMT-0500 (Central Daylight Time) 
+

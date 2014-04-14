@@ -659,3 +659,107 @@ Asked for tag page  RT at Time Fri Apr 11 2014 00:35:16 GMT-0500 (Central Daylig
 
 Requesting chart for RT at Time Fri Apr 11 2014 00:35:16 GMT-0500 (Central Daylight Time) 
 
+Asked for tag page  RT at Time Fri Apr 11 2014 01:19:57 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Fri Apr 11 2014 01:19:57 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Fri Apr 11 2014 01:30:52 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Fri Apr 11 2014 01:30:52 GMT-0500 (Central Daylight Time) 
+
+Bought tag  RT For undefined at Time Fri Apr 11 2014 01:30:54 GMT-0500 (Central Daylight Time) 
+
+Sold tag  RT For undefined at Time Fri Apr 11 2014 01:30:58 GMT-0500 (Central Daylight Time) 
+
+Sold tag  RT For undefined at Time Fri Apr 11 2014 01:31:08 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  Training at Time Fri Apr 11 2014 01:31:23 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for Training at Time Fri Apr 11 2014 01:31:23 GMT-0500 (Central Daylight Time) 
+
+Sold tag  Training For undefined at Time Fri Apr 11 2014 01:31:29 GMT-0500 (Central Daylight Time) 
+
+Bought tag  Training For undefined at Time Fri Apr 11 2014 01:31:34 GMT-0500 (Central Daylight Time) 
+
+Sold tag  Training For undefined at Time Fri Apr 11 2014 01:31:38 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Fri Apr 11 2014 12:57:16 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Fri Apr 11 2014 12:57:16 GMT-0500 (Central Daylight Time) 
+
+Bought tag  tbt For undefined at Time Fri Apr 11 2014 12:57:33 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Fri Apr 11 2014 12:57:33 GMT-0500 (Central Daylight Time) 
+
+Bought tag  tbt For undefined at Time Fri Apr 11 2014 12:57:42 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Fri Apr 11 2014 12:57:42 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Fri Apr 11 2014 12:58:00 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Fri Apr 11 2014 12:58:00 GMT-0500 (Central Daylight Time) 
+
+Bought tag  tbt For undefined at Time Fri Apr 11 2014 12:58:07 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Fri Apr 11 2014 12:58:07 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Fri Apr 11 2014 12:58:19 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Fri Apr 11 2014 13:06:16 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Fri Apr 11 2014 13:06:16 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Fri Apr 11 2014 13:07:58 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Fri Apr 11 2014 13:07:58 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Fri Apr 11 2014 13:12:03 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Fri Apr 11 2014 13:12:03 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Fri Apr 11 2014 13:34:18 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Fri Apr 11 2014 13:34:18 GMT-0500 (Central Daylight Time) 
+
+Sold tag  tbt For undefined at Time Fri Apr 11 2014 13:34:51 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Fri Apr 11 2014 13:34:51 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Fri Apr 11 2014 13:35:08 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Fri Apr 11 2014 13:35:08 GMT-0500 (Central Daylight Time) 
+
+Logged in Sat Apr 12 2014 22:14:25 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Sat Apr 12 2014 22:14:52 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Sat Apr 12 2014 22:14:52 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Sat Apr 12 2014 22:15:12 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Sat Apr 12 2014 22:15:12 GMT-0500 (Central Daylight Time) 
+
+Logged in Sat Apr 12 2014 22:19:28 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sat Apr 12 2014 22:19:43 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 13 2014 19:09:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Sun Apr 13 2014 19:09:41 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Sun Apr 13 2014 19:09:41 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Sun Apr 13 2014 19:09:50 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Sun Apr 13 2014 19:09:50 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 13 2014 20:18:10 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Mon Apr 14 2014 00:10:33 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Mon Apr 14 2014 00:10:33 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Mon Apr 14 2014 00:10:41 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Mon Apr 14 2014 00:10:41 GMT-0500 (Central Daylight Time) 
+
