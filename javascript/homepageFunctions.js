@@ -162,3 +162,9 @@ function show_menu(hashtag_name) {
 function hide_menu(hashtag_name) {
 	document.getElementById(hashtag_name).style.display ="none";
 }
+
+function change_current_challenge(id) {
+	var curr_chal = "challenge" + id;
+	document.getElementById(curr_chal).style.background = "yellow"; 
+	setCookie("challenge_id", id , 1);
+}
