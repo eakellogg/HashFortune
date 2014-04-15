@@ -264,12 +264,16 @@ function challengesProcedure(message) {				// ChallengeTODO this is where the to
 	//create the normal one
 	var table1 = "<table id=\"challenge_toolbar_table\">";
 	var table3 = "</table>";
-	var table2 = "<tr><td> <b>Overall Purse</b> <br>Available: " + message[0].AvailablePoints + "<br>Total: " + message[0].TotalValue + "<br> Time Remaining </td></tr>";
-	//for loop to create boxes for challenges - have limit??
+	var table2 = "<tr><td class=\"pointable\" id = \"challenge0\" onclick = \" change_current_challenge(0);  \">";
+	table2 = table2 + "<b>Overall Purse</b> <br>Available: " + message[0].AvailablePoints + "<br>Total: " + message[0].TotalValue + "<br> Time Remaining </td></tr>";
+	
 	
 	for (var x = 1; x < message.length; x++)
 	{
-		table2 = table2 + "<tr><td> <b>Challenge " + message[x].id + "</b> <br>Available: " + message[x].AvailablePoints + "<br>Total: " + message[x].TotalValue + "<br> Time Remaining </td></tr>";
+		
+		table2 = table2 + "<tr class = \"pointable\" id = challenge" + message[x].id + " onclick = \" change_current_challenge(" + message[x].id + "); \">";
+		table2 = table2 +"<td> <b>Challenge " + message[x].id + "</b> <br>Available: " + message[x].AvailablePoints + "<br>Total: " + message[x].TotalValue + "<br> Time Remaining </td></tr>";
+		
 	}
 	
 	var finaltable = table1 + table2 + table3;
