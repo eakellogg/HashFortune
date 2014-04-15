@@ -289,9 +289,6 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 
 		for( var i =0 ; i < message.length-1; i++ )
 		{
-			message[i].playerCount = 100;
-			message[i].status = "You're in ";
-			message[i].wager = 100;
 			table += "<tr> <td>" + message[i].name + " </td><td> " + message[i].playerCount + 
 			"</td><td> " + message[i].wager + " </td><td> " + message[i].endTime + " </td><td> "  +message[i].status + " </td></tr>";
 		}
