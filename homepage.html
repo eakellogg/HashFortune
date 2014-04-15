@@ -6,6 +6,7 @@
 	<script> var socket;
 		var user_name;
 		var current_tag;
+		var challenge_id;
 	</script>
 	
 	<script src= "http://code.jquery.com/jquery-2.1.0.min.js"> </script>
@@ -158,10 +159,10 @@
 	<!-- icons on the righthand side of the toolbar -->
 	<div style="float:right;">
 		<img src="icons/trading.jpeg" height = "50" width = "50" class="pointable"
-		onclick="rename_page('Investments');  hide_all();   show_investments(user_name);" >
+		onclick="rename_page('Investments');  hide_all();   show_investments(user_name , challenge_id);" >
 				
 		<img src="icons/portfolio.png" height = "50" width = "50" class="pointable"
-		onclick="rename_page('Portfolio'); hide_all(); show_portfolio(user_name);" >
+		onclick="rename_page('Portfolio'); hide_all(); show_portfolio(user_name , challenge_id);" >
 			 
 		<img src="icons/friends.png" height = "50" width = "50" class="pointable"	
 		onclick="rename_page('Friends'); hide_all(); show_friends_page();"
@@ -415,7 +416,7 @@
 		<form name="buy" >
 			Amount: <input type="text" id="amount_buy" onkeypress="if(event.keyCode==13){var username = user_name;
 				var tag_name = current_tag;
-				var challengeID = 0;
+				var challengeID = getCookie("challenge_id");
 				var amount = $('#amount_buy').val();
 				buy_hash(username, tag_name, challengeID, amount);
 				clear_searches();}"/> <br>
@@ -486,10 +487,14 @@
 		$(document).ready(function() {
 					
 			user_name = getCookie( "user_name" );
-			var currChallenge = getCookie("challenge_id");
-			if (currChallenge == "" || currChallenge == "undefined")
+			challenge_id = getCookie("challenge_id");
+			if (challenge_id == "" || challenge_id == "undefined")
 			{
-				setCookie("challenge_id" , 0 , 1);
+				change_current_challenge(0);
+			}
+			else
+			{
+				change_current_challenge(challenge_id);
 			}
 			socket = io.connect('http://' + document.location.host);			
 			

@@ -62,10 +62,13 @@ function show_homepage() {
     document.getElementById("leaderboard").style.display = "block";
     document.getElementById("friends").style.display = "block";
 			
-	var userObj = { user_name : user_name };
+	var userObj = {};
+	userObj.user_name = user_name;
+	userObj.challenge_id = challenge_id;
 	var investObj = {};
 	investObj.user_name = user_name;
 	investObj.portfolio_name = user_name;
+	investObj.challenge_id = challenge_id;
 			
 	socket.emit( 'trending_request' , userObj );
 	socket.emit( 'leader_request' , userObj  );
@@ -82,7 +85,7 @@ function switch_purse() {			//ChallengeTODO implement this
 }  
 
 //<!-- show divisions relevant to investments page -->
-function show_investments(user_name) {
+function show_investments(user_name , challenge_id) {
 
 	document.getElementById("player_info").style.display = "block";
 	document.getElementById("investments_summary").style.display = "block";
@@ -92,13 +95,14 @@ function show_investments(user_name) {
 	var investObj = {};
 	investObj.user_name = user_name;
     investObj.portfolio_name = user_name;
+    investObj.challenge_id = challenge_id;
 			
     socket.emit( 'my_investments_request' , investObj);
 	socket.emit( 'player_info_request' , investObj);
 }
 	  
 //<!-- show divisions relevant to portfolio page -->
-function show_portfolio(portfolio_name) {
+function show_portfolio(portfolio_name , challenge_id) {
 
 	document.getElementById("player_pic").style.display = "block";
 	document.getElementById("player_info").style.display = "block";
@@ -111,6 +115,7 @@ function show_portfolio(portfolio_name) {
     var investObj = {};
     investObj.user_name = user_name;
     investObj.portfolio_name = portfolio_name;
+    investObj.challenge_id = challenge_id;
 
     socket.emit( 'my_investments_request' , investObj);
 	socket.emit( 'player_info_request' , investObj);

@@ -292,6 +292,7 @@ function serveTagPage(message)
 {
 	//var output = { available_points : 0 , user_invested : 0 , total_invested : 0 , value : 0 };
 	var username = message.user_name;
+	var challenge_id = message.challenge_id;
 	// search for the uninvested points of the user
 	connection.query( "SELECT AvailablePoints FROM users WHERE username = ? ", [username] , 
 	function( err , user_info )
@@ -307,7 +308,7 @@ function serveTagPage(message)
 			 var available_points = user_info[0].AvailablePoints;		//output.avail
 
 			// search for the investment for the user in question
-			connection.query( "SELECT shares FROM `Invests` WHERE username = ? AND tagname = ?", [username, message.tag_name], 
+			connection.query( "SELECT shares FROM `Invests` WHERE username = ? AND tagname = ? AND id = ?", [username, message.tag_name, message.challenge_id], 
 			function( err , investment_info )
 			{
 				if(err) {
@@ -367,8 +368,8 @@ function serveBuyHash(message)
 		var sqlString = "SELECT newTab.AvailablePoints FROM ";
 		sqlString += "(SELECT AvailablePoints, 0 AS challengeID FROM users WHERE username = ? ";
 		sqlString +="UNION ALL SELECT AvailablePoints, id AS challengeID FROM ChallengePurses WHERE username = ?) "; 
-		sqlString +="newTab WHERE newTab.challengeID = ?"
-		connection.query( sqlString ,[message.user_name , message.user_name , message.challengeID],
+		sqlString +="newTab WHERE newTab.challengeID = ?";
+		connection.query( sqlString ,[message.user_name , message.user_name , message.challenge_id],
 		function(err,user_info) {
 			if(err) {
 				throw err;
@@ -405,7 +406,7 @@ function serveBuyHash(message)
 					else{
 					
 						// search for the investment for the user in question
-						connection.query( "SELECT `shares` FROM Invests WHERE username = ? AND tagname = ? AND challengeID = ?", [message.user_name, message.tag_name, message.challengeID], 
+						connection.query( "SELECT `shares` FROM Invests WHERE username = ? AND tagname = ? AND challengeID = ?", [message.user_name, message.tag_name, message.challenge_id], 
 						function (err, investment_info) { 
 							if(err) {
 								throw err;
@@ -415,7 +416,7 @@ function serveBuyHash(message)
 							if(investment_info.length > 0) {
 								var oldamount = investment_info[0].shares;
 								var newamount = parseInt(oldamount) + parseInt(message.amount);		  
-								connection.query( "UPDATE `Invests` SET shares = ? WHERE username = ? AND tagname = ? AND challengeID = ?", [newamount, message.user_name, message.tag_name, message.challengeID],
+								connection.query( "UPDATE `Invests` SET shares = ? WHERE username = ? AND tagname = ? AND challengeID = ?", [newamount, message.user_name, message.tag_name, message.challenge_id],
 								function(err, blank) {
 									if(err) {
 										throw err;
@@ -427,7 +428,7 @@ function serveBuyHash(message)
 							else {
 								// insert new investment into the database
 								connection.query( "INSERT INTO Invests ( username, tagname, shares, challengeID) VALUES ( ?, ?, ?, ? )" , 
-								[message.user_name, message.tag_name, message.amount, message.challengeID], //ChallengeTODO hard coded challege value of 0
+								[message.user_name, message.tag_name, message.amount, message.challenge_id], 
 								function( err , blank){
 									if( err ) {
 										throw err;
@@ -446,7 +447,7 @@ function serveBuyHash(message)
 								
 						});
 							
-						if(message.challengeID != 0)
+						if(message.challenge_id != 0)
 						{
 							if(marketBool)
 							{
@@ -481,7 +482,7 @@ function serveBuyHash(message)
 						
 						else
 						{
-							connection.query( "UPDATE `ChallengePurses` SET AvailablePoints = ? WHERE username = ? AND id = ?", [newpoints, message.user_name, message.challengeID],
+							connection.query( "UPDATE `ChallengePurses` SET AvailablePoints = ? WHERE username = ? AND id = ?", [newpoints, message.user_name, message.challenge_id],
 							function(err, blank) {
 								if(err) {
 									throw err;
@@ -501,7 +502,7 @@ function serveBuyHash(message)
 	}
 	
 	var filename = "./userLogs/" + message.user_name + ".txt";
-	var output = "Bought tag  " + message.tag_name + " For " + message.amount + " with ChallengeID " + message.challengeID + " at Time " + new Date() + " \n\n";
+	var output = "Bought tag  " + message.tag_name + " For " + message.amount + " with ChallengeID " + message.challenge_id + " at Time " + new Date() + " \n\n";
 	fs.appendFile( filename , output , function ( err ) 
 	{
 		if( err )
@@ -517,7 +518,7 @@ function serveSellHash(message)
 	if( message.amount >= 0)
 	{
 	// search for the investment for the user in question			//ChallengeTODO what if in challenge? Does it matter?
-	connection.query( "SELECT `shares` FROM Invests WHERE username = ? AND tagname = ? AND challengeID = ?", [message.user_name, message.tag_name, message.challengeID], 
+	connection.query( "SELECT `shares` FROM Invests WHERE username = ? AND tagname = ? AND challengeID = ?", [message.user_name, message.tag_name, message.challenge_id], 
 	function (err, investment_info) { 
 		if(err) {
 			throw err;
@@ -533,7 +534,7 @@ function serveSellHash(message)
 				
 				// if shares would be left over
 				if(newamount > 0) {
-					connection.query( "UPDATE `Invests` SET shares = ? WHERE username = ? AND tagname = ? AND challengeID = ?", [newamount, message.user_name, message.tag_name, message.challengeID],
+					connection.query( "UPDATE `Invests` SET shares = ? WHERE username = ? AND tagname = ? AND challengeID = ?", [newamount, message.user_name, message.tag_name, message.challenge_id],
 					function(err, blank) {
 						if(err) {
 							throw err;
@@ -543,7 +544,7 @@ function serveSellHash(message)
 				
 				// if selling entire investment
 				if(newamount == 0) {
-					connection.query( "DELETE FROM `Invests` WHERE username = ? AND tagname = ? AND challengeID = ?", [message.user_name, message.tag_name, message.challengeID],
+					connection.query( "DELETE FROM `Invests` WHERE username = ? AND tagname = ? AND challengeID = ?", [message.user_name, message.tag_name, message.challenge_id],
 					function(err, blank) {
 						if(err) {
 							throw err;
@@ -567,7 +568,7 @@ function serveSellHash(message)
 					var value = 10 + 10*(shares) + 10*(market[0].count);
 					
 					// update the user with the post investment point total
-					if(message.challengeID == 0)
+					if(message.challenge_id == 0)
 					{
 						connection.query( "UPDATE `users` SET AvailablePoints = (? + AvailablePoints) WHERE username = ?", [added_value, message.user_name],
 						function(err, blank) {
@@ -586,7 +587,7 @@ function serveSellHash(message)
 					}
 					else
 					{
-						connection.query( "UPDATE `ChallengePurses` SET AvailablePoints = (? + AvailablePoints) WHERE username = ? AND id = ?", [added_value, message.user_name, message.challengeID],
+						connection.query( "UPDATE `ChallengePurses` SET AvailablePoints = (? + AvailablePoints) WHERE username = ? AND id = ?", [added_value, message.user_name, message.challenge_id],
 						function(err, blank) {
 							if(err) {
 								throw err;
@@ -619,7 +620,7 @@ function serveSellHash(message)
 	}
 	
 	var filename = "./userLogs/" + message.user_name + ".txt";
-	var output = "Sold tag  " + message.tag_name + " For " + message.amount + " with ChallengeID " + message.challengeID + " at Time " + new Date() + " \n\n";
+	var output = "Sold tag  " + message.tag_name + " For " + message.amount + " with ChallengeID " + message.challenge_id + " at Time " + new Date() + " \n\n";
 	fs.appendFile( filename , output , function ( err ) 
 	{
 		if( err )
@@ -786,7 +787,7 @@ function serveFormula( message, callback1, callback2 )
 function serveFormulaChallenge( message, callback1, callback2 )
 {
 	var username = message.user_name;
-	var id = message.challengeID;
+	var id = message.challenge_id;
 	var totalValue = 0;
 	
 	connection.query( "SELECT SUM(Market.price * Invests.shares) AS sum FROM Invests inner join Market on Market.tagname = Invests.tagname WHERE Invests.username = ? AND challengeID = ?" , [username , id] , 
@@ -844,21 +845,12 @@ function serveMakeFriend( message )
 	}
 }
 
-function serveChallenges( message )			// ChallengeTODO create query, send list to client
+function serveChallenges( message )			
 {
 	var username = message.user_name;
-	//var current_challenge = message.purse;
-/*	connection.query( "SELECT username , AvailablePoints , TotalValue FROM users WHERE username = ?" ,
-	[ portfolio_name ] , 
-	function( err , rows ){
-		if( err ) {
-			throw err;
-		}
-
-		socketHandler.messageUser( message.user_name , 'player_info_table' , rows[0] );	*/
 	connection.query("SELECT endTime , Challenges.id AS id , playerCount , name , wager , AvailablePoints , TotalValue, status  FROM (Challenges INNER JOIN( SELECT * FROM ChallengePurses WHERE username = ? )AS     ChallengePurses ON Challenges.id = ChallengePurses.id   )" +
-	"UNION SELECT 1 AS status ,0 AS endTime , 0 AS id , 1 AS playerCount , 'Main' AS name , 0 AS wager , AvailablePoints , TotalValue FROM users  WHERE username = ?" , [username , username] ,  		
-	function ( err , challenges )		//ChallengeTODO append remaining time - from Challenges table
+	"UNION SELECT 1 AS status ,0 AS endTime , 0 AS id , 1 AS playerCount , 'Main Points' AS name , 0 AS wager , AvailablePoints , TotalValue FROM users  WHERE username = ?" , [username , username] ,  		
+	function ( err , challenges )		
 	{
 		//var answer = {};
 		if( err )
