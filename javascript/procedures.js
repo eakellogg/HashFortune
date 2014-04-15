@@ -22,9 +22,7 @@ function connectProcedure(message) //TODO //ChallengeTODO add something that che
 			socket.emit( 'leader_request' ,          { user_name : user_name });
 			socket.emit( 'player_info_request' , {user_name : user_name });
 			socket.emit( 'friend_table_request' , { user_name : user_name, portfolio_name : user_name });
-			//console.log("Before requesting challenges");
-			socket.emit( 'challenges_request' , {user_name : user_name}); //ChallengeFIX
-			//console.log("After requesting challenges");
+			socket.emit( 'challenges_request' , {user_name : user_name}); 
 			firstTime = false;
 		}
 	}
@@ -88,24 +86,27 @@ function trendingProcedure(message)
 
 function myInvestmentsProcedure(message) //Changed to have three columns , tagname , #stocks , total value
 {
-	var table1 = "<table width=75%; class='center';> <caption>Investments</caption> <tr><th>Hashtag Name</th><th># Stocks</th><th>Total Value</th></tr>";
-	var table3 = "</table> <BR> <BR>";	
-	var table2 = "";
-	
-	// file the table with the hashtag info received
-	for(var x = 0; x < message.length; x++ )
+	if (message.length > 0)
 	{
-		if( message.price == undefined )
+		var table1 = "<table width=75%; class='center';> <caption>Investments</caption> <tr><th>Hashtag Name</th><th># Stocks</th><th>Total Value</th></tr>";
+		var table3 = "</table> <BR> <BR>";	
+		var table2 = "";
+		
+		// file the table with the hashtag info received
+		for(var x = 0; x < message.length; x++ )
 		{
-			message.price = 0;
+			if( message.price == undefined )
+			{
+				message.price = 0;
+			}
+			table2 = table2 + "<tr><td width=50% onMouseOver=\"show_menu('" + message[x].tagname + "I')\" onMouseOut=\"hide_menu('" + message[x].tagname + "I')\" >";
+			table2 = table2 + "<a onclick=\" rename_page( 'Hashtag Investment' ); current_tag = '" + message[x].tagname + "'; document.getElementById('hashtag_name').innerHTML='#' + '" + message[x].tagname + "'; switch_to_tag('" + user_name + "', '" + message[x].tagname + "', 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : '" + message[x].tagname + "', user_name : '" + user_name + "' } ); show_hashtag_page(); \">";
+			table2 = table2 + "#" + message[x].tagname + "</a> <a style=\"display:none; color:black\"  id=\"" + message[x].tagname + "I\" href=\"https://twitter.com/search?q=%23" + message[x].tagname + "\" target=\"_blank\">Twitter Search</a> </td><td>" + message[x].shares + "</td><td>" + message[x].shares * message[x].price + "</td></tr>";
 		}
-		table2 = table2 + "<tr><td width=50% onMouseOver=\"show_menu('" + message[x].tagname + "I')\" onMouseOut=\"hide_menu('" + message[x].tagname + "I')\" >";
-		table2 = table2 + "<a onclick=\" rename_page( 'Hashtag Investment' ); current_tag = '" + message[x].tagname + "'; document.getElementById('hashtag_name').innerHTML='#' + '" + message[x].tagname + "'; switch_to_tag('" + user_name + "', '" + message[x].tagname + "', 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : '" + message[x].tagname + "', user_name : '" + user_name + "' } ); show_hashtag_page(); \">";
-		table2 = table2 + "#" + message[x].tagname + "</a> <a style=\"display:none; color:black\"  id=\"" + message[x].tagname + "I\" href=\"https://twitter.com/search?q=%23" + message[x].tagname + "\" target=\"_blank\">Twitter Search</a> </td><td>" + message[x].shares + "</td><td>" + message[x].shares * message[x].price + "</td></tr>";
-	}
 
-	var finaltable = table1 + table2 + table3;
-	document.getElementById("investments_summary").innerHTML=finaltable;
+		var finaltable = table1 + table2 + table3;
+		document.getElementById("investments_summary").innerHTML=finaltable;
+	}
 }
 
 function leaderProcedure(message)
@@ -163,7 +164,7 @@ function userProcedure(message)
 function friendsProcedure(message) //No change needed here
 {
 
-	var table1 = "<table width=75%; class='center';> <caption>Friends</caption>";
+	var table1 = "<table width=75%; class='center';> <caption>Friends</caption> <tr><th>Username</th><th>Net Worth</th></tr>";
 	var table3 = "</table> <BR> <BR>";	
 	var table2 = "";
 
@@ -259,21 +260,25 @@ function chartProcedure(message){
 	chart.write('chartdiv');
 }
 
-function challengesProcedure(message) {			// ChallengeTODO this is where the toolbar will actually be createds
+function challengesProcedure(message) {			// ChallengeTODO this is where the toolbar will actually be created
 	//create the normal one
 	
 	var table1 = "<table id=\"challenge_toolbar_table\">";
 	var table3 = "</table>";
 	var table2 = "<tr><td class=\"pointable_toolbar\" id = \"challenge0\" onclick = \" change_current_challenge(" + message[message.length-1].id + ");  \">";
-	table2 = table2 + "<b>Overall Purse</b> <br>Available: " + message[message.length - 1].AvailablePoints + "<br>Total: " + message[message.length - 1].TotalValue + "<br> Time Remaining </td></tr>";
+	table2 = table2 + "<b>Main Account</b> <br>Available: " + message[message.length - 1].AvailablePoints + "<br>Total: " + message[message.length - 1].TotalValue + "</td></tr>";
 	
-	//for loop to create boxes for challenges - have limit??
+	var limit = 9;
+	if (message.length < 10)
+	{
+		limit = message.length - 1;
+	}
 	
-	for (var x = 0; x < message.length-1; x++)
+	for (var x = 0; x < limit; x++)
 	{
 		
 		table2 = table2 + "<tr class = \"pointable_toolbar\" id = challenge" + message[x].id + " onclick = \" change_current_challenge(" + message[x].id + "); \">";
-		table2 = table2 +"<td> <b>Challenge " + message[x].id + "</b> <br>Available: " + message[x].AvailablePoints + "<br>Total: " + message[x].TotalValue + "<br> Time Remaining </td></tr>";
+		table2 = table2 +"<td> <b>" + message[x].name + "</b> <br>Available: " + message[x].AvailablePoints + "<br>Total: " + message[x].TotalValue + "<br>Ends: " + message[x].endTime + "</td></tr>";
 		
 	}
 	

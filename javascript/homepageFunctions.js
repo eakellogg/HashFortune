@@ -77,12 +77,7 @@ function show_homepage() {
 	socket.emit( 'player_info_request' , inestObj);
 	
 }
-
-//<!-- switches which "purse" of money the user is using -->
-function switch_purse() {			//ChallengeTODO implement this
-	//switch which one is highlighted
-	//change the cookie
-}  
+ 
 
 //<!-- show divisions relevant to investments page -->
 function show_investments(user_name , challenge_id) {
@@ -172,6 +167,7 @@ function hide_menu(hashtag_name) {
 	document.getElementById(hashtag_name).style.display ="none";
 }
 
+//<!-- changes the cookie and highlights the challenge in the toolbar -->
 function change_current_challenge(id) {
 	var curr_chal = "challenge" + id;
 	if (getCookie("challenge_id") != id) 
@@ -181,12 +177,15 @@ function change_current_challenge(id) {
 		{
 			c[i].style.background = "white";
 		}
-		document.getElementById(curr_chal).style.background = "yellow"; 
+		document.getElementById(curr_chal).style.backgroundColor="#FFFF66"; 
 		setCookie("challenge_id", id , 1);
 	}
 	
+	//challengeTODO should reload the page here, which may be interesting
+	
 }
 
+//<!-- sends the message to create a challenge -->
 function setupChallenge(name_of_challenge, num_players, time_limit, wager, start_time, friends) {
 
 	now = new Date();

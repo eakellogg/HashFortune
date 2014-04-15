@@ -852,19 +852,18 @@ function serveChallenges( message )
 {
 	var username = message.user_name;
 	connection.query("SELECT endTime , Challenges.id AS id , playerCount , name , wager , AvailablePoints , TotalValue, status  FROM (Challenges INNER JOIN( SELECT * FROM ChallengePurses WHERE username = ? )AS     ChallengePurses ON Challenges.id = ChallengePurses.id   )" +
-	"UNION SELECT 1 AS status ,0 AS endTime , 0 AS id , 1 AS playerCount , 'Main Points' AS name , 0 AS wager , AvailablePoints , TotalValue FROM users  WHERE username = ?" , [username , username] ,  		
+	"UNION SELECT 1 AS status ,0 AS endTime , 1 AS playerCount , 'Main Account' AS name , 0 AS wager , AvailablePoints , TotalValue , 0 AS id  FROM users  WHERE username = ?" , [username , username] ,  		
 	function ( err , challenges )		
 	{
-		//var answer = {};
 		if( err )
 			throw err;
+			console.log(challenges[challenges.length-1].TotalValue);
 		socketHandler.messageUser( username , 'challenges_list' , challenges );
 	});
-	//connection.query("SELECT 0 AS id , AvailablePoints , TotalValue FROM users WHERE username = ? UNION ALL SELECT id , AvailablePoints , TotalValue FROM ChallengePurses WHERE username = ?"
 
 }
 
-function serveAcceptChallenge( message) //Message other users?
+function serveAcceptChallenge( message) //ChallengeTODO Message other users?
 {
 	var condition = message.accept;
 	var challengeID = message.challenge_id;
