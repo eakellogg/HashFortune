@@ -157,6 +157,10 @@ $(document).ready(function() {
    //Below handle all possible user caused events.
     $('#login').click(function() {
 	
+	
+	
+
+		setCookie( "challenge_id" , 0 , 1 );
       var name = $('#name').val();
 	  var pass = $('#pass').val();
       if (name && pass) {

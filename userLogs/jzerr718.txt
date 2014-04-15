@@ -266,3 +266,19 @@ Bought tag  Brentsprocrastinationproblems For 8 with ChallengeID 0 at Time Tue A
 
 Asked for tag page  Brentsprocrastinationproblems at Time Tue Apr 15 2014 00:32:23 GMT-0500 (Central Daylight Time) 
 
+Sold tag  Brentsprocrastinationproblems For 11 with ChallengeID 0 at Time Tue Apr 15 2014 00:32:26 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  Brentsprocrastinationproblems at Time Tue Apr 15 2014 00:32:27 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:32:35 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Tue Apr 15 2014 00:33:07 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Tue Apr 15 2014 00:33:56 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:36:05 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Tue Apr 15 2014 00:38:05 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:38:43 GMT-0500 (Central Daylight Time) 
+

@@ -486,15 +486,7 @@
 		$(document).ready(function() {
 					
 			user_name = getCookie( "user_name" );
-			challenge_id = getCookie("challenge_id");
-			if (challenge_id == "" || challenge_id == "undefined")
-			{
-				change_current_challenge(0);
-			}
-			else
-			{
-				change_current_challenge(challenge_id);
-			}
+
 			socket = io.connect('http://' + document.location.host);			
 			
 			socket.on( 'welcome' , connectProcedure );

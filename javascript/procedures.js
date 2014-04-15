@@ -5,8 +5,7 @@
 
 function connectProcedure(message) //TODO //ChallengeTODO add something that checks which purse you're in and sets that cookie
 {
-
-	var userName = getCookie( "user_name" );
+		var userName = getCookie( "user_name" );
 	// If you already have logged in let the server know about your new socket
 	if( userName )
 	{
@@ -48,10 +47,8 @@ function loginProcedure(message)			//ChallengeTODO FIXME -----------------------
 	setCookie( "pass_word" , message.pass , 1);
 	//setCookie( "challenge_id" , message.chall , 1);
 	
-	alert("JKLDJF");
 	var loc = message.loc;
 	window.location.replace(loc);
-	alert("FDKFJDK");
 }
 
 
