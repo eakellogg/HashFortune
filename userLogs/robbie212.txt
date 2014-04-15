@@ -64,3 +64,21 @@ Logged in Sun Apr 13 2014 19:10:33 GMT-0500 (Central Daylight Time)
 
 Creating user at Time Sun Apr 13 2014 19:11:02 GMT-0500 (Central Daylight Time) 
 
+Logged in Mon Apr 14 2014 21:25:04 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  mcm at Time Mon Apr 14 2014 21:25:43 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for mcm at Time Mon Apr 14 2014 21:25:43 GMT-0500 (Central Daylight Time) 
+
+Sold tag  mcm For undefined at Time Mon Apr 14 2014 21:26:24 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  mcm at Time Mon Apr 14 2014 21:26:24 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Mon Apr 14 2014 21:27:20 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Mon Apr 14 2014 21:27:20 GMT-0500 (Central Daylight Time) 
+
+Bought tag  tbt For undefined at Time Mon Apr 14 2014 21:27:32 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Mon Apr 14 2014 21:27:32 GMT-0500 (Central Daylight Time) 
+
