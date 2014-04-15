@@ -63,7 +63,9 @@ module.exports = {
 	serveChart : serveChart,
 	serveFormula : serveFormula,
 	serveMakeFriend : serveMakeFriend,
-	serveChallenges : serveChallenges
+	serveChallenges : serveChallenges,
+	serveAcceptChallenge : serveAcceptChallenge,
+	serveChallengeSetup : serveChallengeSetup
 };
 
 setInterval( setLeaderBoard ,  60 * 1000);
@@ -854,8 +856,8 @@ function serveChallenges( message )			// ChallengeTODO create query, send list t
 		}
 
 		socketHandler.messageUser( message.user_name , 'player_info_table' , rows[0] );	*/
-	connection.query("SELECT endTime , Challenges.id , playerCount , name , wager , AvailablePoints , TotalValue  FROM (Challenges INNER JOIN( SELECT * FROM ChallengePurses WHERE username = ? )AS     ChallengePurses ON Challenges.id = ChallengePurses.id   )" +
-	"UNION SELECT 0 AS endTime , 0 AS id , 1 AS playerCount , 'Main' AS name , 0 AS wager , AvailablePoints , TotalValue FROM users  WHERE username = ?" , [username , username] ,  		
+	connection.query("SELECT endTime , Challenges.id AS id , playerCount , name , wager , AvailablePoints , TotalValue, status  FROM (Challenges INNER JOIN( SELECT * FROM ChallengePurses WHERE username = ? )AS     ChallengePurses ON Challenges.id = ChallengePurses.id   )" +
+	"UNION SELECT 1 AS status ,0 AS endTime , 0 AS id , 1 AS playerCount , 'Main' AS name , 0 AS wager , AvailablePoints , TotalValue FROM users  WHERE username = ?" , [username , username] ,  		
 	function ( err , challenges )		//ChallengeTODO append remaining time - from Challenges table
 	{
 		//var answer = {};
@@ -867,6 +869,50 @@ function serveChallenges( message )			// ChallengeTODO create query, send list t
 
 }
 
+function serveAcceptChallenge( message) //Message other users?
+{
+	var condition = message.accept;
+	var challengeID = message.challenge_id;
+	var username = message.user_name;
+	
+	if( condition )
+	{
+		connection.query(" UPDATE ChallengePurses SET status = 1 WHERE username = ? AND id = ?" , [username , challengeID] ,
+		function( err , rows )
+		{
+			if( err )
+				throw err;
+			
+		});
+	}
+	else
+	{
+		connection.query( "DELETE FROM ChallengePurses WHERE username = ? AND id = ?" , [username , challengeID ],
+		function (err , rows )
+		{
+			if( err)
+				throw err;
+		});
+	}
+	socketHandler.messageUser( username , 'warning' , 'you suck!');
+}
+
+function serveChallengeSetup( message )
+{
+	var name = message.name_of_challenge;
+	var num_player = message.num_players;
+	var friends = message.friends;
+	var wager = message.wager;s
+	
+	var inlist = "( ";
+	for( var i =0; i < friends.length - 1; i++)
+	{
+		inlist += friends[i] + " , ";
+	}
+	inlist += friends[friends.length -1] + " )";
+	
+	//connection.query( "INSERT INTO ChallengePurses ( username , AvailablePoitns , TotalValue , status ) SELECT username , ? AS AvailablePoints , ? AS TotalValue , 0 AS status  FROM users WHERE username IN " + inlist , );
+}
 
 
 

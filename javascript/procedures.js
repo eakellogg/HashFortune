@@ -265,23 +265,22 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 	
 	var table1 = "<table id=\"challenge_toolbar_table\">";
 	var table3 = "</table>";
-	var table2 = "<tr><td class=\"pointable\" id = \"challenge0\" onclick = \" change_current_challenge(0);  \">";
+	var table2 = "<tr><td class=\"pointable_toolbar\" id = \"challenge0\" onclick = \" change_current_challenge(" + message[message.length-1].id + ");  \">";
 	table2 = table2 + "<b>Overall Purse</b> <br>Available: " + message[message.length - 1].AvailablePoints + "<br>Total: " + message[message.length - 1].TotalValue + "<br> Time Remaining </td></tr>";
 	
-
-	var table2 = "<tr><td> <b>Overall Purse</b> <br>Available: " + message[message.length-1].AvailablePoints + "<br>Total: " + message[message.length-1].TotalValue + "<br> Time Remaining </td></tr>";
 	//for loop to create boxes for challenges - have limit??
 	
 	for (var x = 0; x < message.length-1; x++)
 	{
 		
-		table2 = table2 + "<tr class = \"pointable\" id = challenge" + message[x].id + " onclick = \" change_current_challenge(" + message[x].id + "); \">";
+		table2 = table2 + "<tr class = \"pointable_toolbar\" id = challenge" + message[x].id + " onclick = \" change_current_challenge(" + message[x].id + "); \">";
 		table2 = table2 +"<td> <b>Challenge " + message[x].id + "</b> <br>Available: " + message[x].AvailablePoints + "<br>Total: " + message[x].TotalValue + "<br> Time Remaining </td></tr>";
 		
 	}
 	
 	var finaltable = table1 + table2 + table3;
 	document.getElementById("challenge_toolbar").innerHTML=finaltable;
+	
 	//highlight the one that is current??
 	
 	var table = "<table wide = 75%; class='center'; id='centered'> " +
@@ -298,7 +297,17 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 		{
 			
 			table += "<tr> <td>" + message[i].name + " </td><td> " + message[i].playerCount + 
-			"</td><td> " + message[i].wager + " </td><td> " + message[i].endTime + " </td><td> "  +message[i].status + " </td></tr>";
+			"</td><td> " + message[i].wager + " </td><td> " + message[i].endTime + " </td><td> ";
+			if(message[i].status == 0)
+			{
+				table += "<button type='button' onclick='acceptChallenge( \"" + user_name + "\" , \"" + message[i].id + "\", \"1\");'>Accept</ button>";
+				table += "<button type='button' onclick='acceptChallenge( \"" + user_name + "\" , \"" + message[i].id + "\", \"0\");'>Decline</ button>";
+			}
+			else if (message[i].status == 1)
+				table += "Pending";
+			else
+				table += "Count Down Timer";
+			table += " </td></tr>";
 		}
 		table+= "</table>"
 		

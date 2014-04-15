@@ -169,8 +169,17 @@ function hide_menu(hashtag_name) {
 
 function change_current_challenge(id) {
 	var curr_chal = "challenge" + id;
-	document.getElementById(curr_chal).style.background = "yellow"; 
-	setCookie("challenge_id", id , 1);
+	if (getCookie("challenge_id") != id) 
+	{
+		var c = document.getElementsByClassName("pointable_toolbar");
+		for (var i = 0; i < c.length; i++ )
+		{
+			c[i].style.background = "white";
+		}
+		document.getElementById(curr_chal).style.background = "yellow"; 
+		setCookie("challenge_id", id , 1);
+	}
+	
 }
 
 function setupChallenge(name_of_challenge, num_players, time_limit, wager, start_time, friend_a, friend_b, friend_c) {

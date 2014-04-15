@@ -77,6 +77,8 @@ function listen( client )
 	client.on('chart_request' , serverCommands.serveChart );
 	client.on('make_friend_request' , serverCommands.serveMakeFriend );
 	client.on('challenges_request' , serverCommands.serveChallenges );
+	client.on('accept_challenge'   , serverCommands.serveAcceptChallenge );
+	client.on('challenge_setup_request' , serverCommands.serveChallengeSetup );
 }
 
 

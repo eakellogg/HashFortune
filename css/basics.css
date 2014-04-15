@@ -11,6 +11,10 @@ body {
 {
    	cursor:pointer;
 }
+.pointable_toolbar
+{
+	cursor:pointer;
+}
 a
 {
 	cursor:pointer;
