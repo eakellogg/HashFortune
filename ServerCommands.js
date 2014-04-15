@@ -894,7 +894,7 @@ function serveAcceptChallenge( message) //Message other users?
 				throw err;
 		});
 	}
-	socketHandler.messageUser( username , 'warning' , 'you suck!');
+	socketHandler.messageUser( usernane , 'warning' , 'you suck!');
 }
 
 function serveChallengeSetup( message )
@@ -902,17 +902,23 @@ function serveChallengeSetup( message )
 	var name = message.name_of_challenge;
 	var num_player = message.num_players;
 	var friends = message.friends;
-	var wager = message.wager;s
+	var wager = message.wager;
 	
 	var inlist = "( ";
-	for( var i =0; i < friends.length - 1; i++)
+	for( var i =0; i < num_player - 1; i++)
 	{
 		inlist += friends[i] + " , ";
 	}
-	inlist += friends[friends.length -1] + " )";
+	inlist += friends[num_player -1] + " )";
 	
-	//connection.query( "INSERT INTO ChallengePurses ( username , AvailablePoitns , TotalValue , status ) SELECT username , ? AS AvailablePoints , ? AS TotalValue , 0 AS status  FROM users WHERE username IN " + inlist , );
-}
+	connection.query( "INSERT INTO ChallengePurses ( username , AvailablePoints , TotalValue , status ) SELECT username, ? AS AvailablePoints, ? AS TotalValue, 1 AS status FROM users WHERE username = ? UNION SELECT username, ? AS AvailablePoints, ? AS TotalValue, 0 AS status FROM users WHERE username IN " + inlist , 
+	[wager, wager, message.user_name, wager, wager],
+	function (err , rows )
+		{
+			if( err)
+				throw err;
+		});
+	}
 
 
 
