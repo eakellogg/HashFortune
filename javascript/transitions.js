@@ -97,3 +97,12 @@ function updateChallenges( user_name, current_challenge_ID ) {		//ChallengesTODO
 	socket.emit( 'challenges_request' , message );
 }
  
+//accept the challenge
+function acceptChallenge( user_name, challenge_ID, accept_challenge ) {
+	var message = {};
+	message.user_name = user_name;
+	message.challenge_id = challenge_ID;
+	message.accept = accept_challenge;
+	alert('Accepting');
+	socket.emit( 'accept_challenge' , message );
+}

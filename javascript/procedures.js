@@ -283,7 +283,7 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 	var finaltable = table1 + table2 + table3;
 	document.getElementById("challenge_toolbar").innerHTML=finaltable;
 	//highlight the one that is current??
-	alert('anything');
+
 	var table = "<table wide = 75%; class='center'; id='centered'> " +
             "<caption id ='caption'> Current Challenges</caption> " +
 			"<tr>" +
@@ -298,7 +298,17 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 		{
 			
 			table += "<tr> <td>" + message[i].name + " </td><td> " + message[i].playerCount + 
-			"</td><td> " + message[i].wager + " </td><td> " + message[i].endTime + " </td><td> "  +message[i].status + " </td></tr>";
+			"</td><td> " + message[i].wager + " </td><td> " + message[i].endTime + " </td><td> ";
+			if(message[i].status == 0)
+			{
+				table += "<button type='button' onclick='acceptChallenge( \"" + user_name + "\" , \"" + message[i].id + "\", \"1\");'>Accept</ button>";
+				table += "<button type='button' onclick='acceptChallenge( \"" + user_name + "\" , \"" + message[i].id + "\", \"0\");'>Decline</ button>";
+			}
+			else if (message[i].status == 1)
+				table += "Pending";
+			else
+				table += "Count Down Timer";
+			table += " </td></tr>";
 		}
 		table+= "</table>"
 		
