@@ -793,8 +793,8 @@ function serveChallenges( message )			// ChallengeTODO create query, send list t
 		}
 
 		socketHandler.messageUser( message.user_name , 'player_info_table' , rows[0] );	*/
-	connection.query("SELECT 0 AS id , AvailablePoints , TotalValue FROM users WHERE username = ? UNION ALL SELECT id , AvailablePoints , TotalValue FROM ChallengePurses WHERE username = ?"
-	, [username , username] ,
+	connection.query("SELECT endTime , Challenges.id , playerCount , name , wager , AvailablePoints , TotalValue  FROM (Challenges INNER JOIN( SELECT * FROM ChallengePurses WHERE username = ? )AS     ChallengePurses ON Challenges.id = ChallengePurses.id   )" +
+	"UNION SELECT 0 AS endTime , 0 AS id , 1 AS playerCount , 'Main' AS name , 0 AS wager , AvailablePoints , TotalValue FROM users  WHERE username = ?" , [username , username] ,  		
 	function ( err , challenges )		//ChallengeTODO append remaining time - from Challenges table
 	{
 		//var answer = {};
@@ -802,6 +802,7 @@ function serveChallenges( message )			// ChallengeTODO create query, send list t
 			throw err;
 		socketHandler.messageUser( username , 'challenges_list' , challenges );
 	});
+	//connection.query("SELECT 0 AS id , AvailablePoints , TotalValue FROM users WHERE username = ? UNION ALL SELECT id , AvailablePoints , TotalValue FROM ChallengePurses WHERE username = ?"
 
 }
 

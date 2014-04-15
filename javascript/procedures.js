@@ -260,14 +260,15 @@ function chartProcedure(message){
 	chart.write('chartdiv');
 }
 
-function challengesProcedure(message) {				// ChallengeTODO this is where the toolbar will actually be createds
+function challengesProcedure(message) {			// ChallengeTODO this is where the toolbar will actually be createds
 	//create the normal one
+	
 	var table1 = "<table id=\"challenge_toolbar_table\">";
 	var table3 = "</table>";
-	var table2 = "<tr><td> <b>Overall Purse</b> <br>Available: " + message[0].AvailablePoints + "<br>Total: " + message[0].TotalValue + "<br> Time Remaining </td></tr>";
+	var table2 = "<tr><td> <b>Overall Purse</b> <br>Available: " + message[message.length-1].AvailablePoints + "<br>Total: " + message[message.length-1].TotalValue + "<br> Time Remaining </td></tr>";
 	//for loop to create boxes for challenges - have limit??
 	
-	for (var x = 1; x < message.length; x++)
+	for (var x = 0; x < message.length-1; x++)
 	{
 		table2 = table2 + "<tr><td> <b>Challenge " + message[x].id + "</b> <br>Available: " + message[x].AvailablePoints + "<br>Total: " + message[x].TotalValue + "<br> Time Remaining </td></tr>";
 	}
@@ -276,7 +277,30 @@ function challengesProcedure(message) {				// ChallengeTODO this is where the to
 	document.getElementById("challenge_toolbar").innerHTML=finaltable;
 	//highlight the one that is current??
 	
+	var table = "<table wide = 75%; class='center'; id='centered'> " +
+            "<caption id ='caption'> Current Challenges</caption> " +
+			"<tr>" +
+			"<th style='font-size:18px;'>Challenge Name</th>" +
+			"<th style='font-size:18px;'>Players</th>" +
+    	   "	<th style='font-size:18px;'>Initial Investment</th>" +
+    	   "	<th style='font-size:18px;'>Time</th> "+
+		   "    <th style='font-size:18px;'>Status</th>"+
+    	   " </tr> ";
+
+		for( var i =0 ; i < message.length-1; i++ )
+		{
+			message[i].playerCount = 100;
+			message[i].status = "You're in ";
+			message[i].wager = 100;
+			table += "<tr> <td>" + message[i].name + " </td><td> " + message[i].playerCount + 
+			"</td><td> " + message[i].wager + " </td><td> " + message[i].endTime + " </td><td> "  +message[i].status + " </td></tr>";
+		}
+		table+= "</table>"
+		
+		document.getElementById("challenge_home").innerHTML=table;
 }
+
+
 
 
 

@@ -76,3 +76,17 @@ Bought tag  MTVMovieAwards For undefined at Time Sun Apr 13 2014 20:46:28 GMT-05
 
 Asked for tag page  MTVMovieAwards at Time Sun Apr 13 2014 20:46:28 GMT-0500 (Central Daylight Time) 
 
+Logged in Mon Apr 14 2014 21:31:38 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Mon Apr 14 2014 21:32:01 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Mon Apr 14 2014 21:32:01 GMT-0500 (Central Daylight Time) 
+
+Sold tag  RT For undefined at Time Mon Apr 14 2014 21:32:13 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Mon Apr 14 2014 21:32:13 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TransformationTuesday at Time Mon Apr 14 2014 21:33:27 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for TransformationTuesday at Time Mon Apr 14 2014 21:33:27 GMT-0500 (Central Daylight Time) 
+
