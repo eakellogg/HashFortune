@@ -664,19 +664,34 @@ function getCurrentTime() {
 }
 
 
-function servePlayerInfo(message) {
+function servePlayerInfo(message) {					//ChallengeTODO TODO this probably isnt the best way to do this... but it works
 
 var portfolio_name = message.portfolio_name;
-connection.query( "SELECT username , AvailablePoints , TotalValue FROM users WHERE username = ?" ,
+var challenge_id = message.challenge_id;
+if (challenge_id == 0)
+{
+	connection.query( "SELECT username , AvailablePoints , TotalValue FROM users WHERE username = ?" ,
 	[ portfolio_name ] , 
 	function( err , rows ){
 		if( err ) {
 			throw err;
 		}
-
-		socketHandler.messageUser( message.user_name , 'player_info_table' , rows[0] );
+		socketHandler.messageUser( message.user_name , 'player_info_table' , rows );
 	}
-);
+	);
+}
+else
+{
+	connection.query( "SELECT username , AvailablePoints , TotalValue FROM ChallengePurses WHERE username = ? AND id = ?" ,
+	[portfolio_name , challenge_id] ,
+	function( err , rows ){
+		if( err ) {
+			throw err;
+		}
+		socketHandler.messageUser( message.user_name , 'player_info_table' , rows );
+		
+	});
+}
 }
 
 function serveFriends(message) {

@@ -180,9 +180,18 @@ function change_current_challenge(id) {
 		}
 		document.getElementById(curr_chal).style.backgroundColor="#FFFF66"; 
 		setCookie("challenge_id", id , 1);
+		
+		var investObj = {};
+		investObj.user_name = user_name;
+		investObj.portfolio_name = user_name;
+		investObj.challenge_id = id;
+		document.getElementById("investments_summary").innerHTML = "";
+		socket.emit( 'my_investments_request' , investObj);
+		socket.emit( 'player_info_request' , investObj);
 	}
 	
 	//challengeTODO should reload the page here, which may be interesting
+	
 	
 }
 

@@ -127,21 +127,28 @@ function leaderProcedure(message)
 }
 function playerInfoProcedure(message) //TODO might need change here
 {
-	var table1 = "<table width=75%; class='center';> <caption>" + message.username + "</caption>";
-	var table3 = "</table> <BR> <BR>";	
-	var table2 = "";
-	
-	var uninvested = message.AvailablePoints;
-	var total      = message.TotalValue;
-	var invested = total - uninvested;
+	if (true)
+	{
+		var table1 = "<table width=75%; class='center';> <caption>" + message[0].username + "</caption>";
+		var table3 = "</table> <BR> <BR>";	
+		var table2 = "";
 		
-		table2 = table2 + "<tr><td width=50%>Uninvested Points </td><td>" +     uninvested + "</td></tr>";
-		table2 = table2 + "<tr><td width=50%>Value of owned stocks </td><td>" + invested + "</td></tr>";
-		table2 = table2 + "<tr><td width=50%>Net Worth </td><td>" + total + "</td></tr>";
-	
+		var uninvested = message[0].AvailablePoints;
+		var total      = message[0].TotalValue;
+		var invested = total - uninvested;
+			
+			table2 = table2 + "<tr><td width=50%>Uninvested Points </td><td>" +     uninvested + "</td></tr>";
+			table2 = table2 + "<tr><td width=50%>Value of owned stocks </td><td>" + invested + "</td></tr>";
+			table2 = table2 + "<tr><td width=50%>Net Worth </td><td>" + total + "</td></tr>";
+		
 
-	var finaltable = table1 + table2 + table3;
-	document.getElementById("player_info").innerHTML=finaltable;
+		var finaltable = table1 + table2 + table3;
+		document.getElementById("player_info").innerHTML=finaltable;
+	}
+	else
+	{
+		alert("that user is not in the current challenge");
+	}
 }
 
 function userProcedure(message) 
