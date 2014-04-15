@@ -46,10 +46,12 @@ function loginProcedure(message)			//ChallengeTODO FIXME -----------------------
 {
 	setCookie( "user_name" , message.user , 1);
 	setCookie( "pass_word" , message.pass , 1);
-	setCookie( "challenge_id" , message.chall , 1);
+	//setCookie( "challenge_id" , message.chall , 1);
 	
+	alert("JKLDJF");
 	var loc = message.loc;
 	window.location.replace(loc);
+	alert("FDKFJDK");
 }
 
 

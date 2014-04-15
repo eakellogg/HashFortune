@@ -415,14 +415,14 @@
 		<form name="buy" >
 			Amount: <input type="text" id="amount_buy" onkeypress="if(event.keyCode==13){var username = user_name;
 				var tag_name = current_tag;
-				var challengeID = getCookie("challenge_id");
+				var challengeID = getCookie('challenge_id');
 				var amount = $('#amount_buy').val();
 				buy_hash(username, tag_name, challengeID, amount);
 				clear_searches();}"/> <br>
 			<input type="button" value="Buy!" onclick="
 				var username = user_name;
 				var tag_name = current_tag;
-				var challengeID = getCookie("challenge_id");
+				var challengeID = getCookie('challenge_id');
 				var amount = $('#amount_buy').val();
 				buy_hash(username, tag_name, challengeID, amount);
 				clear_searches();"/>
@@ -430,7 +430,7 @@
 		<form name="sell" >
 			Amount: <input type="text" id="amount_sell" onkeypress="if(event.keyCode==13){var username = user_name;
 				var tag_name = current_tag;
-				var challengeID = getCookie("challenge_id");
+				var challengeID = getCookie('challenge_id');
 				var amount = $('#amount_buy').val();
 				buy_hash(username, tag_name, challengeID, amount);
 				clear_searches();}"/> <br>
@@ -498,6 +498,7 @@
 			socket = io.connect('http://' + document.location.host);			
 			
 			socket.on( 'welcome' , connectProcedure );
+			socket.on( 'login_ok' , loginProcedure );
 			socket.on( 'tag_page', tagProcedure );
 			socket.on( 'trending_table', trendingProcedure );
 			socket.on( 'warning', warningProcedure );

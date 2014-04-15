@@ -374,7 +374,7 @@ function serveBuyHash(message)
 			if(err) {
 				throw err;
 			}
-			
+			console.log( message.user_name + " " + message.tag_name + " " + message.challenge_id );
 			if(user_info.length > 0) {
 				//get the value of the shares
 				connection.query( "SELECT `shares`, `count` FROM Market WHERE tagname = ?", [message.tag_name],
@@ -447,7 +447,7 @@ function serveBuyHash(message)
 								
 						});
 							
-						if(message.challenge_id != 0)
+						if(message.challenge_id == 0)
 						{
 							if(marketBool)
 							{
@@ -515,17 +515,20 @@ function serveBuyHash(message)
 function serveSellHash(message)
 {
 	message.portfolio_name = message.user_name;
+	console.log("HELLO" + message.amount );
 	if( message.amount >= 0)
 	{
 	// search for the investment for the user in question			//ChallengeTODO what if in challenge? Does it matter?
+	
 	connection.query( "SELECT `shares` FROM Invests WHERE username = ? AND tagname = ? AND challengeID = ?", [message.user_name, message.tag_name, message.challenge_id], 
 	function (err, investment_info) { 
 		if(err) {
 			throw err;
 		}
-
+		console.log( message.user_name + " " + message.tag_name + " " + message.challenge_id );
 		// if the investment exists
 		if(investment_info.length > 0) {
+		console.log("DFJDLKFJD");
 			var oldamount = investment_info[0].shares;
 			var newamount = oldamount - message.amount;
 
@@ -867,6 +870,8 @@ function serveAcceptChallenge( message) //Message other users?
 	var challengeID = message.challenge_id;
 	var username = message.user_name;
 	
+	
+	console.log(condition);
 	if( condition )
 	{
 		connection.query(" UPDATE ChallengePurses SET status = 1 WHERE username = ? AND id = ?" , [username , challengeID] ,

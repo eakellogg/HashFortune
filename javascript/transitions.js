@@ -28,7 +28,7 @@ function switch_to_tag( user_name , tag_name , challengeID )
 	var message = {};
 	message.user_name = user_name;
 	message.tag_name = tag_name;
-	message.challengeID = challengeID;
+	message.challenge_id = challengeID;
 	socket.emit( 'tag_page_request' , message); 
 }
 
@@ -38,7 +38,7 @@ function buy_hash( user_name , tag_name , challengeID, amount )
 	var message = {};
 	message.user_name = user_name;
 	message.tag_name = tag_name;
-	message.challengeID = challengeID;
+	message.challenge_id = challengeID;
 	message.amount = amount;
 	socket.emit( 'buy_hash' , message); 
 }
@@ -50,7 +50,7 @@ function sell_hash( user_name , tag_name , challengeID, amount )
 	var message = {};
 	message.user_name = user_name;
 	message.tag_name = tag_name;
-	message.challengeID = challengeID;
+	message.challenge_id = challengeID;
 	message.amount = amount;
 	socket.emit( 'sell_hash' , message); 
 }

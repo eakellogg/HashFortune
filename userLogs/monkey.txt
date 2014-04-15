@@ -1078,3 +1078,83 @@ Logged in Mon Apr 14 2014 23:25:30 GMT-0500 (Central Daylight Time)
 
 Logged in Mon Apr 14 2014 23:32:25 GMT-0500 (Central Daylight Time) 
 
+Logged in Tue Apr 15 2014 00:07:22 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:11:31 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:12:54 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:13:47 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:14:05 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:14:20 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Tue Apr 15 2014 00:14:25 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:14:33 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:14:42 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:16:03 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:26:11 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:27:15 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Tue Apr 15 2014 00:27:25 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for selfie at Time Tue Apr 15 2014 00:27:25 GMT-0500 (Central Daylight Time) 
+
+Bought tag  selfie For 1 with ChallengeID  at Time Tue Apr 15 2014 00:27:31 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for selfie at Time Tue Apr 15 2014 00:27:38 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Tue Apr 15 2014 00:27:38 GMT-0500 (Central Daylight Time) 
+
+Bought tag  selfie For 1 with ChallengeID  at Time Tue Apr 15 2014 00:27:48 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Tue Apr 15 2014 00:27:57 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for selfie at Time Tue Apr 15 2014 00:27:57 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Tue Apr 15 2014 00:28:19 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for selfie at Time Tue Apr 15 2014 00:28:19 GMT-0500 (Central Daylight Time) 
+
+Bought tag  selfie For 1 with ChallengeID  at Time Tue Apr 15 2014 00:28:27 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Tue Apr 15 2014 00:28:27 GMT-0500 (Central Daylight Time) 
+
+Bought tag  selfie For 1 with ChallengeID  at Time Tue Apr 15 2014 00:28:34 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Tue Apr 15 2014 00:28:34 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Tue Apr 15 2014 00:29:12 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for selfie at Time Tue Apr 15 2014 00:29:12 GMT-0500 (Central Daylight Time) 
+
+Sold tag  selfie For 1 with ChallengeID 0 at Time Tue Apr 15 2014 00:29:21 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Tue Apr 15 2014 00:29:21 GMT-0500 (Central Daylight Time) 
+
+Bought tag  selfie For 1 with ChallengeID  at Time Tue Apr 15 2014 00:29:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Tue Apr 15 2014 00:29:28 GMT-0500 (Central Daylight Time) 
+
+Sold tag  selfie For 10 with ChallengeID 0 at Time Tue Apr 15 2014 00:29:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Tue Apr 15 2014 00:29:35 GMT-0500 (Central Daylight Time) 
+
+Bought tag  selfie For 11 with ChallengeID  at Time Tue Apr 15 2014 00:29:39 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Tue Apr 15 2014 00:29:39 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:30:41 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:31:00 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:31:36 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 00:31:56 GMT-0500 (Central Daylight Time) 
+
