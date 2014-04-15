@@ -187,8 +187,8 @@ function change_current_challenge(id) {
 	
 }
 
-function setupChallenge(name_of_challenge, num_players, time_limit, wager, start_time, friend_a, friend_b, friend_c) {
-   
+function setupChallenge(name_of_challenge, num_players, time_limit, wager, start_time, friends) {
+
 	now = new Date();
 	hour = now.getHours();
 	minute = now.getMinutes();
@@ -206,6 +206,6 @@ function setupChallenge(name_of_challenge, num_players, time_limit, wager, start
 		start = now;
 		start.setHours(parseInt(start_time.substring(0,2)),00,00);
 	}
-	
-	socket.emit( 'challenge_setup_request' , { name_of_challenge : name_of_challenge, num_players : num_players, time_limit : time_limit, wager : wager, start_time : start, friend_a : friend_a, friend_b : friend_b, friend_c : friend_c } );
+
+	socket.emit( 'challenge_setup_request' , { name_of_challenge : name_of_challenge, num_players : num_players, time_limit : time_limit, wager : wager, start_time : start, friends : friends} );
 }
