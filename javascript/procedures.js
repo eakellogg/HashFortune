@@ -313,11 +313,3 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 		
 		document.getElementById("challenge_home").innerHTML=table;
 }
-
-
-
-
-
-
-
-
