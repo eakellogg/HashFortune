@@ -642,8 +642,8 @@ function serveTrending(message)
 
 function serveMyTrending(message) {
 	var portfolio_name = message.portfolio_name;
-
-	connection.query( "SELECT  Invests.tagname , Invests.shares, price FROM Invests left join Market on Market.tagname = Invests.tagname WHERE Invests.username = ? " , [portfolio_name] , 
+	var challenge_id = message.challenge_id;
+	connection.query( "SELECT  Invests.tagname , Invests.shares, price FROM (SELECT * FROM Invests WHERE challengeID = ?) AS Invests LEFT JOIN Market on Market.tagname = Invests.tagname WHERE Invests.username = ? " , [challenge_id ,portfolio_name] , 
 	function (err , investments ){
 		if( err )
 			throw err;
@@ -869,15 +869,18 @@ function serveAcceptChallenge( message) //ChallengeTODO Message other users?
 	var challengeID = message.challenge_id;
 	var username = message.user_name;
 	
-	
-	console.log(condition);
-	if( condition )
+	var wager = message.wager;
+	if( wager == undefined )
+	wager = 0;
+	if( condition == 1)
 	{
 		connection.query(" UPDATE ChallengePurses SET status = 1 WHERE username = ? AND id = ?" , [username , challengeID] ,
 		function( err , rows )
 		{
 			if( err )
 				throw err;
+			
+			
 			
 		});
 	}
@@ -888,6 +891,7 @@ function serveAcceptChallenge( message) //ChallengeTODO Message other users?
 		{
 			if( err)
 				throw err;
+			
 		});
 	}
 }
@@ -908,8 +912,7 @@ function serveChallengeSetup( message )
 	inlist += " )";
 
 	var startTime = message.start_time;
-	var endTime = message.start_time;
-	//endTime.setHours( message.start_time + message.time_limit );
+	var endTime = message.end_time
 	console.log( startTime );
 	console.log( endTime );
 	

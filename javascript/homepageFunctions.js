@@ -61,7 +61,9 @@ function show_homepage() {
     document.getElementById("investments_summary").style.display = "block";
     document.getElementById("leaderboard").style.display = "block";
     document.getElementById("friends").style.display = "block";
-			
+	
+
+	challenge_id = getCookie("challenge_id");	
 	var userObj = {};
 	userObj.user_name = user_name;
 	userObj.challenge_id = challenge_id;
@@ -69,7 +71,6 @@ function show_homepage() {
 	investObj.user_name = user_name;
 	investObj.portfolio_name = user_name;
 	investObj.challenge_id = challenge_id;
-			
 	socket.emit( 'trending_request' , userObj );
 	socket.emit( 'leader_request' , userObj  );
 	socket.emit( 'my_investments_request' , investObj);
@@ -195,16 +196,35 @@ function setupChallenge(name_of_challenge, num_players, time_limit, wager, start
 	current_time = hour + ":" + minute + ":" + second;
 	
 	var start = new Date();
+	var end = new Date();
 	
 	
 	if(start_time < current_time) {
 		start = new Date(now.getTime() + (24*60*60*1000));
-		start.setHours(parseInt(start_time.substring(0,2)),00,00);
+		start.setHours(parseInt(start_time.substring(0,2)),00,00);	
+		
+		if(parseInt(start.getHours()) + parseInt(time_limit) == 24) {
+			end = new Date(now.getTime() + (2*24*60*60*1000));
+			end.setHours(00,00,00);
+		}
+		else {
+			end = new Date(now.getTime() + (24*60*60*1000));
+			end.setHours(parseInt(start.getHours()) + parseInt(time_limit),00,00);
+		}
 	}
 	else {
-		start = now;
-		start.setHours(parseInt(start_time.substring(0,2)),00,00);
+		start = new Date(now.getTime());
+		start.setHours(parseInt(start_time.substring(0,2)),00,00);	
+		
+		if(parseInt(start.getHours()) + parseInt(time_limit) == 24) {
+			end = new Date(now.getTime() + (24*60*60*1000));
+			end.setHours(00,00,00);
+		}
+		else {
+			end = new Date(now.getTime());
+			end.setHours(parseInt(start.getHours()) + parseInt(time_limit),00,00);
+		}
 	}
 
-	socket.emit( 'challenge_setup_request' , { user_name : user_name , name_of_challenge : name_of_challenge, num_players : num_players, time_limit : time_limit, wager : wager, start_time : start, friends : friends} );
+	socket.emit( 'challenge_setup_request' , { user_name : user_name , name_of_challenge : name_of_challenge, num_players : num_players, wager : wager, start_time : start, end_time: end, friends : friends} );
 }

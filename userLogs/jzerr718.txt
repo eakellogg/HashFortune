@@ -282,3 +282,9 @@ loging out  at Time Tue Apr 15 2014 00:38:05 GMT-0500 (Central Daylight Time)
 
 Logged in Tue Apr 15 2014 00:38:43 GMT-0500 (Central Daylight Time) 
 
+Logged in Tue Apr 15 2014 13:05:04 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  Jackie42 at Time Tue Apr 15 2014 13:05:29 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for Jackie42 at Time Tue Apr 15 2014 13:05:29 GMT-0500 (Central Daylight Time) 
+
