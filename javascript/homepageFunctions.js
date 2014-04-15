@@ -75,7 +75,7 @@ function show_homepage() {
 	socket.emit( 'leader_request' , userObj  );
 	socket.emit( 'my_investments_request' , investObj);
 	socket.emit( 'friend_table_request' , investObj);
-	socket.emit( 'player_info_request' , inestObj);
+	socket.emit( 'player_info_request' , investObj);
 	
 }
  
