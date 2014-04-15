@@ -905,20 +905,36 @@ function serveChallengeSetup( message )
 	var wager = message.wager;
 	
 	var inlist = "( ";
-	for( var i =0; i < num_player - 1; i++)
+	inlist += "'" +friends[0] + "'" ;
+	for( var i =1; i < num_player -1 ; i++)
 	{
-		inlist += friends[i] + " , ";
+		inlist += " ,  '" +friends[i] + "'  ";
 	}
-	inlist += friends[num_player -1] + " )";
+	inlist += " )";
+
+	var startTime = message.start_time;
+	var endTime = message.start_time;
+	//endTime.setHours( message.start_time + message.time_limit );
+	console.log( startTime );
+	console.log( endTime );
 	
-	connection.query( "INSERT INTO ChallengePurses ( username , AvailablePoints , TotalValue , status ) SELECT username, ? AS AvailablePoints, ? AS TotalValue, 1 AS status FROM users WHERE username = ? UNION SELECT username, ? AS AvailablePoints, ? AS TotalValue, 0 AS status FROM users WHERE username IN " + inlist , 
-	[wager, wager, message.user_name, wager, wager],
-	function (err , rows )
+	console.log(inlist);
+	connection.query( "INSERT INTO Challenges ( startTime, endTime, playerCount, name, wager ) VALUES (?, ?, ?, ?, ?)" , 
+	[message.startTime,  , num_player, name, wager],
+	function (err , blank )
 		{
 			if( err)
 				throw err;
-		});
-	}
+				
+			connection.query( "INSERT INTO ChallengePurses ( id, username , AvailablePoints , TotalValue , status ) SELECT LAST_INSERT_ID() AS id, username, ? AS AvailablePoints, ? AS TotalValue, 1 AS status FROM users WHERE username = ? UNION SELECT LAST_INSERT_ID() AS id, username, ? AS AvailablePoints, ? AS TotalValue, 0 AS status FROM users WHERE username IN " + inlist , 
+			[wager, wager, message.user_name, wager, wager],
+			function (err , blank )
+				{
+					if( err)
+						throw err;
+			});
+	});
+}
 
 
 
