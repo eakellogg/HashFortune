@@ -894,7 +894,6 @@ function serveAcceptChallenge( message) //Message other users?
 				throw err;
 		});
 	}
-	socketHandler.messageUser( usernane , 'warning' , 'you suck!');
 }
 
 function serveChallengeSetup( message )
