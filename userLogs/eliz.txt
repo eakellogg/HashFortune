@@ -769,3 +769,11 @@ Logged in Mon Apr 14 2014 21:58:17 GMT-0500 (Central Daylight Time)
 
 Logged in Mon Apr 14 2014 23:56:38 GMT-0500 (Central Daylight Time) 
 
+Asked for tag page  RT at Time Tue Apr 15 2014 00:01:11 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Tue Apr 15 2014 00:01:11 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 15 2014 00:01:55 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Tue Apr 15 2014 00:01:55 GMT-0500 (Central Daylight Time) 
+

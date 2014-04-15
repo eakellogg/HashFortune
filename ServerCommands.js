@@ -308,7 +308,7 @@ function serveTagPage(message)
 			 var available_points = user_info[0].AvailablePoints;		//output.avail
 
 			// search for the investment for the user in question
-			connection.query( "SELECT shares FROM `Invests` WHERE username = ? AND tagname = ? AND id = ?", [username, message.tag_name, message.challenge_id], 
+			connection.query( "SELECT shares FROM `Invests` WHERE username = ? AND tagname = ? AND challengeID = ?", [username, message.tag_name, message.challenge_id], 
 			function( err , investment_info )
 			{
 				if(err) {
