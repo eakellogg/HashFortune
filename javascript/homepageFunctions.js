@@ -17,6 +17,10 @@ function clear_searches() {
 	document.getElementById("time_limit").value= "";
 	document.getElementById("wager").value= "";
 	document.getElementById("start_time").value= "";
+	document.getElementById("name_of_challenge").value= "";
+	document.getElementById("friend_a").value= "";
+	document.getElementById("friend_b").value= "";
+	document.getElementById("friend_c").value= "";
 }
 		
 //<!-- hide all divisions (results in a blank page) -->
@@ -167,4 +171,27 @@ function change_current_challenge(id) {
 	var curr_chal = "challenge" + id;
 	document.getElementById(curr_chal).style.background = "yellow"; 
 	setCookie("challenge_id", id , 1);
+}
+
+function setupChallenge(name_of_challenge, num_players, time_limit, wager, start_time, friend_a, friend_b, friend_c) {
+   
+	now = new Date();
+	hour = now.getHours();
+	minute = now.getMinutes();
+	second = now.getSeconds();
+	current_time = hour + ":" + minute + ":" + second;
+	
+	var start = new Date();
+	
+	
+	if(start_time < current_time) {
+		start = new Date(now.getTime() + (24*60*60*1000));
+		start.setHours(parseInt(start_time.substring(0,2)),00,00);
+	}
+	else {
+		start = now;
+		start.setHours(parseInt(start_time.substring(0,2)),00,00);
+	}
+	
+	socket.emit( 'challenge_setup_request' , { name_of_challenge : name_of_challenge, num_players : num_players, time_limit : time_limit, wager : wager, start_time : start, friend_a : friend_a, friend_b : friend_b, friend_c : friend_c } );
 }

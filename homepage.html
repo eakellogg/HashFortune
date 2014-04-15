@@ -16,7 +16,7 @@
     <script src= "/javasctipt/homepageFunctions.js"></script>
 	<script src= "/socket.io/socket.io.js"></script>
 	<script src="amcharts/amcharts.js" type="text/javascript"></script>
-<script src="amcharts/serial.js" type="text/javascript"></script>
+	<script src="amcharts/serial.js" type="text/javascript"></script>
 
 
 <head>
@@ -269,6 +269,18 @@
 	<div>
 		<a href="#close" title="Close" class="close">X</a>
 		<h2>New Quick Challenge</h2>
+		<input type="text" id="name_of_challenge"> Challenge Name
+		</input>
+		<BR>
+		<input type="text" id="friend_a"> Friend Name
+		</input>
+		<BR>
+		<input type="text" id="friend_b"> Friend Name
+		</input>
+		<BR>
+		<input type="text" id="friend_c"> Friend Name
+		</input>
+		<BR>
 		<select id="player_num">
 			<option value="" disabled="disabled" selected="selected">Max Players</option>
 			<option value="1">1</option>
@@ -286,37 +298,33 @@
 		<BR>
 		<select id="wager">
 			<option value="" disabled="disabled" selected="selected">Wager</option>
-			<option value="1">250</option>
-			<option value="2">500</option>
-			<option value="3">750</option>
-			<option value="4">1000</option>
+			<option value="250">250</option>
+			<option value="500">500</option>
+			<option value="750">750</option>
+			<option value="1000">1000</option>
 		</select>
 		<BR>
 		<select id="start_time">
 			<option value="" disabled="disabled" selected="selected">Start Time</option>
-			<option value="1">12:00 am</option>
-			<option value="2">3:00 am</option>
-			<option value="3">6:00 am</option>
-			<option value="4">9:00 am</option>
-			<option value="5">12:00 pm</option>
-			<option value="6">3:00 pm</option>
-			<option value="7">6:00 pm</option>
-			<option value="8">9:00 pm</option>
-			
+			<option value="00:00:00">00:00:00</option>
+			<option value="03:00:00">03:00:00</option>
+			<option value="06:00:00">06:00:00</option>
+			<option value="09:00:00">09:00:00</option>
+			<option value="12:00:00">12:00:00</option>
+			<option value="15:00:00">15:00:00</option>
+			<option value="18:00:00">18:00:00</option>
+			<option value="21:00:00">21:00:00</option>
 		</select>
 		<BR>
-			
-		<input type="button" value="Search" width="50" onclick="clear_searches();">
+		<BR>	
+		<input type="button" value="Search" width="50" onclick="setupChallenge(document.getElementById('name_of_challenge').value, document.getElementById('player_num').value, document.getElementById('time_limit').value, document.getElementById('wager').value, document.getElementById('start_time').value, document.getElementById('friend_a').value, document.getElementById('friend_b').value, document.getElementById('friend_c').value); clear_searches();">
 	</div>
 </div>
 
 <!-- division containing a new challenges page -->
 <div id="new_challenge">
-	<form name="Quick" action="#openModal">
-		<input type="submit" value="New Quick Challenge" />
-	</form>
-	<form name="Friends" >
-		<input type="button" value="New Friend Challenge" />
+	<form name="Friends" action="#openModal">
+		<input type="submit" value="New Challenge" />
 	</form>
 <BR>
 <BR>

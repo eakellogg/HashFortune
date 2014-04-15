@@ -283,7 +283,7 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 	var finaltable = table1 + table2 + table3;
 	document.getElementById("challenge_toolbar").innerHTML=finaltable;
 	//highlight the one that is current??
-	alert('anything');
+	
 	var table = "<table wide = 75%; class='center'; id='centered'> " +
             "<caption id ='caption'> Current Challenges</caption> " +
 			"<tr>" +
@@ -304,11 +304,3 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 		
 		document.getElementById("challenge_home").innerHTML=table;
 }
-
-
-
-
-
-
-
-
