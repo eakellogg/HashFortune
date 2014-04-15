@@ -53,6 +53,7 @@ function hide_all() {
 function show_homepage() {
 			
     document.getElementById("trending").style.display = "block";
+    document.getElementById("player_info").style.display = "block";
     document.getElementById("investments_summary").style.display = "block";
     document.getElementById("leaderboard").style.display = "block";
     document.getElementById("friends").style.display = "block";
@@ -62,12 +63,19 @@ function show_homepage() {
 	investObj.user_name = user_name;
 	investObj.portfolio_name = user_name;
 			
-	socket.emit( "trending_request"        , userObj );
+	socket.emit( 'trending_request' , userObj );
 	socket.emit( 'leader_request' , userObj  );
 	socket.emit( 'my_investments_request' , investObj);
 	socket.emit( 'friend_table_request' , investObj);
+	socket.emit( 'player_info_request' , inestObj);
+	
 }
-	  
+
+//<!-- switches which "purse" of money the user is using -->
+function switch_purse() {			//ChallengeTODO implement this
+	//switch which one is highlighted
+	//change the cookie
+}  
 
 //<!-- show divisions relevant to investments page -->
 function show_investments(user_name) {

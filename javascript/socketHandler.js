@@ -1,7 +1,5 @@
-
 /*
-This is the file where you should for now, add different types of messages for the server to be listening to, and 
-the function that describes how they should behave
+Contains the list of messages the client sends and which function the server should call in response to each type of message.
 */
 
 
@@ -78,6 +76,7 @@ function listen( client )
 	client.on('logout' , serverCommands.serveLogout );
 	client.on('chart_request' , serverCommands.serveChart );
 	client.on('make_friend_request' , serverCommands.serveMakeFriend );
+	client.on('challenges_request' , serverCommands.serveChallenges );
 }
 
 

@@ -1,5 +1,6 @@
-//Challenge Handler
-
+/*Challenge Handler
+* This file contains the queries needed to update the challenges every hour
+*/
 var mysql = require('mysql');
 var db_config = { host : 'hashfortune.com' , user : 'jzerr718_zerr2' , password : 'csGeni01' , database : 'jzerr718_HashFortune' };
 
@@ -75,7 +76,7 @@ connection.query(  "(SELECT Maxes.id , Entries.username , " +
 		var result = createUpdateString( rows );
 		var updateString = result.query;
 		//console.log( updateString );
-		//Okay to be paralel
+		//Okay to be parallel
 		//Update
 		connection.query( updateString , result.args, function(err ,rows )
 		{
@@ -114,7 +115,7 @@ connection.query(  "(SELECT Maxes.id , Entries.username , " +
 
 function createUpdateString( rows )
 {
-	var query = "UPDATE users SET AvailablePoints = (CASE username "
+	var query = "UPDATE users SET AvailablePoints = (CASE username ";
 	var args = new Array();
 	for( var i =0; i < rows.length; i++)
 	{
@@ -161,7 +162,7 @@ function createInsertionString( rows )
 		args.push( rows[i].amount );
 	}
 	var i = rows.length-1;
-	query+= " ( ? , ? , ? , ? )\n"
+	query+= " ( ? , ? , ? , ? )\n";
 	args.push( rows[i].username );
 	args.push( rows[i].id );
 	args.push( rows[i].win );

@@ -1,4 +1,6 @@
-
+/* This file contains functions which recieve a message from the client, perform a query, 
+ * and then message the user with the appropriate information.
+ */
 var fs = require('fs');
 var trendingTable;
 var leaderBoard;
@@ -60,7 +62,8 @@ module.exports = {
 	serveLogout  : serveLogout,
 	serveChart : serveChart,
 	serveFormula : serveFormula,
-	serveMakeFriend : serveMakeFriend
+	serveMakeFriend : serveMakeFriend,
+	serveChallenges : serveChallenges
 };
 
 setInterval( setLeaderBoard ,  60 * 1000);
@@ -126,7 +129,7 @@ function serveSearchUser(message)
 			socketHandler.messageUser( message.user_name , 'warning' , { content : "That user doesn't exist!" } );
 	}); 
 }
-function serveSearchEmail(message)
+function serveSearchEmail(message)		//TODO
 {
 }
 function setLeaderBoard()
@@ -182,6 +185,7 @@ function createUser( newUser , connection )
 
 // verify the creation of a new account
 //TODO should more be done to check a new account besides just checking that its unused?
+//should check if email is unused
 function VerifyCreate(message)
 {
 	var user = message.user_name;
@@ -417,7 +421,7 @@ function serveBuyHash(message)
 						else {
 							// insert new investment into the database
 							connection.query( "INSERT INTO Invests ( username, tagname, shares, challengeID) VALUES ( ?, ?, ?, 0 )" , 
-							[message.user_name, message.tag_name, message.amount], //Todo hard coded challege value of 0
+							[message.user_name, message.tag_name, message.amount], //ChallengeTODO hard coded challege value of 0
 							function( err , blank){
 								if( err ) {
 									throw err;
@@ -493,7 +497,7 @@ function serveSellHash(message)
 	message.portfolio_name = message.user_name;
 	if( message.amount >= 0)
 	{
-	// search for the investment for the user in question
+	// search for the investment for the user in question			//ChallengeTODO what if in challenge? Does it matter?
 	connection.query( "SELECT `shares` FROM Invests WHERE username = ? AND tagname = ?", [message.user_name, message.tag_name], 
 	function (err, investment_info) { 
 		if(err) {
@@ -775,8 +779,35 @@ function serveMakeFriend( message )
 				
 		});
 	}
-	
-	
-	
-	
 }
+
+function serveChallenges( message )			// ChallengeTODO create query, send list to client
+{
+	var username = message.user_name;
+	//var current_challenge = message.purse;
+/*	connection.query( "SELECT username , AvailablePoints , TotalValue FROM users WHERE username = ?" ,
+	[ portfolio_name ] , 
+	function( err , rows ){
+		if( err ) {
+			throw err;
+		}
+
+		socketHandler.messageUser( message.user_name , 'player_info_table' , rows[0] );	*/
+	connection.query("SELECT 0 AS id , AvailablePoints , TotalValue FROM users WHERE username = ? UNION ALL SELECT id , AvailablePoints , TotalValue FROM ChallengePurses WHERE username = ?"
+	, [username , username] ,
+	function ( err , challenges )		//ChallengeTODO append remaining time - from Challenges table
+	{
+		//var answer = {};
+		if( err )
+			throw err;
+		socketHandler.messageUser( username , 'challenges_list' , challenges );
+	});
+
+}
+
+
+
+
+
+
+

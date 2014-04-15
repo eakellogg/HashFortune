@@ -1,22 +1,31 @@
+/* This file contains the functions that provide client-side functionality for recieving messages from the server.
+ * Most of the functions create divs in the html, dynamically filling them with information.
+ */
 
-function connectProcedure(message) //TODO 
+
+function connectProcedure(message) //TODO //ChallengeTODO add something that checks which purse you're in and sets that cookie
 {
 
-	var userName = getCookie( "user_name" )
+	var userName = getCookie( "user_name" );
 	// If you already have logged in let the server know about your new socket
 	if( userName )
 	{
 		var passWord = getCookie( "pass_word");
-		socket.emit( "re_establish" , { user_name : userName , pass_word : passWord	} );
+		var currentChallenge = getCookie ( "challenge_id" );
+		socket.emit( "re_establish" , { user_name : userName , pass_word : passWord	, challenge_id : currentChallenge} );
 		
 	var userObj = { user_name : userName , pass_word : passWord	};
 	
 		if ( firstTime )
 		{
-			socket.emit( "my_investments_request"        , { user_name : user_name, portfolio_name : user_name });
-			socket.emit( "trending_request"        , { user_name : user_name });
+			socket.emit( 'my_investments_request'        , { user_name : user_name, portfolio_name : user_name });
+			socket.emit( 'trending_request'        , { user_name : user_name });
 			socket.emit( 'leader_request' ,          { user_name : user_name });
+			socket.emit( 'player_info_request' , {user_name : user_name });
 			socket.emit( 'friend_table_request' , { user_name : user_name, portfolio_name : user_name });
+			//console.log("Before requesting challenges");
+			socket.emit( 'challenges_request' , {user_name : user_name}); //ChallengeFIX
+			//console.log("After requesting challenges");
 			firstTime = false;
 		}
 	}
@@ -33,10 +42,11 @@ function connectProcedure(message) //TODO
 
 
 // handle a login
-function loginProcedure(message)
+function loginProcedure(message)			//ChallengeTODO FIXME -------------------------------------------------
 {
 	setCookie( "user_name" , message.user , 1);
 	setCookie( "pass_word" , message.pass , 1);
+	setCookie( "challenge_id" , message.chall , 1);
 	
 	var loc = message.loc;
 	window.location.replace(loc);
@@ -46,19 +56,7 @@ function loginProcedure(message)
 
 // update the user info in the appropriate areas on a hashtag page
 function tagProcedure(message) 
-{ /*
-	var total = message.value * message.user_invested;
-	var table1 = "<table><caption id=\"hashtag_name\">Hashtag Name</caption>";
-	table1 = table1 + "<tr><td>Stocks I Own</td><td>"+message.user_invested+"</td></tr>";
-	table1 = table1 + "<tr><td>My Investment Value</td><td>"+total+"</td></tr>";
-	table1 = table1 + "<tr><td>Uninvested Pts</td><td>"+message.available_points+"</td></tr></table><BR><BR>";
-	document.getElementById("hashtag_investments").innerHTML = table1;
-	
-	var table2="<table><caption>Current Value</caption>";
-	table2 = table2 + "<tr><td>Total # of Shares</td><td>"+message.total_invested+"</td></tr>";
-	table2 = table2 + "<tr><td>Value per share</td><td>"+message.value+"</td></tr></table><BR><BR>";
-	document.getElementById("hashtag_stats").innerHTML = table2;
-	*/
+{ 
 	var total = message.value * message.user_invested;
 	document.getElementById("current_value").innerHTML = total;
 	document.getElementById("my_uninvested_points").innerHTML= message.available_points;
@@ -189,7 +187,7 @@ function friendRequestsProcedure(message)
 		var table3 = "</table> <BR> <BR>";	
 		var table2 = "";
 		
-		// file the table with the hashtag info received
+		// file the table with the friend info received
 		for(var x = 0; x < message.length; x++ )
 		{
 			table2 = table2 + "<tr><td width=50%>" + message[x].sender + "</td><td width=25%><button type='button' onclick=\"acceptFriend( '"; 
@@ -233,31 +231,55 @@ function warningProcedure(message)
 
 function chartProcedure(message){
 
-chartData = message;
-var chart = new AmCharts.AmSerialChart();
-chart.dataProvider = chartData;
-chart.categoryField = "time";
-
-
-var chartScrollbar = new AmCharts.ChartScrollbar();
-chart.addChartScrollbar(chartScrollbar);
-
-var graph = new AmCharts.AmGraph();
-graph.valueField = "price"; //This changed to a tags stock value at each time
-graph.type = "line";
-
-chart.addGraph(graph);
-
-var categoryAxis = chart.categoryAxis;
-categoryAxis.autoGridCount  = true;
-categoryAxis.gridPosition = "start";
-categoryAxis.labelRotation = 90;
-
-graph.type = "line";
-graph.lineColor = "#003300";
-graph.fillAlphas = 0; // or delete this line, as 0 is default
-//graph.bullet = "round";
-//graph.lineColor = "#8d1cc6"
-
-chart.write('chartdiv');
+	chartData = message;
+	var chart = new AmCharts.AmSerialChart();
+	chart.dataProvider = chartData;
+	chart.categoryField = "time";
+	
+	
+	var chartScrollbar = new AmCharts.ChartScrollbar();
+	chart.addChartScrollbar(chartScrollbar);
+	
+	var graph = new AmCharts.AmGraph();
+	graph.valueField = "price"; //This changed to a tags stock value at each time
+	graph.type = "line";
+	
+	chart.addGraph(graph);
+	
+	var categoryAxis = chart.categoryAxis;
+	categoryAxis.autoGridCount  = true;
+	categoryAxis.gridPosition = "start";
+	categoryAxis.labelRotation = 90;
+	
+	graph.type = "line";
+	graph.lineColor = "#003300";
+	graph.fillAlphas = 0; // or delete this line, as 0 is default
+	//graph.bullet = "round";
+	//graph.lineColor = "#8d1cc6"
+	
+	chart.write('chartdiv');
 }
+
+function challengesProcedure(message) {				// ChallengeTODO this is where the toolbar will actually be createds
+	//create the normal one
+	var table1 = "<table id=\"challenge_toolbar_table\">";
+	var table3 = "</table>";
+	var table2 = "<tr><td> <b>Overall Purse</b> <br>Available: " + message[0].AvailablePoints + "<br>Total: " + message[0].TotalValue + "<br> Time Remaining </td></tr>";
+	//for loop to create boxes for challenges - have limit??
+	
+	for (var x = 1; x < message.length; x++)
+	{
+		table2 = table2 + "<tr><td> <b>Challenge " + message[x].id + "</b> <br>Available: " + message[x].AvailablePoints + "<br>Total: " + message[x].TotalValue + "<br> Time Remaining </td></tr>";
+	}
+	
+	var finaltable = table1 + table2 + table3;
+	document.getElementById("challenge_toolbar").innerHTML=finaltable;
+	//highlight the one that is current??
+	
+}
+
+
+
+
+
+

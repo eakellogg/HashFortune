@@ -1,4 +1,5 @@
-//Hash Server
+// Hash Server
+// This file sets up the server
 
 
 //If you want to run your own server 10002 is the port, 

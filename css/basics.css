@@ -1,17 +1,19 @@
-body
-{
-   background-color:#CCF5CC; //C9FBC9;
-   margin: 0px;
+body {
+	background-color:#CCF5CC; //C9FBC9;
+	margin: 0px;
 }
+
+
+
 
 /* when you move your mouse over anything with class="pointable", your cursor will turn into a pointer */
 .pointable 
 {
-   cursor:pointer;
+   //cursor:pointer;
 }
 a
 {
-	cursor:pointer;
+	//cursor:pointer;
 }
 img.pointable:hover
 {
@@ -21,7 +23,7 @@ h1
 {
     color:rgb(235, 235, 235);
     font-size: 30pt; 
-    font-weight: 100;
+    font-weight: 400;
     /*color:black;
     font-size: 40pt; */
     padding:8px;
@@ -52,13 +54,13 @@ caption {
     font-family:Times; 
     color:black;
     font-size:30pt;
-    font-weight:150%;
+    font-weight:600;
     //text-shadow:.5px .5px #336600;
 }     
 th {font-family:Times; 
     color:#1A3300; 
     font-size:14pt;
-    font-weight:50%;
+    font-weight:500;
     border-bottom:1px solid #000000;
     border-right:1px solid #000000;
     border-left:1px solid #000000;
@@ -83,6 +85,10 @@ tr {
 #page_title {
 	font-size:100%;
 }
+#main_body {
+    margin-left:200px;
+    padding:2em;
+}
 #challenge_toolbar {
     background-color:#A1C9A1;
     width:175px;
@@ -100,9 +106,8 @@ tr {
     padding: 16px;
     z-index: -1;
 }
-#main_body {
-    margin-left:200px;
-    padding:2em;
+#challenge_toolbar_table {
+	width:auto;
 }
 #symbol {
 	background-color:white;

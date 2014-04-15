@@ -1,3 +1,6 @@
+/* This file contains the functions that allow the client to message the server.
+ * These functions are called from homepage.html
+ */
 
 // send a friend request
 function send_friend_request( user_name , friend )
@@ -6,7 +9,7 @@ function send_friend_request( user_name , friend )
 	message.user_name = user_name;
 	message.friend    = friend;
 	message.drop = false;
-	socket.emit( 'make_friend_request' , message);f
+	socket.emit( 'make_friend_request' , message);
 }
 
 // remove a friend
@@ -85,3 +88,12 @@ function declineFriend( user_name, friend_name ) {
  	message.friend_name = friend_name;
  	socket.emit( 'decline_friend' , message);
 }
+
+//update and fill the challenge toolbar
+function updateChallenges( user_name, current_challenge_ID ) {		//ChallengesTODO make sure this works, call it in the appropriate places 
+	var message = {};
+	message.user_name = user_name;
+	message.purse = current_challenge_ID;
+	socket.emit( 'challenges_request' , message );
+}
+ 

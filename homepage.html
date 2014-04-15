@@ -77,7 +77,7 @@
 	}
 
 	#player_info {
-		display:none; 
+		display:block; 
 	}
 
 	#player_pic {
@@ -135,7 +135,7 @@
 </style>
 
 
-<body>
+<body id="whole">
 
 <h1 id="main_header">
     <script src = "/javascript/homepageFunctions.js"></script>
@@ -178,17 +178,6 @@
 
 <!--division containing the challenge toolbar, which shows which challenge you're playing in  -->
 <div id="challenge_toolbar" >
-<b> Challenge Toolbar </b> <br>
-<p> This will have more cool stuff after we set up challenges! </p>
-<p> For right now, enjoy the power of buying and selling, and try to make it to the top of the leaderboard! </p>
-
-<BR>
-----------------------------
-<p><b> Notice! We have reworked our investment system to run on stocks.  Please check out the 
-tutorial, found in the settings page.</b>
-</p>
-----------------------------
-
 </div>
 
 <!-- division containing the main body of the page, everything not in a toolbar -->
@@ -489,6 +478,11 @@ tutorial, found in the settings page.</b>
 		$(document).ready(function() {
 					
 			user_name = getCookie( "user_name" );
+			var currChallenge = getCookie("challenge_id");
+			if (currChallenge == "")
+			{
+				setCookie("challenge_id" , 0 , 1);
+			}
 			socket = io.connect('http://' + document.location.host);			
 					
 			socket.on( 'welcome' , connectProcedure );
@@ -504,6 +498,7 @@ tutorial, found in the settings page.</b>
             socket.on( 'user_search' , userProcedure );
 			socket.on( 'chart_data' , chartProcedure );
 			socket.on( 'user_search' , userSearchProcedure );
+			socket.on( 'challenges_list' , challengesProcedure );	//ChallengesTODO make sure that this is called in appropriate places (homepage refresh, creating challenges, hourly, etc.)
 		});
 		
 		
