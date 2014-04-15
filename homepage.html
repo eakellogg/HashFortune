@@ -414,7 +414,7 @@
 			<input type="button" value="Buy!" onclick="
 				var username = user_name;
 				var tag_name = current_tag;
-				var challengeID = 0;
+				var challengeID = getCookie("challenge_id");
 				var amount = $('#amount_buy').val();
 				buy_hash(username, tag_name, challengeID, amount);
 				clear_searches();"/>
@@ -422,7 +422,7 @@
 		<form name="sell" >
 			Amount: <input type="text" id="amount_sell" onkeypress="if(event.keyCode==13){var username = user_name;
 				var tag_name = current_tag;
-				var challengeID = 0;
+				var challengeID = getCookie("challenge_id");
 				var amount = $('#amount_buy').val();
 				buy_hash(username, tag_name, challengeID, amount);
 				clear_searches();}"/> <br>
@@ -479,12 +479,12 @@
 					
 			user_name = getCookie( "user_name" );
 			var currChallenge = getCookie("challenge_id");
-			if (currChallenge == "")
+			if (currChallenge == "" || currChallenge == "undefined")
 			{
 				setCookie("challenge_id" , 0 , 1);
 			}
 			socket = io.connect('http://' + document.location.host);			
-					
+			
 			socket.on( 'welcome' , connectProcedure );
 			socket.on( 'tag_page', tagProcedure );
 			socket.on( 'trending_table', trendingProcedure );
