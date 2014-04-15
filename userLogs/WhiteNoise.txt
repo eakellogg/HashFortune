@@ -90,3 +90,55 @@ Asked for tag page  TransformationTuesday at Time Mon Apr 14 2014 21:33:27 GMT-0
 
 Requesting chart for TransformationTuesday at Time Mon Apr 14 2014 21:33:27 GMT-0500 (Central Daylight Time) 
 
+Logged in Tue Apr 15 2014 01:12:32 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for TransformationTuesday at Time Tue Apr 15 2014 01:13:16 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TransformationTuesday at Time Tue Apr 15 2014 01:13:16 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page   at Time Tue Apr 15 2014 01:13:17 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for  at Time Tue Apr 15 2014 01:13:17 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TransformationTuesday at Time Tue Apr 15 2014 01:13:26 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for TransformationTuesday at Time Tue Apr 15 2014 01:13:26 GMT-0500 (Central Daylight Time) 
+
+Bought tag  TransformationTuesday For 30 with ChallengeID 0 at Time Tue Apr 15 2014 01:14:37 GMT-0500 (Central Daylight Time) 
+
+Bought tag  TransformationTuesday For 20 with ChallengeID 0 at Time Tue Apr 15 2014 01:14:43 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TransformationTuesday at Time Tue Apr 15 2014 01:14:43 GMT-0500 (Central Daylight Time) 
+
+Bought tag  TransformationTuesday For 3 with ChallengeID 0 at Time Tue Apr 15 2014 01:14:52 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TransformationTuesday at Time Tue Apr 15 2014 01:14:52 GMT-0500 (Central Daylight Time) 
+
+Sold tag  TransformationTuesday For 23 with ChallengeID 0 at Time Tue Apr 15 2014 01:15:05 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TransformationTuesday at Time Tue Apr 15 2014 01:15:05 GMT-0500 (Central Daylight Time) 
+
+Bought tag  TransformationTuesday For 20 with ChallengeID 0 at Time Tue Apr 15 2014 01:15:11 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TransformationTuesday at Time Tue Apr 15 2014 01:15:11 GMT-0500 (Central Daylight Time) 
+
+Sold tag  TransformationTuesday For 20 with ChallengeID 0 at Time Tue Apr 15 2014 01:15:16 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TransformationTuesday at Time Tue Apr 15 2014 01:15:17 GMT-0500 (Central Daylight Time) 
+
+Sold tag  TransformationTuesday For  with ChallengeID 0 at Time Tue Apr 15 2014 01:15:17 GMT-0500 (Central Daylight Time) 
+
+Bought tag  TransformationTuesday For 23 with ChallengeID 0 at Time Tue Apr 15 2014 01:15:26 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TransformationTuesday at Time Tue Apr 15 2014 01:15:26 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TransformationTuesday at Time Tue Apr 15 2014 01:15:53 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for TransformationTuesday at Time Tue Apr 15 2014 01:15:53 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TransformationTuesday at Time Tue Apr 15 2014 01:16:46 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for TransformationTuesday at Time Tue Apr 15 2014 01:16:46 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Tue Apr 15 2014 01:24:56 GMT-0500 (Central Daylight Time) 
+

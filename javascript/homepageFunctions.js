@@ -61,7 +61,9 @@ function show_homepage() {
     document.getElementById("investments_summary").style.display = "block";
     document.getElementById("leaderboard").style.display = "block";
     document.getElementById("friends").style.display = "block";
-			
+	
+
+	challenge_id = getCookie("challenge_id");	
 	var userObj = {};
 	userObj.user_name = user_name;
 	userObj.challenge_id = challenge_id;
@@ -69,7 +71,6 @@ function show_homepage() {
 	investObj.user_name = user_name;
 	investObj.portfolio_name = user_name;
 	investObj.challenge_id = challenge_id;
-			
 	socket.emit( 'trending_request' , userObj );
 	socket.emit( 'leader_request' , userObj  );
 	socket.emit( 'my_investments_request' , investObj);

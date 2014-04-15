@@ -915,3 +915,43 @@ loging out  at Time Tue Apr 15 2014 00:30:06 GMT-0500 (Central Daylight Time)
 
 Logged in Tue Apr 15 2014 00:33:12 GMT-0500 (Central Daylight Time) 
 
+loging out  at Time Tue Apr 15 2014 00:40:52 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 10:08:49 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 15 2014 10:09:05 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Tue Apr 15 2014 10:09:05 GMT-0500 (Central Daylight Time) 
+
+Bought tag  RT For 1 with ChallengeID  at Time Tue Apr 15 2014 10:09:31 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 15 2014 10:09:31 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 15 2014 10:10:36 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Tue Apr 15 2014 10:10:36 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Tue Apr 15 2014 10:10:47 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for ThrowbackThursday at Time Tue Apr 15 2014 10:10:47 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Tue Apr 15 2014 10:10:56 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Tue Apr 15 2014 10:10:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Tue Apr 15 2014 10:11:07 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Tue Apr 15 2014 10:11:07 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Tue Apr 15 2014 10:26:41 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 13:02:53 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Tue Apr 15 2014 13:11:58 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 13:13:50 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 13:27:40 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 13:41:01 GMT-0500 (Central Daylight Time) 
+
