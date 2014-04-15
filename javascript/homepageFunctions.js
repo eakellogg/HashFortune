@@ -202,5 +202,5 @@ function setupChallenge(name_of_challenge, num_players, time_limit, wager, start
 		start.setHours(parseInt(start_time.substring(0,2)),00,00);
 	}
 
-	socket.emit( 'challenge_setup_request' , { name_of_challenge : name_of_challenge, num_players : num_players, time_limit : time_limit, wager : wager, start_time : start, friends : friends} );
+	socket.emit( 'challenge_setup_request' , { user_name : user_name , name_of_challenge : name_of_challenge, num_players : num_players, time_limit : time_limit, wager : wager, start_time : start, friends : friends} );
 }
