@@ -1403,3 +1403,51 @@ Asked for tag page  tbt at Time Thu Apr 17 2014 03:37:10 GMT-0500 (Central Dayli
 
 Requesting chart for tbt at Time Thu Apr 17 2014 03:37:10 GMT-0500 (Central Daylight Time) 
 
+Asked for tag page  fashion at Time Thu Apr 17 2014 03:53:33 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for fashion at Time Thu Apr 17 2014 03:53:33 GMT-0500 (Central Daylight Time) 
+
+Bought tag  fashion For 1 with ChallengeID 19 at Time Thu Apr 17 2014 03:53:40 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  love at Time Thu Apr 17 2014 03:54:10 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for love at Time Thu Apr 17 2014 03:54:10 GMT-0500 (Central Daylight Time) 
+
+Bought tag  love For 1 with ChallengeID 21 at Time Thu Apr 17 2014 03:54:15 GMT-0500 (Central Daylight Time) 
+
+Bought tag  love For 1 with ChallengeID 21 at Time Thu Apr 17 2014 03:54:24 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  Jackie42 at Time Thu Apr 17 2014 04:00:22 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for Jackie42 at Time Thu Apr 17 2014 04:00:22 GMT-0500 (Central Daylight Time) 
+
+Sold tag  Jackie42 For 1 with ChallengeID 18 at Time Thu Apr 17 2014 04:00:29 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Thu Apr 17 2014 04:04:35 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 17 2014 04:04:57 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 17 2014 08:24:21 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 17 2014 08:26:35 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Thu Apr 17 2014 08:26:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 17 2014 08:27:21 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Thu Apr 17 2014 08:27:21 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 17 2014 11:31:30 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Thu Apr 17 2014 11:31:30 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 17 2014 13:56:38 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Thu Apr 17 2014 13:56:38 GMT-0500 (Central Daylight Time) 
+
+Sold tag  tbt For 77 with ChallengeID 0 at Time Thu Apr 17 2014 13:56:49 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 17 2014 13:56:50 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 17 2014 14:20:20 GMT-0500 (Central Daylight Time) 
+

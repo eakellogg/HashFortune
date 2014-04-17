@@ -294,3 +294,11 @@ Logged in Wed Apr 16 2014 12:58:56 GMT-0500 (Central Daylight Time)
 
 loging out  at Time Wed Apr 16 2014 13:00:26 GMT-0500 (Central Daylight Time) 
 
+Logged in Thu Apr 17 2014 12:37:47 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 17 2014 12:37:59 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 17 2014 12:41:33 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Thu Apr 17 2014 12:41:33 GMT-0500 (Central Daylight Time) 
+

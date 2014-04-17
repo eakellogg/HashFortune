@@ -285,7 +285,6 @@ function userSearchProcedure(message)
 }
 
 // present the user with a warning
-
 function warningProcedure(message)
 {
 	alert(message.content);
@@ -337,10 +336,14 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 	
 	for (var x = 0; x < limit; x++)
 	{
-		if( message[x].status == 1 || message[x].status == 2 )
+		if( message[x].status == 1 || message[x].status == 2 )		//take 1 out - means hasn't start
 		{
 			table2 = table2 + "<tr class = \"pointable_toolbar\" id = challenge" + message[x].id + " onclick = \" change_current_challenge(" + message[x].id + "); \">";
-			table2 = table2 +"<td> <b>" + message[x].name + "</b> <br>Available: " + message[x].AvailablePoints + "<br>Total: " + message[x].TotalValue + "<br>Ends: " + message[x].endTime + "</td></tr>";
+			table2 = table2 + "<td> <b>" + message[x].name + "</b> <br>Available: " + message[x].AvailablePoints + "<br>Total: " + message[x].TotalValue + "<br>";
+			if (message[x].status == 1)
+				table2 += "Starts: " + message[x].startTime;
+			else
+				table2 = table2 + "<div id=\"" + message[x].endTime + "\" name=\"countdown\"/></td></tr>";
 		}
 		
 	}
@@ -358,7 +361,6 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 			"<th>Challenge Name</th>" +
 			"<th>Players</th>" +
     	   "	<th>Initial Investment</th>" +
-    	   "	<th>Time</th> "+
 		   "    <th>Status</th>"+
     	   " </tr> ";
 
@@ -369,19 +371,69 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 			else
 				table = table + "<tr>"
 			table += "<td>" + message[i].name + " </td><td> " + message[i].playerCount + 
-			"</td><td> " + message[i].wager + " </td><td> " + message[i].endTime + " </td><td> ";
+			"</td><td> " + message[i].wager + " </td><td> ";
 			if(message[i].status == 0)
 			{
 				table += "<button type='button' onclick='acceptChallenge( \"" + user_name + "\" , \"" + message[i].id + "\", \"1\");'>Accept</ button>";
 				table += "<button type='button' onclick='acceptChallenge( \"" + user_name + "\" , \"" + message[i].id + "\", \"0\");'>Decline</ button>";
 			}
 			else if (message[i].status == 1)
-				table += "Pending";
+				table += "Starts: " + message[i].startTime;
 			else
-				table += "Count Down Timer";
+				table += "<div id=\"" + message[i].endTime + "\" name=\"countdown\"/>";
 			table += " </td></tr>";
 		}
 		table+= "</table>"
 		
 		document.getElementById("challenge_home").innerHTML=table;
+	
+	var counters = document.getElementsByName("countdown");
+	for (i = 0; i < counters.length; i++)
+	{
+		createCountdown(counters[i].id);
+		alert(counters[i].id);
+	}
+	
+}
+
+function createCountdown(id)
+{
+	var countdown = document.getElementById(id);
+	var end = id;
+	var target = new Date();
+	target.setFullYear(parseInt(end.substring(0,4)));
+	target.setMonth(parseInt(end.substring(5,7)) - 1);		//the -1 is needed... not sure why...
+	target.setDate(parseInt(end.substring(8,10)));
+	target.setHours(parseInt(end.substring(11,13)));
+	target.setMinutes(parseInt(end.substring(14,16)));
+	target.setSeconds(parseInt(end.substring(17,19)));
+	var end_time = target.getTime();
+	
+	var days, hours, minutes, seconds;
+	
+	setInterval(function() {
+	
+		var now = new Date();
+		var curr_time = now.getTime();
+		var seconds_left = (end_time - curr_time) / 1000;
+		
+		if (seconds_left > 0)
+		{
+			days = parseInt(seconds_left / 86400);
+			seconds_left = seconds_left % 86400;
+			
+			hours = parseInt(seconds_left / 3600);
+			seconds_left = seconds_left % 3600;
+			
+			minutes = parseInt(seconds_left / 60);
+			seconds = parseInt(seconds_left % 60);
+			countdown.innerHTML = hours + ":" + minutes + ":" + seconds + " remaining";
+		}
+		else
+		{
+			countdown.innerHTML = "Challenge isn't going";
+			//return;
+		}
+	}, 1000);
+	
 }

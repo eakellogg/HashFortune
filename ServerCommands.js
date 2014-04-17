@@ -907,8 +907,8 @@ function serveMakeFriend( message )
 function serveChallenges( message )			
 {
 	var username = message.user_name;
-	connection.query("SELECT endTime , Challenges.id AS id , playerCount , name , wager , AvailablePoints , TotalValue, status   FROM (Challenges INNER JOIN( SELECT * FROM ChallengePurses WHERE username = ? )AS     ChallengePurses ON Challenges.id = ChallengePurses.id   )" +
-	"UNION SELECT 1 AS status ,0 AS endTime , 1 AS playerCount , 'Main Account' AS name , 0 AS wager , AvailablePoints , TotalValue , 0 AS id  FROM users  WHERE username = ?" , [username , username] ,  		
+	connection.query("SELECT startTime, endTime , Challenges.id AS id , playerCount , name , wager , AvailablePoints , TotalValue, status   FROM (Challenges INNER JOIN( SELECT * FROM ChallengePurses WHERE username = ? )AS     ChallengePurses ON Challenges.id = ChallengePurses.id   )" +
+	"UNION SELECT 1 AS status , 0 as startTime, 0 AS endTime , 1 AS playerCount , 'Main Account' AS name , 0 AS wager , AvailablePoints , TotalValue , 0 AS id  FROM users  WHERE username = ?" , [username , username] ,  		
 	function ( err , challenges )		
 	{
 		if( err )
@@ -975,7 +975,7 @@ function serveChallengeSetup( message )
 	
 	console.log(inlist);
 	connection.query( "INSERT INTO Challenges ( startTime, endTime, playerCount, name, wager ) VALUES (?, ?, ?, ?, ?)" , 
-	[message.startTime,  , num_player, name, wager],
+	[startTime, endTime , num_player, name, wager],
 	function (err , blank )
 		{
 			if( err)
