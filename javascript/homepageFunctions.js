@@ -26,9 +26,12 @@ function clear_searches() {
 //<!-- hide all divisions (results in a blank page) -->
 function hide_all() {
     document.getElementById("trending").style.display = "none";
+	document.getElementById("top_tags").style.display = "none";
+	document.getElementById("left").style.cssFloat = "";
     document.getElementById("investments_summary").style.display = "none";
     document.getElementById("leaderboard").style.display = "none";
     document.getElementById("friends").style.display = "none";
+	document.getElementById("right").style.cssFloat = "";
     document.getElementById("friend_requests").style.display = "none";
 	document.getElementById("friend_button").style.display = "none";
     document.getElementById("challenge_home").style.display = "none";
@@ -57,10 +60,13 @@ function hide_all() {
 function show_homepage() {
 			
     document.getElementById("trending").style.display = "block";
+	document.getElementById("top_tags").style.display = "block";
+	//document.getElementById("left").style.cssFloat = "left";
     document.getElementById("player_info").style.display = "block";
     document.getElementById("investments_summary").style.display = "block";
     document.getElementById("leaderboard").style.display = "block";
     document.getElementById("friends").style.display = "block";
+	//document.getElementById("right").style.cssFloat = "right";
 	
 
 	challenge_id = getCookie("challenge_id");	
@@ -72,10 +78,12 @@ function show_homepage() {
 	investObj.portfolio_name = user_name;
 	investObj.challenge_id = challenge_id;
 	socket.emit( 'trending_request' , userObj );
+	socket.emit( 'top_tags_request' , userObj );
+	console.log("inside homepageFunctions");
 	socket.emit( 'leader_request' , userObj  );
 	socket.emit( 'my_investments_request' , investObj);
 	socket.emit( 'friend_table_request' , investObj);
-	socket.emit( 'player_info_request' , inestObj);
+	socket.emit( 'player_info_request' , investObj);
 	
 }
  
@@ -86,13 +94,15 @@ function show_investments(user_name , challenge_id) {
 	document.getElementById("player_info").style.display = "block";
 	document.getElementById("investments_summary").style.display = "block";
 	document.getElementById("trending").style.display = "block";
+	document.getElementById("top_tags").style.display = "block";
 	document.getElementById("hashtag_search").style.display = "block"; 
 	
 	var investObj = {};
 	investObj.user_name = user_name;
     investObj.portfolio_name = user_name;
-    investObj.challenge_id = challenge_id;
-			
+ 
+	var challenge_id = getCookie("challenge_id");
+	investObj.challenge_id = l;
     socket.emit( 'my_investments_request' , investObj);
 	socket.emit( 'player_info_request' , investObj);
 }
@@ -112,10 +122,11 @@ function show_portfolio(portfolio_name , challenge_id) {
     investObj.user_name = user_name;
     investObj.portfolio_name = portfolio_name;
     investObj.challenge_id = challenge_id;
-
+	if( user_name != portfolio_name )
+		investObj.challenge_id = 0;
     socket.emit( 'my_investments_request' , investObj);
 	socket.emit( 'player_info_request' , investObj);
-	socket.emit( 'friend_table_request' , { user_name : user_name } );
+	socket.emit( 'friend_table_request' , investObj);
 	socket.emit( 'friend_button_request', investObj);
 }
 
@@ -150,7 +161,6 @@ function show_hashtag_page() {
 	document.getElementById("hashtag_investments").style.display = "block";
 	document.getElementById("hashtag_stats").style.display = "block";
 	document.getElementById("chartdiv").style.display = "block";
-	//document.getElementById("hashtag_graph").style.display = "block";
 	document.getElementById("buy_sell_tags").style.display = "block";
 	document.getElementById("hashtag_search").style.display = "block";
 
@@ -170,9 +180,11 @@ function hide_menu(hashtag_name) {
 
 //<!-- changes the cookie and highlights the challenge in the toolbar -->
 function change_current_challenge(id) {
+	
 	var curr_chal = "challenge" + id;
-	if (getCookie("challenge_id") != id) 
+	if ( ( getCookie("challenge_id") != id) ) 
 	{
+		
 		var c = document.getElementsByClassName("pointable_toolbar");
 		for (var i = 0; i < c.length; i++ )
 		{
@@ -180,8 +192,46 @@ function change_current_challenge(id) {
 		}
 		document.getElementById(curr_chal).style.backgroundColor="#FFFF66"; 
 		setCookie("challenge_id", id , 1);
+		var new_id = getCookie("challenge_id" );
+		challenge_id = new_id;
+		
+		//if portfolio name != username then you are on someone elses portfolio, and you shouldn't show your own info
+		var portfolio_name = document.getElementById('PICKME').innerHTML;
+		//console.log();
+		var message ={};
+		message.user_name = user_name;
+		message.portfolio_name = portfolio_name;
+		message.challenge_id = challenge_id;
+		socket.emit( 'my_investments_request' , message );
+		socket.emit( 'player_info_request' , message );
 	}
 	
+	//challengeTODO should reload the page here, which may be interesting
+	//for right now, it's just not going to reload the pages if on someone else's portfolio
+	
+}
+
+function force_change_current_challenge(id) {
+	var curr_chal = "challenge" + id;
+		
+	var c = document.getElementsByClassName("pointable_toolbar");
+	for (var i = 0; i < c.length; i++ )
+	{
+		c[i].style.background = "#EFFEEF";
+	}
+	
+	setCookie("challenge_id", id , 1);
+	var new_id = getCookie("challenge_id" );
+		
+	challenge_id = new_id;
+	var message ={};
+	message.user_name = user_name;
+	message.portfolio_name = user_name;
+	message.challenge_id = challenge_id;
+	socket.emit( 'my_investments_request' , message );
+	socket.emit( 'player_info_request' , message );
+	
+	//document.getElementById(curr_chal).style.backgroundColor="#FFFF66"; 
 	//challengeTODO should reload the page here, which may be interesting
 	
 }

@@ -90,7 +90,7 @@ function declineFriend( user_name, friend_name ) {
 }
 
 //update and fill the challenge toolbar
-function updateChallenges( user_name, current_challenge_ID ) {		//ChallengesTODO make sure this works, call it in the appropriate places 
+function updateChallenges( user_name, current_challenge_ID ) {		//ChallengesTODO I'm not sure if this is ever actually used... make sure this works, call it in the appropriate places 
 	var message = {};
 	message.user_name = user_name;
 	message.purse = current_challenge_ID;
@@ -103,6 +103,6 @@ function acceptChallenge( user_name, challenge_ID, accept_challenge ) {
 	message.user_name = user_name;
 	message.challenge_id = challenge_ID;
 	message.accept = accept_challenge;
-	alert('Accepting');
 	socket.emit( 'accept_challenge' , message );
+	socket.emit( 'challenges_request', message );
 }

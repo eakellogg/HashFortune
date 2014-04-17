@@ -2,7 +2,7 @@
  * Most of the functions create divs in the html, dynamically filling them with information.
  */
 
-
+//<script src = "/homepageFunction.js"></script>
 function connectProcedure(message) //TODO //ChallengeTODO add something that checks which purse you're in and sets that cookie
 {
 		var userName = getCookie( "user_name" );
@@ -11,16 +11,18 @@ function connectProcedure(message) //TODO //ChallengeTODO add something that che
 	{
 		var passWord = getCookie( "pass_word");
 		var currentChallenge = getCookie ( "challenge_id" );
+		force_change_current_challenge( currentChallenge );
 		socket.emit( "re_establish" , { user_name : userName , pass_word : passWord	, challenge_id : currentChallenge} );
 		
 	var userObj = { user_name : userName , pass_word : passWord	};
 	
 		if ( firstTime )
 		{
-			socket.emit( 'my_investments_request'        , { user_name : user_name, portfolio_name : user_name });
+			socket.emit( 'my_investments_request'        , { user_name : user_name, portfolio_name : user_name, challenge_id : currentChallenge});
 			socket.emit( 'trending_request'        , { user_name : user_name });
+			socket.emit( 'top_tags_request' 		, {user_name : user_name});
 			socket.emit( 'leader_request' ,          { user_name : user_name });
-			socket.emit( 'player_info_request' , {user_name : user_name });
+			socket.emit( 'player_info_request' , {user_name : user_name, challenge_id : currentChallenge });
 			socket.emit( 'friend_table_request' , { user_name : user_name, portfolio_name : user_name });
 			socket.emit( 'challenges_request' , {user_name : user_name}); 
 			firstTime = false;
@@ -74,7 +76,11 @@ function trendingProcedure(message)
 	// file the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
-		table2 = table2 + "<tr><td width=50% onMouseOver=\"show_menu('" + message[x].name + "T')\" onMouseOut=\"hide_menu('" + message[x].name + "T')\" >";
+		if (x%2 == 1)
+			table2 = table2 + "<tr class=\"alt\">"
+		else
+			table2 = table2 + "<tr>"
+		table2 = table2 + "<td width=50% onMouseOver=\"show_menu('" + message[x].name + "T')\" onMouseOut=\"hide_menu('" + message[x].name + "T')\" >";
 		table2 = table2 + "<a onclick=\" rename_page( 'Hashtag Investment' ); current_tag = '" + message[x].name + "'; document.getElementById('hashtag_name').innerHTML='#' + '" + message[x].name + "'; switch_to_tag('" + user_name + "', '" + message[x].name + "', 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : '" + message[x].name + "', user_name : '" + user_name + "' } ); show_hashtag_page(); \">";
 		table2 = table2 + "#" + message[x].name + "</a> <a style=\"display:none; color:black\" id=\"" + message[x].name + "T\" href=\"https://twitter.com/search?q=%23" + message[x].name + "\" target=\"_blank\">Twitter Search</a> </td><td>" + message[x].price + "</td></tr>";
 
@@ -84,11 +90,35 @@ function trendingProcedure(message)
 	document.getElementById("trending").innerHTML=finaltable;
 }
 
+// update the top hashtags table
+function topTagsProcedure(message)
+{
+    var table1 = "<table width=75%; class='center';> <caption>Top Hashtags</caption> <tr><th>Hashtag Name</th><th>Stock Price</th><tr>";
+	var table3 = "</table> <BR> <BR>";	
+	var table2 = "";
+	//console.log("top procedure");
+	// fill the table with the hashtag info received
+	for(var x = 0; x < message.length; x++ )
+	{
+		if (x%2 == 1)
+			table2 = table2 + "<tr class=\"alt\">"
+		else
+			table2 = table2 + "<tr>"
+		table2 = table2 + "<td width=50% onMouseOver=\"show_menu('" + message[x].name + "T')\" onMouseOut=\"hide_menu('" + message[x].name + "T')\" >";
+		table2 = table2 + "<a onclick=\" rename_page( 'Hashtag Investment' ); current_tag = '" + message[x].name + "'; document.getElementById('hashtag_name').innerHTML='#' + '" + message[x].name + "'; switch_to_tag('" + user_name + "', '" + message[x].name + "', 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : '" + message[x].name + "', user_name : '" + user_name + "' } ); show_hashtag_page(); \">";
+		table2 = table2 + "#" + message[x].name + "</a> <a style=\"display:none; color:black\" id=\"" + message[x].name + "T\" href=\"https://twitter.com/search?q=%23" + message[x].name + "\" target=\"_blank\">Twitter Search</a> </td><td>" + message[x].price + "</td></tr>";
+
+	}
+
+	var finaltable = table1 + table2 + table3;
+	document.getElementById("top_tags").innerHTML=finaltable;
+}
+
 function myInvestmentsProcedure(message) //Changed to have three columns , tagname , #stocks , total value
 {
 	if (message.length > 0)
 	{
-		var table1 = "<table width=75%; class='center';> <caption>Investments</caption> <tr><th>Hashtag Name</th><th># Stocks</th><th>Total Value</th></tr>";
+		var table1 = "<table width=75%; class='center';> <caption>Investments</caption> <tr><th>Hashtag Name</th><th># of Stocks</th><th>Total Value</th></tr>";
 		var table3 = "</table> <BR> <BR>";	
 		var table2 = "";
 		
@@ -99,12 +129,24 @@ function myInvestmentsProcedure(message) //Changed to have three columns , tagna
 			{
 				message.price = 0;
 			}
-			table2 = table2 + "<tr><td width=50% onMouseOver=\"show_menu('" + message[x].tagname + "I')\" onMouseOut=\"hide_menu('" + message[x].tagname + "I')\" >";
+			if (x%2 == 1)
+				table2 = table2 + "<tr class=\"alt\">"
+			else
+				table2 = table2 + "<tr>"
+			table2 = table2 + "<td width=50% onMouseOver=\"show_menu('" + message[x].tagname + "I')\" onMouseOut=\"hide_menu('" + message[x].tagname + "I')\" >";
 			table2 = table2 + "<a onclick=\" rename_page( 'Hashtag Investment' ); current_tag = '" + message[x].tagname + "'; document.getElementById('hashtag_name').innerHTML='#' + '" + message[x].tagname + "'; switch_to_tag('" + user_name + "', '" + message[x].tagname + "', 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : '" + message[x].tagname + "', user_name : '" + user_name + "' } ); show_hashtag_page(); \">";
 			table2 = table2 + "#" + message[x].tagname + "</a> <a style=\"display:none; color:black\"  id=\"" + message[x].tagname + "I\" href=\"https://twitter.com/search?q=%23" + message[x].tagname + "\" target=\"_blank\">Twitter Search</a> </td><td>" + message[x].shares + "</td><td>" + message[x].shares * message[x].price + "</td></tr>";
 		}
-
 		var finaltable = table1 + table2 + table3;
+		document.getElementById("investments_summary").innerHTML=finaltable;
+	}
+	else
+	{
+		//var table1 = "<table width=75%; class='center';> <caption>Investments</caption> <tr><th>Hashtag Name</th><th># Stocks</th><th>Total Value</th></tr>";
+		//var table3 = "</table> <BR> <BR>";	
+		//var table2 = "";
+		//var finaltable = table1 + table2 + table3;
+		var finaltable = "<table width=75%; class='center';> <caption>Investments</caption> <tr><th>No current investments.</th></tr></table><BR><BR>";
 		document.getElementById("investments_summary").innerHTML=finaltable;
 	}
 }
@@ -119,7 +161,11 @@ function leaderProcedure(message)
 	// file the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
-		table2 = table2 + "<tr><td width=50%><a onclick=\"rename_page('Portfolio'); hide_all(); show_portfolio('" + message[x].username + "');\"> " + message[x].username + " </ a></td><td>" + message[x].TotalValue + "</td></tr>";
+		if (x%2 == 1)
+			table2 = table2 + "<tr class=\"alt\">"
+		else
+			table2 = table2 + "<tr>"
+		table2 = table2 + "<td width=50%><a onclick=\"rename_page('Portfolio'); hide_all(); show_portfolio('" + message[x].username + "');\"> " + message[x].username + " </ a></td><td>" + message[x].TotalValue + "</td></tr>";
 	}
 
 	var finaltable = table1 + table2 + table3;
@@ -127,21 +173,29 @@ function leaderProcedure(message)
 }
 function playerInfoProcedure(message) //TODO might need change here
 {
-	var table1 = "<table width=75%; class='center';> <caption>" + message.username + "</caption>";
-	var table3 = "</table> <BR> <BR>";	
-	var table2 = "";
-	
-	var uninvested = message.AvailablePoints;
-	var total      = message.TotalValue;
-	var invested = total - uninvested;
-		
-		table2 = table2 + "<tr><td width=50%>Uninvested Points </td><td>" +     uninvested + "</td></tr>";
-		table2 = table2 + "<tr><td width=50%>Value of owned stocks </td><td>" + invested + "</td></tr>";
-		table2 = table2 + "<tr><td width=50%>Net Worth </td><td>" + total + "</td></tr>";
-	
+	if (true)
+	{
+		var table1 = "<table width=75%; class='center';> <caption id=\"PICKME\">" + message[0].username + "</caption>";
+		var table3 = "</table> <BR> <BR>";	
+		var table2 = "";
+		console.log(message[0].username);
+		var uninvested = message[0].AvailablePoints;
+		var total      = message[0].TotalValue;
+		var invested   = total - uninvested;
 
-	var finaltable = table1 + table2 + table3;
-	document.getElementById("player_info").innerHTML=finaltable;
+			table2 = table2 + "<tr><td width=50%>Uninvested Points </td><td>" + uninvested + "</td></tr>";
+			table2 = table2 + "<tr class=\"alt\"><td width=50%>Value of owned stocks </td><td>" + invested + "</td></tr>";
+			table2 = table2 + "<tr><td width=50%>Net Worth </td><td>" + total + "</td></tr>";
+
+
+		var finaltable = table1 + table2 + table3;
+		document.getElementById("player_info").innerHTML=finaltable;
+		
+	}
+	else
+	{
+		alert("that user is not in the current challenge");
+	}
 }
 
 function userProcedure(message) 
@@ -171,7 +225,11 @@ function friendsProcedure(message) //No change needed here
 	// file the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
 	{
-		table2 = table2 + "<tr><td width=50%><a onclick=\"rename_page('Portfolio'); hide_all(); show_portfolio('" + message[x].Friend + "');\"> " + message[x].Friend + " </ a></td><td>" + message[x].TotalValue + "</td></tr>";
+		if (x%2 == 1)
+			table2 = table2 + "<tr class=\"alt\">"
+		else
+			table2 = table2 + "<tr>"
+		table2 = table2 + "<td width=50%><a onclick=\"rename_page('Portfolio'); hide_all(); show_portfolio('" + message[x].Friend + "');\"> " + message[x].Friend + " </ a></td><td>" + message[x].TotalValue + "</td></tr>";
 	}
 
 	var finaltable = table1 + table2 + table3;
@@ -190,7 +248,11 @@ function friendRequestsProcedure(message)
 		// file the table with the friend info received
 		for(var x = 0; x < message.length; x++ )
 		{
-			table2 = table2 + "<tr><td width=50%>" + message[x].sender + "</td><td width=25%><button type='button' onclick=\"acceptFriend( '"; 
+			if (x%2 == 1)
+			table2 = table2 + "<tr class=\"alt\">"
+		else
+			table2 = table2 + "<tr>"
+			table2 = table2 + "<td width=50%>" + message[x].sender + "</td><td width=25%><button type='button' onclick=\"acceptFriend( '"; 
 			table2 = table2 + message[x].receiver + "' , '" + message[x].sender + "' );\"> Accept </ button></ td><td width=25%>";
 			table2 = table2 + "<button type='button' onclick=\"declineFriend( '" + message[x].receiver + "' , '" + message[x].sender + "' );\"> Decline </ button></ td></tr>";
 		}
@@ -262,7 +324,6 @@ function chartProcedure(message){
 
 function challengesProcedure(message) {			// ChallengeTODO this is where the toolbar will actually be created
 	//create the normal one
-	
 	var table1 = "<table id=\"challenge_toolbar_table\">";
 	var table3 = "</table>";
 	var table2 = "<tr><td class=\"pointable_toolbar\" id = \"challenge0\" onclick = \" change_current_challenge(" + message[message.length-1].id + ");  \">";
@@ -276,31 +337,38 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 	
 	for (var x = 0; x < limit; x++)
 	{
-		
-		table2 = table2 + "<tr class = \"pointable_toolbar\" id = challenge" + message[x].id + " onclick = \" change_current_challenge(" + message[x].id + "); \">";
-		table2 = table2 +"<td> <b>" + message[x].name + "</b> <br>Available: " + message[x].AvailablePoints + "<br>Total: " + message[x].TotalValue + "<br>Ends: " + message[x].endTime + "</td></tr>";
+		if( message[x].status == 1 || message[x].status == 2 )
+		{
+			table2 = table2 + "<tr class = \"pointable_toolbar\" id = challenge" + message[x].id + " onclick = \" change_current_challenge(" + message[x].id + "); \">";
+			table2 = table2 +"<td> <b>" + message[x].name + "</b> <br>Available: " + message[x].AvailablePoints + "<br>Total: " + message[x].TotalValue + "<br>Ends: " + message[x].endTime + "</td></tr>";
+		}
 		
 	}
 	
 	var finaltable = table1 + table2 + table3;
 	document.getElementById("challenge_toolbar").innerHTML=finaltable;
 	
-	//highlight the one that is current??
 	
-	var table = "<table wide = 75%; class='center'; id='centered'> " +
+	
+	var table = "<p><b>Howdy! Challenges are currently under construction and in Beta testing.  " +  
+			"We would appreciate it if you don't try them out until we have them working properly.  Thanks!</b></p>" +
+			"<table wide = 75%; class='center'; id='centered'> " +
             "<caption id ='caption'> Current Challenges</caption> " +
 			"<tr>" +
-			"<th style='font-size:18px;'>Challenge Name</th>" +
-			"<th style='font-size:18px;'>Players</th>" +
-    	   "	<th style='font-size:18px;'>Initial Investment</th>" +
-    	   "	<th style='font-size:18px;'>Time</th> "+
-		   "    <th style='font-size:18px;'>Status</th>"+
+			"<th>Challenge Name</th>" +
+			"<th>Players</th>" +
+    	   "	<th>Initial Investment</th>" +
+    	   "	<th>Time</th> "+
+		   "    <th>Status</th>"+
     	   " </tr> ";
 
 		for( var i =0 ; i < message.length-1; i++ )
 		{
-			
-			table += "<tr> <td>" + message[i].name + " </td><td> " + message[i].playerCount + 
+			if (i%2 == 1)
+				table = table + "<tr class=\"alt\">"
+			else
+				table = table + "<tr>"
+			table += "<td>" + message[i].name + " </td><td> " + message[i].playerCount + 
 			"</td><td> " + message[i].wager + " </td><td> " + message[i].endTime + " </td><td> ";
 			if(message[i].status == 0)
 			{

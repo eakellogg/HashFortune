@@ -955,3 +955,451 @@ Logged in Tue Apr 15 2014 13:27:40 GMT-0500 (Central Daylight Time)
 
 Logged in Tue Apr 15 2014 13:41:01 GMT-0500 (Central Daylight Time) 
 
+Logged in Tue Apr 15 2014 17:20:16 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 17:21:46 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Tue Apr 15 2014 17:21:57 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Tue Apr 15 2014 17:21:57 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 15 2014 17:22:58 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Tue Apr 15 2014 17:22:58 GMT-0500 (Central Daylight Time) 
+
+Logged in Tue Apr 15 2014 21:25:08 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 15 2014 21:25:57 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Tue Apr 15 2014 21:25:57 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Tue Apr 15 2014 23:52:56 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Tue Apr 15 2014 23:52:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 15 2014 23:53:11 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Tue Apr 15 2014 23:53:11 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Tue Apr 15 2014 23:53:36 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Tue Apr 15 2014 23:53:36 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WCW For 80 with ChallengeID 0 at Time Tue Apr 15 2014 23:54:18 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WCW For 20 with ChallengeID 0 at Time Tue Apr 15 2014 23:54:24 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Tue Apr 15 2014 23:54:24 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WCW For 10 with ChallengeID 0 at Time Tue Apr 15 2014 23:54:32 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Tue Apr 15 2014 23:54:32 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WCW For 1 with ChallengeID 0 at Time Tue Apr 15 2014 23:54:37 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Tue Apr 15 2014 23:54:37 GMT-0500 (Central Daylight Time) 
+
+Sold tag  WCW For  with ChallengeID 0 at Time Tue Apr 15 2014 23:56:27 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Tue Apr 15 2014 23:56:50 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Tue Apr 15 2014 23:56:50 GMT-0500 (Central Daylight Time) 
+
+Bought tag  RT For  with ChallengeID 0 at Time Tue Apr 15 2014 23:56:58 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:08:10 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:08:28 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:08:34 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:08:39 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:09:07 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:09:41 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:09:48 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 16 2014 00:09:58 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:10:03 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:10:07 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:10:42 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 00:10:53 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for ThrowbackThursday at Time Wed Apr 16 2014 00:10:53 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 00:11:39 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 00:11:39 GMT-0500 (Central Daylight Time) 
+
+Sold tag  WCW For 40 with ChallengeID 0 at Time Wed Apr 16 2014 00:11:44 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 00:11:44 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:12:51 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:12:56 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:17:04 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 00:17:39 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 00:17:39 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WCW For 40 with ChallengeID  at Time Wed Apr 16 2014 00:17:52 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 00:17:52 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 16 2014 00:18:45 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:18:50 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 16 2014 00:18:57 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:19:22 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:19:28 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:19:47 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Wed Apr 16 2014 00:20:18 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for RT at Time Wed Apr 16 2014 00:20:18 GMT-0500 (Central Daylight Time) 
+
+Sold tag  RT For 2 with ChallengeID 0 at Time Wed Apr 16 2014 00:20:26 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  RT at Time Wed Apr 16 2014 00:20:26 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 00:20:31 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for ThrowbackThursday at Time Wed Apr 16 2014 00:20:31 GMT-0500 (Central Daylight Time) 
+
+Sold tag  ThrowbackThursday For 38 with ChallengeID 0 at Time Wed Apr 16 2014 00:20:42 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 00:20:42 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 16 2014 00:20:48 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Wed Apr 16 2014 00:20:48 GMT-0500 (Central Daylight Time) 
+
+Sold tag  tbt For 15 with ChallengeID 0 at Time Wed Apr 16 2014 00:21:03 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 16 2014 00:21:03 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 00:21:10 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 00:21:10 GMT-0500 (Central Daylight Time) 
+
+Sold tag  WCW For 40 with ChallengeID 0 at Time Wed Apr 16 2014 00:21:20 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 00:21:20 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  LizzyisaPoopyFace at Time Wed Apr 16 2014 00:21:46 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for LizzyisaPoopyFace at Time Wed Apr 16 2014 00:21:46 GMT-0500 (Central Daylight Time) 
+
+Bought tag  LizzyisaPoopyFace For 60 with ChallengeID  at Time Wed Apr 16 2014 00:22:04 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  LizzyisaPoopyFace at Time Wed Apr 16 2014 00:22:04 GMT-0500 (Central Daylight Time) 
+
+Bought tag  LizzyisaPoopyFace For 4 with ChallengeID  at Time Wed Apr 16 2014 00:22:11 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  LizzyisaPoopyFace at Time Wed Apr 16 2014 00:22:11 GMT-0500 (Central Daylight Time) 
+
+Bought tag  LizzyisaPoopyFace For 2 with ChallengeID  at Time Wed Apr 16 2014 00:22:17 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  LizzyisaPoopyFace at Time Wed Apr 16 2014 00:22:17 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  LizzyisaPoopyFace at Time Wed Apr 16 2014 00:22:41 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for LizzyisaPoopyFace at Time Wed Apr 16 2014 00:22:41 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  LizzyisaPoopyFace at Time Wed Apr 16 2014 00:23:41 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for LizzyisaPoopyFace at Time Wed Apr 16 2014 00:23:41 GMT-0500 (Central Daylight Time) 
+
+Sold tag  LizzyisaPoopyFace For 66 with ChallengeID 0 at Time Wed Apr 16 2014 00:23:54 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  LizzyisaPoopyFace at Time Wed Apr 16 2014 00:23:54 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:24:07 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 16 2014 00:24:13 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:28:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 00:29:59 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 00:29:59 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WCW For 40 with ChallengeID 19 at Time Wed Apr 16 2014 00:30:09 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WCW For 20 with ChallengeID 19 at Time Wed Apr 16 2014 00:30:25 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WCW For 1 with ChallengeID 19 at Time Wed Apr 16 2014 00:30:31 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 16 2014 00:30:37 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 16 2014 00:30:37 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 00:31:11 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 00:31:11 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WCW For 1 with ChallengeID 19 at Time Wed Apr 16 2014 00:33:01 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WCW For 1 with ChallengeID 19 at Time Wed Apr 16 2014 00:33:50 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WCW For 30 with ChallengeID 0 at Time Wed Apr 16 2014 00:34:07 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 00:37:01 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 00:37:01 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 16 2014 00:38:23 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:38:27 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 00:38:33 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 00:38:33 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WCW For 30 with ChallengeID 0 at Time Wed Apr 16 2014 00:38:59 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 00:38:59 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 00:39:50 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 00:39:50 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 16 2014 00:41:02 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 00:42:33 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 00:42:49 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 00:42:49 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 01:22:24 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 01:22:24 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 16 2014 01:24:06 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Wed Apr 16 2014 01:24:06 GMT-0500 (Central Daylight Time) 
+
+Bought tag  tbt For 15 with ChallengeID 0 at Time Wed Apr 16 2014 01:24:16 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 16 2014 01:24:16 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 01:24:31 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for ThrowbackThursday at Time Wed Apr 16 2014 01:24:32 GMT-0500 (Central Daylight Time) 
+
+Bought tag  ThrowbackThursday For 40 with ChallengeID 0 at Time Wed Apr 16 2014 01:24:59 GMT-0500 (Central Daylight Time) 
+
+Bought tag  ThrowbackThursday For 1 with ChallengeID 0 at Time Wed Apr 16 2014 01:25:03 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 01:25:03 GMT-0500 (Central Daylight Time) 
+
+Bought tag  ThrowbackThursday For 30 with ChallengeID 0 at Time Wed Apr 16 2014 01:25:08 GMT-0500 (Central Daylight Time) 
+
+Bought tag  ThrowbackThursday For 10 with ChallengeID 0 at Time Wed Apr 16 2014 01:25:14 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 01:25:14 GMT-0500 (Central Daylight Time) 
+
+Bought tag  ThrowbackThursday For 7 with ChallengeID 0 at Time Wed Apr 16 2014 01:25:23 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 01:25:24 GMT-0500 (Central Daylight Time) 
+
+Bought tag  ThrowbackThursday For 7 with ChallengeID 0 at Time Wed Apr 16 2014 01:25:29 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 01:25:29 GMT-0500 (Central Daylight Time) 
+
+Bought tag  ThrowbackThursday For 7 with ChallengeID 0 at Time Wed Apr 16 2014 01:25:34 GMT-0500 (Central Daylight Time) 
+
+Bought tag  ThrowbackThursday For 5 with ChallengeID 0 at Time Wed Apr 16 2014 01:25:39 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 01:25:39 GMT-0500 (Central Daylight Time) 
+
+Bought tag  ThrowbackThursday For 1 with ChallengeID 0 at Time Wed Apr 16 2014 01:25:43 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 01:25:43 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 16 2014 01:27:40 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 01:30:05 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 16 2014 01:35:27 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Wed Apr 16 2014 01:35:27 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 01:35:42 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 01:35:42 GMT-0500 (Central Daylight Time) 
+
+Sold tag  WCW For  with ChallengeID 0 at Time Wed Apr 16 2014 01:35:54 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 16 2014 01:42:52 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Wed Apr 16 2014 01:42:52 GMT-0500 (Central Daylight Time) 
+
+Bought tag  tbt For  with ChallengeID 0 at Time Wed Apr 16 2014 01:42:57 GMT-0500 (Central Daylight Time) 
+
+Sold tag  tbt For  with ChallengeID 0 at Time Wed Apr 16 2014 01:43:02 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 12:28:16 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 12:28:16 GMT-0500 (Central Daylight Time) 
+
+Sold tag  WCW For  with ChallengeID 0 at Time Wed Apr 16 2014 12:29:19 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 12:41:10 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 12:41:10 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 15:21:20 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 15:26:34 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 15:26:34 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  Push5SOS at Time Wed Apr 16 2014 15:53:14 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for Push5SOS at Time Wed Apr 16 2014 15:53:14 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 15:54:33 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 16:00:47 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 16:01:09 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 16:01:09 GMT-0500 (Central Daylight Time) 
+
+Sold tag  WCW For 33 with ChallengeID  at Time Wed Apr 16 2014 16:01:23 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 16:01:23 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WCW at Time Wed Apr 16 2014 16:03:58 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WCW at Time Wed Apr 16 2014 16:03:58 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 16 2014 16:04:34 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Wed Apr 16 2014 16:04:34 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 16:04:48 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for ThrowbackThursday at Time Wed Apr 16 2014 16:04:48 GMT-0500 (Central Daylight Time) 
+
+Bought tag  ThrowbackThursday For 15 with ChallengeID  at Time Wed Apr 16 2014 16:05:05 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 16:05:05 GMT-0500 (Central Daylight Time) 
+
+Bought tag  ThrowbackThursday For 20 with ChallengeID  at Time Wed Apr 16 2014 16:05:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 16:05:09 GMT-0500 (Central Daylight Time) 
+
+Bought tag  ThrowbackThursday For 20 with ChallengeID  at Time Wed Apr 16 2014 16:05:19 GMT-0500 (Central Daylight Time) 
+
+Bought tag  ThrowbackThursday For 10 with ChallengeID  at Time Wed Apr 16 2014 16:05:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 16:05:35 GMT-0500 (Central Daylight Time) 
+
+Bought tag  ThrowbackThursday For 3 with ChallengeID  at Time Wed Apr 16 2014 16:05:41 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 16:05:41 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 16 2014 16:06:01 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Wed Apr 16 2014 16:06:01 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 16:06:24 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for ThrowbackThursday at Time Wed Apr 16 2014 16:06:24 GMT-0500 (Central Daylight Time) 
+
+Sold tag  ThrowbackThursday For 79 with ChallengeID  at Time Wed Apr 16 2014 16:06:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  ThrowbackThursday at Time Wed Apr 16 2014 16:06:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 16 2014 16:06:34 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Wed Apr 16 2014 16:06:34 GMT-0500 (Central Daylight Time) 
+
+Bought tag  tbt For 50 with ChallengeID  at Time Wed Apr 16 2014 16:06:41 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 16 2014 16:06:41 GMT-0500 (Central Daylight Time) 
+
+Bought tag  tbt For 13 with ChallengeID  at Time Wed Apr 16 2014 16:06:47 GMT-0500 (Central Daylight Time) 
+
+Bought tag  tbt For 12 with ChallengeID  at Time Wed Apr 16 2014 16:06:51 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 16 2014 16:06:51 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 16 2014 16:24:51 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Wed Apr 16 2014 16:24:51 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 16 2014 16:25:14 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 16 2014 16:25:14 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 16 2014 16:25:32 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 16:26:03 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 20:36:02 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 16 2014 20:42:39 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 20:50:55 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 23:07:45 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  IdolLive at Time Wed Apr 16 2014 23:08:24 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for IdolLive at Time Wed Apr 16 2014 23:08:24 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 16 2014 23:08:38 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Wed Apr 16 2014 23:08:38 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 16 2014 23:09:10 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Wed Apr 16 2014 23:09:10 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Wed Apr 16 2014 23:10:15 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Wed Apr 16 2014 23:10:15 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 16 2014 23:14:09 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 23:26:42 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Wed Apr 16 2014 23:59:36 GMT-0500 (Central Daylight Time) 
+
+Logged in Wed Apr 16 2014 23:59:40 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 17 2014 00:00:06 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 17 2014 00:28:21 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 17 2014 01:10:54 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Thu Apr 17 2014 01:10:54 GMT-0500 (Central Daylight Time) 
+
+Logged in Thu Apr 17 2014 01:55:33 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 17 2014 02:20:18 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Thu Apr 17 2014 02:20:18 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Thu Apr 17 2014 03:37:10 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Thu Apr 17 2014 03:37:10 GMT-0500 (Central Daylight Time) 
+

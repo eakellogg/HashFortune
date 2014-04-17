@@ -63,6 +63,7 @@ function listen( client )
 	client.on('buy_hash' , serverCommands.serveBuyHash );
 	client.on('sell_hash' , serverCommands.serveSellHash );
 	client.on('trending_request' , serverCommands.serveTrending );
+	client.on('top_tags_request' , serverCommands.serveTop );
 	client.on('my_investments_request' , serverCommands.serveMyTrending );
 	client.on('player_info_request' , serverCommands.servePlayerInfo);
 	client.on('friend_table_request' , serverCommands.serveFriends);

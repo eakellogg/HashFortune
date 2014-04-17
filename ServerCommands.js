@@ -3,6 +3,7 @@
  */
 var fs = require('fs');
 var trendingTable;
+var topTable;
 var leaderBoard;
 // create connection to sql database
 var mysql = require('mysql');
@@ -46,6 +47,7 @@ module.exports = {
 	serveBuyHash : serveBuyHash,
     serveSellHash : serveSellHash,
 	serveTrending : serveTrending,
+	serveTop : serveTop,
 	serveFriends : serveFriends,
 	serveFriendRequests : serveFriendRequests,
 	serveFriendButton : serveFriendButton,
@@ -57,6 +59,7 @@ module.exports = {
 	serveLeaderBoard : serveLeaderBoard,
 	setLeaderBoard : setLeaderBoard,
 	setTrendingPage : setTrendingPage,
+	setTopPage : setTopPage,
 	serveSearchUser : serveSearchUser,
 	serveSearchEmail : serveSearchEmail,
 	serveLogout  : serveLogout,
@@ -69,7 +72,8 @@ module.exports = {
 };
 
 setInterval( setLeaderBoard ,  60 * 1000);
-setInterval( setTrendingPage , 60 * 1000 );
+setInterval( setTrendingPage , 60 * 1000);
+setInterval( setTopPage , 60 * 1000);
 
 
 function serveChart( message) 
@@ -92,9 +96,9 @@ function serveChart( message)
 			throw err;
 	});
 }
+
 function serveLogout( message )
 {
-
 	var username = message.user_name;
 	socketHandler.removeClient( username );
 	
@@ -117,6 +121,7 @@ function serveLogout( message )
 			throw err;
 	});
 }
+
 function serveSearchUser(message)
 {
 
@@ -131,25 +136,36 @@ function serveSearchUser(message)
 			socketHandler.messageUser( message.user_name , 'warning' , { content : "That user doesn't exist!" } );
 	}); 
 }
+
 function serveSearchEmail(message)		//TODO
 {
+	connection.query( "SELECT username FROM users WHERE email = ? LIMIT 1" , [message.search_email] ,
+	function( err, rows)
+	{
+		if( err )
+			throw err;
+		if( rows.length == 1 )
+			socketHandler.messageUser( message.user_name , 'user_search' , { portfolio_name : rows[0].username } );
+		else
+			socketHandler.messageUser( message.user_name , 'warning' , { content : "That user doesn't exist!" } );
+	}); 
 }
+
 function setLeaderBoard()
 {
-		connection.query( "SELECT username , TotalValue FROM users ORDER BY TotalValue DESC LIMIT 10" , 
-		function (err , rows )
-		{
-			if( err)
-				throw err;
-			leaderBoard = rows;
-		});
+	connection.query( "SELECT username , TotalValue FROM users ORDER BY TotalValue DESC LIMIT 10" , 
+	function (err , rows )
+	{
+		if( err)
+			throw err;
+		leaderBoard = rows;
+	});
 }
 
 
 function setTrendingPage()
 {
-
-	connection.query( "SELECT tagname AS name , price FROM Market ORDER BY price DESC LIMIT 10" , 
+	connection.query( "SELECT tagname AS name , price FROM Market ORDER BY count DESC LIMIT 10" , 
 	function( err , hashtags )
 	{
 		if(err) {
@@ -159,6 +175,20 @@ function setTrendingPage()
 		trendingTable = hashtags;
 	});
 }
+
+function setTopPage()
+{
+	connection.query( "SELECT tagname AS name , price FROM Market ORDER BY price DESC LIMIT 10" , 
+	function( err , hashtags )
+	{
+		if(err) {
+			throw err;
+		}
+		
+		topTable = hashtags;
+	});
+}
+
 
 function giveHandler( handler )
 {
@@ -175,6 +205,7 @@ function createUser( newUser , connection )
 			throw err;
 		}
 	});
+	
 	var filename = "./userLogs/" + newUser.user_name + ".txt";
 	var output = "Creating user at Time " + new Date() + " \n\n";
 			fs.appendFile( filename , output , function ( err ) 
@@ -184,7 +215,6 @@ function createUser( newUser , connection )
 			});
 }
 
-
 // verify the creation of a new account
 //TODO should more be done to check a new account besides just checking that its unused?
 //should check if email is unused
@@ -193,7 +223,6 @@ function VerifyCreate(message)
 	var user = message.user_name;
 	var pass = message.pass_word;
 	var email = message.user_email;
-	
 	
 	// search the username
 	var clientSocket = this;
@@ -251,7 +280,7 @@ function VerifyLogin(message)
 		// no user found from the search
 		if(user_info.length == 0) {
 			
-			socketHandler.messageAnonymous( clientSocket , 'login_fail' , "User does not exist" );	
+			socketHandler.messageAnonymous( clientSocket , 'login_fail' , "Incorrect username or password" );	
 			socketHandler.removeClient( username );
 		}
 		
@@ -270,7 +299,7 @@ function VerifyLogin(message)
 			}
 			else
 			{
-				socketHandler.messageAnonymous( clientSocket , 'login_fail' , "Password incorrect");
+				socketHandler.messageAnonymous( clientSocket , 'login_fail' , "Password incorrect");		//it won't actually get here. if the password was incorrect, then the query result would be empty
 			}
 		}
 	});
@@ -350,11 +379,11 @@ function serveTagPage(message)
 	
 	var filename = "./userLogs/" + username + ".txt";
 	var output = "Asked for tag page  " + message.tag_name + " at Time " + new Date() + " \n\n";
-			fs.appendFile( filename , output , function ( err ) 
-			{
-				if( err )
-					throw err;
-			});
+	fs.appendFile( filename , output , function ( err ) 
+	{
+		if( err )
+			throw err;
+	});
 }
 
 
@@ -516,106 +545,106 @@ function serveSellHash(message)
 {
 	message.portfolio_name = message.user_name;
 	console.log("HELLO" + message.amount );
-	if( message.amount >= 0)
+	if( message.amount > 0)
 	{
-	// search for the investment for the user in question			//ChallengeTODO what if in challenge? Does it matter?
+		// search for the investment for the user in question			//ChallengeTODO what if in challenge? Does it matter?
 	
-	connection.query( "SELECT `shares` FROM Invests WHERE username = ? AND tagname = ? AND challengeID = ?", [message.user_name, message.tag_name, message.challenge_id], 
-	function (err, investment_info) { 
-		if(err) {
-			throw err;
-		}
-		console.log( message.user_name + " " + message.tag_name + " " + message.challenge_id );
-		// if the investment exists
-		if(investment_info.length > 0) {
-		console.log("DFJDLKFJD");
-			var oldamount = investment_info[0].shares;
-			var newamount = oldamount - message.amount;
+		connection.query( "SELECT `shares` FROM Invests WHERE username = ? AND tagname = ? AND challengeID = ?", [message.user_name, message.tag_name, message.challenge_id], 
+		function (err, investment_info) { 
+			if(err) {
+				throw err;
+			}
+			console.log( message.user_name + " " + message.tag_name + " " + message.challenge_id );
+			// if the investment exists
+			if(investment_info.length > 0) {
+			//console.log("DFJDLKFJD");
+				var oldamount = investment_info[0].shares;
+				var newamount = oldamount - message.amount;
 
-			// if the user has the shares to sell
-			if(newamount >= 0) {
+				// if the user has the shares to sell
+				if(newamount >= 0) {
+					
+					// if shares would be left over
+					if(newamount > 0) {
+						connection.query( "UPDATE `Invests` SET shares = ? WHERE username = ? AND tagname = ? AND challengeID = ?", [newamount, message.user_name, message.tag_name, message.challenge_id],
+						function(err, blank) {
+							if(err) {
+								throw err;
+							}
+						});
+					}
+					
+					// if selling entire investment
+					if(newamount == 0) {
+						connection.query( "DELETE FROM `Invests` WHERE username = ? AND tagname = ? AND challengeID = ?", [message.user_name, message.tag_name, message.challenge_id],
+						function(err, blank) {
+							if(err) {
+								throw err;
+							}
+						});	
+						/*connection.query( "UPDATE `users` SET investCount = (investCount -1 ) WHERE username = ?" , [message.user_name],
+						function( err , rows )
+						{
+							if( err )
+								throw err;
+						});*/
+					}
 				
-				// if shares would be left over
-				if(newamount > 0) {
-					connection.query( "UPDATE `Invests` SET shares = ? WHERE username = ? AND tagname = ? AND challengeID = ?", [newamount, message.user_name, message.tag_name, message.challenge_id],
-					function(err, blank) {
+					connection.query( "SELECT `price`, `shares`, `count` FROM Market WHERE tagname = ?", [message.tag_name],
+					function(err, market) {
 						if(err) {
 							throw err;
+						}
+						var added_value = Math.ceil(market[0].price * message.amount);
+						var shares = parseInt(market[0].shares) - parseInt(message.amount);
+						var value = 10 + 10*(shares) + 10*(market[0].count);
+						
+						// update the user with the post investment point total
+						if(message.challenge_id == 0)
+						{
+							connection.query( "UPDATE `users` SET AvailablePoints = (? + AvailablePoints) WHERE username = ?", [added_value, message.user_name],
+							function(err, blank) {
+								if(err) {
+									throw err;
+								}
+							});
+						
+							connection.query( "UPDATE `Market` SET price = ?, shares = ? WHERE tagname = ?", [value, shares, message.tag_name],
+							function(err, blank) {
+								if(err) {
+									throw err;
+								}
+								serveFormula(message, serveTagPage);
+							});	
+						}
+						else
+						{
+							connection.query( "UPDATE `ChallengePurses` SET AvailablePoints = (? + AvailablePoints) WHERE username = ? AND id = ?", [added_value, message.user_name, message.challenge_id],
+							function(err, blank) {
+								if(err) {
+									throw err;
+								}
+								serveFormulaChallenge(message);
+							});
 						}
 					});
 				}
-				
-				// if selling entire investment
-				if(newamount == 0) {
-					connection.query( "DELETE FROM `Invests` WHERE username = ? AND tagname = ? AND challengeID = ?", [message.user_name, message.tag_name, message.challenge_id],
-					function(err, blank) {
-						if(err) {
-							throw err;
-						}
-					});	
-					/*connection.query( "UPDATE `users` SET investCount = (investCount -1 ) WHERE username = ?" , [message.user_name],
-					function( err , rows )
-					{
-						if( err )
-							throw err;
-					});*/
-				}
-			
-				connection.query( "SELECT `price`, `shares`, `count` FROM Market WHERE tagname = ?", [message.tag_name],
-				function(err, market) {
-					if(err) {
-						throw err;
-					}
-					var added_value = Math.ceil(market[0].price * message.amount);
-					var shares = parseInt(market[0].shares) - parseInt(message.amount);
-					var value = 10 + 10*(shares) + 10*(market[0].count);
-					
-					// update the user with the post investment point total
-					if(message.challenge_id == 0)
-					{
-						connection.query( "UPDATE `users` SET AvailablePoints = (? + AvailablePoints) WHERE username = ?", [added_value, message.user_name],
-						function(err, blank) {
-							if(err) {
-								throw err;
-							}
-						});
-					
-						connection.query( "UPDATE `Market` SET price = ?, shares = ? WHERE tagname = ?", [value, shares, message.tag_name],
-						function(err, blank) {
-							if(err) {
-								throw err;
-							}
-							serveFormula(message, serveTagPage);
-						});	
-					}
-					else
-					{
-						connection.query( "UPDATE `ChallengePurses` SET AvailablePoints = (? + AvailablePoints) WHERE username = ? AND id = ?", [added_value, message.user_name, message.challenge_id],
-						function(err, blank) {
-							if(err) {
-								throw err;
-							}
-							serveFormulaChallenge(message);
-						});
-					}
-				});
-			}
 
-			// if the user does not have the shares to sell
+				// if the user does not have the shares to sell
+				else {
+					var warning = {};
+					warning.content = "You do not have that many stocks to sell!";
+					socketHandler.messageUser(message.user_name, 'warning', warning);
+				}
+			}
+			
+			// user doesn't own that invest - can't sell
 			else {
 				var warning = {};
-				warning.content = "You do not have that many stocks to sell!";
+				warning.content = "You do not currently have stocks to sell!";
 				socketHandler.messageUser(message.user_name, 'warning', warning);
 			}
-		}
-		
-		// user doesn't own that invest - can't sell
-		else {
-			var warning = {};
-			warning.content = "You do not currently have stocks to sell!";
-			socketHandler.messageUser(message.user_name, 'warning', warning);
-		}
-	});
+		});
 	}
 	else
 	{
@@ -631,25 +660,36 @@ function serveSellHash(message)
 	});
 }
 
-
-//Give the requester  the current trending_table
+//Give the requester the current trending_table
 function serveTrending(message) 
 {
 	var username = message.user_name;
 	socketHandler.messageUser( username , 'trending_table' , trendingTable );
 }
 
+//Give the requester the current table of hashtags with the highest stock price
+function serveTop(message)
+{
+	var username = message.user_name;
+	console.log("We made it to the server!!!!!!!!");
+	socketHandler.messageUser( username , 'top_table' , topTable );
+}
 
+// sends a list of the user's current investments
 function serveMyTrending(message) {
+
 	var portfolio_name = message.portfolio_name;
+	//console.log( portfolio_name + " HERE I AM " );
 	var challenge_id = message.challenge_id;
-	connection.query( "SELECT  Invests.tagname , Invests.shares, price FROM (SELECT * FROM Invests WHERE challengeID = ?) AS Invests LEFT JOIN Market on Market.tagname = Invests.tagname WHERE Invests.username = ? " , [challenge_id ,portfolio_name] , 
+	if( challenge_id == undefined )
+		challenge_id = 0;
+	console.log( "id " + challenge_id );
+	connection.query( "SELECT  Invests.tagname , Invests.shares, price FROM (SELECT * FROM Invests) AS Invests LEFT JOIN Market on Market.tagname = Invests.tagname WHERE Invests.challengeID = ? AND Invests.username = ? " , [challenge_id , portfolio_name] , 
 	function (err , investments ){
 		if( err )
 			throw err;
 
 		socketHandler.messageUser( message.user_name,  'my_investments_table' , investments );
-
 	});
 }
 
@@ -666,22 +706,38 @@ function getCurrentTime() {
 
 function servePlayerInfo(message) {
 
-var portfolio_name = message.portfolio_name;
-connection.query( "SELECT username , AvailablePoints , TotalValue FROM users WHERE username = ?" ,
-	[ portfolio_name ] , 
-	function( err , rows ){
-		if( err ) {
-			throw err;
+	var portfolio_name = message.portfolio_name;
+	var challenge_id = message.challenge_id;
+	if (challenge_id == 0)
+	{
+		connection.query( "SELECT username , AvailablePoints , TotalValue FROM users WHERE username = ?" ,
+		[ portfolio_name ] , 
+		function( err , rows ){
+			if( err ) {
+				throw err;
+			}
+			socketHandler.messageUser( message.user_name , 'player_info_table' , rows );
 		}
-
-		socketHandler.messageUser( message.user_name , 'player_info_table' , rows[0] );
+		);
 	}
-);
+	else
+	{
+		connection.query( "SELECT username , AvailablePoints , TotalValue FROM ChallengePurses WHERE username = ? AND id = ?" ,
+		[portfolio_name , challenge_id] ,
+		function( err , rows ){
+			if( err ) {
+				throw err;
+			}
+			socketHandler.messageUser( message.user_name , 'player_info_table' , rows );
+
+		});
+	}
 }
 
 function serveFriends(message) {
 	var username = message.user_name;
-	connection.query( "SELECT sender AS Friend, TotalValue FROM friends inner join users on users.username = friends.sender WHERE accepted = 1 AND receiver = ? UNION ALL SELECT receiver AS Friend, TotalValue FROM friends inner join users on users.username = friends.receiver WHERE accepted = 1 AND sender = ?", [username, username] ,
+	var portfolio_name = message.portfolio_name;
+	connection.query( "SELECT sender AS Friend, TotalValue FROM friends inner join users on users.username = friends.sender WHERE accepted = 1 AND receiver = ? UNION ALL SELECT receiver AS Friend, TotalValue FROM friends inner join users on users.username = friends.receiver WHERE accepted = 1 AND sender = ?", [portfolio_name, portfolio_name] ,
 	function (err , friends )
 	{
 		if(err) {
@@ -851,7 +907,7 @@ function serveMakeFriend( message )
 function serveChallenges( message )			
 {
 	var username = message.user_name;
-	connection.query("SELECT endTime , Challenges.id AS id , playerCount , name , wager , AvailablePoints , TotalValue, status  FROM (Challenges INNER JOIN( SELECT * FROM ChallengePurses WHERE username = ? )AS     ChallengePurses ON Challenges.id = ChallengePurses.id   )" +
+	connection.query("SELECT endTime , Challenges.id AS id , playerCount , name , wager , AvailablePoints , TotalValue, status   FROM (Challenges INNER JOIN( SELECT * FROM ChallengePurses WHERE username = ? )AS     ChallengePurses ON Challenges.id = ChallengePurses.id   )" +
 	"UNION SELECT 1 AS status ,0 AS endTime , 1 AS playerCount , 'Main Account' AS name , 0 AS wager , AvailablePoints , TotalValue , 0 AS id  FROM users  WHERE username = ?" , [username , username] ,  		
 	function ( err , challenges )		
 	{
@@ -886,6 +942,7 @@ function serveAcceptChallenge( message) //ChallengeTODO Message other users?
 	}
 	else
 	{
+		console.log("I tried to delet the challenge " + challengeID + " name of player + " +username  );
 		connection.query( "DELETE FROM ChallengePurses WHERE username = ? AND id = ?" , [username , challengeID ],
 		function (err , rows )
 		{

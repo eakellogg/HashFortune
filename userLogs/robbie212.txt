@@ -86,3 +86,41 @@ Logged in Tue Apr 15 2014 00:14:49 GMT-0500 (Central Daylight Time)
 
 loging out  at Time Tue Apr 15 2014 00:15:35 GMT-0500 (Central Daylight Time) 
 
+Logged in Wed Apr 16 2014 20:50:54 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 16 2014 20:51:48 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 16 2014 20:51:48 GMT-0500 (Central Daylight Time) 
+
+Sold tag  wcw For 2 with ChallengeID  at Time Wed Apr 16 2014 20:52:00 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 16 2014 20:52:00 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  mcm at Time Wed Apr 16 2014 20:52:11 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for mcm at Time Wed Apr 16 2014 20:52:11 GMT-0500 (Central Daylight Time) 
+
+Bought tag  mcm For 2 with ChallengeID  at Time Wed Apr 16 2014 20:52:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  mcm at Time Wed Apr 16 2014 20:52:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  Easter at Time Wed Apr 16 2014 20:53:01 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for Easter at Time Wed Apr 16 2014 20:53:01 GMT-0500 (Central Daylight Time) 
+
+Bought tag  Easter For 5 with ChallengeID  at Time Wed Apr 16 2014 20:53:10 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  Easter at Time Wed Apr 16 2014 20:53:11 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  EasterSunday at Time Wed Apr 16 2014 20:53:48 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for EasterSunday at Time Wed Apr 16 2014 20:53:48 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Wed Apr 16 2014 20:54:45 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for selfie at Time Wed Apr 16 2014 20:54:45 GMT-0500 (Central Daylight Time) 
+
+Bought tag  selfie For 3 with ChallengeID  at Time Wed Apr 16 2014 20:54:57 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Wed Apr 16 2014 20:54:57 GMT-0500 (Central Daylight Time) 
+

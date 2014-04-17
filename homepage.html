@@ -48,6 +48,10 @@
 	#trending {
 		display:block; 
 	}
+	
+	#top_tags {
+		display:block;
+	}
 
 	#investments_summary {
 		display:block; 
@@ -124,19 +128,11 @@
 	#hashtag_stats {
 		display:none;
 	}
-
-	table.center {
-		margin-left:auto;
-		margin-right:auto;
-	}
-
-	
-
 	
 </style>
 
 
-<body id="whole">
+<body>
 
 <h1 id="main_header">
     <script src = "/javascript/homepageFunctions.js"></script>
@@ -194,8 +190,7 @@
 
 <!-- division containing the player's info -->
 <div id="player_info">
-  
-  <!--<div class='info'> -->
+
 </div>
 
 <!-- division containing a summary of a subset of the player's investments -->
@@ -203,25 +198,35 @@
 	
 </div>
 
+<!-- to make columns on the homepage -->
+<div id="left">
+<!-- division containing the hashtags with the highest prices -->
+<div id="top_tags">
+
+</div>
+
 <!-- division containing the trending hashtags -->
 <div id="trending">
 
 </div>
+</div>
 
+<!-- to make columns on the homepage -->
+<div id="right">
 <!-- division containing the game leaderboard -->
 <div id="leaderboard">
 
-
-</div>
-
-<!-- division containing the player's friend requests -->
-<div id="friend_requests">
-
-<BR><BR>
 </div>
 
 <!-- division containing the player's friends -->
 <div id="friends">
+
+<BR><BR>
+</div>
+</div>
+
+<!-- division containing the player's friend requests -->
+<div id="friend_requests">
 
 <BR><BR>
 </div>
@@ -432,12 +437,12 @@
 				var tag_name = current_tag;
 				var challengeID = getCookie('challenge_id');
 				var amount = $('#amount_buy').val();
-				buy_hash(username, tag_name, challengeID, amount);
+				sell_hash(username, tag_name, challengeID, amount);
 				clear_searches();}"/> <br>
 			<input type="button" value="Sell!" onclick="
 				var username = user_name;
 				var tag_name = current_tag;
-				var challengeID = 0;
+				var challengeID = getCookie('challenge_id');
 				var amount = $('#amount_sell').val();
 				sell_hash(username, tag_name, challengeID, amount);
 				clear_searches();"/>
@@ -486,13 +491,14 @@
 		$(document).ready(function() {
 					
 			user_name = getCookie( "user_name" );
-
+			challenge_id = getCookie( "challenge_id");
 			socket = io.connect('http://' + document.location.host);			
 			
 			socket.on( 'welcome' , connectProcedure );
 			socket.on( 'login_ok' , loginProcedure );
 			socket.on( 'tag_page', tagProcedure );
 			socket.on( 'trending_table', trendingProcedure );
+			socket.on( 'top_table', topTagsProcedure );
 			socket.on( 'warning', warningProcedure );
 			socket.on( 'my_investments_table' , myInvestmentsProcedure );
 			socket.on( 'leader_board' , leaderProcedure );
