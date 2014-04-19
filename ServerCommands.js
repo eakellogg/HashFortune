@@ -323,7 +323,21 @@ function serveTagPage(message)
 	var username = message.user_name;
 	var challenge_id = message.challenge_id;
 	// search for the uninvested points of the user
-	connection.query( "SELECT AvailablePoints FROM users WHERE username = ? ", [username] , 
+	
+	var queryString = "";
+	var queryArgs = new Array();
+	if( challenge_id == 0)
+	{
+		queryString = "SELECT AvailablePoints FROM users WHERE username = ? ";
+		queryArgs.push( username );
+	}
+	else
+	{
+		queryString = "SELECT AvailablePoints FROM ChallengePurses WHERE username = ? AND id = ? ";
+		queryArgs.push( username );
+		queryArgs.push( challenge_id );
+	}
+	connection.query( queryString , queryArgs ,  
 	function( err , user_info )
 	{
 		if(err) {
@@ -930,25 +944,45 @@ function serveAcceptChallenge( message) //ChallengeTODO Message other users?
 	wager = 0;
 	if( condition == 1)
 	{
-		connection.query(" UPDATE ChallengePurses SET status = 1 WHERE username = ? AND id = ?" , [username , challengeID] ,
-		function( err , rows )
+		connection.query(" SELECT AvailablePoints FROM users WHERE username = ? " , [username] ,
+		function ( err , rows )
 		{
-			if( err )
-				throw err;
-			
-			
-			
-		});
+				if( err )
+					throw err;
+				
+				if( rows[0].AvailablePoints >= wager )
+				{
+					connection.query(" UPDATE ChallengePurses SET status = 1 WHERE username = ? AND id = ?" , [username , challengeID] ,
+					function( err , rows )
+					{
+						if( err )
+							throw err;
+					});
+					connection.query(" UPDATE users SET AvailablePoints = ( AvailablePoints - ? ) , TotalValue = ( TotalValue - ? ) WHERE username = ?" , [wager , wager , username ],
+					function( err , rows )
+					{
+						if( err )
+							throw err;
+							
+					});
+					serveChallenges(message);
+				}
+				else
+				{
+					socketHandler.messageUser( 'warning' , { content : "You can not enter that challenge due to a lack of funds " } );
+				}
+				
+		} );
+	
 	}
 	else
 	{
-		console.log("I tried to delet the challenge " + challengeID + " name of player + " +username  );
 		connection.query( "DELETE FROM ChallengePurses WHERE username = ? AND id = ?" , [username , challengeID ],
 		function (err , rows )
 		{
 			if( err)
 				throw err;
-			
+			serveChallenges(message);
 		});
 	}
 }
@@ -968,8 +1002,8 @@ function serveChallengeSetup( message )
 	}
 	inlist += " )";
 
-	var startTime = message.start_time;
-	var endTime = message.end_time
+	var startTime = new Date(message.start_time);
+	var endTime = new Date(message.end_time);
 	console.log( startTime );
 	console.log( endTime );
 	
@@ -987,6 +1021,8 @@ function serveChallengeSetup( message )
 				{
 					if( err)
 						throw err;
+					
+					serveChallenges( message );
 			});
 	});
 }

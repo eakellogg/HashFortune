@@ -179,10 +179,12 @@ function hide_menu(hashtag_name) {
 }
 
 //<!-- changes the cookie and highlights the challenge in the toolbar -->
-function change_current_challenge(id) {
+function change_current_challenge(id , force) {
 	
+	if( force == undefined )
+		force = false;
 	var curr_chal = "challenge" + id;
-	if ( ( getCookie("challenge_id") != id) ) 
+	if ( ( getCookie("challenge_id") != id) || force  ) 
 	{
 		
 		var c = document.getElementsByClassName("pointable_toolbar");
@@ -212,8 +214,8 @@ function change_current_challenge(id) {
 }
 
 function force_change_current_challenge(id) {
+	
 	var curr_chal = "challenge" + id;
-		
 	var c = document.getElementsByClassName("pointable_toolbar");
 	for (var i = 0; i < c.length; i++ )
 	{
@@ -230,8 +232,8 @@ function force_change_current_challenge(id) {
 	message.challenge_id = challenge_id;
 	socket.emit( 'my_investments_request' , message );
 	socket.emit( 'player_info_request' , message );
-	
-	//document.getElementById(curr_chal).style.backgroundColor="#FFFF66"; 
+	document.getElementById(curr_chal).style.backgroundColor="#FFFF66"; 
+	alert("HEY");
 	//challengeTODO should reload the page here, which may be interesting
 	
 }
@@ -275,6 +277,6 @@ function setupChallenge(name_of_challenge, num_players, time_limit, wager, start
 			end.setHours(parseInt(start.getHours()) + parseInt(time_limit),00,00);
 		}
 	}
-
+	
 	socket.emit( 'challenge_setup_request' , { user_name : user_name , name_of_challenge : name_of_challenge, num_players : num_players, wager : wager, start_time : start, end_time: end, friends : friends} );
 }

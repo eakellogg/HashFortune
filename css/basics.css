@@ -105,7 +105,7 @@ table.center {
     height: 100%;
     padding: 16px;
 	padding-bottom: 2em;
-	//z-index: -1;
+	z-index: 1;
 }
 #challenge_toolbar_table {
 	width:auto;

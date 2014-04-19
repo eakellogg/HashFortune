@@ -11,7 +11,7 @@ function connectProcedure(message) //TODO //ChallengeTODO add something that che
 	{
 		var passWord = getCookie( "pass_word");
 		var currentChallenge = getCookie ( "challenge_id" );
-		force_change_current_challenge( currentChallenge );
+		//force_change_current_challenge( currentChallenge );
 		socket.emit( "re_establish" , { user_name : userName , pass_word : passWord	, challenge_id : currentChallenge} );
 		
 	var userObj = { user_name : userName , pass_word : passWord	};
@@ -99,7 +99,7 @@ function topTagsProcedure(message)
 	//console.log("top procedure");
 	// fill the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
-	{
+	{f
 		if (x%2 == 1)
 			table2 = table2 + "<tr class=\"alt\">"
 		else
@@ -351,10 +351,11 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 	var finaltable = table1 + table2 + table3;
 	document.getElementById("challenge_toolbar").innerHTML=finaltable;
 	
+	change_current_challenge( challenge_id  , true);
 	
 	
-	var table = "<p><b>Howdy! Challenges are currently under construction and in Beta testing.  " +  
-			"We would appreciate it if you don't try them out until we have them working properly.  Thanks!</b></p>" +
+	var table = "<p><b>Howdy! Challenges are working, but still in Beta testing.  " +  
+			"You are welcome to try them out, and we will be adding instructions to the tutorial soon.</b></p>" +
 			"<table wide = 75%; class='center'; id='centered'> " +
             "<caption id ='caption'> Current Challenges</caption> " +
 			"<tr>" +

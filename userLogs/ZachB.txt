@@ -1618,3 +1618,17 @@ Logged in Thu Apr 17 2014 11:26:50 GMT-0500 (Central Daylight Time)
 
 Logged in Thu Apr 17 2014 12:40:48 GMT-0500 (Central Daylight Time) 
 
+Logged in Fri Apr 18 2014 10:33:22 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Fri Apr 18 2014 10:34:35 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Fri Apr 18 2014 10:34:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Fri Apr 18 2014 10:35:18 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Fri Apr 18 2014 10:35:18 GMT-0500 (Central Daylight Time) 
+
+Logged in Sat Apr 19 2014 11:19:40 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sat Apr 19 2014 11:37:43 GMT-0500 (Central Daylight Time) 
+
