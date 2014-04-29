@@ -141,7 +141,6 @@ Not a member? <br>
 	
 $(document).ready(function() {
 	
-
    $('#warning').css('display', 'none');
    $('#login').attr('disabled', false);
    socket = io.connect('http://' + document.location.host);
@@ -160,13 +159,14 @@ $(document).ready(function() {
 	
 	
 
-		setCookie( "challenge_id" , 0 , 1 );
+	  setCookie( "challenge_id" , 0 , 1 );
       var name = $('#name').val();
 	  var pass = $('#pass').val();
       if (name && pass) {
         name = name.trim();
 		pass = pass.trim();
         if (name.length > 0 ) {
+
           socket.emit('login', { user_name: name , pass_word: pass });
         }
       }

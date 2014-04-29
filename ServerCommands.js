@@ -248,6 +248,7 @@ function VerifyCreate(message)
 			message.loc = "homepage.html";
 			message.user = user;
 			message.pass = pass;
+			message.chall = "0";
 			socketHandler.messageUser( user, 'login_ok' , message	); //Tell the user to log in with new account
 		}
 		else {
@@ -293,6 +294,7 @@ function VerifyLogin(message)
 				returnmessage.loc = "homepage.html";
 				returnmessage.user = username;
 				returnmessage.pass = password;	
+				returnmessage.chall = "0";
 				socketHandler.messageUser( username, 'login_ok' , returnmessage );
 				
 				serveFormula(message);
@@ -323,13 +325,31 @@ function serveTagPage(message)
 	var username = message.user_name;
 	var challenge_id = message.challenge_id;
 	// search for the uninvested points of the user
-	connection.query( "SELECT AvailablePoints FROM users WHERE username = ? ", [username] , 
+	
+	var queryString = "";
+	var queryArgs = new Array();
+	console.log( challenge_id );
+	if( challenge_id == 0)
+	{
+		queryString = "SELECT AvailablePoints FROM users WHERE username = ? ";
+		queryArgs.push( username );
+	}
+	else
+	{
+		queryString = "SELECT AvailablePoints FROM ChallengePurses WHERE username = ? AND id = ? ";
+		queryArgs.push( username );
+		queryArgs.push( challenge_id );
+	}
+
+	console.log(queryString );
+	console.log(queryArgs);
+	connection.query( queryString , queryArgs ,  
 	function( err , user_info )
 	{
 		if(err) {
 			throw err;
 		}
-		
+		console.log( user_info );
 		// if the user and his/her available points exist
 		if( user_info.length > 0 )
 		{	
@@ -369,7 +389,7 @@ function serveTagPage(message)
 					update.user_invested = user_invested;
 					update.total_invested = total_invested;
 					update.value = value;
-						console.log("HEYYYYYY"+update);
+					console.log("HEYYYYYY"+update);
 					socketHandler.messageUser( username , 'tag_page' , update );	
 				});
 				
@@ -420,7 +440,9 @@ function serveBuyHash(message)
 					}
 					
 					var shares = parseInt(message.amount) + parseInt(value_info[0].shares);
-					var value = 10 + 10*(shares) + 10*(value_info[0].count);
+					var value = 10*(shares) + 10*(value_info[0].count);
+					if( message.challenge_id == 0)
+						value +=10 * (shares);
 					var cost = Math.ceil(value* message.amount);
 					var newpoints = user_info[0].AvailablePoints - cost;
 					
@@ -506,6 +528,7 @@ function serveBuyHash(message)
 									throw err;
 								}
 								serveFormula(message, serveTagPage);
+								serveChallenges(message);
 							});
 						}
 						
@@ -517,6 +540,7 @@ function serveBuyHash(message)
 									throw err;
 								}
 								serveFormulaChallenge(message);
+								serveChallenges(message);
 							});
 						}
 					}
@@ -596,6 +620,17 @@ function serveSellHash(message)
 							throw err;
 						}
 						var added_value = Math.ceil(market[0].price * message.amount);
+						if( message.challenge_id == 0 )
+						{
+							var adjust = 0;
+							for( var i =0; i < parseInt(message.amount) -1; i++)
+							{
+								adjust += 10 * i;
+							}
+							adjust = Math.floor( adjust / 2 );
+							added_value = added_value - adjust;
+						}
+				
 						var shares = parseInt(market[0].shares) - parseInt(message.amount);
 						var value = 10 + 10*(shares) + 10*(market[0].count);
 						
@@ -615,6 +650,7 @@ function serveSellHash(message)
 									throw err;
 								}
 								serveFormula(message, serveTagPage);
+								serveChallenges(message);
 							});	
 						}
 						else
@@ -625,6 +661,7 @@ function serveSellHash(message)
 									throw err;
 								}
 								serveFormulaChallenge(message);
+								serveChallenges(message);
 							});
 						}
 					});
@@ -678,7 +715,10 @@ function serveTop(message)
 // sends a list of the user's current investments
 function serveMyTrending(message) {
 
+	console.log(message);
 	var portfolio_name = message.portfolio_name;
+	if( message.portfolio_name == undefined )
+		portfolio_name = message.user_name;
 	//console.log( portfolio_name + " HERE I AM " );
 	var challenge_id = message.challenge_id;
 	if( challenge_id == undefined )
@@ -707,6 +747,8 @@ function getCurrentTime() {
 function servePlayerInfo(message) {
 
 	var portfolio_name = message.portfolio_name;
+	if( portfolio_name == undefined )
+		portfolio_name = message.user_name;
 	var challenge_id = message.challenge_id;
 	if (challenge_id == 0)
 	{
@@ -737,6 +779,8 @@ function servePlayerInfo(message) {
 function serveFriends(message) {
 	var username = message.user_name;
 	var portfolio_name = message.portfolio_name;
+	if( portfolio_name == undefined )
+		portfolio_name = username;
 	connection.query( "SELECT sender AS Friend, TotalValue FROM friends inner join users on users.username = friends.sender WHERE accepted = 1 AND receiver = ? UNION ALL SELECT receiver AS Friend, TotalValue FROM friends inner join users on users.username = friends.receiver WHERE accepted = 1 AND sender = ?", [portfolio_name, portfolio_name] ,
 	function (err , friends )
 	{
@@ -924,31 +968,55 @@ function serveAcceptChallenge( message) //ChallengeTODO Message other users?
 	var condition = message.accept;
 	var challengeID = message.challenge_id;
 	var username = message.user_name;
-	
-	var wager = message.wager;
-	if( wager == undefined )
-	wager = 0;
 	if( condition == 1)
 	{
-		connection.query(" UPDATE ChallengePurses SET status = 1 WHERE username = ? AND id = ?" , [username , challengeID] ,
-		function( err , rows )
+		connection.query(" SELECT AvailablePoints FROM users WHERE username = ? " , [username] ,
+		function ( err , points )
 		{
-			if( err )
-				throw err;
-			
-			
-			
-		});
+				if( err )
+					throw err;
+				
+				connection.query("SELECT wager FROM Challenges WHERE id = ?" , [challengeID],
+					function ( err ,rows )
+					{
+					if( err )
+						throw err;
+					var wager = rows[0].wager;
+				if( points[0].AvailablePoints >= wager )
+				{
+					connection.query(" UPDATE ChallengePurses SET status = 1 WHERE username = ? AND id = ?" , [username , challengeID] ,
+					function( err , rows )
+					{
+						if( err )
+							throw err;
+						serveChallenges(message);
+					});
+				
+					connection.query("UPDATE users SET AvailablePoints = ( AvailablePoints - ? ) , TotalValue = ( TotalValue - ? ) WHERE username = ?" , [wager , wager , username ],
+					function( err , rows )
+					{
+						if( err )
+							throw err;
+							
+					});
+				}
+				else
+				{
+					socketHandler.messageUser( username , 'warning' , { content : "You can not enter that challenge due to a lack of funds " } );
+				}
+				});
+				
+		} );
+	
 	}
 	else
 	{
-		console.log("I tried to delet the challenge " + challengeID + " name of player + " +username  );
 		connection.query( "DELETE FROM ChallengePurses WHERE username = ? AND id = ?" , [username , challengeID ],
 		function (err , rows )
 		{
 			if( err)
 				throw err;
-			
+			serveChallenges(message);
 		});
 	}
 }
@@ -968,15 +1036,23 @@ function serveChallengeSetup( message )
 	}
 	inlist += " )";
 
-	var startTime = message.start_time;
-	var endTime = message.end_time
+	var startTime = new Date(message.start_time);
+	var endTime = new Date(message.end_time);
 	console.log( startTime );
 	console.log( endTime );
 	
 	console.log(inlist);
-	connection.query( "INSERT INTO Challenges ( startTime, endTime, playerCount, name, wager ) VALUES (?, ?, ?, ?, ?)" , 
-	[startTime, endTime , num_player, name, wager],
-	function (err , blank )
+	console.log(message.user_name);
+	connection.query("SELECT AvailablePoints FROM users WHERE username = ? " , [message.user_name] , 
+	function ( err , rows )
+	{
+		if( err )
+			throw err;
+		if( rows[0].AvailablePoints >= wager )
+		{
+		connection.query( "INSERT INTO Challenges ( startTime, endTime, playerCount, name, wager ) VALUES (?, ?, ?, ?, ?)" , 
+		[startTime, endTime , num_player, name, wager],
+		function (err , blank )
 		{
 			if( err)
 				throw err;
@@ -987,7 +1063,22 @@ function serveChallengeSetup( message )
 				{
 					if( err)
 						throw err;
+					
+					serveChallenges( message );
 			});
+		
+		});
+		connection.query( "UPDATE users SET AvailablePoints = ( AvailablePoints - ? ) , TotalValue = ( TotalValue - ? ) WHERE username = ? " , [wager ,  wager , message.user_name ] ,
+		function( err , rows )
+		{
+			if( err ) 
+				throw err;
+		});
+		}
+		else
+		{
+			socketHandler.messageUser(message.user_name ,'warning' , {content : "You don't have the points to create that challenge " } );
+		}
 	});
 }
 

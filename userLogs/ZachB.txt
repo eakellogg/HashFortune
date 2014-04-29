@@ -1618,3 +1618,299 @@ Logged in Thu Apr 17 2014 11:26:50 GMT-0500 (Central Daylight Time)
 
 Logged in Thu Apr 17 2014 12:40:48 GMT-0500 (Central Daylight Time) 
 
+Logged in Fri Apr 18 2014 10:33:22 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Fri Apr 18 2014 10:34:35 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Fri Apr 18 2014 10:34:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Fri Apr 18 2014 10:35:18 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Fri Apr 18 2014 10:35:18 GMT-0500 (Central Daylight Time) 
+
+Logged in Sat Apr 19 2014 11:19:40 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sat Apr 19 2014 11:37:43 GMT-0500 (Central Daylight Time) 
+
+Logged in Sat Apr 19 2014 12:05:07 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  Jesus at Time Sat Apr 19 2014 12:09:54 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for Jesus at Time Sat Apr 19 2014 12:09:54 GMT-0500 (Central Daylight Time) 
+
+Sold tag  Jesus For 1 with ChallengeID 40 at Time Sat Apr 19 2014 12:09:55 GMT-0500 (Central Daylight Time) 
+
+Bought tag  Jesus For 1 with ChallengeID 40 at Time Sat Apr 19 2014 12:10:00 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  Jesus at Time Sat Apr 19 2014 12:10:23 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for Jesus at Time Sat Apr 19 2014 12:10:23 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  Jesus at Time Sat Apr 19 2014 12:12:13 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for Jesus at Time Sat Apr 19 2014 12:12:13 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sat Apr 19 2014 23:30:55 GMT-0500 (Central Daylight Time) 
+
+Logged in Sat Apr 19 2014 23:31:00 GMT-0500 (Central Daylight Time) 
+
+Logged in Sat Apr 19 2014 23:31:30 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sat Apr 19 2014 23:37:51 GMT-0500 (Central Daylight Time) 
+
+Logged in Sat Apr 19 2014 23:43:13 GMT-0500 (Central Daylight Time) 
+
+Logged in Sat Apr 19 2014 23:46:23 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sat Apr 19 2014 23:47:56 GMT-0500 (Central Daylight Time) 
+
+Logged in Sat Apr 19 2014 23:54:38 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sun Apr 20 2014 00:03:19 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 20 2014 00:05:51 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sun Apr 20 2014 00:09:39 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 20 2014 00:10:54 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 20 2014 00:12:31 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 20 2014 00:13:25 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 20 2014 00:14:18 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 20 2014 00:14:30 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 20 2014 00:20:27 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sun Apr 20 2014 00:21:24 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 20 2014 00:21:30 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sun Apr 20 2014 00:21:38 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 20 2014 00:21:55 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sun Apr 20 2014 00:22:29 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 20 2014 00:22:34 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Sun Apr 20 2014 00:35:10 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Sun Apr 20 2014 00:35:10 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  poppies at Time Sun Apr 20 2014 00:35:18 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for poppies at Time Sun Apr 20 2014 00:35:18 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Sun Apr 20 2014 00:35:31 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for tbt at Time Sun Apr 20 2014 00:35:31 GMT-0500 (Central Daylight Time) 
+
+Sold tag  tbt For 1 with ChallengeID 0 at Time Sun Apr 20 2014 00:35:39 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  tbt at Time Sun Apr 20 2014 00:35:39 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sun Apr 20 2014 00:43:38 GMT-0500 (Central Daylight Time) 
+
+Logged in Sun Apr 20 2014 11:38:58 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for Easter at Time Sun Apr 20 2014 12:18:40 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  Easter at Time Sun Apr 20 2014 12:18:40 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  Easter at Time Sun Apr 20 2014 12:19:12 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for Easter at Time Sun Apr 20 2014 12:19:12 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for HappyEaster at Time Sun Apr 20 2014 12:20:43 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  HappyEaster at Time Sun Apr 20 2014 12:20:43 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  Easter at Time Sun Apr 20 2014 12:20:52 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for Easter at Time Sun Apr 20 2014 12:20:52 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  HappyEaster at Time Sun Apr 20 2014 12:22:00 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for HappyEaster at Time Sun Apr 20 2014 12:22:00 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  HappyEaster at Time Sun Apr 20 2014 12:23:34 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for HappyEaster at Time Sun Apr 20 2014 12:23:34 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  HappyEaster at Time Sun Apr 20 2014 12:25:20 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for HappyEaster at Time Sun Apr 20 2014 12:25:20 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  HappyEaster at Time Sun Apr 20 2014 12:25:29 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for HappyEaster at Time Sun Apr 20 2014 12:25:29 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Sun Apr 20 2014 12:26:22 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  HappyEaster at Time Sun Apr 20 2014 12:26:25 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for HappyEaster at Time Sun Apr 20 2014 12:26:25 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  HappyEaster at Time Sun Apr 20 2014 12:26:30 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  HappyEaster at Time Sun Apr 20 2014 12:26:31 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  HappyEaster at Time Sun Apr 20 2014 12:26:32 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  HappyEaster at Time Sun Apr 20 2014 12:26:40 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:26:45 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WMYBTo1Billion at Time Sun Apr 20 2014 12:26:45 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:26:50 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WMYBTo1Billion For  with ChallengeID 54 at Time Sun Apr 20 2014 12:26:52 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WMYBTo1Billion For 1 with ChallengeID 54 at Time Sun Apr 20 2014 12:26:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Sun Apr 20 2014 12:27:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:27:41 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WMYBTo1Billion at Time Sun Apr 20 2014 12:27:41 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:27:55 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WMYBTo1Billion at Time Sun Apr 20 2014 12:27:55 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:28:02 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:28:03 GMT-0500 (Central Daylight Time) 
+
+Sold tag  WMYBTo1Billion For 1 with ChallengeID 54 at Time Sun Apr 20 2014 12:28:13 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:28:13 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WMYBTo1Billion For 1 with ChallengeID 54 at Time Sun Apr 20 2014 12:28:15 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:28:15 GMT-0500 (Central Daylight Time) 
+
+Sold tag  WMYBTo1Billion For 1 with ChallengeID 54 at Time Sun Apr 20 2014 12:28:21 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:28:21 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:28:27 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:28:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:28:29 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:28:30 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WMYBTo1Billion For 1 with ChallengeID 54 at Time Sun Apr 20 2014 12:28:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:28:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:28:38 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:28:43 GMT-0500 (Central Daylight Time) 
+
+Sold tag  WMYBTo1Billion For 1 with ChallengeID 54 at Time Sun Apr 20 2014 12:28:46 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:28:46 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Sun Apr 20 2014 12:29:47 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:29:50 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WMYBTo1Billion at Time Sun Apr 20 2014 12:29:50 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Sun Apr 20 2014 12:30:03 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:30:05 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WMYBTo1Billion at Time Sun Apr 20 2014 12:30:05 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WMYBTo1Billion For 1 with ChallengeID 54 at Time Sun Apr 20 2014 12:30:10 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Sun Apr 20 2014 12:30:29 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:30:32 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for WMYBTo1Billion at Time Sun Apr 20 2014 12:30:32 GMT-0500 (Central Daylight Time) 
+
+Bought tag  WMYBTo1Billion For 1 with ChallengeID 54 at Time Sun Apr 20 2014 12:30:36 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:30:36 GMT-0500 (Central Daylight Time) 
+
+Sold tag  WMYBTo1Billion For 1 with ChallengeID 54 at Time Sun Apr 20 2014 12:30:39 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:30:40 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  WMYBTo1Billion at Time Sun Apr 20 2014 12:31:25 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Sun Apr 20 2014 12:31:27 GMT-0500 (Central Daylight Time) 
+
+Logged in Mon Apr 21 2014 20:36:12 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Mon Apr 21 2014 20:36:13 GMT-0500 (Central Daylight Time) 
+
+Logged in Mon Apr 21 2014 22:40:55 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA UNION ALL SELECT * FROM users at Time Mon Apr 21 2014 22:42:02 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA UNION ALL SELECT * FROM users at Time Mon Apr 21 2014 22:42:02 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  'KCA' UNION ALL SELECT username AS dateTime , password AS price  at Time Mon Apr 21 2014 22:47:30 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for 'KCA' UNION ALL SELECT username AS dateTime , password AS price  at Time Mon Apr 21 2014 22:47:30 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  kca at Time Mon Apr 21 2014 22:53:13 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for kca at Time Mon Apr 21 2014 22:53:13 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page   at Time Mon Apr 21 2014 22:53:33 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for  at Time Mon Apr 21 2014 22:53:33 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Mon Apr 21 2014 22:53:39 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Mon Apr 21 2014 22:53:39 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA UNION ALL SELECT username AS dateTime , password AS price FROM users at Time Mon Apr 21 2014 22:54:21 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA UNION ALL SELECT username AS dateTime , password AS price FROM users at Time Mon Apr 21 2014 22:54:21 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  SELECT dateTime AS time , price FROM hashTags WHERE name = `KCA` UNION ALL SELECT * FROM users at Time Mon Apr 21 2014 22:55:54 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for SELECT dateTime AS time , price FROM hashTags WHERE name = `KCA` UNION ALL SELECT * FROM users at Time Mon Apr 21 2014 22:55:54 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  UNION ALL SELECT username AS dateTime , password AS price FROM users at Time Mon Apr 21 2014 22:56:27 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for UNION ALL SELECT username AS dateTime , password AS price FROM users at Time Mon Apr 21 2014 22:56:27 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA "UNION ALL SELECT username AS dateTime , password AS price FROM users " at Time Mon Apr 21 2014 23:02:55 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA "UNION ALL SELECT username AS dateTime , password AS price FROM users " at Time Mon Apr 21 2014 23:02:55 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA 'UNION ALL SELECT username AS dateTime , password AS price FROM users' at Time Mon Apr 21 2014 23:03:13 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA 'UNION ALL SELECT username AS dateTime , password AS price FROM users' at Time Mon Apr 21 2014 23:03:13 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  "'KCA' UNION ALL SELECT username AS dateTime , password AS price FROM users" at Time Mon Apr 21 2014 23:05:06 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for "'KCA' UNION ALL SELECT username AS dateTime , password AS price FROM users" at Time Mon Apr 21 2014 23:05:06 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA at Time Mon Apr 21 2014 23:05:19 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA at Time Mon Apr 21 2014 23:05:19 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  KCA 'UNION ALL SELECT username AS dateTime , password AS price FROM users' at Time Mon Apr 21 2014 23:05:26 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for KCA 'UNION ALL SELECT username AS dateTime , password AS price FROM users' at Time Mon Apr 21 2014 23:05:26 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Mon Apr 21 2014 23:06:05 GMT-0500 (Central Daylight Time) 
+
+Logged in Mon Apr 28 2014 21:01:54 GMT-0500 (Central Daylight Time) 
+
+loging out  at Time Mon Apr 28 2014 21:21:28 GMT-0500 (Central Daylight Time) 
+

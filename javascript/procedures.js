@@ -11,7 +11,7 @@ function connectProcedure(message) //TODO //ChallengeTODO add something that che
 	{
 		var passWord = getCookie( "pass_word");
 		var currentChallenge = getCookie ( "challenge_id" );
-		force_change_current_challenge( currentChallenge );
+		//force_change_current_challenge( currentChallenge );
 		socket.emit( "re_establish" , { user_name : userName , pass_word : passWord	, challenge_id : currentChallenge} );
 		
 	var userObj = { user_name : userName , pass_word : passWord	};
@@ -45,7 +45,7 @@ function loginProcedure(message)			//ChallengeTODO FIXME -----------------------
 {
 	setCookie( "user_name" , message.user , 1);
 	setCookie( "pass_word" , message.pass , 1);
-	//setCookie( "challenge_id" , message.chall , 1);
+	setCookie( "challenge_id" , message.chall , 1);
 	
 	var loc = message.loc;
 	window.location.replace(loc);
@@ -81,7 +81,7 @@ function trendingProcedure(message)
 		else
 			table2 = table2 + "<tr>"
 		table2 = table2 + "<td width=50% onMouseOver=\"show_menu('" + message[x].name + "T')\" onMouseOut=\"hide_menu('" + message[x].name + "T')\" >";
-		table2 = table2 + "<a onclick=\" rename_page( 'Hashtag Investment' ); current_tag = '" + message[x].name + "'; document.getElementById('hashtag_name').innerHTML='#' + '" + message[x].name + "'; switch_to_tag('" + user_name + "', '" + message[x].name + "', 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : '" + message[x].name + "', user_name : '" + user_name + "' } ); show_hashtag_page(); \">";
+		table2 = table2 + "<a onclick=\" rename_page( 'Hashtag Investment' ); current_tag = '" + message[x].name + "'; document.getElementById('hashtag_name').innerHTML='#' + '" + message[x].name + "'; switch_to_tag('" + user_name + "', '" + message[x].name + "', " + challenge_id+" ); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : '" + message[x].name + "', user_name : '" + user_name + "' } ); show_hashtag_page(); \">";
 		table2 = table2 + "#" + message[x].name + "</a> <a style=\"display:none; color:black\" id=\"" + message[x].name + "T\" href=\"https://twitter.com/search?q=%23" + message[x].name + "\" target=\"_blank\">Twitter Search</a> </td><td>" + message[x].price + "</td></tr>";
 
 	}
@@ -96,10 +96,10 @@ function topTagsProcedure(message)
     var table1 = "<table width=75%; class='center';> <caption>Top Hashtags</caption> <tr><th>Hashtag Name</th><th>Stock Price</th><tr>";
 	var table3 = "</table> <BR> <BR>";	
 	var table2 = "";
-	//console.log("top procedure");
+	console.log("top procedure");
 	// fill the table with the hashtag info received
 	for(var x = 0; x < message.length; x++ )
-	{
+	{f
 		if (x%2 == 1)
 			table2 = table2 + "<tr class=\"alt\">"
 		else
@@ -165,7 +165,7 @@ function leaderProcedure(message)
 			table2 = table2 + "<tr class=\"alt\">"
 		else
 			table2 = table2 + "<tr>"
-		table2 = table2 + "<td width=50%><a onclick=\"rename_page('Portfolio'); hide_all(); show_portfolio('" + message[x].username + "');\"> " + message[x].username + " </ a></td><td>" + message[x].TotalValue + "</td></tr>";
+		table2 = table2 + "<td width=50%><a onclick=\"rename_page('Portfolio'); hide_all(); portfolio_name = '" + message[x].username + "'; show_portfolio('" + message[x].username + "');\"> " + message[x].username + " </ a></td><td>" + message[x].TotalValue + "</td></tr>";
 	}
 
 	var finaltable = table1 + table2 + table3;
@@ -217,22 +217,27 @@ function userProcedure(message)
 
 function friendsProcedure(message) //No change needed here
 {
-
-	var table1 = "<table width=75%; class='center';> <caption>Friends</caption> <tr><th>Username</th><th>Net Worth</th></tr>";
-	var table3 = "</table> <BR> <BR>";	
-	var table2 = "";
-
-	// file the table with the hashtag info received
-	for(var x = 0; x < message.length; x++ )
+	if (message.length > 0)
 	{
-		if (x%2 == 1)
-			table2 = table2 + "<tr class=\"alt\">"
-		else
-			table2 = table2 + "<tr>"
-		table2 = table2 + "<td width=50%><a onclick=\"rename_page('Portfolio'); hide_all(); show_portfolio('" + message[x].Friend + "');\"> " + message[x].Friend + " </ a></td><td>" + message[x].TotalValue + "</td></tr>";
-	}
+		var table1 = "<table width=75%; class='center';> <caption>Friends</caption> <tr><th>Username</th><th>Net Worth</th></tr>";
+		var table3 = "</table> <BR> <BR>";	
+		var table2 = "";
 
-	var finaltable = table1 + table2 + table3;
+		// file the table with the hashtag info received
+		for(var x = 0; x < message.length; x++ )
+		{
+			if (x%2 == 1)
+				table2 = table2 + "<tr class=\"alt\">"
+			else
+				table2 = table2 + "<tr>"
+			table2 = table2 + "<td width=50%><a onclick=\"rename_page('Portfolio'); hide_all(); portfolio_name = '" +message[x].Friend + "'; show_portfolio('" + message[x].Friend + "');\"> " + message[x].Friend + " </ a></td><td>" + message[x].TotalValue + "</td></tr>";
+		}
+
+		var finaltable = table1 + table2 + table3;
+	}
+	else {
+		var finaltable = "<table width=75%; class='center';> <caption>Friends</caption> <tr><th>You have no friends :'(</th></tr>";
+	}
 	document.getElementById("friends").innerHTML=finaltable;
 }
 
@@ -336,7 +341,7 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 	
 	for (var x = 0; x < limit; x++)
 	{
-		if( message[x].status == 1 || message[x].status == 2 )		//take 1 out - means hasn't start
+		if( message[x].status == 2 )		//take 1 out - means hasn't start
 		{
 			table2 = table2 + "<tr class = \"pointable_toolbar\" id = challenge" + message[x].id + " onclick = \" change_current_challenge(" + message[x].id + "); \">";
 			table2 = table2 + "<td> <b>" + message[x].name + "</b> <br>Available: " + message[x].AvailablePoints + "<br>Total: " + message[x].TotalValue + "<br>";
@@ -347,31 +352,28 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 		}
 		
 	}
-	
 	var finaltable = table1 + table2 + table3;
 	document.getElementById("challenge_toolbar").innerHTML=finaltable;
+	//alert("inside challenge function:" +challenge_id);
+	change_current_challenge( challenge_id  , true);
 	
-	
-	
-	var table = "<p><b>Howdy! Challenges are currently under construction and in Beta testing.  " +  
-			"We would appreciate it if you don't try them out until we have them working properly.  Thanks!</b></p>" +
-			"<table wide = 75%; class='center'; id='centered'> " +
-            "<caption id ='caption'> Current Challenges</caption> " +
-			"<tr>" +
-			"<th>Challenge Name</th>" +
+	var table = "<table width = 75%; class='center'; id='centered'> " +
+            "<caption id ='caption'> Current Challenges </caption> " +
+			"<tr>";
+if (message.length > 1)
+{			
+			table += "<th>Challenge Name</th>" +
 			"<th>Players</th>" +
     	   "	<th>Initial Investment</th>" +
 		   "    <th>Status</th>"+
     	   " </tr> ";
-
-		for( var i =0 ; i < message.length-1; i++ )
-		{
+	for( var i =0 ; i < message.length-1; i++ )
+	{
 			if (i%2 == 1)
-				table = table + "<tr class=\"alt\">"
+				table = table + "<tr class=\"alt\">";
 			else
-				table = table + "<tr>"
-			table += "<td>" + message[i].name + " </td><td> " + message[i].playerCount + 
-			"</td><td> " + message[i].wager + " </td><td> ";
+				table = table + "<tr>";
+			table += "<td>" + message[i].name + " </td><td> " + message[i].playerCount + "</td><td> " + message[i].wager + " </td><td> ";
 			if(message[i].status == 0)
 			{
 				table += "<button type='button' onclick='acceptChallenge( \"" + user_name + "\" , \"" + message[i].id + "\", \"1\");'>Accept</ button>";
@@ -382,16 +384,20 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 			else
 				table += "<div id=\"" + message[i].endTime + "\" name=\"countdown\"/>";
 			table += " </td></tr>";
-		}
-		table+= "</table>"
-		
-		document.getElementById("challenge_home").innerHTML=table;
+	}
+	table+= "</table>";
+}	
 	
+else 
+	{
+		table += "<th>You do not have any current challenges. *Success*</th></tr></table>"
+	}
+	document.getElementById("challenge_home").innerHTML=table;
 	var counters = document.getElementsByName("countdown");
 	for (i = 0; i < counters.length; i++)
 	{
 		createCountdown(counters[i].id);
-		alert(counters[i].id);
+		//alert(counters[i].id);
 	}
 	
 }

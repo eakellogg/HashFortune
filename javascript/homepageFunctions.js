@@ -67,7 +67,7 @@ function show_homepage() {
     document.getElementById("leaderboard").style.display = "block";
     document.getElementById("friends").style.display = "block";
 	//document.getElementById("right").style.cssFloat = "right";
-	
+	document.getElementById("hashtag_search").style.display = "block";
 
 	challenge_id = getCookie("challenge_id");	
 	var userObj = {};
@@ -110,12 +110,15 @@ function show_investments(user_name , challenge_id) {
 //<!-- show divisions relevant to portfolio page -->
 function show_portfolio(portfolio_name , challenge_id) {
 
-	document.getElementById("player_pic").style.display = "block";
+	//document.getElementById("player_pic").style.display = "block";
 	document.getElementById("player_info").style.display = "block";
 	document.getElementById("investments_summary").style.display = "block";
 	document.getElementById("friends").style.display = "block";
 	if(user_name != portfolio_name) {
 		document.getElementById("friend_button").style.display = "block";
+	}
+	else {
+		document.getElementById("friend_requests").style.display = "block";
 	}
 			
     var investObj = {};
@@ -127,6 +130,8 @@ function show_portfolio(portfolio_name , challenge_id) {
     socket.emit( 'my_investments_request' , investObj);
 	socket.emit( 'player_info_request' , investObj);
 	socket.emit( 'friend_table_request' , investObj);
+	socket.emit( 'friend_request_request' , { user_name: user_name } );
+
 	socket.emit( 'friend_button_request', investObj);
 }
 
@@ -152,6 +157,8 @@ function show_friends_page() {
 //<!-- show divisions relevant to settings page -->
 function show_settings() {
     document.getElementById("settings").style.display = "block";
+	document.getElementById("username_search").style.display = "block";
+
 }
 	  
 
@@ -179,10 +186,12 @@ function hide_menu(hashtag_name) {
 }
 
 //<!-- changes the cookie and highlights the challenge in the toolbar -->
-function change_current_challenge(id) {
-	
+function change_current_challenge(id , force) {
+	//alert ("Challenge: " +id);
+	if( force == undefined )
+		force = false;
 	var curr_chal = "challenge" + id;
-	if ( ( getCookie("challenge_id") != id) ) 
+	if ( ( getCookie("challenge_id") != id) || force  ) 
 	{
 		
 		var c = document.getElementsByClassName("pointable_toolbar");
@@ -194,45 +203,17 @@ function change_current_challenge(id) {
 		setCookie("challenge_id", id , 1);
 		var new_id = getCookie("challenge_id" );
 		challenge_id = new_id;
-		
 		//if portfolio name != username then you are on someone elses portfolio, and you shouldn't show your own info
-		var portfolio_name = document.getElementById('PICKME').innerHTML;
-		//console.log();
-		var message ={};
+		var message = {};
 		message.user_name = user_name;
-		message.portfolio_name = portfolio_name;
 		message.challenge_id = challenge_id;
+		message.portfolio_name = portfolio_name;
+		switch_to_tag( user_name , current_tag , challenge_id ); 
 		socket.emit( 'my_investments_request' , message );
 		socket.emit( 'player_info_request' , message );
 	}
-	
 	//challengeTODO should reload the page here, which may be interesting
 	//for right now, it's just not going to reload the pages if on someone else's portfolio
-	
-}
-
-function force_change_current_challenge(id) {
-	var curr_chal = "challenge" + id;
-		
-	var c = document.getElementsByClassName("pointable_toolbar");
-	for (var i = 0; i < c.length; i++ )
-	{
-		c[i].style.background = "#EFFEEF";
-	}
-	
-	setCookie("challenge_id", id , 1);
-	var new_id = getCookie("challenge_id" );
-		
-	challenge_id = new_id;
-	var message ={};
-	message.user_name = user_name;
-	message.portfolio_name = user_name;
-	message.challenge_id = challenge_id;
-	socket.emit( 'my_investments_request' , message );
-	socket.emit( 'player_info_request' , message );
-	
-	//document.getElementById(curr_chal).style.backgroundColor="#FFFF66"; 
-	//challengeTODO should reload the page here, which may be interesting
 	
 }
 
@@ -275,6 +256,6 @@ function setupChallenge(name_of_challenge, num_players, time_limit, wager, start
 			end.setHours(parseInt(start.getHours()) + parseInt(time_limit),00,00);
 		}
 	}
-
+	
 	socket.emit( 'challenge_setup_request' , { user_name : user_name , name_of_challenge : name_of_challenge, num_players : num_players, wager : wager, start_time : start, end_time: end, friends : friends} );
 }

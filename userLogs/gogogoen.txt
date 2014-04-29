@@ -48,3 +48,59 @@ Logged in Tue Apr 15 2014 00:38:26 GMT-0500 (Central Daylight Time)
 
 loging out  at Time Tue Apr 15 2014 00:39:03 GMT-0500 (Central Daylight Time) 
 
+Logged in Mon Apr 28 2014 19:09:40 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Mon Apr 28 2014 19:10:16 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for selfie at Time Mon Apr 28 2014 19:10:16 GMT-0500 (Central Daylight Time) 
+
+Sold tag  selfie For 10 with ChallengeID  at Time Mon Apr 28 2014 19:10:34 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  selfie at Time Mon Apr 28 2014 19:10:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  miamiheat at Time Mon Apr 28 2014 19:13:45 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for miamiheat at Time Mon Apr 28 2014 19:13:45 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  heat at Time Mon Apr 28 2014 19:14:00 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for heat at Time Mon Apr 28 2014 19:14:00 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  miamiheat at Time Mon Apr 28 2014 19:14:17 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for miamiheat at Time Mon Apr 28 2014 19:14:17 GMT-0500 (Central Daylight Time) 
+
+Bought tag  miamiheat For 1000 with ChallengeID  at Time Mon Apr 28 2014 19:14:44 GMT-0500 (Central Daylight Time) 
+
+Bought tag  miamiheat For 100 with ChallengeID  at Time Mon Apr 28 2014 19:15:00 GMT-0500 (Central Daylight Time) 
+
+Bought tag  miamiheat For 1 with ChallengeID  at Time Mon Apr 28 2014 19:15:18 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  miamiheat at Time Mon Apr 28 2014 19:15:18 GMT-0500 (Central Daylight Time) 
+
+Bought tag  miamiheat For 99 with ChallengeID  at Time Mon Apr 28 2014 19:15:31 GMT-0500 (Central Daylight Time) 
+
+Bought tag  miamiheat For 50 with ChallengeID  at Time Mon Apr 28 2014 19:15:38 GMT-0500 (Central Daylight Time) 
+
+Bought tag  miamiheat For 19 with ChallengeID  at Time Mon Apr 28 2014 19:16:03 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  miamiheat at Time Mon Apr 28 2014 19:16:03 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  lebron at Time Mon Apr 28 2014 19:16:18 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for lebron at Time Mon Apr 28 2014 19:16:18 GMT-0500 (Central Daylight Time) 
+
+Bought tag  lebron For 1 with ChallengeID  at Time Mon Apr 28 2014 19:16:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  lebron at Time Mon Apr 28 2014 19:16:28 GMT-0500 (Central Daylight Time) 
+
+Bought tag  lebron For 19 with ChallengeID  at Time Mon Apr 28 2014 19:18:04 GMT-0500 (Central Daylight Time) 
+
+Bought tag  lebron For 9 with ChallengeID  at Time Mon Apr 28 2014 19:18:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  lebron at Time Mon Apr 28 2014 19:18:09 GMT-0500 (Central Daylight Time) 
+
+Bought tag  lebron For 5 with ChallengeID  at Time Mon Apr 28 2014 19:18:17 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  lebron at Time Mon Apr 28 2014 19:18:17 GMT-0500 (Central Daylight Time) 
+

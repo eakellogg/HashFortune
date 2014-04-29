@@ -7,6 +7,7 @@
 		var user_name;
 		var current_tag;
 		var challenge_id;
+		var portfolio_name;
 	</script>
 	
 	<script src= "http://code.jquery.com/jquery-2.1.0.min.js"> </script>
@@ -90,7 +91,7 @@
 	}
 
 	#hashtag_search {
-		display:none; 
+		display:block; 
 	}
 
 	#username_search {
@@ -154,20 +155,21 @@
 
 	<!-- icons on the righthand side of the toolbar -->
 	<div style="float:right;">
+		<!--
 		<img src="icons/trading.jpeg" height = "50" width = "50" class="pointable"
-		onclick="rename_page('Investments');  hide_all();   show_investments(user_name , challenge_id);" >
-				
-		<img src="icons/portfolio.png" height = "50" width = "50" class="pointable"
+		onclick="rename_page('Investments'); hide_all();   show_investments(user_name , challenge_id);" >
+		-->
+		<img src="icons/portfolio.png" height = "50" width = "50" class="pointable" alt="portfolio" title="portfolio"
 		onclick="rename_page('Portfolio'); hide_all(); show_portfolio(user_name , challenge_id);" >
-			 
+		<!--
 		<img src="icons/friends.png" height = "50" width = "50" class="pointable"	
 		onclick="rename_page('Friends'); hide_all(); show_friends_page();"
         style="background-color:#336600">
-			
-		<img src="icons/challenge.png" height = "50" width = "50" class="pointable"
+		-->
+		<img src="icons/challenge.png" height = "50" width = "50" class="pointable" alt="challenges" title="challenges"
 		onclick="rename_page('Challenges'); hide_all(); 	show_challenge_home();" >
 			
-		<img src="icons/settings.png" height = "50" width = "50" class="pointable"
+		<img src="icons/settings.png" height = "50" width = "50" class="pointable" alt="settings" title="settings"
 		onclick="rename_page('Settings'); hide_all(); show_settings();" >
 	</div>
   
@@ -182,10 +184,9 @@
     
 <!-- division containing the player's profile picture -->
 <div id="player_pic">
-	<img style="margin:0px auto;display:block;background-color:#8DB08D;"
-	src="icons/friends.png" height = "250" width = "250">
-	<BR>
-	<BR>
+	<img style="margin:0px auto; position:fixed; top:67px;
+	left:200px; display:collapsed; background-color:#8DB08D;"
+	src="icons/friends.png" height = "300" width = "300">
 </div>
 
 <!-- division containing the player's info -->
@@ -242,28 +243,7 @@
    <table width=75%; class="center"; id="centered">
     	<caption id="caption">Current Challenges</caption>
     	   <tr>
-    	   	<th style="font-size:18px;">Players</th>
-    	   	<th style="font-size:18px;">Type</th>
-    	   	<th style="font-size:18px;">Initial Investment</th>
-    	   	<th style="font-size:18px;">Time</th>
-    	   </tr>
-    	   <tr>
-      		<td>4</td> 
-      		<td>Quick</td> 
-      		<td>500</td>
-      		<td>[Accept][Decline]</td>
-    	   </tr>
-    	   <tr>
-      		<td>6</td>
-      		<td>Friends</td>
-      		<td>700</td>
-      		<td>2:00 Remaining</td>
-    	   </tr>
-    	   <tr>
-    	   	<td>4</td>
-    	   	<td>Friends</td> 
-    	   	<td>900</td>
-    	   	<td>Pending</td>
+    	   	<th>You do not have any current challenges.</th>
     	   </tr>
     </table>
 <BR>
@@ -336,35 +316,7 @@
 </div>
 
 
-<!-- division containing the searchbar for a username -->
 
-<div id="username_search">
-	<form>
-		<h2>
-		Search by username:
-		<input type="text" id="usearch"; onkeypress="if(event.keyCode==13){search_by_username(user_name, document.getElementById('usearch').value);clear_searches();}" size="35">
-		<input type="button" value="Search" width="50" 	
-            onclick="search_by_username(user_name, document.getElementById('usearch').value);clear_searches();">
-		</h2>
-	</form>
-</div>
-
-<!-- division containing the searchbar for an email -->
-
-<div id="email_search">
-	<form>
-		<h2>
-		Search by email:
-		<input type="email" id="esearch"; onkeypress="if(event.keyCode==13){search_by_email(user_name, document.getElementById('esearch').value);clear_searches();}" size="35">
-		<input type="button" value="Search" width="50" 
-            onclick="search_by_email(user_name, document.getElementById('esearch').value);clear_searches();">
-		</h2>
-	</form>
-</div>
-
-<!-- division containing the results from searching for a user by username or email -->
-<div id="user_search_results">
-</div>
 
 <!-- division containing a list of all investments of a user -->
 <div id="investments_all">
@@ -433,10 +385,11 @@
 				clear_searches();"/>
 		</form>
 		<form name="sell" >
-			Amount: <input type="text" id="amount_sell" onkeypress="if(event.keyCode==13){var username = user_name;
+			Amount: <input type="text" id="amount_sell" onkeypress="if(event.keyCode==13){
+				var username = user_name;
 				var tag_name = current_tag;
 				var challengeID = getCookie('challenge_id');
-				var amount = $('#amount_buy').val();
+				var amount = $('#amount_sell').val();
 				sell_hash(username, tag_name, challengeID, amount);
 				clear_searches();}"/> <br>
 			<input type="button" value="Sell!" onclick="
@@ -453,13 +406,13 @@
 	<!-- division containing the searchbar for a hashtag -->
 	<div id="hashtag_search" >
 		<form>
-			<h1 class="hashtag_search">
-				#Hashtag Search:
+			<!-- <h1 class="hashtag_search">-->
+				<!--#Hashtag Search:-->
 				
-				<span id="symbol">#</span><input type="text" id="hsearch"; size="35" onkeypress="if(event.keyCode==13){rename_page('Hashtag Investment');current_tag = document.getElementById('hsearch').value; document.getElementById('hashtag_name').innerHTML='#' + current_tag; switch_to_tag(user_name, document.getElementById('hsearch').value, 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : current_tag , user_name : user_name } ); show_hashtag_page();}" />
-				<input type="button" value="Search" width="50" onclick="rename_page('Hashtag Investment');current_tag = document.getElementById('hsearch').value; document.getElementById('hashtag_name').innerHTML='#' + current_tag; switch_to_tag(user_name, document.getElementById('hsearch').value, 0); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : current_tag , user_name : user_name } ); show_hashtag_page();"/>
+				<span id="symbol">#</span><input type="text" id="hsearch" size="35" onkeypress="if(event.keyCode==13){rename_page('Hashtag Investment');current_tag = document.getElementById('hsearch').value; document.getElementById('hashtag_name').innerHTML='#' + current_tag; switch_to_tag(user_name, document.getElementById('hsearch').value, challenge_id); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : current_tag , user_name : user_name } ); show_hashtag_page();}" />
+				<input type="button" value="Search" width="50" height="20" onclick="rename_page('Hashtag Investment');current_tag = document.getElementById('hsearch').value; document.getElementById('hashtag_name').innerHTML='#' + current_tag; switch_to_tag(user_name, document.getElementById('hsearch').value, challenge_id); clear_searches(); hide_all(); document.getElementById('chartdiv').innerHTML=''; socket.emit('chart_request' , { tagname : current_tag , user_name : user_name } ); show_hashtag_page();"/>
 				
-			</h1>
+			<!--</h1>-->
 		</form>
 		<BR>
 		<BR>
@@ -467,15 +420,45 @@
 
 <!-- division containing the settings menu -->
 <div id="settings">
-	<p> Email Notifications </p>
-	<p> Change Profile Picture </p>
-	<p>
-    <a href="tutorial.html" target="_blank">A quick tutorial</a>
-    </p>
-    <a href="https://docs.google.com/forms/d/11X2S7wk5odFIWruJPixHJM3T6lcv9LR2fkCTE4ofsF4/viewform" target="_blank">And please take our user study!</a>
-    <br>
-    <br>
-    <p> If you encounter any issues, you can email us at hashfortune@gmail.com </p>
+	<!--<p> Email Notifications </p>
+	<p> Change Profile Picture </p>-->
+	<h2>
+    <a href="http://www.youtube.com/watch?v=FCKs-srh76c" target="_blank">Check out our video tutorial!</a>
+    </h2>
+    <p> 
+		If you encounter any issues, you can email us at 
+		<a href="mailto:hashfortune@gmail.com?Subject=HashFortune" target="_top">hashfortune@gmail.com</a>
+	</p>
+	
+	
+	<!-- division containing the searchbar for a username -->
+	<div id="username_search">
+		<form>
+			<h3>
+			Find player by username:
+			<input type="text" id="usearch"; onkeypress="if(event.keyCode==13){search_by_username(user_name, document.getElementById('usearch').value);clear_searches();}" size="35">
+			<input type="button" value="Search" width="50" 	
+				onclick="search_by_username(user_name, document.getElementById('usearch').value);clear_searches();">
+			</h3>
+		</form>
+	</div>
+
+	<!-- division containing the searchbar for an email -->
+	<div id="email_search">
+		<form>
+			<h2>
+			Find player by email:
+			<input type="email" id="esearch"; onkeypress="if(event.keyCode==13){search_by_email(user_name, document.getElementById('esearch').value);clear_searches();}" size="35">
+			<input type="button" value="Search" width="50" 
+				onclick="search_by_email(user_name, document.getElementById('esearch').value);clear_searches();">
+			</h2>
+		</form>
+	</div>
+
+	<!-- division containing the results from searching for a user by username or email -->
+	<div id="user_search_results">
+	</div>
+	
 	<input type="button" value="Logout" onclick=" setCookie( 'user_name' , '' , 1); setCookie('pass_word' , '' , 1 ); socket.emit( 'logout' , { user_name : user_name } ); location.href = '/index.html'; "/>
 </div>
 
