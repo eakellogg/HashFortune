@@ -1007,7 +1007,6 @@ function serveAcceptChallenge( message) //ChallengeTODO Message other users?
 				}
 				});
 				
-		} );
 	
 	}
 	else
