@@ -296,7 +296,18 @@ function warningProcedure(message)
 }
 
 function chartProcedure(message){
-
+	//for (var i = 0; i < message.length; i++)
+	//{
+			var time = message[0].time;
+			//var month = (parseInt(time.substring(5,7))-1);
+			//var day = time.substring(8,10);
+			//var year = time.substring(0,4);
+			//var hour = time.substring(11,13);
+			//var min = time.substring(14,16);
+			//var newtime = month.toString() + "/" + date + "/" + year + "\n" + hour + ":" + min;
+			//alert(time);
+			//message[i].time = newtime;
+	//}
 	chartData = message;
 	var chart = new AmCharts.AmSerialChart();
 	chart.dataProvider = chartData;
@@ -313,9 +324,11 @@ function chartProcedure(message){
 	chart.addGraph(graph);
 	
 	var categoryAxis = chart.categoryAxis;
+	categoryAxis.parseDates = true;
+	categoryAxis.minPeriod = "hh";
+	chart.dataDateFormat = "YYYY-MM-DD-HH-NN";
 	categoryAxis.autoGridCount  = true;
 	categoryAxis.gridPosition = "start";
-	categoryAxis.labelRotation = 90;
 	
 	graph.type = "line";
 	graph.lineColor = "#003300";
@@ -362,9 +375,9 @@ function challengesProcedure(message) {			// ChallengeTODO this is where the too
 			"<tr>";
 if (message.length > 1)
 {			
-			table += "<th>Challenge Name</th>" +
+			table += "<th>Name</th>" +
 			"<th>Players</th>" +
-    	   "	<th>Initial Investment</th>" +
+    	   "	<th>Wager</th>" +
 		   "    <th>Status</th>"+
     	   " </tr> ";
 	for( var i =0 ; i < message.length-1; i++ )
@@ -380,9 +393,14 @@ if (message.length > 1)
 				table += "<button type='button' onclick='acceptChallenge( \"" + user_name + "\" , \"" + message[i].id + "\", \"0\");'>Decline</ button>";
 			}
 			else if (message[i].status == 1)
-				table += "Starts: " + message[i].startTime;
+			{
+				table += "Starts: " + convertTime(message[i].startTime);
+			}
 			else
-				table += "<div id=\"" + message[i].endTime + "\" name=\"countdown\"/>";
+			{
+				//table += "<div id=\"" + message[i].endTime + "\" name=\"countdown\"/>";
+				table += "Ends: " + (convertTime(message[i].endTime)).substring(10);
+			}
 			table += " </td></tr>";
 	}
 	table+= "</table>";
@@ -408,7 +426,7 @@ function createCountdown(id)
 	var end = id;
 	var target = new Date();
 	target.setFullYear(parseInt(end.substring(0,4)));
-	target.setMonth(parseInt(end.substring(5,7)) - 1);		//the -1 is needed... not sure why...
+	target.setMonth(parseInt(end.substring(5,7)) - 1);
 	target.setDate(parseInt(end.substring(8,10)));
 	target.setHours(parseInt(end.substring(11,13)));
 	target.setMinutes(parseInt(end.substring(14,16)));
@@ -423,7 +441,7 @@ function createCountdown(id)
 		var curr_time = now.getTime();
 		var seconds_left = (end_time - curr_time) / 1000;
 		
-		if (seconds_left > 0)
+		if (seconds_left > 3600)
 		{
 			days = parseInt(seconds_left / 86400);
 			seconds_left = seconds_left % 86400;
@@ -433,7 +451,25 @@ function createCountdown(id)
 			
 			minutes = parseInt(seconds_left / 60);
 			seconds = parseInt(seconds_left % 60);
-			countdown.innerHTML = hours + ":" + minutes + ":" + seconds + " remaining";
+			
+			var hour_zero = "";
+			var min_zero="";
+			var sec_zero="";
+			if (hours < 10) {hour_zero = "0";}
+			if (minutes < 10) {min_zero="0";}
+			if (seconds < 10) {sec_zero="0";}
+			countdown.innerHTML = hour_zero+hours + ":" + min_zero+minutes + ":" + sec_zero+seconds + " remaining";
+		}
+		else if (seconds_left > 0)
+		{
+			minutes = parseInt(seconds_left / 60);
+			seconds = parseInt(seconds_left % 60);
+			
+			var min_zero="";
+			var sec_zero="";
+			if (minutes < 10) {min_zero="0";}
+			if (seconds < 10) {sec_zero="0";}
+			countdown.innerHTML = "00:"+ min_zero+minutes + ":" + sec_zero+seconds + " remaining";
 		}
 		else
 		{

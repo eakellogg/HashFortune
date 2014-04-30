@@ -42,6 +42,11 @@ h1
 {
     box-shadow: 0px 0px 16px 3px rgb(73, 73, 73);
     z-index = 2;
+	position:fixed;
+	right:0px;
+	left:0px;
+	top:0px;
+	bottom:740px;
 }
 table {
 	border-collapse:collapse;
@@ -105,7 +110,7 @@ table.center {
     height: 100%;
     padding: 16px;
 	padding-bottom: 2em;
-	z-index: 1;
+	//z-index: 1;
 }
 #challenge_toolbar_table {
 	width:auto;
@@ -141,6 +146,9 @@ table.center {
 }
 #settings {
 	font-size:18px;
+}
+#login_page {
+	margin:1em;
 }
 
 .modalDialog {

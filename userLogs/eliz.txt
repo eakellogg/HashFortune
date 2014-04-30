@@ -4477,3 +4477,311 @@ loging out  at Time Mon Apr 28 2014 21:39:31 GMT-0500 (Central Daylight Time)
 
 Logged in Mon Apr 28 2014 22:00:31 GMT-0500 (Central Daylight Time) 
 
+Logged in Wed Apr 30 2014 11:14:26 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:14:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:15:09 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 11:15:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:16:34 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:17:21 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:17:33 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:17:49 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:18:39 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:18:54 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:19:24 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:19:30 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:19:41 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:19:49 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:20:00 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:20:08 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:20:15 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:20:25 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:20:34 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:20:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:21:49 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:22:24 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:22:37 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:22:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:25:54 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:25:57 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:25:58 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:25:59 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:26:07 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:26:08 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:26:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:26:10 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:26:11 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:26:12 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:26:13 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:26:13 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:26:18 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:26:18 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  MeanGirls10thAnniversary at Time Wed Apr 30 2014 11:26:23 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for MeanGirls10thAnniversary at Time Wed Apr 30 2014 11:26:23 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  MeanGirls10thAnniversary at Time Wed Apr 30 2014 11:26:42 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  MeanGirls10thAnniversary at Time Wed Apr 30 2014 11:27:03 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  MeanGirls10thAnniversary at Time Wed Apr 30 2014 11:27:04 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:28:00 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 11:28:00 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:28:24 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:28:25 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:28:26 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:28:27 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:28:38 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 11:28:38 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:46:10 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:46:11 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 11:46:11 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:47:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:47:29 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 11:47:29 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:48:58 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:48:59 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 11:48:59 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:50:14 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:50:15 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 11:50:15 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:50:43 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:50:45 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 11:50:45 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:56:54 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:56:56 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 11:56:56 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:57:16 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:57:18 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 11:57:18 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:58:03 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:58:04 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 11:58:04 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:58:42 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:58:43 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 11:58:43 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:59:17 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:59:19 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 11:59:19 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 11:59:33 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 11:59:35 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 11:59:35 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:00:00 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 12:00:02 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 12:00:02 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:00:26 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 12:00:28 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 12:00:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:01:05 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 12:01:06 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 12:01:06 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:02:01 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 12:02:03 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 12:02:03 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:02:31 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 12:02:32 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 12:02:32 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:04:30 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 12:04:31 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 12:04:31 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:04:48 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 12:04:50 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 12:04:50 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:05:30 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 12:05:31 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 12:05:31 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:06:07 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 12:06:08 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 12:06:08 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:06:48 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 12:06:50 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 12:06:50 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  MeanGirls10thAnniversary at Time Wed Apr 30 2014 12:07:42 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for MeanGirls10thAnniversary at Time Wed Apr 30 2014 12:07:42 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  BringBackOurGirls at Time Wed Apr 30 2014 12:08:19 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for BringBackOurGirls at Time Wed Apr 30 2014 12:08:19 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  happynationalbestfriendday at Time Wed Apr 30 2014 12:08:43 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for happynationalbestfriendday at Time Wed Apr 30 2014 12:08:43 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Wed Apr 30 2014 12:10:09 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for TBT at Time Wed Apr 30 2014 12:10:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Wed Apr 30 2014 12:10:57 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Wed Apr 30 2014 12:10:59 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Wed Apr 30 2014 12:11:00 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Wed Apr 30 2014 12:11:06 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Wed Apr 30 2014 12:11:10 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  TBT at Time Wed Apr 30 2014 12:11:13 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:11:17 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:11:28 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:11:39 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:12:12 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 12:12:18 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 12:12:18 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:12:48 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:13:50 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:15:24 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:18:16 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:18:39 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:22:16 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:22:55 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:24:03 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:24:22 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:25:16 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:34:30 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:35:59 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:37:34 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:38:14 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:38:47 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:39:00 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:39:42 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  wcw at Time Wed Apr 30 2014 12:40:09 GMT-0500 (Central Daylight Time) 
+
+Requesting chart for wcw at Time Wed Apr 30 2014 12:40:09 GMT-0500 (Central Daylight Time) 
+
+Asked for tag page  undefined at Time Wed Apr 30 2014 12:41:50 GMT-0500 (Central Daylight Time) 
+

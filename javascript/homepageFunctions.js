@@ -259,3 +259,15 @@ function setupChallenge(name_of_challenge, num_players, time_limit, wager, start
 	
 	socket.emit( 'challenge_setup_request' , { user_name : user_name , name_of_challenge : name_of_challenge, num_players : num_players, wager : wager, start_time : start, end_time: end, friends : friends} );
 }
+
+function convertTime(time)
+{
+	var year = time.substring(0,4);
+	var month = (parseInt(time.substring(5,7))).toString();
+	var day = time.substring(8,10);
+	var hour = time.substring(11,13);
+	var minute = time.substring(14,16);
+	var second = time.substring(17,19);
+	var time_string = month + "/" + day + "/" + year + " " + hour + ":" + minute;
+	return time_string;
+}

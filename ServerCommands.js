@@ -85,6 +85,7 @@ function serveChart( message)
 	{
 		if( err )
 			throw err;
+		
 		socket.emit( 'chart_data' , rows );
 	});
 	
